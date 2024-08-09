@@ -15,6 +15,12 @@ import userfuncs
 import utility.plotting_tools as plots
 
 def get_default_settings():
+    '''
+    get_default_settings _summary_
+
+    :return: _description_
+    :rtype: _type_
+    '''    
     fullsettings = {}
     settings = {}
     autoscan_settings = {}
@@ -60,6 +66,14 @@ def get_default_settings():
     return fullsettings
 
 def vna_spec_flux_scan_user_sweep(instruments, settings):
+    '''
+    vna_spec_flux_scan_user_sweep _summary_
+
+    :param instruments: _description_
+    :type instruments: _type_
+    :param settings: _description_
+    :type settings: _type_
+    '''    
     ##Instruments used
     vna = instruments['VNA']
     FBL = instruments['FBL']

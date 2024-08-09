@@ -13,8 +13,8 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 import userfuncs 
-from measurement_helpers import remove_IQ_ellipse, extract_data
-from plotting_tools import simplescan_plot
+from utility.measurement_helpers import remove_IQ_ellipse, extract_data
+from utility.plotting_tools import simplescan_plot
    
 def base_task(card, xaxis, settings):
     card.ArmAndWait()

@@ -1,4 +1,4 @@
-from kollar_instruments.Keithley import keithley
+from kollar_instruments.Keithley2400 import keithley
 
 device = keithley('ASRL5::INSTR')
 device.mode = 'current' #or voltage

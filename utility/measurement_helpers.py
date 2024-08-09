@@ -19,9 +19,14 @@ def check_inputs(inputs, defaults):
     Checks that the given input dictionary has the correct settings. It's easy
     to accidentally mistype something or us an old naming convention so this 
     function will throw an error if the keys in the dictionaries don't match
-    Input params:
-        inputs: input dictionary that is modified by user
-        defaults: default dictionary specified by script
+    
+    Parameters
+    __________
+            inputs: 
+                input dictionary that is modified by user
+            defaults: 
+                default dictionary specified by script
+
     '''
     diff1 = set(inputs) - set(defaults)
     diff2 = set(defaults) - set(inputs)
@@ -39,11 +44,14 @@ def remove_IQ_ellipse(Is, Qs, mixer_config):
     small SNR since the differences between high and low can be wiped out by
     the ellipse eccentricity. Expects axes center phi in the convention defined
     by the 'fitEllipse' function in the ellipse_fitting file
-    Input params:
-        Is, Qs: raw I, Q signals 
-        mixer config: dictionary with axes, center and phase rotation params
+    
+        Parameters:
+            Is, Qs: raw I, Q signals 
+
+            mixer config: dictionary with axes, center and phase rotation params
             of the ellipse as found in the fitEllipse function. This is initialized
             in the exp_globals function
+
     '''
     center = mixer_config['center']
     axes   = mixer_config['axes']
@@ -55,12 +63,32 @@ def remove_IQ_ellipse(Is, Qs, mixer_config):
     return Isprime, Qsprime
 
 def remove_slow_drift(I, Q, t):
+    '''
+    remove_slow_drift _summary_
+
+    :param I: _description_
+    :type I: _type_
+    :param Q: _description_
+    :type Q: _type_
+    :param t: _description_
+    :type t: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     angle = -0.00035*t*np.pi/180
     rot_mat = np.array([[np.cos(angle), -np.sin(angle)], 
                          [np.sin(angle), np.cos(angle)]])
     return rot_mat@np.array([I,Q])
 
 def generate_filter(card, settings):
+    '''
+    generate_filter _summary_
+
+    :param card: _description_
+    :type card: _type_
+    :param settings: _description_
+    :type settings: _type_
+    '''    
     exp_globals = settings['exp_globals']
     #create Chebychev type II digital filter
     filter_N = exp_globals['ddc_config']['order']
@@ -83,14 +111,24 @@ def extract_data(raw_data, xaxis, settings):
     data and background (assumes that they are the same length, which should
     be enforced by the card samples in the actual exp script) and splices the 
     correct ranges from the raw data. Returns a time axis for the data window 
-    and subtracts mean of background if specified
-    Key input params:
+    and subtracts mean of background if specified.
+
     ALL VALUES SHOULD BE IN TIME UNITS (base seconds)
-        init_buffer: buffer specified to card before the measurement tone
-        emp_delay: combination of line delay and other delays that correctly
-                   shifts the digitizer to match the HDAWG time axis
-        meas_window: width of the measurement pulse
-        post_buffer: time to wait after the pulse before measuring background
+
+
+    Parameters
+    ________________
+        
+
+        init_buffer: 
+            buffer specified to card before the measurement tone
+        emp_delay: 
+            combination of line delay and other delays that correctly shifts the digitizer to match the HDAWG time axis
+        meas_window: 
+            width of the measurement pulse
+        post_buffer: 
+            time to wait after the pulse before measuring background
+
     '''
     measurement_pulse = settings['exp_globals']['measurement_pulse']
     init_buffer = measurement_pulse['init_buffer']
@@ -121,17 +159,24 @@ def extract_data_heterodyne(raw_data, xaxis, settings):
     data and background (assumes that they are the same length, which should
     be enforced by the card samples in the actual exp script) and splices the 
     correct ranges from the raw data. Returns a time axis for the data window 
-    and subtracts mean of background if specified
-    Key input params:
+    and subtracts mean of background if specified.
+
     ALL VALUES SHOULD BE IN TIME UNITS (base seconds)
-        init_buffer: buffer specified to card before the measurement tone
-        emp_delay: combination of line delay and other delays that correctly
-                   shifts the digitizer to match the HDAWG time axis
-        meas_window: width of the measurement pulse
-        post_buffer: time to wait after the pulse before measuring background
+
+    This has been modified from extract_data so that it will work with heterodyne and digital down conversion
+    
+    Parameters
+    _________________
+
+        init_buffer: 
+            buffer specified to card before the measurement tone
+        emp_delay: 
+            combination of line delay and other delays that correctly shifts the digitizer to match the HDAWG time axis
+        meas_window: 
+            width of the measurement pulse
+        post_buffer: 
+            time to wait after the pulse before measuring background
         
-    modified from extract_data so that it will work with heterodyne and digital 
-    down conversion
         
     '''
     measurement_pulse = settings['exp_globals']['measurement_pulse']
@@ -166,6 +211,16 @@ def extract_data_heterodyne(raw_data, xaxis, settings):
     return filtered_cos, filtered_sin, data_x, filtered_cos_full, filtered_sin_full, xaxis
         
 def estimate_time(t1, t2, steps):
+    '''
+    estimate_time _summary_
+
+    :param t1: _description_
+    :type t1: _type_
+    :param t2: _description_
+    :type t2: _type_
+    :param steps: _description_
+    :type steps: _type_
+    '''    
     one_step = t2-t1
     total_time = one_step*steps
     
@@ -179,6 +234,20 @@ def estimate_time(t1, t2, steps):
     print('    ')
 
 def heterodyne_martin(Ipp, Qpp, xaxis, settings):
+    '''
+    heterodyne_martin _summary_
+
+    :param Ipp: _description_
+    :type Ipp: _type_
+    :param Qpp: _description_
+    :type Qpp: _type_
+    :param xaxis: _description_
+    :type xaxis: _type_
+    :param settings: _description_
+    :type settings: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     I_cos, I_sin, Itime, I_cos_full, I_sin_full, time_full = extract_data_heterodyne(Ipp, xaxis, settings)
     Q_cos, Q_sin, Qtime, Q_cos_full, Q_sin_full, time_full = extract_data_heterodyne(Qpp, xaxis, settings)
     Qprime_sin = Q_cos
@@ -197,6 +266,18 @@ def heterodyne_martin(Ipp, Qpp, xaxis, settings):
     return I_window, Q_window, Itime, I_full, Q_full, time_full
 
 def read_and_process_two_pulses(card, settings, plot):
+    '''
+    read_and_process_two_pulses _summary_
+
+    :param card: _description_
+    :type card: _type_
+    :param settings: _description_
+    :type settings: _type_
+    :param plot: _description_
+    :type plot: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     card.ArmAndWait()
     I, Q = card.ReadAllData()
     Ipeven = np.mean(I[::2], 0)
@@ -260,7 +341,9 @@ def read_and_process_dual_readout(card, settings, plot):
         fig0.canvas.draw()
         fig0.canvas.flush_events()
     
-    return boost_I, boost_Q, readout_I, readout_Q, xaxis            
+    return boost_I, boost_Q, readout_I, readout_Q, xaxis        
+
+
 def read_and_process_single_channel(card, settings, plot):
     '''
     The original version of this function wanted to convert to 
@@ -302,6 +385,8 @@ def read_and_process_single_channel(card, settings, plot):
         plot_data_extraction(amp, Itime, amp_full, time_full, I_full, Q_full)
     
     return I_window, Q_window, I_full, Q_full, xaxis
+
+
 def read_and_process(card, settings, plot, IQstorage = True):
     '''The original version of this function wanted to convert to 
     amplitude(t) and phase(t). This has been found to be problematic.
@@ -433,6 +518,22 @@ def read_and_process(card, settings, plot, IQstorage = True):
         
 
 def plot_data_extraction(amp_extract, time_extract, amp_full, time_full, I, Q):
+    '''
+    plot_data_extraction _summary_
+
+    :param amp_extract: _description_
+    :type amp_extract: _type_
+    :param time_extract: _description_
+    :type time_extract: _type_
+    :param amp_full: _description_
+    :type amp_full: _type_
+    :param time_full: _description_
+    :type time_full: _type_
+    :param I: _description_
+    :type I: _type_
+    :param Q: _description_
+    :type Q: _type_
+    '''    
     fig = plt.figure(99)
     plt.clf()
     plt.plot(time_full*1e6, amp_full, 'r')
@@ -467,6 +568,15 @@ def plot_data_extraction(amp_extract, time_extract, amp_full, time_full, I, Q):
     fig2.canvas.flush_events()
 
 def configure_hdawg(hdawg, settings):
+    '''
+    configure_hdawg _summary_
+
+    :param hdawg: _description_
+    :type hdawg: _type_
+    :param settings: _description_
+    :type settings: _type_
+    '''
+
     hdawg_config = settings['hdawg_config']
     amp = hdawg_config['amplitude']
     trigger_slope = hdawg_config['trigger_slope']
@@ -484,25 +594,36 @@ def configure_card(card, settings):
     force a standard definition of what the digitizer timing should be. Computes
     the total acquisition time and converts it to samples (also configures the 
     rest of the digitizer but this is the main part that requires logic)
-    Inputs:
+
+    Inputs
+    _______
+
         settings dictionary with the following keys (should be initialized from
         the get_default_settings method)
-        meas_window: width of measurment tone
-        meas_pos: position of measurement tone relative to the rise edge of the 
-            trigger
-        emp_delay: line delay and other delays accumulated between the 
-            AWG and the digitizer
-        init_buffer: buffer to collect data before the pulse
-        post_buffer: buffer after measurment tone to wait out the ringing before
-            background subtraction
-        averages: number of averages for the card to perform in HW
-        segments: number of segments (will be averaged together), useful when
-            number of averages gets very high ~>50e3
-        sampleRate: sampling rate of digitizer (make this lower for longer acquisitions)
-        activeChannels: active channels on digitizer (both by default)
-        timeout: timeout (in s) for VISA communication (make this longer for 
-                         longer acquisitions)
-        channelRange: full scale (peak to peak) of each channel, 0.5 or 2.5 V
+
+        meas_window: 
+            width of measurment tone
+        meas_pos: 
+            position of measurement tone relative to the rise edge of the trigger
+        emp_delay: 
+            line delay and other delays accumulated between the AWG and the digitizer
+        init_buffer: 
+            buffer to collect data before the pulse
+        post_buffer: 
+            buffer after measurment tone to wait out the ringing before background subtraction
+        averages: 
+            number of averages for the card to perform in HW
+        segments: 
+            number of segments (will be averaged together), useful when number of averages gets very high ~>50e3
+        sampleRate: 
+            sampling rate of digitizer (make this lower for longer acquisitions)
+        activeChannels: 
+            active channels on digitizer (both by default)
+        timeout: 
+            timeout (in s) for VISA communication (make this longer for longer acquisitions)
+        channelRange: 
+            full scale (peak to peak) of each channel, 0.5 or 2.5 V
+
     '''
     exp_globals = settings['exp_globals']
     exp_settings = settings['exp_settings']

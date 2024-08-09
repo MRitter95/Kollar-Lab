@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pulsed_measurements.schedules.scheduler_v2 &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pulsed_measurements/schedules/scheduler_v2';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pulsed_measu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pulsed_measurements.schedules.scheduler_v2</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<div class="viewcode-block" id="pulse">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.pulse.html#pulsed_measurements.schedules.scheduler_v2.pulse">[docs]</a>
+<span class="k">class</span> <span class="nc">pulse</span><span class="p">():</span>
+<div class="viewcode-block" id="pulse.__init__">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.pulse.html#pulsed_measurements.schedules.scheduler_v2.pulse.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">wave</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wave</span> <span class="o">=</span> <span class="n">wave</span></div>
+</div>
+
+
+<div class="viewcode-block" id="flat_top">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.flat_top.html#pulsed_measurements.schedules.scheduler_v2.flat_top">[docs]</a>
+<span class="k">class</span> <span class="nc">flat_top</span><span class="p">(</span><span class="n">pulse</span><span class="p">):</span>
+    <span class="n">_defaults</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sigma&#39;</span>       <span class="p">:</span> <span class="mf">10e-9</span><span class="p">,</span>
+            <span class="s1">&#39;num_sigma&#39;</span>   <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="s1">&#39;hold_time&#39;</span>   <span class="p">:</span> <span class="mf">0e-9</span><span class="p">,</span>
+            <span class="s1">&#39;amp&#39;</span>         <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
+            <span class="s1">&#39;sample_rate&#39;</span> <span class="p">:</span> <span class="mf">2.4e9</span><span class="p">,</span>
+            <span class="s1">&#39;angle&#39;</span>       <span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+<div class="viewcode-block" id="flat_top.__init__">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.flat_top.html#pulsed_measurements.schedules.scheduler_v2.flat_top.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">,</span> <span class="o">**</span><span class="n">settings</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_settings</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wave</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compile_pulse</span><span class="p">()</span></div>
+
+        
+    <span class="k">def</span> <span class="nf">set_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error or typo, </span><span class="si">{}</span><span class="s1"> is not a valid parameter for this class&#39;</span>
+                      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parameter</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="p">[</span><span class="n">parameter</span><span class="p">])</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">full_settings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">full_settings</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">full_settings</span>
+
+    <span class="k">def</span> <span class="nf">compile_pulse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="n">amp</span>         <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amp</span>
+        <span class="n">sigma</span>       <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span>
+        <span class="n">length</span>      <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hold_time</span>
+        <span class="n">num_sigma</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sigma</span>
+        <span class="n">sample_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span>
+        
+        <span class="c1"># Create gaussian ramp</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">num_sigma</span><span class="o">*</span><span class="n">sample_rate</span><span class="p">)</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">sigma</span><span class="o">*</span><span class="n">num_sigma</span><span class="p">,</span> <span class="n">samples</span><span class="p">)</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">num_sigma</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">wave</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">wave</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">init_amp</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">wave</span><span class="p">)</span>
+        <span class="n">ramp</span> <span class="o">=</span> <span class="n">amp</span><span class="o">*</span><span class="p">(</span><span class="n">wave</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">init_amp</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span>
+        <span class="c1">#Hold max amplitude</span>
+        <span class="n">square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span><span class="o">*</span><span class="n">sample_rate</span><span class="p">))</span><span class="o">*</span><span class="n">amp</span>
+        <span class="n">ramp_up</span><span class="p">,</span> <span class="n">ramp_down</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">ramp</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ramp_up</span><span class="p">,</span> <span class="n">square</span><span class="p">,</span> <span class="n">ramp_down</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">wave</span> <span class="o">=</span> <span class="n">final</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">final</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">final</span></div>
+
+
+<div class="viewcode-block" id="marker">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.marker.html#pulsed_measurements.schedules.scheduler_v2.marker">[docs]</a>
+<span class="k">class</span> <span class="nc">marker</span><span class="p">():</span>
+    <span class="n">_defaults</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;position&#39;</span> <span class="p">:</span> <span class="mf">50e-6</span><span class="p">,</span>
+        <span class="s1">&#39;length&#39;</span>   <span class="p">:</span> <span class="mf">5e-6</span><span class="p">,</span>
+        <span class="s1">&#39;buffer&#39;</span>   <span class="p">:</span> <span class="mf">100e-9</span>
+    <span class="p">}</span>
+<div class="viewcode-block" id="marker.__init__">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.marker.html#pulsed_measurements.schedules.scheduler_v2.marker.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">,</span> <span class="o">**</span><span class="n">settings</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_settings</span><span class="p">()</span></div>
+
+
+    <span class="k">def</span> <span class="nf">set_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error or typo, </span><span class="si">{}</span><span class="s1"> is not a valid parameter for this class&#39;</span>
+                      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parameter</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="p">[</span><span class="n">parameter</span><span class="p">])</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">full_settings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">full_settings</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">full_settings</span></div>
+
+
+<div class="viewcode-block" id="AnalogChannel">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.AnalogChannel.html#pulsed_measurements.schedules.scheduler_v2.AnalogChannel">[docs]</a>
+<span class="k">class</span> <span class="nc">AnalogChannel</span><span class="p">():</span>
+<div class="viewcode-block" id="AnalogChannel.__init__">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.AnalogChannel.html#pulsed_measurements.schedules.scheduler_v2.AnalogChannel.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chanID</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;waveform&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">chanID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span> <span class="o">=</span> <span class="n">sample_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_array</span> <span class="o">=</span> <span class="n">samples</span><span class="o">/</span><span class="n">sample_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wave_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span></div>
+
+    
+    <span class="k">def</span> <span class="nf">add_pulse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pulse</span><span class="p">):</span>
+        <span class="n">pos_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pulse</span><span class="o">.</span><span class="n">position</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+        <span class="c1">#print(&#39;index:{}, len array:{}, array:{}&#39;.format(pos_index, len(pulse.wave), len(self.wave_array)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wave_array</span><span class="p">[</span><span class="n">pos_index</span><span class="p">:</span><span class="n">pos_index</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">pulse</span><span class="o">.</span><span class="n">wave</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pulse</span><span class="o">.</span><span class="n">wave</span>
+
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wave_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span></div>
+
+            
+<div class="viewcode-block" id="DigitalChannel">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.DigitalChannel.html#pulsed_measurements.schedules.scheduler_v2.DigitalChannel">[docs]</a>
+<span class="k">class</span> <span class="nc">DigitalChannel</span><span class="p">():</span>
+<div class="viewcode-block" id="DigitalChannel.__init__">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.DigitalChannel.html#pulsed_measurements.schedules.scheduler_v2.DigitalChannel.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chanID</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;marker&#39;</span><span class="p">,</span> <span class="n">HW_offset_on</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">HW_offset_off</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="s1">&#39;Pos&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">chanID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">polarity</span> <span class="o">=</span> <span class="n">polarity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span> <span class="o">=</span> <span class="n">sample_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="n">samples</span>
+        <span class="k">if</span> <span class="n">polarity</span><span class="o">==</span><span class="s1">&#39;Pos&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">marker_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">polarity</span><span class="o">==</span><span class="s1">&#39;Neg&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">marker_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span><span class="o">*</span><span class="n">chanID</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Acceptable polarity is &#39;Neg&#39; or &#39;Pos&#39;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">polarity</span> <span class="o">=</span> <span class="n">polarity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">HW_offset_on</span>  <span class="o">=</span> <span class="n">HW_offset_on</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">HW_offset_off</span> <span class="o">=</span> <span class="n">HW_offset_off</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window_list</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+
+    <span class="k">def</span> <span class="nf">add_window</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">])</span>
+    
+    <span class="k">def</span> <span class="nf">compile_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">window</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">window_list</span><span class="p">:</span>
+            <span class="n">start_ind</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+            <span class="n">stop_ind</span>   <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+            <span class="n">offset_on</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HW_offset_on</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+            <span class="n">offset_off</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HW_offset_off</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarity</span><span class="o">==</span><span class="s1">&#39;Pos&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">marker_array</span><span class="p">[</span><span class="n">start_ind</span><span class="o">-</span><span class="n">offset_on</span><span class="p">:</span><span class="n">stop_ind</span><span class="o">-</span><span class="n">offset_off</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarity</span><span class="o">==</span><span class="s1">&#39;Neg&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">marker_array</span><span class="p">[</span><span class="n">start_ind</span><span class="o">-</span><span class="n">offset_on</span><span class="p">:</span><span class="n">stop_ind</span><span class="o">-</span><span class="n">offset_off</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">polarity</span><span class="p">:</span>
+            <span class="n">polarity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarity</span>
+        <span class="k">if</span> <span class="n">polarity</span><span class="o">==</span><span class="s1">&#39;Pos&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">marker_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">polarity</span><span class="o">==</span><span class="s1">&#39;Neg&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">marker_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">chanID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window_list</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+
+<div class="viewcode-block" id="base_schedule">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.base_schedule.html#pulsed_measurements.schedules.scheduler_v2.base_schedule">[docs]</a>
+<span class="k">class</span> <span class="nc">base_schedule</span><span class="p">():</span>
+<div class="viewcode-block" id="base_schedule.__init__">
+<a class="viewcode-back" href="../../../pulsed_measurements/pulsed_measurements.schedules.scheduler_v2.base_schedule.html#pulsed_measurements.schedules.scheduler_v2.base_schedule.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">total_time</span><span class="p">,</span> <span class="n">num_analog_channels</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_digital_channels</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sample_rate</span><span class="o">=</span><span class="mf">2.4e9</span><span class="p">):</span>
+        <span class="c1">## Choose the right HDAWG file for the 2 vs 4 channel mode</span>
+        <span class="c1">## Create all the channels here?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span> <span class="o">=</span> <span class="n">sample_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">total_time</span> <span class="o">=</span> <span class="n">total_time</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">total_time</span><span class="o">*</span><span class="n">sample_rate</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">samples</span><span class="o">%</span><span class="mi">32</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Warning, waveform lengths not a multiple of 32, padding to match AWG reqs&#39;</span><span class="p">)</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">samples</span><span class="o">/</span><span class="mi">32</span><span class="p">)</span><span class="o">*</span><span class="mi">32</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">total_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_analog_channels</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_analog_channel</span><span class="p">(</span><span class="n">chan</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_digital_channels</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_digital_channel</span><span class="p">(</span><span class="n">chan</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">add_analog_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">HW_ID</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;waveform</span><span class="si">{}</span><span class="s1">&#39;</span><span class="p">):</span>
+        <span class="n">sample_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HW_ID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnalogChannel</span><span class="p">(</span><span class="n">HW_ID</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">add_digital_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">HW_ID</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;marker</span><span class="si">{}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="n">HW_offset_on</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">HW_offset_off</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">sample_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HW_ID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">DigitalChannel</span><span class="p">(</span><span class="n">HW_ID</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">HW_offset_on</span><span class="p">,</span> <span class="n">HW_offset_off</span><span class="p">,</span> <span class="n">polarity</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_pulse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pulse</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">pulse</span><span class="p">,</span> <span class="n">channel</span><span class="p">])</span>
+    
+    <span class="k">def</span> <span class="nf">add_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pulse</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="n">pulse</span><span class="o">.</span><span class="n">position</span>
+        <span class="n">length</span>   <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pulse</span><span class="o">.</span><span class="n">wave</span><span class="p">)</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">buffer</span>
+        <span class="n">mark_channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">channel</span><span class="p">]</span>
+        <span class="n">mark_channel</span><span class="o">.</span><span class="n">add_window</span><span class="p">(</span><span class="n">position</span><span class="o">-</span><span class="n">buffer</span><span class="p">,</span> <span class="n">position</span><span class="o">-</span><span class="n">buffer</span><span class="o">+</span><span class="n">length</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">compute_schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">## Loop through all the channels and add their pulses to the arrays</span>
+        <span class="k">for</span> <span class="p">[</span><span class="n">pulse</span><span class="p">,</span> <span class="n">channel</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pulse_list</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="n">channel</span><span class="p">]</span><span class="o">.</span><span class="n">add_pulse</span><span class="p">(</span><span class="n">pulse</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">channel</span><span class="p">]</span>
+            <span class="n">ch</span><span class="o">.</span><span class="n">compile_channel</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">compile_schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">AWG_type</span><span class="o">=</span><span class="s1">&#39;HDAWG&#39;</span><span class="p">,</span> <span class="n">analog_list</span><span class="o">=</span><span class="p">[],</span> <span class="n">digital_list</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="k">if</span> <span class="n">AWG_type</span><span class="o">==</span><span class="s1">&#39;HDAWG&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">digital_list</span><span class="p">:</span>
+                <span class="n">mark1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">digital_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">mark2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">digital_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                <span class="n">final_markers</span> <span class="o">=</span> <span class="n">mark1</span><span class="o">.</span><span class="n">marker_array</span> <span class="o">+</span> <span class="n">mark2</span><span class="o">.</span><span class="n">marker_array</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No markers provided, using blank array&#39;</span><span class="p">)</span>
+                <span class="n">final_markers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">analog_list</span><span class="p">:</span>
+                <span class="n">analog1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="n">analog_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">wave_array</span>
+                <span class="n">analog2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="n">analog_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">wave_array</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No analog wf provided, using blank array&#39;</span><span class="p">)</span>
+                <span class="n">analog1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span>
+                <span class="n">analog2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">analog1</span><span class="p">,</span> <span class="n">analog2</span><span class="p">,</span> <span class="n">final_markers</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not implemented&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_measurement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mpulse</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="n">mpulse</span><span class="o">.</span><span class="n">position</span>
+        <span class="n">length</span>   <span class="o">=</span> <span class="n">mpulse</span><span class="o">.</span><span class="n">length</span>
+        <span class="n">cav_channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">channel</span><span class="p">]</span>
+        <span class="n">cav_channel</span><span class="o">.</span><span class="n">add_window</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">position</span><span class="o">+</span><span class="n">length</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">plot_waveforms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">analog_traces</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">)</span>
+        <span class="n">digital_traces</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">)</span>
+        <span class="n">num_traces</span> <span class="o">=</span> <span class="n">analog_traces</span><span class="o">+</span><span class="n">digital_traces</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        <span class="n">ax_a</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+        <span class="n">ax_a</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Analog Traces&#39;</span><span class="p">)</span>
+        <span class="n">ax_a</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+        <span class="n">ax_a</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Amp&#39;</span><span class="p">)</span>
+        <span class="n">ax_b</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="n">ax_a</span><span class="p">)</span>
+        <span class="n">ax_b</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Digital Traces&#39;</span><span class="p">)</span>
+        <span class="n">ax_b</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+        <span class="n">ax_b</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Amp&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="n">active_channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+            <span class="n">wave_data</span> <span class="o">=</span> <span class="n">active_channel</span><span class="o">.</span><span class="n">wave_array</span>
+            <span class="n">time_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_array</span><span class="o">*</span><span class="mf">1e6</span>
+            <span class="n">ax_a</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_data</span><span class="p">,</span> <span class="n">wave_data</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+            <span class="n">active_channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+            <span class="n">active_channel</span><span class="o">.</span><span class="n">compile_channel</span><span class="p">()</span>
+            <span class="n">wave_data</span> <span class="o">=</span> <span class="n">active_channel</span><span class="o">.</span><span class="n">marker_array</span>
+            <span class="n">time_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_array</span><span class="o">*</span><span class="mf">1e6</span>
+            <span class="n">ax_b</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_data</span><span class="p">,</span> <span class="n">wave_data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">ax_a</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">ax_b</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analog_channels</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">chan</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">digital_channels</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">chan</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
+
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

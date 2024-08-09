@@ -36,7 +36,7 @@ class keithley(SCPIinst):
     commandlist['voltage'] = voltage
     commandlist['current'] = current
 
-    def __init__(self, address, mode='current', volt_range=10z, Output=1):
+    def __init__(self, address, mode='current', volt_range=10, Output=1):
         self.instrument_type = 'keithley'
         
         super().__init__(address, self.commandlist, self.errcmds, baud_rate = 9600)

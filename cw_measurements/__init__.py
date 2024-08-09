@@ -1,7 +1,3 @@
-"""
-Module containing the various vna measurement scripts
-"""
-
 from . import vna_spec
 from . import vna_trans
 from . import vna_trans_flux_scan

@@ -5,12 +5,21 @@ Created on Tue Sep  8 17:10:29 2020
 @author: Kollarlab
 """
 
+
 from .SCPIinst import SCPIinst
 from bidict import bidict
 import numpy as np
 import time
 
+
 class DC205(SCPIinst):
+    '''
+    :no-index:
+    DC205 _summary_
+    :param SCPIinst: _description_
+    :type SCPIinst: _type_
+    '''    
+    
     LEXE = bidict({
             0:'No exec error',
             1:'Illegal value',
@@ -67,9 +76,26 @@ class DC205(SCPIinst):
     commandlist['core'] = core
     
     def __init__(self, address, reset):
+        '''
+        __init__ _summary_
+        :param address: _description_
+        :type address: _type_
+        :param reset: _description_
+        :type reset: _type_
+        '''        
         super().__init__(address, self.commandlist, self.errcmds, reset)
     
     def voltage_ramp(self, newV, step_size = 0.005, step_time = 0.001):
+        '''
+        voltage_ramp _summary_
+        :no-index:
+        :param newV: _description_
+        :type newV: _type_
+        :param step_size: _description_, defaults to 0.005
+        :type step_size: float, optional
+        :param step_time: _description_, defaults to 0.001
+        :type step_time: float, optional
+        '''        
         deltaV = newV - self.Volt
         numSteps = max(2, int(np.abs(np.ceil(deltaV/step_size))))
         vsteps = np.linspace(self.Volt, newV, numSteps)

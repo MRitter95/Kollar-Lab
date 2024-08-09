@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>VNA &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'kollar_instruments/kollar_instruments.VNA.VNA';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="settingTools" href="kollar_instruments.settingTools.html" />
+    <link rel="prev" title="VNA" href="kollar_instruments.VNA.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MRitter95/Kollar-Lab" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MRitter95/Kollar-Lab" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="kollar_instruments.html">kollar_instruments</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.Acqiris.html">Acqiris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.DC205.html">DC205</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.Generator.html">Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.HDAWG.html">HDAWG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.HS9000B.html">HS9000B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.HS9000B_auto.html">HS9000B_auto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.Keithley2400.html">Keithley2400</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.SCPIinst.html">SCPIinst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.SGS.html">SGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.SGShelper.html">SGShelper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.SGSoffset.html">SGSoffset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.SMB100A.html">SMB100A</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="kollar_instruments.VNA.html">VNA</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">VNA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kollar_instruments.VNA.VNA.__init__"><code class="docutils literal notranslate"><span class="pre">VNA.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA"><code class="docutils literal notranslate"><span class="pre">VNA</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kollar_instruments.settingTools.html">settingTools</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/kollar_instruments/kollar_instruments.VNA.VNA.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="kollar_instruments.html" class="nav-link">kollar_instruments</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="kollar_instruments.VNA.html" class="nav-link">VNA</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">VNA</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="vna">
+<h1>VNA<a class="headerlink" href="#vna" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VNA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kollar_instruments/VNA.html#VNA"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Class representing RS VNA instrument
+Attributes:</p>
+<blockquote>
+<div><p>output (str or int): output state of instrument (ON/1 or OFF/0)
+power (str or float): output power of instrument (‘10 dBm’ or 10 work)
+error: read only value, returns error code and string</p>
+</div></blockquote>
+<dl>
+<dt>Methods:</dt><dd><p>__init__(address) - initialize connection and resets the instrument</p>
+<p>spec_default_settings(): return default settings for a spec measurement</p>
+<p>meas_spec(settings): perform spec measurement using settings dict</p>
+<p>trans_default_settings(): return default settings for transmission meas</p>
+<p>meas_trans(settings): perform transmission measurement using settings</p>
+<p>wait_complete(channel, averages): block execution until acquisition is done</p>
+<p>autoscale(window, ref_trace): autoscale window using ref_trace as reference</p>
+<p>configure_averages(channel, averages): setup VNA to meas and average x times</p>
+<p>configure_frequency(channel, start, stop, sweep_points): configure freq axis</p>
+<dl class="simple">
+<dt>configure_trace(channel, name, meastype, measformat): set up trace on a</dt><dd><p>channel to measure ‘meastype’ (e.g.’S21’) in ‘measformat’ (e.g.’MLOG’)</p>
+</dd>
+</dl>
+<p>get_channel_traces(channel): get a list of traces on the channel</p>
+<p>get_channel_axis(channel): return numpy array of the x-axis of channel</p>
+<p>get_trace(channel, name): return numpy array of trace data on channel</p>
+<p>clear_all_traces(): remove all traces defined on all channels</p>
+<p>clear_channel_traces(channel): remove traces defined in channel</p>
+<p>display_trace(trace, tracenum, window): display trace in window with number tracenum</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="kollar_instruments.VNA.VNA.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kollar_instruments/VNA.html#VNA.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kollar_instruments.VNA.VNA.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Initialize connection with instrument, reset it and clear all errors</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#kollar_instruments.VNA.VNA.__init__" title="kollar_instruments.VNA.VNA.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(address[, reset])</p></td>
+<td><p>Initialize connection with instrument, reset it and clear all errors</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.autoscale" title="kollar_instruments.VNA.VNA.autoscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">autoscale</span></code></a>([window, ref_trace])</p></td>
+<td><p>Autoscale window to match ref_trace range</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.avg_time" title="kollar_instruments.VNA.VNA.avg_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avg_time</span></code></a>(channel, time)</p></td>
+<td><p>Set the instrument to measure for 'time' seconds. The instrument will autoscale after 20% of the time has elapsed so that the traces can be examined on the VNA Arguments:     channel (int): channel being used for the measurement     time (int): time in seconds that the instrument will measure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.clear_all_traces" title="kollar_instruments.VNA.VNA.clear_all_traces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_all_traces</span></code></a>()</p></td>
+<td><p>Clear all traces defined on instrument</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.clear_averages" title="kollar_instruments.VNA.VNA.clear_averages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_averages</span></code></a>(channel)</p></td>
+<td><p>Clear averages on channel</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.clear_channel_traces" title="kollar_instruments.VNA.VNA.clear_channel_traces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_channel_traces</span></code></a>(channel)</p></td>
+<td><p>Clear all traces defined in channel</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</p></td>
+<td><p>Closes the connection to the instrument (using the pyvisa.inst close method)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_averages" title="kollar_instruments.VNA.VNA.configure_averages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configure_averages</span></code></a>(channel, averages[, mode])</p></td>
+<td><p>Set up channel to measure averages traces</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_frequency" title="kollar_instruments.VNA.VNA.configure_frequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configure_frequency</span></code></a>(channel[, start, stop, ...])</p></td>
+<td><p>Set up frequency axis Arguments:     channel(int): channel number, channel must have been created beforehand     if specified:         start(float/str): frequency of sweep start ('10 MHz' or 10e6)         stop(float/str): frequency of sweep end ('100 MHz' or 100e6)     if specified:         center(float/str): center of frequency sweep         span(float/str): span of frequency sweep     sweep_points(int): number of points in sweep</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_measurement" title="kollar_instruments.VNA.VNA.configure_measurement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configure_measurement</span></code></a>(channel, measurement)</p></td>
+<td><p>Set up a basic 'Sij' measurement configuring traces for magnitude and  phase. If the traces already exist, the code will ignore the clearing commands and return without doing anything Arguments:     channel (int): channel number for measurement     measurement (string): measurement to be performed (e.g 'S21')     window (int): window to display the traces in (default 1).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_trace" title="kollar_instruments.VNA.VNA.configure_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configure_trace</span></code></a>(channel, name, meastype, ...)</p></td>
+<td><p>Configure trace to measure a specific parameter in a given format Argument:     channel(int): channel number     name(str): name to assign to trace     meastype(str): parameter being measured (e.g. 'S21')     measformat(str): format to measure parameter (e.g. 'MLOG' for dB scale).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.display_trace" title="kollar_instruments.VNA.VNA.display_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_trace</span></code></a>(trace, tracenum, window)</p></td>
+<td><p>Display trace in window assigning it the tracenum number Arguments:     trace (str): name of trace to be displayed     tracenum (int): number to assign to trace in window     window (int): window to display trace in (will create a new one if needed)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_channel_axis" title="kollar_instruments.VNA.VNA.get_channel_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_axis</span></code></a>(channel)</p></td>
+<td><p>Return numpy array of channel x-axis</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_channel_data" title="kollar_instruments.VNA.VNA.get_channel_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_data</span></code></a>(channel)</p></td>
+<td><p>Return dictionary with all the data from a channel</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_channel_traces" title="kollar_instruments.VNA.VNA.get_channel_traces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_traces</span></code></a>(channel)</p></td>
+<td><p>Return list of traces defined in channel</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_trace" title="kollar_instruments.VNA.VNA.get_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_trace</span></code></a>(channel, name)</p></td>
+<td><p>Return measurement data for trace with name 'name' Arguments:     channel(int): channel number     name(str): trace name, same as name given at trace creation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">meas_lines</span></code>(freqs, spans, settings)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">power_sweep</span></code>(settings, powers)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.reset" title="kollar_instruments.VNA.VNA.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</p></td>
+<td><p>Calls the standard SCPI reset and clear commands ('<a href="#id1"><span class="problematic" id="id2">*</span></a>RST' and '<a href="#id3"><span class="problematic" id="id4">*</span></a>CLS'). This function can be overwritten if the instrument does not follow the standard. .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.reverse_spec_meas" title="kollar_instruments.VNA.VNA.reverse_spec_meas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reverse_spec_meas</span></code></a>(settings)</p></td>
+<td><p>Perform reverse spec measurement using settings dict. Measurement consists of:     -setting up a cavity port (fixed power, fixed freq), CAVport     -setting up a probe port (swept power, fixed freq), RFport Currently just plots data on VNA.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.spec_default_settings" title="kollar_instruments.VNA.VNA.spec_default_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spec_default_settings</span></code></a>()</p></td>
+<td><p>Return default settings for spec measurement</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.spec_meas" title="kollar_instruments.VNA.VNA.spec_meas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spec_meas</span></code></a>(settings)</p></td>
+<td><p>Perform spec measurement using settings dict. Measurement consists of:     -setting up an cavity port (fixed frequency/power), CAVport     -setting up a probe port (swept freq), RFport     -configuring the measurement port (Mport) to measure         S(Mport-CAVport) as function of RFfreq Currently just plots data on VNA.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.trans_default_settings" title="kollar_instruments.VNA.VNA.trans_default_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trans_default_settings</span></code></a>()</p></td>
+<td><p>Return default settings for trans measurement</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.trans_meas" title="kollar_instruments.VNA.VNA.trans_meas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trans_meas</span></code></a>(settings)</p></td>
+<td><p>Perform transmission measurement between user specified ports Uses settings dictionary to configure instrument Returns:     mag: array containing magnitude info for measurement     phase: array containing phase info     freqs: x axis for channel (frequency here)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.trans_meas_S21_real_imag" title="kollar_instruments.VNA.VNA.trans_meas_S21_real_imag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trans_meas_S21_real_imag</span></code></a>(settings)</p></td>
+<td><p>Perform transmission measurement between user specified ports Uses settings dictionary to configure instrument Returns:     S21_real: array containing real part of S21     S21_imag: array containing imaginary part of S21     freqs: x axis for channel (frequency here)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.wait_complete" title="kollar_instruments.VNA.VNA.wait_complete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_complete</span></code></a>(channel, averages)</p></td>
+<td><p>Block execution until instrument has completed measurement Will estimate the sweep time and update the user periodically on progress Arguments:     channel (int): channel number     averages (int): number of traces the instrument is set to average</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ref</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commandlist</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">core</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">errcmds</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">error</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">settings</span></code></p></td>
+<td><p>Collect all the settings inside the module and loops through all other modules to accumulate their settings in subdictionnaries.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="kollar_instruments.VNA.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">VNA</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="kollar_instruments.settingTools.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">settingTools</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kollar_instruments.VNA.VNA.__init__"><code class="docutils literal notranslate"><span class="pre">VNA.__init__()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/kollar_instruments/kollar_instruments.VNA.VNA.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

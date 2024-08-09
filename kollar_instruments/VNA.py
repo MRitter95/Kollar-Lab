@@ -9,32 +9,48 @@ import numpy
 
 from .SCPIinst import SCPIinst
 
-class VNA(SCPIinst):
+class VNA(SCPIinst):    
     '''
     Class representing RS VNA instrument
     Attributes:
         output (str or int): output state of instrument (ON/1 or OFF/0)
         power (str or float): output power of instrument ('10 dBm' or 10 work)
         error: read only value, returns error code and string
+        
     Methods:
-        __init__(address): initialize connection and resets the instrument
+        __init__(address) - initialize connection and resets the instrument
+        
         spec_default_settings(): return default settings for a spec measurement
+        
         meas_spec(settings): perform spec measurement using settings dict
+        
         trans_default_settings(): return default settings for transmission meas
+        
         meas_trans(settings): perform transmission measurement using settings
+        
         wait_complete(channel, averages): block execution until acquisition is done
+        
         autoscale(window, ref_trace): autoscale window using ref_trace as reference
+        
         configure_averages(channel, averages): setup VNA to meas and average x times
+        
         configure_frequency(channel, start, stop, sweep_points): configure freq axis
+        
         configure_trace(channel, name, meastype, measformat): set up trace on a
             channel to measure 'meastype' (e.g.'S21') in 'measformat' (e.g.'MLOG')
+        
         get_channel_traces(channel): get a list of traces on the channel
+        
         get_channel_axis(channel): return numpy array of the x-axis of channel
+        
         get_trace(channel, name): return numpy array of trace data on channel
+        
         clear_all_traces(): remove all traces defined on all channels
+        
         clear_channel_traces(channel): remove traces defined in channel
-        display_trace(trace, tracenum, window): display trace in window with number
-            tracenum
+        
+        display_trace(trace, tracenum, window): display trace in window with number tracenum
+    
     '''
     errcmds           = {}
     errcmds['error']  = 'SYSTem:ERRor?'

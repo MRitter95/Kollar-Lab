@@ -11,9 +11,11 @@ class HS9000B():
     '''
     Holzworth class, currently hard coded to 2 channels.
     Attributes:
-        settings: property that returns the settings of the submodules (channels and reference)
-        ch1, ch2: channel objects with frequency, phase, power, output control
-        ref: reference objet that controls the reference clock source (INT/EXT) and frequency (10/100MHz)
+    
+    settings: property that returns the settings of the submodules (channels and reference)
+    ch1, ch2: channel objects with frequency, phase, power, output control
+    ref: reference objet that controls the reference clock source (INT/EXT) and frequency (10/100MHz)
+    
     '''
     def __init__(self, address):
         '''
@@ -119,14 +121,17 @@ class channel(object):
     channel.freq = '5GHz' sets the instrument frequency to 5 GHz)
     All interactions with the instrument happen as queries because that's just how it is
     not sure why.
+    
     Attributes:
-        ID: channel number
-        inst: pyvisa handle
-        props: dictionary of commands that can be set/ read from the instrument
+        
+    ID: channel number
+    inst: pyvisa handle
+    props: dictionary of commands that can be set/ read from the instrument
         
         
     9-6-21 Going in to force the holzworth channel to have the same syntax (as much as possible)
     as the SGS for compatibility. Auto behavior is too persnickety.
+    
     '''
     def __init__(self, inst, number):
         

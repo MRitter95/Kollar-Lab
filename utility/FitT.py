@@ -8,15 +8,17 @@ from scipy.fftpack import rfft, rfftfreq
 def T1_model(x, tau, amp, offset):
     ''' 
     Returns the amplitude value of a T1 qubit measurement at a given time
-    ##################
+
     INPUTS:
-    x (float or array of floats): time value
-    tau (float) = T1
-    amp (float) = amplitude
-    offset (float) = the value to which the state decays
-    ##################
-    OUTPUTS: 
-    float, Amplitude value at specified tau
+    ########
+        x (float or array of floats): time value
+        tau (float) = T1
+        amp (float) = amplitude
+        offset (float) = the value to which the state decays
+    
+    OUTPUTS:
+    ######### 
+        float, Amplitude value at specified tau
     '''
     
     return amp*np.exp(- (x)/tau) + offset
@@ -26,16 +28,19 @@ def T1_model(x, tau, amp, offset):
 def noisy_T1(x, tau, amp, offset, noise):
     '''
     Returns a noisy amplitude value of a T1 qubit measurement at a given time
-    ##################
+    
     INPUTS:
-    x (float or array of floats): time value
-    tau (float): T1
-    amp (float): amplitude
-    offset (float): the value to which the state decays
-    noise (float): Standard deviation of the Gaussian noise.
-    ###################
+    #########
+        x (float or array of floats): time value
+        tau (float): T1
+        amp (float): amplitude
+        offset (float): the value to which the state decays
+        noise (float): Standard deviation of the Gaussian noise.
+    
     OUTPUTS: 
-    float, Noisy amplitude value at specified tau
+    ########
+        float, Noisy amplitude value at specified tau
+    
     '''
     
     genData = T1_model(x, tau, amp, offset)
@@ -47,13 +52,16 @@ def noisy_T1(x, tau, amp, offset, noise):
 def fit_T1(taus, amps):
     '''
     Automatically fits the parameters of a T1 qubit decay to given data.
-    ###################
+
     INPUTS:
-    taus (float array): set of time values
-    amps (float array): set of amplitude values 
-    ###################
+    ########
+
+        taus (float array): set of time values
+        amps (float array): set of amplitude values 
+    
     OUTPUT:
-    Dictionary containing fitted parameters and analytics
+    ########
+        Dictionary containing fitted parameters and analytics
     '''
     
     ts = np.linspace(min(taus), max(taus), 10*len(taus))
@@ -98,17 +106,20 @@ def T2_model(x, tau, amp, offset, freq, phi):
     
     '''
     Returns an amplitude value of a T2 qubit measurement at a given time
-    ##################
+    
     INPUTS:
-    x (float or array of floats): time value
-    tau (float): T2 value
-    amp (float): amplitude
-    offset (float): The value to which the state decays
-    freq (float): The frequency difference Delta
-    phi (float): The T2 phase
-    ###################
+    ##########
+        x (float or array of floats): time value
+        tau (float): T2 value
+        amp (float): amplitude
+        offset (float): The value to which the state decays
+        freq (float): The frequency difference Delta
+        phi (float): The T2 phase
+    
     OUTPUTS: 
-    float, amplitude value at specified tau
+    #########
+        float, amplitude value at specified tau
+    
     '''
     
     pi = np.pi
@@ -118,18 +129,21 @@ def T2_model(x, tau, amp, offset, freq, phi):
 def noisy_T2(x, tau, amp, offset, freq, phi, noise):
     '''
     Returns a noisy amplitude value of a T2 qubit measurement at a given time
-    ##################
+    
     INPUTS:
-    x (float or array of floats): time value
-    tau (float): T2 value
-    amp (float): amplitude
-    offset (float): The value to which the state decays
-    freq (float): The frequency difference Delta
-    phi (float): The T2 phase
-    noise (float): Standard deviation of the Gaussian noise.
-    ###################
+    #########
+        x (float or array of floats): time value
+        tau (float): T2 value
+        amp (float): amplitude
+        offset (float): The value to which the state decays
+        freq (float): The frequency difference Delta
+        phi (float): The T2 phase
+        noise (float): Standard deviation of the Gaussian noise.
+    
     OUTPUTS: 
-    float, noisy amplitude value at specified tau
+    #########
+        float, noisy amplitude value at specified tau
+    
     '''
     
     genData = T2_model(x, tau, amp, offset, freq, phi)
@@ -141,13 +155,16 @@ def fit_T2(taus, amps, T2_guess=None):
     
     '''
     Automatically fits the parameters of a T2 qubit decay to given data.
-    ###################
+    
     INPUTS:
-    taus (float array): set of time values
-    amps (float array): set of amplitude values 
-    ###################
+    ##########
+        taus (float array): set of time values
+        amps (float array): set of amplitude values 
+    
     OUTPUT:
-    Dictionary containing fitted parameters and analytics
+    #########
+        Dictionary containing fitted parameters and analytics
+    
     '''
     
     ts = np.linspace(min(taus), max(taus), 10*len(taus))

@@ -6,9 +6,10 @@ Created on Wed May 26 10:38:41 2021
 """
 
 from time import sleep, time
+import matplotlib as plt
 
-#from kollar_instruments.VNA import VNA
-#vna = VNA('TCPIP0::192.168.1.7::inst0::INSTR', reset = False)
+from kollar_instruments.VNA import VNA
+vna = VNA('TCPIP0::192.168.1.7::inst0::INSTR', reset = False)
 
 vna.configure_frequency(1, start=3.5e+9, stop=5e+9) 
 vna.inst.write('SOUR1:FREQ1:CONV:ARB:IFR 1, 1, 0, SWEep')

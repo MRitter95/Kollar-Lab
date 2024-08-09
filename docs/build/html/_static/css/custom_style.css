@@ -1,0 +1,16 @@
+.bd-main .bd-content .bd-article-container {
+    max-width: 100%;
+}
+
+.bd-page-width {
+    max-width: 100%;
+}
+
+html[data-theme = "light"] {
+    --pst-color-secondary: #8babf1;
+    --pst-color-target: #dee7cf;
+}
+
+html[data-theme = "light"] {
+    --pst-color-table-row-hover-bg: #8babf1;
+}

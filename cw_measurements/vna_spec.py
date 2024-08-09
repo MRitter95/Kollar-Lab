@@ -14,6 +14,12 @@ import userfuncs
 import utility.plotting_tools as plots
 
 def get_default_settings():
+    '''
+    get_default_settings _summary_
+
+    :return: _description_
+    :rtype: _type_
+    '''    
     settings = {}
     
     #Save location
@@ -49,6 +55,14 @@ def get_default_settings():
     return settings
 
 def vna_spec(instruments, settings):
+    '''
+    vna_spec _summary_
+
+    :param instruments: _description_
+    :type instruments: _type_
+    :param settings: _description_
+    :type settings: _type_
+    '''    
     #Instruments used
     vna = instruments['VNA']
 

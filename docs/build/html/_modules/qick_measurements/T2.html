@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qick_measurements.T2 &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qick_measurements/T2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qick_measurements.T2</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qick_measurements.T2</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Wed Feb  1 10:16:54 2023</span>
+
+<span class="sd">@author: kollarlab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">qick.averager_program</span> <span class="kn">import</span> <span class="n">AveragerProgram</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">userfuncs</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">utility.userfits</span> <span class="kn">import</span> <span class="n">fit_T2</span>
+<span class="kn">from</span> <span class="nn">utility.plotting_tools</span> <span class="kn">import</span> <span class="n">general_colormap_subplot</span>
+<span class="kn">from</span> <span class="nn">utility.measurement_helpers</span> <span class="kn">import</span> <span class="n">estimate_time</span>
+
+      
+<div class="viewcode-block" id="T2_sequence">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.T2.T2_sequence.html#qick_measurements.T2.T2_sequence">[docs]</a>
+<span class="k">class</span> <span class="nc">T2_sequence</span><span class="p">(</span><span class="n">AveragerProgram</span><span class="p">):</span>
+<div class="viewcode-block" id="T2_sequence.initialize">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.T2.html#qick_measurements.T2.T2_sequence.initialize">[docs]</a>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cfg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span>   
+        <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">]</span>
+        <span class="n">qub_ch</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">]</span>
+
+        <span class="c1"># set the nyquist zone</span>
+        <span class="c1"># Implement an if statement here to catch? </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_gen</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">],</span> <span class="n">nqz</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;nqz_c&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_gen</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">],</span> <span class="n">nqz</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;nqz_q&quot;</span><span class="p">])</span>
+        
+        <span class="c1"># configure the readout lengths and downconversion frequencies (ensuring it is an available DAC frequency)</span>
+        
+        <span class="n">readout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;readout_length&quot;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">declare_readout</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="n">readout</span><span class="p">,</span>
+                                 <span class="n">freq</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_freq&quot;</span><span class="p">],</span> <span class="n">gen_ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">])</span>
+
+        <span class="c1"># convert frequency to DAC freqency (ensuring it is an available ADC frequency)</span>
+        <span class="n">freq_c</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq2reg</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_freq&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">ro_ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">phase_c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deg2reg</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_phase&quot;</span><span class="p">],</span> <span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">)</span>
+        <span class="n">gain_c</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_gain&quot;</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">freq_c</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="n">phase_c</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="n">gain_c</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;const&quot;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_window&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">))</span>
+        
+        <span class="n">freq_q</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq2reg</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_freq&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">qub_ch</span><span class="p">)</span>
+        <span class="n">phase_q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deg2reg</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_phase&quot;</span><span class="p">],</span> <span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">)</span>
+        <span class="n">gain_q</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_gain&quot;</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">qub_ch</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="n">phase_q</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">freq_q</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="n">gain_q</span><span class="p">)</span>
+        
+        <span class="n">sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_sigma&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">qub_ch</span><span class="p">)</span>
+        <span class="n">num_sigma</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;num_sigma&quot;</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_gauss</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">qub_ch</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ex&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">num_sigma</span><span class="p">),</span><span class="n">maxv</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">soccfg</span><span class="p">[</span><span class="s1">&#39;gens&#39;</span><span class="p">][</span><span class="n">qub_ch</span><span class="p">][</span><span class="s1">&#39;maxv&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">qub_ch</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;arb&quot;</span><span class="p">,</span> <span class="n">waveform</span><span class="o">=</span><span class="s2">&quot;ex&quot;</span><span class="p">)</span>
+
+        
+        <span class="c1"># give processor some time to configure pulses, I believe it sets the offset time 200 cycles into the future?</span>
+        <span class="c1"># Try varying this and seeing if it moves. Also try putting a synci after the trigger in the body</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">synci</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>   </div>
+
+    
+<div class="viewcode-block" id="T2_sequence.body">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.T2.html#qick_measurements.T2.T2_sequence.body">[docs]</a>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#The body sets the pulse sequence, it runs through it a number of times specified by &quot;reps&quot; and takes averages</span>
+        <span class="c1">#specified by &quot;soft_averages.&quot; Both are required if you wish to acquire_decimated, only &quot;reps&quot; is otherwise.</span>
+        <span class="n">sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_sigma&quot;</span><span class="p">])</span>
+        <span class="n">num_sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;num_sigma&quot;</span><span class="p">]</span>
+        
+        <span class="n">offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;adc_trig_offset&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">])</span>
+        <span class="n">meas_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_time&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">])</span>
+        <span class="n">ex_time_fixed</span> <span class="o">=</span> <span class="n">meas_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;qub_delay_fixed&#39;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_sigma</span><span class="o">*</span><span class="n">sigma</span><span class="p">)</span>
+        <span class="n">ex_time_t2</span> <span class="o">=</span> <span class="n">ex_time_fixed</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;qub_delay_t2&#39;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_sigma</span><span class="o">*</span><span class="n">sigma</span><span class="p">)</span>
+        <span class="c1">#Sets off the ADC</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">adcs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ro_chs</span><span class="p">,</span>
+                    <span class="n">pins</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">adc_trig_offset</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span>
+        
+        <span class="c1">#Sends measurement pulse</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">],</span><span class="n">t</span><span class="o">=</span><span class="n">ex_time_t2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">],</span><span class="n">t</span><span class="o">=</span><span class="n">ex_time_fixed</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">],</span><span class="n">t</span><span class="o">=</span><span class="n">meas_time</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_all</span><span class="p">()</span> <span class="c1">#Tells TProc to wait until pulses are complete before sending out the next command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;relax_delay&quot;</span><span class="p">]))</span> <span class="c1">#Syncs to an offset time after the final pulse is sent</span></div>
+</div>
+
+
+<div class="viewcode-block" id="CavitySweep">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.T2.CavitySweep.html#qick_measurements.T2.CavitySweep">[docs]</a>
+<span class="k">class</span> <span class="nc">CavitySweep</span><span class="p">(</span><span class="n">AveragerProgram</span><span class="p">):</span>
+<div class="viewcode-block" id="CavitySweep.initialize">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.T2.html#qick_measurements.T2.CavitySweep.initialize">[docs]</a>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cfg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span>   
+        <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">]</span>
+
+        <span class="c1"># set the nyquist zone</span>
+        <span class="c1"># Implement an if statement here to catch? </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_gen</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">],</span> <span class="n">nqz</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;nqz_c&quot;</span><span class="p">])</span>
+        
+        <span class="c1"># configure the readout lengths and downconversion frequencies (ensuring it is an available DAC frequency)</span>
+        
+        <span class="n">readout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;readout_length&quot;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">declare_readout</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="n">readout</span><span class="p">,</span>
+                                 <span class="n">freq</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_freq&quot;</span><span class="p">],</span> <span class="n">gen_ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">])</span>
+
+        <span class="c1"># convert frequency to DAC freqency (ensuring it is an available ADC frequency)</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq2reg</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_freq&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">ro_ch</span><span class="o">=</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">phase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deg2reg</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_phase&quot;</span><span class="p">],</span> <span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">)</span>
+        <span class="n">gain</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_gain&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="n">phase</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="n">gain</span><span class="p">)</span>
+
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;const&quot;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_window&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">))</span>
+
+        
+        <span class="c1"># give processor some time to configure pulses, I believe it sets the offset time 200 cycles into the future?</span>
+        <span class="c1"># Try varying this and seeing if it moves. Also try putting a synci after the trigger in the body</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">synci</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>   </div>
+
+    
+<div class="viewcode-block" id="CavitySweep.body">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.T2.html#qick_measurements.T2.CavitySweep.body">[docs]</a>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#The body sets the pulse sequence, it runs through it a number of times specified by &quot;reps&quot; and takes averages</span>
+        <span class="c1">#specified by &quot;soft_averages.&quot; Both are required if you wish to acquire_decimated, only &quot;reps&quot; is otherwise.</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;adc_trig_offset&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">])</span>
+        <span class="n">meas_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_time&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">])</span>
+        <span class="c1">#Sets off the ADC</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">adcs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ro_chs</span><span class="p">,</span>
+                    <span class="n">pins</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">adc_trig_offset</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span>
+        
+        <span class="c1">#Sends measurement pulse</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">],</span><span class="n">t</span><span class="o">=</span><span class="n">meas_time</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_all</span><span class="p">()</span> <span class="c1">#Tells TProc to wait until pulses are complete before sending out the next command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;relax_delay&quot;</span><span class="p">]))</span></div>
+</div>
+
+
+<span class="k">def</span> <span class="nf">get_T2_settings</span><span class="p">():</span>
+    <span class="n">settings</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;scanname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;T2_meas&#39;</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;meas_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Tmeas&#39;</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;cav_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e9</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;meas_gain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;qub_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">4e9</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;qub_gain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+    
+    <span class="c1">#Sweep parameters    </span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Tau_min&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="mf">200e-9</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Tau_max&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="mf">30e-6</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Tau_points&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;Linear&#39;</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;T2_guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10e-6</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;detuning&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2e6</span>
+    <span class="c1">#Card settings</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;reps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;soft_avgs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">5e3</span>
+    
+    <span class="k">return</span> <span class="n">settings</span>
+
+<span class="k">def</span> <span class="nf">meas_T2</span><span class="p">(</span><span class="n">soc</span><span class="p">,</span><span class="n">soccfg</span><span class="p">,</span><span class="n">instruments</span><span class="p">,</span><span class="n">settings</span><span class="p">):</span>
+    <span class="n">exp_globals</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">]</span>
+    <span class="n">exp_settings</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_settings&#39;</span><span class="p">]</span> 
+    <span class="n">m_pulse</span>      <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;measurement_pulse&#39;</span><span class="p">]</span>
+    <span class="n">q_pulse</span>      <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;qubit_pulse&#39;</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO&#39;</span><span class="p">]:</span>
+        <span class="n">logen</span> <span class="o">=</span> <span class="n">instruments</span><span class="p">[</span><span class="s1">&#39;LO&#39;</span><span class="p">]</span>
+        
+        <span class="n">logen</span><span class="o">.</span><span class="n">freq</span>   <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO_freq&#39;</span><span class="p">]</span>
+        <span class="n">logen</span><span class="o">.</span><span class="n">power</span>  <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO_power&#39;</span><span class="p">]</span>
+        <span class="n">logen</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: No LO has been initialized.&quot;</span><span class="p">)</span>
+
+    <span class="n">stamp</span>    <span class="o">=</span> <span class="n">userfuncs</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
+    <span class="n">saveDir</span>  <span class="o">=</span> <span class="n">userfuncs</span><span class="o">.</span><span class="n">saveDir</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;scanname&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">stamp</span>
+
+    <span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;cav_channel&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;cav_channel&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_channel&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;qub_channel&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;ro_channels&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;ro_channels&#39;</span><span class="p">],</span>
+
+        <span class="s1">&#39;nqz_c&#39;</span>           <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;cav_phase&#39;</span>       <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;cav_phase&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;meas_window&#39;</span>     <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;meas_time&#39;</span>       <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;meas_gain&#39;</span>       <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;meas_gain&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;cav_freq&#39;</span>        <span class="p">:</span> <span class="p">(</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;cav_freq&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO_freq&#39;</span><span class="p">])</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span>
+        
+        <span class="s1">&#39;nqz_q&#39;</span>           <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;qub_phase&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;qub_phase&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_freq&#39;</span>        <span class="p">:</span> <span class="p">(</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;qub_freq&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;detuning&#39;</span><span class="p">])</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span>
+        <span class="s1">&#39;qub_gain&#39;</span>        <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;qub_gain&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_sigma&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_delay_fixed&#39;</span> <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_delay_t2&#39;</span>    <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">#Placeholder</span>
+        <span class="s1">&#39;num_sigma&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">],</span>
+        
+        <span class="s1">&#39;readout_length&#39;</span>  <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;post_buffer&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;adc_trig_offset&#39;</span> <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;emp_delay&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">],</span>
+
+
+        <span class="s1">&#39;relax_delay&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;relax_delay&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;reps&#39;</span>            <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;reps&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;soft_avgs&#39;</span>       <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;soft_avgs&#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+
+    <span class="n">prog</span> <span class="o">=</span> <span class="n">T2_sequence</span><span class="p">(</span><span class="n">soccfg</span><span class="p">,</span><span class="n">config</span><span class="p">)</span>
+    <span class="n">meas_start</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">m_pulse</span><span class="p">[</span><span class="s2">&quot;init_buffer&quot;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">meas_end</span> <span class="o">=</span> <span class="n">meas_start</span><span class="o">+</span><span class="n">prog</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">m_pulse</span><span class="p">[</span><span class="s2">&quot;meas_window&quot;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">total_samples</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;readout_length&#39;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="c1">## Set up array of taus and randomize it</span>
+    <span class="k">if</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Log&#39;</span><span class="p">:</span>
+        <span class="n">tau_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;Tau_min&#39;</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;Tau_max&#39;</span><span class="p">]),</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;Tau_points&#39;</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+         <span class="n">tau_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;Tau_min&#39;</span><span class="p">],</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;Tau_max&#39;</span><span class="p">],</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;Tau_points&#39;</span><span class="p">])</span>
+    <span class="n">taus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">tau_list</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    
+    <span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">taus</span><span class="p">)))</span>
+<span class="c1">#    np.random.shuffle(indices)</span>
+    
+    <span class="n">amp_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">taus</span><span class="p">))</span>
+    <span class="n">amps</span>    <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">taus</span><span class="p">),</span><span class="n">total_samples</span><span class="p">))</span>
+    
+    <span class="n">ang_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">taus</span><span class="p">))</span>
+    <span class="n">angles</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">taus</span><span class="p">),</span><span class="n">total_samples</span><span class="p">))</span>
+    
+    
+    
+    <span class="n">tstart</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">first_it</span> <span class="o">=</span> <span class="kc">True</span>
+    
+    <span class="k">if</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;subtract_background&#39;</span><span class="p">]:</span>
+        <span class="c1">#Acquire background trace</span>
+<span class="c1">#            qubitgen.freq=3.8e9</span>
+<span class="c1">#            time.sleep(0.1)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting Background Trace&#39;</span><span class="p">)</span>
+        <span class="n">bprog</span> <span class="o">=</span> <span class="n">CavitySweep</span><span class="p">(</span><span class="n">soccfg</span><span class="p">,</span><span class="n">config</span><span class="p">)</span>
+        <span class="n">holder</span> <span class="o">=</span> <span class="n">bprog</span><span class="o">.</span><span class="n">acquire_decimated</span><span class="p">(</span><span class="n">soc</span><span class="p">,</span> <span class="n">load_pulses</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Background Trace Complete&#39;</span><span class="p">)</span>
+        <span class="n">I_full_b</span> <span class="o">=</span> <span class="n">holder</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">Q_full_b</span> <span class="o">=</span> <span class="n">holder</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">I_window_b</span> <span class="o">=</span> <span class="n">I_full_b</span><span class="p">[</span><span class="n">meas_start</span><span class="p">:</span><span class="n">meas_end</span><span class="p">]</span>
+        <span class="n">Q_window_b</span> <span class="o">=</span> <span class="n">Q_full_b</span><span class="p">[</span><span class="n">meas_start</span><span class="p">:</span><span class="n">meas_end</span><span class="p">]</span>     
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">I_window_b</span><span class="p">,</span> <span class="n">Q_window_b</span><span class="p">,</span> <span class="n">I_full_b</span><span class="p">,</span> <span class="n">Q_full_b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+    
+    <span class="n">I_back</span><span class="p">,</span> <span class="n">Q_back</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I_window_b</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q_window_b</span><span class="p">)]</span> <span class="c1">#&lt;I&gt;, &lt;Q&gt; for background trace</span>
+    
+    <span class="k">for</span> <span class="n">tind</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+        
+        <span class="n">tau</span> <span class="o">=</span> <span class="n">taus</span><span class="p">[</span><span class="n">tind</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tau: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tau</span><span class="p">))</span>
+        
+        <span class="n">config</span><span class="p">[</span><span class="s1">&#39;qub_delay_t2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tau</span><span class="o">*</span><span class="mf">1e6</span>
+        <span class="n">prog</span> <span class="o">=</span> <span class="n">T2_sequence</span><span class="p">(</span><span class="n">soccfg</span><span class="p">,</span><span class="n">config</span><span class="p">)</span>
+        <span class="n">holder</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">acquire_decimated</span><span class="p">(</span><span class="n">soc</span><span class="p">,</span> <span class="n">load_pulses</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">I_full</span> <span class="o">=</span> <span class="n">holder</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">Q_full</span> <span class="o">=</span> <span class="n">holder</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">I_window</span> <span class="o">=</span> <span class="n">I_full</span><span class="p">[</span><span class="n">meas_start</span><span class="p">:</span><span class="n">meas_end</span><span class="p">]</span>
+        <span class="n">Q_window</span> <span class="o">=</span> <span class="n">Q_full</span><span class="p">[</span><span class="n">meas_start</span><span class="p">:</span><span class="n">meas_end</span><span class="p">]</span>
+        
+        <span class="c1">##No background subtraction here!!!!</span>
+        
+        <span class="n">I_sig</span><span class="p">,</span> <span class="n">Q_sig</span>   <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I_window</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q_window</span><span class="p">)]</span> <span class="c1">#&lt;I&gt;, &lt;Q&gt; for signal trace</span>
+              
+<span class="c1">#        I_final, Q_final   = [np.mean(I_window), np.mean(Q_window)] #&lt;I&gt;, &lt;Q&gt; for signal trace</span>
+        
+        <span class="n">I_final</span> <span class="o">=</span> <span class="n">I_sig</span><span class="o">-</span><span class="n">I_back</span> <span class="c1">#compute &lt;I_net&gt; in the data window</span>
+        <span class="n">Q_final</span> <span class="o">=</span> <span class="n">Q_sig</span><span class="o">-</span><span class="n">Q_back</span>
+        
+<span class="c1">#        amps[tind] = np.sqrt(I_full**2+Q_full**2)</span>
+<span class="c1">#        angles[tind] = np.arctan2(Q_full,I_full)*180/np.pi</span>
+<span class="c1">#        amp_int[tind] = np.sqrt(I_final**2+Q_final**2)</span>
+<span class="c1">#        ang_int[tind] = np.arctan2(Q_final, I_final)*180/np.pi</span>
+        
+        
+        <span class="n">amps</span><span class="p">[</span><span class="n">tind</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">I_full</span><span class="o">-</span><span class="n">I_full_b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">Q_full</span><span class="o">-</span><span class="n">Q_full_b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">angles</span><span class="p">[</span><span class="n">tind</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">((</span><span class="n">Q_full</span><span class="o">-</span><span class="n">Q_full_b</span><span class="p">),</span> <span class="p">(</span><span class="n">I_full</span><span class="o">-</span><span class="n">I_full_b</span><span class="p">))</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">amp_int</span><span class="p">[</span><span class="n">tind</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I_final</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Q_final</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">ang_int</span><span class="p">[</span><span class="n">tind</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">Q_final</span><span class="p">,</span> <span class="n">I_final</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        
+        <span class="k">if</span> <span class="n">first_it</span><span class="p">:</span>
+            <span class="n">tstop</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="n">estimate_time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span> <span class="n">tstop</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">taus</span><span class="p">))</span>
+            
+            <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">I_full</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">I_full</span><span class="p">))</span>
+
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">xaxis</span><span class="p">)):</span>
+                <span class="n">xaxis</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">cycles2us</span><span class="p">(</span><span class="n">xaxis</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                
+            <span class="n">first_it</span> <span class="o">=</span> <span class="kc">False</span>  
+            
+        <span class="c1">#_______________________________________#</span>
+    
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">taus</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">amp_int</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Live T2 data (no fit)&#39;</span><span class="p">)</span><span class="c1">#, {} pi pulses&#39;.format(exp_settings[&#39;pulse_count&#39;]))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tau (us)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">taus</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">ang_int</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Angle&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="o">+</span><span class="s1">&#39;_no_fit.png&#39;</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">150</span><span class="p">)</span>
+
+        <span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">taus</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">amps</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">,</span> <span class="s1">&#39;Tau (us)&#39;</span><span class="p">],</span> <span class="s1">&#39;Raw data</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="o">+</span><span class="s1">&#39;_fulldata.png&#39;</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">150</span><span class="p">)</span>
+        <span class="n">userfuncs</span><span class="o">.</span><span class="n">SaveFull</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;taus&#39;</span><span class="p">,</span><span class="s1">&#39;xaxis&#39;</span><span class="p">,</span> <span class="s1">&#39;amps&#39;</span><span class="p">,</span> <span class="s1">&#39;amp_int&#39;</span><span class="p">],</span> <span class="nb">locals</span><span class="p">(),</span> <span class="n">expsettings</span><span class="o">=</span><span class="n">settings</span><span class="p">,</span> <span class="n">instruments</span><span class="o">=</span><span class="n">instruments</span><span class="p">)</span>
+  
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t2</span><span class="o">-</span><span class="n">tstart</span><span class="p">))</span>
+    
+    <span class="n">T2_guess</span>     <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;T2_guess&#39;</span><span class="p">]</span>
+    <span class="n">amp_guess</span>    <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amp_int</span><span class="p">)</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">amp_int</span><span class="p">)</span>
+    <span class="n">offset_guess</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">amp_int</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:])</span>
+    <span class="n">freq_guess</span>   <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;detuning&#39;</span><span class="p">]</span> <span class="c1"># No detuning mode, always does this</span>
+    <span class="n">phi_guess</span>    <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="n">fit_guess</span> <span class="o">=</span> <span class="p">[</span><span class="n">T2_guess</span><span class="p">,</span> <span class="n">amp_guess</span><span class="p">,</span> <span class="n">offset_guess</span><span class="p">,</span> <span class="n">freq_guess</span><span class="p">,</span> <span class="n">phi_guess</span><span class="p">]</span>
+    <span class="n">T2</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">fit_xvals</span><span class="p">,</span> <span class="n">fit_yvals</span> <span class="o">=</span> <span class="n">fit_T2</span><span class="p">(</span><span class="n">taus</span><span class="p">,</span> <span class="n">amp_int</span><span class="p">,</span> <span class="n">fit_guess</span><span class="p">)</span>
+    <span class="n">fig3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">taus</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">amp_int</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fit_xvals</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">fit_yvals</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;T2:</span><span class="si">{}</span><span class="s1">us freq:</span><span class="si">{}</span><span class="s1">MHz. </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">T2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">freq</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>  <span class="n">filename</span><span class="p">))</span> <span class="c1"># {} pi pulses, exp_settings[&#39;pulse_count&#39;],</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">)</span>
+    <span class="n">fig3</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig3</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="o">+</span><span class="s1">&#39;_fit.png&#39;</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+    <span class="n">userfuncs</span><span class="o">.</span><span class="n">SaveFull</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;taus&#39;</span><span class="p">,</span><span class="s1">&#39;xaxis&#39;</span><span class="p">,</span> <span class="s1">&#39;amps&#39;</span><span class="p">,</span> <span class="s1">&#39;amp_int&#39;</span><span class="p">,</span> <span class="s1">&#39;tau&#39;</span><span class="p">,</span> <span class="s1">&#39;amp&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;freq&#39;</span><span class="p">,</span> <span class="s1">&#39;phi&#39;</span><span class="p">,</span> <span class="s1">&#39;fit_guess&#39;</span><span class="p">],</span>
+                         <span class="nb">locals</span><span class="p">(),</span> <span class="n">expsettings</span><span class="o">=</span><span class="n">settings</span><span class="p">,</span> <span class="n">instruments</span><span class="o">=</span><span class="n">instruments</span><span class="p">)</span>
+    
+    
+    <span class="k">if</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO&#39;</span><span class="p">]:</span>
+        <span class="n">logen</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">return</span> <span class="n">T2</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">taus</span><span class="p">,</span> <span class="n">amp_int</span>
+    
+
+
+   
+    
+
+        
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

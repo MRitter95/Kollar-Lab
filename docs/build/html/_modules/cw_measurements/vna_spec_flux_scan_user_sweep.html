@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cw_measurements.vna_spec_flux_scan_user_sweep &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/cw_measurements/vna_spec_flux_scan_user_sweep';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">cw_measureme...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for cw_measurements.vna_spec_flux_scan_user_sweep</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu Dec 17 12:02:58 2020</span>
+
+<span class="sd">@author: Kollarlab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">copy</span> 
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">utility.measurement_helpers</span> <span class="kn">import</span> <span class="n">estimate_time</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">userfuncs</span>
+<span class="kn">import</span> <span class="nn">utility.plotting_tools</span> <span class="k">as</span> <span class="nn">plots</span>
+
+<div class="viewcode-block" id="get_default_settings">
+<a class="viewcode-back" href="../../cw_measurements/cw_measurements.vna_spec_flux_scan_user_sweep.html#cw_measurements.vna_spec_flux_scan_user_sweep.get_default_settings">[docs]</a>
+<span class="k">def</span> <span class="nf">get_default_settings</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    get_default_settings _summary_</span>
+
+<span class="sd">    :return: _description_</span>
+<span class="sd">    :rtype: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">settings</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">autoscan_settings</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1">#Save location</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;scanname&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;flux_scan&#39;</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;meas_type&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s1">&#39;spec_flux_scan&#39;</span>
+    <span class="c1">#settings[&#39;project_dir&#39;] = r&#39;Z:\Data&#39;</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;q_volts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;c_volts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFport&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Mport&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVport&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;S21&#39;</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">6.5e9</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">9.5e9</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3001</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">55</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">15</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.2e3</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;high_power_spec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;S21&#39;</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">501</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">7.6e9</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">7.7e9</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;background_subtract&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">autoscan_settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;spec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">settings</span>
+    <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;autoscan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">autoscan_settings</span>
+    
+    <span class="k">return</span> <span class="n">fullsettings</span></div>
+
+
+<div class="viewcode-block" id="vna_spec_flux_scan_user_sweep">
+<a class="viewcode-back" href="../../cw_measurements/cw_measurements.vna_spec_flux_scan_user_sweep.html#cw_measurements.vna_spec_flux_scan_user_sweep.vna_spec_flux_scan_user_sweep">[docs]</a>
+<span class="k">def</span> <span class="nf">vna_spec_flux_scan_user_sweep</span><span class="p">(</span><span class="n">instruments</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    vna_spec_flux_scan_user_sweep _summary_</span>
+
+<span class="sd">    :param instruments: _description_</span>
+<span class="sd">    :type instruments: _type_</span>
+<span class="sd">    :param settings: _description_</span>
+<span class="sd">    :type settings: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="c1">##Instruments used</span>
+    <span class="n">vna</span> <span class="o">=</span> <span class="n">instruments</span><span class="p">[</span><span class="s1">&#39;VNA&#39;</span><span class="p">]</span>
+    <span class="n">FBL</span> <span class="o">=</span> <span class="n">instruments</span><span class="p">[</span><span class="s1">&#39;FBL&#39;</span><span class="p">]</span>
+<span class="c1">#    qubit_bias = instruments[&#39;qubit&#39;]</span>
+<span class="c1">#    coupler_bias = instruments[&#39;coupler&#39;]</span>
+
+    <span class="n">vna</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="n">exp_globals</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">]</span>
+    <span class="n">exp_settings</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_settings&#39;</span><span class="p">]</span>
+
+    <span class="n">spec_set</span> <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;spec&#39;</span><span class="p">]</span>
+    <span class="n">autoscan_set</span> <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;autoscan&#39;</span><span class="p">]</span>
+    
+    <span class="n">background_subtract</span> <span class="o">=</span> <span class="n">autoscan_set</span><span class="p">[</span><span class="s1">&#39;background_subtract&#39;</span><span class="p">]</span>
+
+    <span class="c1">##Data saving and naming</span>
+    <span class="c1">#saveDir = userfuncs.saveDir(settings[&#39;project_dir&#39;], settings[&#39;meas_type&#39;])</span>
+    <span class="n">stamp</span>    <span class="o">=</span> <span class="n">userfuncs</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
+    <span class="n">saveDir</span>  <span class="o">=</span> <span class="n">userfuncs</span><span class="o">.</span><span class="n">saveDir</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;scanname&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">stamp</span>
+
+    <span class="n">CAV_Attenuation</span>  <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;CAV_Attenuation&#39;</span><span class="p">]</span>
+    <span class="n">Qbit_Attenuation</span> <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;Qbit_Attenuation&#39;</span><span class="p">]</span>
+    
+    
+    <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">CAV_Attenuation</span>
+    <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>  <span class="o">+</span> <span class="n">Qbit_Attenuation</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;high_power_spec&#39;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using CAVpower from general settings, ignoring autoscan power&#39;</span><span class="p">)</span>
+        <span class="n">autoscan_set</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">autoscan_set</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">autoscan_set</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">CAV_Attenuation</span>
+    
+    <span class="c1">#set voltage sweep</span>
+    
+    <span class="n">start</span>  <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;start_flux&#39;</span><span class="p">]</span>
+    <span class="n">stop</span>   <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;stop_flux&#39;</span><span class="p">]</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;flux_points&#39;</span><span class="p">]</span>
+    <span class="n">flux_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
+    
+    <span class="n">swept_val</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;sweep_name&#39;</span><span class="p">]</span>
+    <span class="n">fixed_val</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;fixed_name&#39;</span><span class="p">]</span>
+    <span class="n">bias_flux</span> <span class="o">=</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;bias_point&#39;</span><span class="p">]</span>
+    
+<span class="c1">#    max_voltage = 10#3.5</span>
+<span class="c1">#    if np.max(voltages) &gt; max_voltage:</span>
+<span class="c1">#        raise ValueError(&#39;max voltage too large!&#39;)</span>
+<span class="c1">#    else:</span>
+<span class="c1">#        settings[&#39;voltages&#39;] = voltages</span>
+    
+    <span class="n">trans_mags</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">points</span><span class="p">,</span> <span class="n">autoscan_set</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]))</span>
+    <span class="n">trans_phases</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">points</span><span class="p">,</span> <span class="n">autoscan_set</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]))</span>
+    
+    <span class="n">mags</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">points</span><span class="p">,</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]))</span>
+    <span class="n">phases</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">points</span><span class="p">,</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]))</span>
+    
+    <span class="n">FBL</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Output</span> <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+    <span class="n">FBL</span><span class="o">.</span><span class="n">ch2</span><span class="o">.</span><span class="n">Output</span> <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+    
+    <span class="n">tstart</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    
+    <span class="n">identifier</span> <span class="o">=</span> <span class="s1">&#39;Cav Power : &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">CAV_Attenuation</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; dB</span><span class="se">\n</span><span class="si">{}</span><span class="s1"> parked at </span><span class="si">{}</span><span class="s1"> flux&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fixed_val</span><span class="p">,</span> <span class="n">bias_flux</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">background_subtract</span><span class="p">:</span>
+        <span class="n">vna</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Collecting background ripple, turning cavity power to 0 dBm (on vna)&#39;</span><span class="p">)</span>
+        <span class="n">back_settings</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">autoscan_set</span><span class="p">)</span>
+        <span class="n">back_settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">back_data</span> <span class="o">=</span> <span class="n">vna</span><span class="o">.</span><span class="n">trans_meas</span><span class="p">(</span><span class="n">back_settings</span><span class="p">)</span>
+        
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
+        <span class="n">flux</span> <span class="o">=</span> <span class="n">flux_points</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+        <span class="n">FBL</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">swept_val</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+        <span class="n">FBL</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">fixed_val</span><span class="p">,</span> <span class="n">bias_flux</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Flux: </span><span class="si">{}</span><span class="s1">, final flux: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span> <span class="n">flux_points</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+        
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+        
+        <span class="n">vna</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">vna</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trans&#39;</span><span class="p">)</span>
+        <span class="n">trans_data</span>  <span class="o">=</span> <span class="n">vna</span><span class="o">.</span><span class="n">trans_meas</span><span class="p">(</span><span class="n">autoscan_set</span><span class="p">)</span>
+        <span class="n">trans_freqs</span> <span class="o">=</span> <span class="n">trans_data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>
+        <span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>   <span class="o">=</span> <span class="n">trans_data</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+        <span class="n">trans_phases</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_data</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">background_subtract</span><span class="p">:</span>
+            <span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">back_data</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="n">hanger</span> <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;hanger&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">hanger</span><span class="p">:</span>
+            <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVfreq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_freqs</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">])]</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVfreq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_freqs</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">trans_mags</span><span class="p">[</span><span class="n">ind</span><span class="p">])]</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;spec, CAV power: </span><span class="si">{}</span><span class="s1">, cav freq: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">],</span> <span class="n">spec_set</span><span class="p">[</span><span class="s1">&#39;CAVfreq&#39;</span><span class="p">]))</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">vna</span><span class="o">.</span><span class="n">spec_meas</span><span class="p">(</span><span class="n">spec_set</span><span class="p">)</span>
+        
+        <span class="n">vna</span><span class="o">.</span><span class="n">autoscale</span><span class="p">()</span>
+        
+        <span class="n">mags</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>   <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+        <span class="n">phases</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>
+
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>  
+        
+        <span class="k">if</span> <span class="n">ind</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">tstop</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="n">estimate_time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span> <span class="n">tstop</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">flux_points</span><span class="p">))</span>
+            
+        <span class="n">transdata</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_freqs</span><span class="o">/</span><span class="mf">1e9</span>
+        <span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_mags</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">,:]</span>
+        <span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_phases</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">,:]</span>
+        
+        <span class="n">specdata</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">freqs</span><span class="o">/</span><span class="mf">1e9</span>
+        <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mags</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">,:]</span>
+        <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phases</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">,:]</span>
+        
+        <span class="n">singledata</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">freqs</span><span class="o">/</span><span class="mf">1e9</span>
+        <span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span> 
+        <span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>
+        
+        <span class="n">trans_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Freq (GHz)&#39;</span><span class="p">,</span><span class="s1">&#39;Flux quanta&#39;</span><span class="p">]</span>
+        <span class="n">spec_labels</span>  <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Freq (GHz)&#39;</span><span class="p">,</span><span class="s1">&#39;Flux quanta&#39;</span><span class="p">]</span>
+        
+        <span class="c1">#modify the spec data to subtract the offset in amp and phase</span>
+        <span class="c1">#and then plot the modified version</span>
+        <span class="n">specplotdata</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>
+        <span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span>
+        <span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span>
+        
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">mat</span><span class="p">[</span><span class="n">ind</span><span class="p">,:]</span>  <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">ind</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">ind</span><span class="p">,:])</span>
+        <span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span>
+        
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">mat</span><span class="p">[</span><span class="n">ind</span><span class="p">,:]</span>  <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">ind</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">ind</span><span class="p">,:])</span>
+        <span class="n">specplotdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span>
+        
+        <span class="n">plots</span><span class="o">.</span><span class="n">autoscan_plot</span><span class="p">(</span><span class="n">transdata</span><span class="p">,</span> <span class="n">specplotdata</span><span class="p">,</span> <span class="n">singledata</span><span class="p">,</span> <span class="n">flux_points</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">filename</span><span class="p">,</span> <span class="n">trans_labels</span><span class="p">,</span> <span class="n">spec_labels</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">fig_num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+            
+        <span class="n">userfuncs</span><span class="o">.</span><span class="n">SaveFull</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;transdata&#39;</span><span class="p">,</span> <span class="s1">&#39;specdata&#39;</span><span class="p">,</span> <span class="s1">&#39;singledata&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_points&#39;</span><span class="p">,</span> 
+                                       <span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="s1">&#39;trans_labels&#39;</span><span class="p">,</span> <span class="s1">&#39;spec_labels&#39;</span><span class="p">],</span> 
+                                       <span class="nb">locals</span><span class="p">(),</span> <span class="n">expsettings</span><span class="o">=</span><span class="n">settings</span><span class="p">,</span> <span class="n">instruments</span><span class="o">=</span><span class="n">instruments</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">150</span><span class="p">)</span>
+            
+    
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t2</span><span class="o">-</span><span class="n">tstart</span><span class="p">))</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;saveDir&#39;</span><span class="p">:</span> <span class="n">saveDir</span><span class="p">,</span> <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;transdata&#39;</span><span class="p">:</span><span class="n">transdata</span><span class="p">,</span> <span class="s1">&#39;specdata&#39;</span><span class="p">:</span><span class="n">specdata</span><span class="p">,</span> <span class="s1">&#39;flux_points&#39;</span><span class="p">:</span><span class="n">flux_points</span><span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">data</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

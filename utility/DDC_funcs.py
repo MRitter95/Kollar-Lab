@@ -8,6 +8,18 @@ import numpy as np
 import scipy.signal
 
 def heterodyne_DDC(I, Q, settings):
+    '''
+    heterodyne_DDC _summary_
+
+    :param I: _description_
+    :type I: _type_
+    :param Q: _description_
+    :type Q: _type_
+    :param settings: _description_
+    :type settings: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     [I1, Q1, xaxis] = demod(I, settings)
     [I2, Q2, xaxis] = demod(Q, settings)
     It = I1+Q2
@@ -15,6 +27,16 @@ def heterodyne_DDC(I, Q, settings):
     return [It,Qt, xaxis]
 
 def demod(signal, settings):
+    '''
+    demod _summary_
+
+    :param signal: _description_
+    :type signal: _type_
+    :param settings: _description_
+    :type settings: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     IF = settings['IF']
     sample_rate = settings['sample_rate']
     
@@ -26,6 +48,17 @@ def demod(signal, settings):
     return [demodI, demodQ, time]
 
 def filter_sig(signal, settings):
+    '''
+    filter_sig _summary_
+
+    :param signal: _description_
+    :type signal: _type_
+    :param settings: _description_
+    :type settings: _type_
+    :return: _description_
+    :rtype: _type_
+    '''
+
     method = settings['method']
     IF     = settings['cutoff']
     
@@ -40,6 +73,19 @@ def filter_sig(signal, settings):
         return low_pass(signal, filter_order, filter_atten, IF, sample_rate)
         
 def period(signal, period, sample_rate):
+    '''
+    period _summary_
+
+    :param signal: _description_
+    :type signal: _type_
+    :param period: _description_
+    :type period: _type_
+    :param sample_rate: _description_
+    :type sample_rate: _type_
+    :return: _description_
+    :rtype: _type_
+    '''
+
     full_periods = int(np.floor(len(signal)/period))
     split = np.array(np.split(signal[0:int(full_periods*period)], full_periods))
     clean = np.mean(split, axis=1)
@@ -52,6 +98,23 @@ def period(signal, period, sample_rate):
     return [clean, xaxis]
        
 def low_pass(signal, filter_N, filter_rs, filter_cutoff, sample_rate):
+    '''
+    low_pass _summary_
+
+    :param signal: _description_
+    :type signal: _type_
+    :param filter_N: _description_
+    :type filter_N: _type_
+    :param filter_rs: _description_
+    :type filter_rs: _type_
+    :param filter_cutoff: _description_
+    :type filter_cutoff: _type_
+    :param sample_rate: _description_
+    :type sample_rate: _type_
+    :return: _description_
+    :rtype: _type_
+    '''
+
     LPF = scipy.signal.cheby2(filter_N, filter_rs, filter_cutoff, btype='low', analog=False, output='sos', fs=sample_rate)
     filtered_sig = scipy.signal.sosfilt(LPF, signal)
     xaxis = np.linspace(0, len(signal), len(signal))/sample_rate

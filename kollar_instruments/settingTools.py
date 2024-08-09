@@ -69,11 +69,17 @@ def load_settings(inputfile):
     -[sections] that describe the main blocks/ modules of the instrument where more [] indicates subsections
     -settings = value that match attributes of the section/subsection they are in
     Can format this, modify reg-exes in function to do so
+
     Argurments:
-        inputfile (str) : file where the settings are stored
+    ############
+        inputfile (str): 
+            file where the settings are stored
+    
     Returns:
+    ##########
         dictionary organized as follows:
         settings = {sectionA:{settings},sectionB:{subsectionB:{settings},etc.},etc.}
+    
     '''
     #Reg-exes to match sections and settings
     gensetting = r'(\S*)\s*=\s*(.*)' #Matches anything of 'Setting = value' format
@@ -128,11 +134,15 @@ def load_settings(inputfile):
 def print_settings(settings, file = None, sectionstyle = '[{}]', sectionheading = '{}'):
     '''
     Helper function to display the settings stored in a dictionary
+    
     Arguments:
-        settings (str) : dictionary structured with nested dictionaries composed of sections, subsections and settings
+    ###########
+        settings (str) : 
+            dictionary structured with nested dictionaries composed of sections, subsections and settings
         Optional:
             file (filehandle): handle to file. If provided, will save to file instead of printing (default=None)
             sectionheading (str): format to display sections as (default=[{}])
+    
     '''
     sectionheading = sectionheading.format(sectionstyle)
     if not settings:
@@ -155,12 +165,17 @@ def save_settings(settings, savefile, sectionstyle = '[{}]'):
     '''
     Helper function to save settings to file, expects a dictionary with nested
     dictionaries coresponding to the various sections, subsections of the instrument settings
+
     Arguments:
-        settings (dict) : dictionary containing all the relevant settings
-        savefile (str) : path to file where settings should be saved
+        settings (dict): 
+            dictionary containing all the relevant settings
+        savefile (str): 
+            path to file where settings should be saved
         Optional:
-            sectionheading (str): format string for section style (default=[{}]\n)
+            sectionheading (str): format string for section style (default=[{}]\\n)
+
     '''
+    
     if not settings:
         return
     fID = open(savefile,'w')
@@ -180,11 +195,17 @@ def load_settings_old(inputfile):
     -[sections] that describe the main blocks/ modules of the instrument
     -[subsections] that describe subblocks such as channels
     -settings = value that match attributes of the section/subsection they are in
-    Argurments:
-        inputfile (str) : file where the settings are stored
+    
+    Arguments:
+    ###########
+        inputfile (str) : 
+            file where the settings are stored
+    
     Returns:
+    #########
         dictionary organized as follows:
         settings = {sectionA:{settings},sectionB:{subsectionB:{settings},etc.},etc.}
+    
     '''
 
     #Regular expression that denote the style of the different setting labels
@@ -258,8 +279,11 @@ def load_settings_old(inputfile):
 def print_settings_old(settings):
     '''
     Helper function to display the settings stored in a dictionary
+    
     Arguments:
-        settings (str) : dictionary structured with nested dictionaries composed of sections, subsections and settings
+        settings (str) : 
+            dictionary structured with nested dictionaries composed of sections, subsections and settings
+    
     '''
 
     #Formatting the output
@@ -289,9 +313,15 @@ def save_settings_old(settings, savefile):
     '''
     Helper function to save settings to file, expects a dictionary with nested
     dictionaries coresponding to the various sections, subsections of the instrument settings
+    
     Arguments:
-        settings (dict) : dictionary containing all the relevant settings
-        savefile (str) : path to file where settings should be saved
+    ###########
+
+        settings (dict) : 
+            dictionary containing all the relevant settings
+        savefile (str) : 
+            path to file where settings should be saved
+    
     '''
 
     #Formatting strings

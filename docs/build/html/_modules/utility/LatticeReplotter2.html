@@ -1,0 +1,1519 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utility.LatticeReplotter2 &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/utility/LatticeReplotter2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">utility.Latt...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for utility.LatticeReplotter2</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Fri Oct 13 14:51:51 2023</span>
+
+<span class="sd">@author: kollar2</span>
+
+<span class="sd">10-13 AK is creating a new version of replotter class to help with book keeping for </span>
+<span class="sd">the lattice project.</span>
+
+<span class="sd">Main features being added or modified</span>
+<span class="sd">1) Default is to auto load all settings and limits from the file, with an option </span>
+<span class="sd">to overwrite if desired</span>
+<span class="sd">2) add save command so the replotter object can be pickled</span>
+<span class="sd">-make sure not to resave the data itself.</span>
+<span class="sd">3) add an option to reload and refill from pickled replotter, rather than a pickled data file</span>
+<span class="sd">4) Automatically save record of settings when saving the replotter. This is for version tracking.</span>
+
+
+<span class="sd">10-16-23 AK making differntial cutoff an attribute so that changing it</span>
+<span class="sd">        will automatically trigger a recompute of the differential stuff.</span>
+<span class="sd">        Differential plot methods should now automatically check if this is up to date</span>
+<span class="sd">        </span>
+<span class="sd">        Also changing show_plots so that if you don&#39;t specify something, </span>
+<span class="sd">        it uses the default instead of overwriting</span>
+<span class="sd">        </span>
+<span class="sd">10-17-23 AK adding proper flags to detect if this is a raw voltage scan or </span>
+<span class="sd">        if it&#39;s something where fluxes are put in and the voltages computed</span>
+<span class="sd">        according to precalibtation</span>
+<span class="sd">        </span>
+<span class="sd">        -Add making the color limit guessing adjust if there is phase data.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="c1"># from scipy import *</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="c1"># import pylab</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="kn">from</span> <span class="nn">scipy.ndimage</span> <span class="kn">import</span> <span class="n">gaussian_filter</span>
+
+
+
+
+<span class="c1">################</span>
+<span class="c1">#making a custom colormap</span>
+
+
+<span class="c1"># found that a dark in the middle color map works very well for the </span>
+<span class="c1">#differential transmission data, so I&#39;m going to try to build a custom one.</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">ListedColormap</span><span class="p">,</span> <span class="n">LinearSegmentedColormap</span>
+
+<span class="c1"># viridis = mpl.cm.get_cmap(&#39;viridis&#39;)</span>
+<span class="c1"># viridis_r = mpl.cm.get_cmap(&#39;viridis_r&#39;)</span>
+<span class="c1"># comboMap_colors = viridis_r.colors + viridis.colors </span>
+<span class="c1"># comboMap = ListedColormap(comboMap_colors)</span>
+
+<span class="c1">#my favorites (old double sided)</span>
+<span class="n">colorlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;khaki&#39;</span><span class="p">,</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="s1">&#39;midnightblue&#39;</span><span class="p">,</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="s1">&#39;khaki&#39;</span><span class="p">]</span>
+<span class="n">khakiBlue_double</span> <span class="o">=</span> <span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s1">&#39;khakiBlue&#39;</span><span class="p">,</span> <span class="n">colorlist</span><span class="p">)</span>
+
+<span class="n">colorlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;antiquewhite&#39;</span><span class="p">,</span> <span class="s1">&#39;lightskyblue&#39;</span><span class="p">,</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="s1">&#39;navy&#39;</span><span class="p">,</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span><span class="s1">&#39;lightskyblue&#39;</span><span class="p">,</span><span class="s1">&#39;antiquewhite&#39;</span><span class="p">]</span>
+<span class="n">whiteBlueBlue_double</span> <span class="o">=</span> <span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s1">&#39;whiteBlueBlue&#39;</span><span class="p">,</span> <span class="n">colorlist</span><span class="p">)</span>
+
+
+
+
+
+
+<div class="viewcode-block" id="replotter2">
+<a class="viewcode-back" href="../../utility/utility.LatticeReplotter2.replotter2.html#utility.LatticeReplotter2.replotter2">[docs]</a>
+<span class="k">class</span> <span class="nc">replotter2</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="replotter2.__init__">
+<a class="viewcode-back" href="../../utility/utility.LatticeReplotter2.replotter2.html#utility.LatticeReplotter2.replotter2.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">folder</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">savedir</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">vmin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                 <span class="n">vmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                 <span class="n">xlims</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+                 <span class="n">ylims</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+                 <span class="n">diff_cutoff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                 <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;YlGnBu_r&#39;</span><span class="p">,</span>
+                 <span class="n">div_cmap</span> <span class="o">=</span> <span class="n">whiteBlueBlue_double</span><span class="p">,</span>
+                 <span class="n">fig_xSize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+                 <span class="n">fig_ySize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                 <span class="n">subtraction_ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="n">diff_colorBound</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                 <span class="n">auto_display_plots</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                 <span class="n">default_phase</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        new version of replotter class.</span>
+<span class="sd">        </span>
+<span class="sd">        Init will now automatically fill values from the data file or a prepickled replotter object</span>
+<span class="sd">        </span>
+<span class="sd">        settings with default of nan will automatically load from the file</span>
+<span class="sd">        If they are set to not nan, then the manually entered value will be used instead</span>
+<span class="sd">        </span>
+<span class="sd">        for compatibility with first replotter, folder argument comes firts, but will try to make it optional</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">        name is now an important attribute. The idea is that this will be a convenient handle</span>
+<span class="sd">        that can be given to the replotter, rather then the really long data file name</span>
+<span class="sd">        </span>
+<span class="sd">        if a name is not given it will </span>
+<span class="sd">        </span>
+<span class="sd">        removing old data smoothing option. it was not being used.</span>
+<span class="sd">        </span>
+<span class="sd">        savedir sets where any outputs should be saved. </span>
+<span class="sd">        by default this will be the same as the location</span>
+<span class="sd">        of the corresponding raw data pickle.</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_display_plots</span> <span class="o">=</span> <span class="n">auto_display_plots</span>
+        
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_data_folder</span> <span class="o">=</span> <span class="n">folder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span> <span class="o">==</span> <span class="s1">&#39;.pkl&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No valid file given. Please give &quot;something.pkl&quot;   &#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+            
+        <span class="k">if</span> <span class="n">savedir</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">savedir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_data_folder</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">savedir</span> <span class="o">=</span> <span class="n">savedir</span> <span class="c1">#location to save replotter files. Defaults to same location as script</span>
+        
+        
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_data_folder</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        
+        <span class="c1">#flag for identify saved pickles as replotter instead of raw data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">replotter_flag</span> <span class="o">=</span> <span class="kc">True</span> 
+        
+        <span class="c1">#flag for warning if it can&#39;t find the raw data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_load_failed</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="c1">#open the .pkl and check if it is a raw data file</span>
+        <span class="c1">#or a replotter</span>
+        <span class="n">raw_pickledict</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;replotter_flag&#39;</span> <span class="ow">in</span> <span class="n">raw_pickledict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">raw_pickledict</span><span class="p">[</span><span class="s1">&#39;replotter_flag&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">load_from_replot_pickle</span><span class="p">(</span><span class="n">raw_pickledict</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#this must be a raw data file, </span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pickledict</span> <span class="o">=</span> <span class="n">raw_pickledict</span> <span class="c1">#this pickle is the actual data file pickle</span>
+            
+            <span class="c1">#fill in settings that won&#39;t be defined just from raw data</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">subtraction_ind</span> <span class="o">=</span> <span class="n">subtraction_ind</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_colorBound</span> <span class="o">=</span> <span class="n">diff_colorBound</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">fig_xSize</span> <span class="o">=</span><span class="n">fig_xSize</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fig_ySize</span> <span class="o">=</span><span class="n">fig_ySize</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">default_phase</span> <span class="o">=</span> <span class="n">default_phase</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="n">cmap</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">div_cmap</span> <span class="o">=</span> <span class="n">div_cmap</span>
+            
+            <span class="c1">#so load from the data file</span>
+            <span class="c1"># self.load_from_raw_data()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parse_raw_data_file</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">semiauto_color_limits</span><span class="p">()</span>
+        
+        <span class="c1">####potentially overwrite settings, given inuts at creation</span>
+        <span class="c1">##########</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">xlims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="c1">#overwrite the default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span> <span class="o">=</span> <span class="n">xlims</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ylims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="c1">#overwrite the default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ylims</span> <span class="o">=</span> <span class="n">ylims</span>
+            
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">vmin</span><span class="p">):</span>
+            <span class="c1">#overwrite the default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">vmin</span>
+            
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">vmax</span><span class="p">):</span>
+            <span class="c1">#overwrite the default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">vmax</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">diff_cutoff</span><span class="p">):</span>
+            <span class="c1">#overwrite the default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span> <span class="o">=</span> <span class="n">diff_cutoff</span>     
+        <span class="c1">############</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_load_failed</span><span class="p">):</span>
+            <span class="c1">#compute final stuff</span>
+            <span class="c1">#recompute the differential transmission</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_trimmed_data</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_diff_transmission</span><span class="p">()</span>
+            
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_display_plots</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">show_default_plots</span><span class="p">()</span>
+                
+        <span class="k">return</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">diff_cutoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_diff_cutoff</span>
+    
+    <span class="nd">@diff_cutoff</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">diff_cutoff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_diff_cutoff</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stale_diff_cutoff</span> <span class="o">=</span> <span class="kc">True</span>
+        
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autolog</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+             <span class="n">saveplots</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+             <span class="n">fignums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">401</span><span class="p">,</span><span class="mi">402</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;save the replotter object as a pickle</span>
+<span class="sd">        --but make sure not to resave the raw data matrices again,</span>
+<span class="sd">        or this will get huge</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#these are variables that shouldn&#39;t be saved</span>
+        <span class="n">exceptions_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datadict&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;mags&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;phases&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;transdatadict&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;transmags&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;transphases&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;deltaMat&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;trimmedMat&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;pickledict&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;freqs&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;voltages&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;fluxes&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;ref_trace&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;data&#39;</span><span class="p">]</span>
+        
+        <span class="c1">#make a dictionary will all of the other settings</span>
+        <span class="n">savedict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">exceptions_list</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">savedict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">savedict</span><span class="o">=</span> <span class="n">savedict</span> <span class="c1">####</span>
+        
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">savedir</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">savedir</span><span class="p">)</span>
+        
+        <span class="n">savename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;.pkl&#39;</span>
+        <span class="n">savepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">savedir</span><span class="p">,</span> <span class="n">savename</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">savedict</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">savepath</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+        
+        <span class="c1">#now to automatically back up the currrent settings</span>
+        <span class="k">if</span> <span class="n">autolog</span><span class="p">:</span>
+            <span class="n">backupdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">savedir</span><span class="p">,</span> <span class="s1">&#39;Backup&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">backupdir</span><span class="p">):</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">backupdir</span><span class="p">)</span>
+            <span class="n">savename_backup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;.pkl&#39;</span> 
+            <span class="n">savepath_backup</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">backupdir</span><span class="p">,</span> <span class="n">savename_backup</span><span class="p">)</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">savedict</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">savepath_backup</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+        
+        <span class="k">if</span> <span class="n">saveplots</span><span class="p">:</span>
+            <span class="c1">#save the plots</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show_default_plots</span><span class="p">(</span><span class="n">savefig</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                           <span class="n">show_diff_baseline_plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                           <span class="n">fignums</span> <span class="o">=</span> <span class="n">fignums</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="k">def</span> <span class="nf">timestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;time stamp for auto saving &#39;&#39;&#39;</span>
+        <span class="n">date</span>  <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">stamp</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">_%H%M%S&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">stamp</span>   
+
+    <span class="k">def</span> <span class="nf">load_from_replot_pickle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">raw_pickledict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        laod structure from pickle file of the replotter class</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">raw_pickledict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">raw_pickledict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1">#and now I just need to repload the data</span>
+            
+            <span class="c1">####trying to fix the fact that the raw data file path is absolute at creation</span>
+            <span class="c1">####this is a temporary hack</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">):</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">testPath1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Z:\Data\PeterChainPaperData\Raw Data Files&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+                <span class="n">testPath2</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/Volumes/Kollar/Data/PeterChainPaperData/Raw Data Files&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+            
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">testPath1</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">old_filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="n">testPath1</span>
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">testPath2</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">old_filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="n">testPath2</span>
+            
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">pickledict</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span> <span class="p">)</span> <span class="p">)</span>
+            
+            <span class="c1">#fix differential cutoff, because I made it an attribute</span>
+            <span class="c1">#and so it doesn&#39;t auto load right</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_diff_cutoff</span>
+            
+            <span class="c1">#some old saved versions will have self.voltages instead of self.yaxis</span>
+            <span class="c1">#so I will manually fix the issue</span>
+            <span class="k">if</span> <span class="s1">&#39;voltages&#39;</span> <span class="ow">in</span> <span class="n">raw_pickledict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voltages</span>
+                <span class="nb">delattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;voltages&#39;</span><span class="p">)</span>
+        
+            <span class="bp">self</span><span class="o">.</span><span class="n">parse_raw_data_file</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Something went wrong in reloading the original data file!!!!!!&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finishing object creation, so you can check the paths&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;but the object is BLANK!!!!!&#39;</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">data_load_failed</span> <span class="o">=</span> <span class="kc">True</span>
+        
+        <span class="k">return</span> 
+
+    <span class="c1"># def load_from_raw_data(self):</span>
+    <span class="c1">#     #drab the data matrices from the raw data file</span>
+    <span class="c1">#     self.parse_raw_data_file()</span>
+        
+    <span class="c1">#     #configure the replotter settings</span>
+    <span class="c1">#     self.auto_fill_plot_limits_from_file()</span>
+        
+        
+    <span class="k">def</span> <span class="nf">parse_raw_data_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;populate data files from the raw data file &#39;&#39;&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pickledict</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pickledict</span><span class="p">[</span><span class="s1">&#39;ExpSettings&#39;</span><span class="p">]</span>
+        
+        <span class="c1">#figure out some general settings of the data file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hanger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;hanger&#39;</span><span class="p">]</span>   <span class="c1">#whether or not this is hanger data</span>
+        
+        <span class="c1">#check if the y axis is uncalibrated voltage or if it</span>
+        <span class="c1"># should be some fluxes. This is going to be a bit messy</span>
+        <span class="c1">#because some data files come from before such a distinction was made</span>
+        <span class="k">if</span> <span class="s1">&#39;voltages&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">yaxiskey</span> <span class="o">=</span> <span class="s1">&#39;voltages&#39;</span>
+        <span class="k">elif</span> <span class="s1">&#39;fluxes&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">yaxiskey</span> <span class="o">=</span> <span class="s1">&#39;fluxes&#39;</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Was looking for a y axis in either voltages or fluxes and found neither&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="s1">&#39;specdata&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spec_flag</span> <span class="o">=</span> <span class="kc">True</span>
+            
+            <span class="c1">#this is spec data and I need to load differently</span>
+            <span class="n">specdict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="s1">&#39;specdata&#39;</span><span class="p">]</span>
+            
+            <span class="c1"># self.voltages = self.datadict[&#39;voltages&#39;]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">yaxiskey</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="s1">&#39;spec_labels&#39;</span><span class="p">]</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">mags</span> <span class="o">=</span> <span class="n">specdict</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">phases</span> <span class="o">=</span> <span class="n">specdict</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">specdict</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+                <span class="c1">#clear sign that the frequency axis is in GHz</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">GHzVHz_correction</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freqs</span> <span class="o">=</span> <span class="n">temp</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#axis isn&#39;t in GHz. It had better be in Hz</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">GHzVHz_correction</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freqs</span> <span class="o">=</span> <span class="n">temp</span><span class="o">/</span><span class="mf">1e9</span>
+            <span class="c1"># if self.GHzVHz_correction:</span>
+            <span class="c1">#     self.freqs = specdict[&#39;xaxis&#39;]</span>
+            <span class="c1"># else:</span>
+            <span class="c1">#     self.freqs = specdict[&#39;xaxis&#39;]/1e9</span>
+            
+            <span class="c1">#pull up the transmission data to use for background subtractions</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transdatadict</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="s1">&#39;transdata&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transmags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transdatadict</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transphases</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transdatadict</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hangerBool</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;hanger&#39;</span><span class="p">]</span> 
+            
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">mags</span> <span class="o">=</span> <span class="n">specdict</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">phases</span> <span class="o">=</span> <span class="n">specdict</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span>
+            <span class="c1">#do the rolling background subtraction</span>
+            <span class="c1"># for vind in range(0, len(self.voltages)):</span>
+            <span class="k">for</span> <span class="n">vind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">)):</span>
+                
+                <span class="c1"># #get the baseline by finding the cavity and taking transmission there.</span>
+                <span class="c1"># #this is looking in the right place, but it might not have</span>
+                <span class="c1"># #enough averaging.</span>
+                <span class="c1"># trans_row = self.transmags[vind,:]</span>
+                <span class="c1"># #find where the max or the min is. Fit would be safe, but I&#39;m too lazy</span>
+                <span class="c1"># #and the stupid way is somewhat robust.</span>
+                <span class="c1"># if self.hangerBool:</span>
+                <span class="c1">#     cav_ind = np.where(trans_row == np.min(trans_row))[0][0]</span>
+                <span class="c1"># else:</span>
+                <span class="c1">#     cav_ind = np.where(trans_row == np.max(trans_row))[0][0]  </span>
+                <span class="c1"># mag_baseline = self.transmags[vind,cav_ind]</span>
+                <span class="c1"># phase_baseline = self.transphases[vind,cav_ind]</span>
+            
+            
+                <span class="c1"># #old way of finding the baseline by averaging the entire row of the spec</span>
+                <span class="c1"># #this is a bit sketch if there are a lot of dips in a narrow window, but it averages </span>
+                <span class="c1"># #a lot.</span>
+                <span class="n">mag_baseline</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mags</span><span class="p">[</span><span class="n">vind</span><span class="p">,:])</span>
+                <span class="n">phase_baseline</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="n">vind</span><span class="p">,:])</span>
+                
+                <span class="bp">self</span><span class="o">.</span><span class="n">mags</span><span class="p">[</span><span class="n">vind</span><span class="p">,:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mags</span><span class="p">[</span><span class="n">vind</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">mag_baseline</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="n">vind</span><span class="p">,:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phases</span><span class="p">[</span><span class="n">vind</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">phase_baseline</span>
+            
+            
+            
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spec_flag</span> <span class="o">=</span> <span class="kc">False</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="s1">&#39;full_data&#39;</span><span class="p">]</span>
+            
+            <span class="c1"># self.voltages = self.datadict[&#39;voltages&#39;]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">yaxiskey</span><span class="p">]</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">mags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">phases</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">]</span>
+            
+            <span class="n">temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+                <span class="c1">#clear sign that the frequency axis is in GHz</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">GHzVHz_correction</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freqs</span> <span class="o">=</span> <span class="n">temp</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#axis isn&#39;t in GHz. It had better be in Hz</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">GHzVHz_correction</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freqs</span> <span class="o">=</span> <span class="n">temp</span><span class="o">/</span><span class="mf">1e9</span>
+            <span class="c1"># if self.GHzVHz_correction:</span>
+            <span class="c1">#     self.freqs = self.data[&#39;xaxis&#39;]</span>
+            <span class="c1"># else:</span>
+            <span class="c1">#     self.freqs = self.data[&#39;xaxis&#39;]/1e9</span>
+        
+        <span class="c1">#gather the plotting limits</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="c1"># self.ylims = [self.voltages[0], self.voltages[-1]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ylims</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        
+        <span class="c1"># if self.smoothe_data:</span>
+        <span class="c1">#     # raw_mags = copy.deepcopy(self.mags)</span>
+        <span class="c1">#     self.mags = gaussian_filter(self.mags, sigma = self.smoothing_sigma)</span>
+            
+        <span class="k">return</span>
+
+
+    <span class="k">def</span> <span class="nf">semiauto_color_limits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+                            <span class="n">dynamic_range</span> <span class="o">=</span> <span class="mi">35</span><span class="p">,</span> 
+                            <span class="n">max_offset</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                            <span class="n">diff_dynamic_range</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+                            <span class="n">show_diff_baseline_plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;crawl the data file for relevant variables</span>
+<span class="sd">        and try to guess the right limits for colorplots etc.</span>
+<span class="sd">        </span>
+<span class="sd">        It won&#39;t be perfect, but it should be a pretty good guess&#39;</span>
+<span class="sd">        </span>
+<span class="sd">        For safety will also recomute differential transmission</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_phase</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phases</span> <span class="c1">#this will work a little funny if it&#39;s a hanger</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mags</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hanger</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">plot_data</span><span class="p">)</span> <span class="o">+</span> <span class="n">max_offset</span> <span class="c1">#set the color bar edge to the dip</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">+</span> <span class="n">dynamic_range</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">plot_data</span><span class="p">)</span> <span class="o">-</span> <span class="n">max_offset</span> <span class="c1">#set the colorbar edge to the peak</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">dynamic_range</span>
+        <span class="c1"># self.xlims = [self.freqs[0], self.freqs[-1]]</span>
+        <span class="c1"># self.ylims = [self.voltages[0], self.voltages[-1]]</span>
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">diff_dynamic_range</span>  <span class="c1">#cutoff for differential transmission</span>
+        
+        <span class="c1">#recompute the differential transmission</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_trimmed_data</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_diff_transmission</span><span class="p">()</span>
+     
+        <span class="k">return</span>
+    
+    <span class="k">def</span> <span class="nf">manual_color_limits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+                            <span class="n">vmax</span><span class="p">,</span>
+                            <span class="n">vmin</span><span class="p">,</span>
+                            <span class="n">diff_cutoff</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;set the color bar limits as a group, but manually&#39;</span>
+<span class="sd">        </span>
+<span class="sd">        For safety will also recompute differential transmission</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">vmin</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">vmax</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span> <span class="o">=</span> <span class="n">diff_cutoff</span>
+        
+        <span class="c1">#recompute the differential transmission</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_trimmed_data</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_diff_transmission</span><span class="p">()</span>
+     
+        <span class="k">return</span>
+
+
+
+
+
+    <span class="c1">###########</span>
+    <span class="c1">#methods for computing differential transmission</span>
+    <span class="c1">######</span>
+    <span class="k">def</span> <span class="nf">compute_trimmed_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#zero out the noisy stuff at low power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trimmedMat</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mags</span><span class="p">)</span>
+        <span class="n">noise_region</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trimmedMat</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trimmedMat</span><span class="p">[</span><span class="n">noise_region</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span>
+        <span class="k">return</span>
+    
+    <span class="k">def</span> <span class="nf">compute_diff_transmission</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#take a reference trace</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref_trace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trimmedMat</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">subtraction_ind</span><span class="p">,:]</span>
+        
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">deltaMat</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trimmedMat</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref_trace</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deltaMat</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_min</span> <span class="o">=</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deltaMat</span><span class="p">)</span> <span class="c1">#np.min(deltaMat)</span>
+        <span class="k">return</span>
+
+    <span class="k">def</span> <span class="nf">recompute_differential</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Fully recompute the differential transmision including </span>
+<span class="sd">        both trimming matrices with the cutoff and computing the differential</span>
+<span class="sd">        </span>
+<span class="sd">        Then will reset the warning flag.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_trimmed_data</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_diff_transmission</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stale_diff_cutoff</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+
+
+    <span class="c1">#############</span>
+    <span class="c1">#built in plot methods</span>
+    <span class="c1">######</span>
+    <span class="k">def</span> <span class="nf">show_baseline_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fignum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="c1">####plot the raw data, and the cutoff for differential transmission</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_phase</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phases</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Raw Phase Data&#39;</span><span class="p">,</span> <span class="s1">&#39;S21 Phase (deg)&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mags</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Raw Mag Data&#39;</span><span class="p">,</span> <span class="s1">&#39;S21 Log Mag (dB)&#39;</span><span class="p">]</span>
+        
+        <span class="n">fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fignum</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">,</span> <span class="n">plot_data</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;hot&#39;</span><span class="p">,</span><span class="n">shading</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="n">plot_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;mediumblue&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;firebrick&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;cutoff&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single Trace&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+        
+        <span class="n">fig1</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">([</span><span class="mi">14</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="c1"># save_name = filename + &#39;_Replot.png&#39;</span>
+        <span class="c1"># fig1.savefig(save_name, dpi = 400)</span>
+        <span class="c1">######################## </span>
+        <span class="k">return</span>
+    
+    <span class="k">def</span> <span class="nf">show_transmission_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fignum</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Make a non-differential plot fo the main data.</span>
+<span class="sd">        </span>
+<span class="sd">        Originally this was written assuming transmission data, but </span>
+<span class="sd">        has since been modified to also work for spec data, but the old </span>
+<span class="sd">        name remains. </span>
+<span class="sd">        </span>
+<span class="sd">        New wrapper show_data_plot and show_spec_plot will be created so that</span>
+<span class="sd">        the names are more sensible and backwards compatibility is maintained</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fignum</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_phase</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phases</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mags</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">,</span> <span class="n">plot_data</span> <span class="p">,</span> 
+                       <span class="n">cmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cmap</span><span class="p">,</span>
+                       <span class="n">vmin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span><span class="p">,</span>
+                       <span class="n">vmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span><span class="p">,</span>
+                       <span class="n">shading</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;specdata&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Spec v Applied Flux&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Transmission v Applied Flux&#39;</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xlims</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ylims</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        
+        <span class="n">fig2</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">fig_xSize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig_ySize</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="n">savefig</span><span class="p">:</span>
+            <span class="n">save_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span>
+            <span class="n">save_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">savedir</span><span class="p">,</span> <span class="n">save_name</span><span class="p">)</span>
+            <span class="n">fig2</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_path</span> <span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+            <span class="c1"># save_name = filename + &#39;_&#39; + cmap + &#39;.pdf&#39;  #WARNING - PDF save seems to crash. Maybe map is too big</span>
+            <span class="c1"># fig22.savefig(save_name)</span>
+        
+        <span class="k">return</span>
+
+    <span class="k">def</span> <span class="nf">show_data_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fignum</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Wrapper for the function show_transmission plot</span>
+<span class="sd">        </span>
+<span class="sd">        That function is no longer specific to transmission data.</span>
+<span class="sd">        So this wrapper is to change the name.</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_transmission_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span> <span class="n">fignum</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span> <span class="n">savefig</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">show_spec_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fignum</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Wrapper for the function show_transmission plot</span>
+<span class="sd">        </span>
+<span class="sd">        That function is no longer specific to transmission data.</span>
+<span class="sd">        So this wrapper is to change the name.</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;specdata&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show_transmission_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span> <span class="n">fignum</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span> <span class="n">savefig</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;This is not a spec data set.&#39;</span><span class="p">)</span>
+
+    
+    <span class="k">def</span> <span class="nf">show_differential_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fignum</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1">#plot the subtracted data, but using deltMat wich zeros</span>
+        <span class="c1">#out parts of the data that are too low to have signal</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stale_diff_cutoff</span><span class="p">:</span>
+            <span class="c1">#diff cutoff has been set, but the matrices </span>
+            <span class="c1">#have not been recomputed</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recompute_differential</span><span class="p">()</span>
+        
+        <span class="n">fig3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fignum</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltaMat</span><span class="p">,</span> 
+                       <span class="n">cmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">div_cmap</span><span class="p">,</span> 
+                       <span class="n">vmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_colorBound</span><span class="p">,</span> 
+                       <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">diff_colorBound</span><span class="p">,</span>
+                       <span class="n">shading</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        
+        <span class="k">if</span> <span class="s1">&#39;specdata&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Differential Spec v Applied Flux&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Differential Transmission v Applied Flux&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xlims</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ylims</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        
+        <span class="c1"># fig23.set_size_inches([7.5, 2.75])</span>
+        <span class="n">fig3</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">fig_xSize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig_ySize</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="n">savefig</span><span class="p">:</span>
+            <span class="n">save_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;_diff.png&#39;</span>
+            <span class="n">save_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">savedir</span><span class="p">,</span> <span class="n">save_name</span><span class="p">)</span>
+            <span class="n">fig3</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_path</span> <span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+        
+        <span class="k">return</span>
+        
+    
+    <span class="k">def</span> <span class="nf">show_default_plots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">savefig</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> 
+                           <span class="n">show_diff_baseline_plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                           <span class="n">fignums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">401</span><span class="p">,</span> <span class="mi">402</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;show all the plots with default values </span>
+<span class="sd">        color bar limits and dynamic ranges etc are whatever the latest guesses were</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_load_failed</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;WARNING!!! Data load failed. This file is blank!!!&#39;</span><span class="p">)</span>
+            <span class="k">return</span>
+        
+        <span class="c1"># #recomute differential transmission in case the settings are stale</span>
+        <span class="c1"># self.compute_trimmed_data()</span>
+        <span class="c1"># self.compute_diff_transmission()</span>
+        <span class="c1">#this safety check was moved to the differential plot itself</span>
+        
+        
+        <span class="c1"># self.show_transmission_plot(fignum = 2, savefig = savefig) </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_data_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span> <span class="n">fignums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">savefig</span> <span class="o">=</span> <span class="n">savefig</span><span class="p">)</span>  
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_differential_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span> <span class="n">fignums</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">savefig</span> <span class="o">=</span> <span class="n">savefig</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">show_diff_baseline_plot</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show_baseline_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span><span class="mi">403</span><span class="p">)</span>
+        
+        <span class="k">return</span>
+    
+    <span class="c1"># def show_plots(self, dynamic_range = 35, </span>
+    <span class="c1">#                 max_offset = 3,</span>
+    <span class="c1">#                 diff_dynamic_range = 30,</span>
+    <span class="c1">#                 savefig = False,</span>
+    <span class="c1">#                 fignums = [401,402],</span>
+    <span class="c1">#                 show_diff_baseline_plot = False):</span>
+    
+    <span class="k">def</span> <span class="nf">show_plots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range</span> <span class="o">=</span> <span class="mi">35</span><span class="p">,</span> 
+                    <span class="n">max_offset</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                    <span class="n">diff_dynamic_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="n">diff_colorBound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="n">savefig</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                    <span class="n">fignums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">401</span><span class="p">,</span><span class="mi">402</span><span class="p">],</span>
+                    <span class="n">show_diff_baseline_plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; will show the main plots, but allows you to plot with the dynamic ranges</span>
+<span class="sd">        and limits.</span>
+<span class="sd">        </span>
+<span class="sd">        dynamic_range sets the extent of the color bar for the main plot</span>
+<span class="sd">        </span>
+<span class="sd">        max_offset sets how far off the extremum one end of the color scale is</span>
+<span class="sd">        (max for regular and min for hangers)</span>
+<span class="sd">        </span>
+<span class="sd">        diff_dynamic_range sets how far below the extremum of the main data you</span>
+<span class="sd">        put the cutoff for differential transmission</span>
+<span class="sd">        </span>
+<span class="sd">        diff_colorBound = color bar limits for differential data</span>
+<span class="sd">        </span>
+<span class="sd">        WARNING. If you specify limits for this stuff, it will get written</span>
+<span class="sd">        to the object. </span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">diff_dynamic_range</span><span class="p">):</span>
+            <span class="c1">#don&#39;t change the differential cutoff</span>
+            <span class="n">diff_dynamic_range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">diff_colorBound</span><span class="p">):</span>
+            <span class="c1">#overwrite the default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_colorBound</span> <span class="o">=</span> <span class="n">diff_colorBound</span>
+        
+        <span class="c1">#reset the colorscale limits to the new values, this automatially recomputes diff trans</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">semiauto_color_limits</span><span class="p">(</span><span class="n">dynamic_range</span> <span class="o">=</span> <span class="n">dynamic_range</span><span class="p">,</span>
+                            <span class="n">max_offset</span> <span class="o">=</span> <span class="n">max_offset</span><span class="p">,</span>
+                            <span class="n">diff_dynamic_range</span> <span class="o">=</span> <span class="n">diff_dynamic_range</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">show_diff_baseline_plot</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show_baseline_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span><span class="mi">403</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_data_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span> <span class="n">fignums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">savefig</span> <span class="o">=</span> <span class="n">savefig</span><span class="p">)</span>  
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_differential_plot</span><span class="p">(</span><span class="n">fignum</span> <span class="o">=</span> <span class="n">fignums</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">savefig</span> <span class="o">=</span> <span class="n">savefig</span><span class="p">)</span>
+        
+        
+        <span class="k">return</span>
+
+    
+    
+    <span class="k">def</span> <span class="nf">make_data_subplot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span>
+                          <span class="n">dynamic_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> 
+                          <span class="n">ref_offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                          <span class="n">ref_level</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                          <span class="n">xlims</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+                          <span class="n">ylims</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+                          <span class="n">plot_phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                          <span class="n">title_with_filename</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                          <span class="n">colorbar</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">        </span>
+<span class="sd">        Replot that allows to you command that the plot be created in a specific subplot</span>
+<span class="sd">        axis, rather than creating a new figure for it.</span>
+<span class="sd">        </span>
+<span class="sd">        ax = axis object in which to plot</span>
+<span class="sd">        </span>
+<span class="sd">        dynamic_range = dynamic range for the color bar</span>
+<span class="sd">        </span>
+<span class="sd">        ref_offset = how far the edge of the colorbar should be from the </span>
+<span class="sd">                        extremum of the data</span>
+<span class="sd">                        Sign of offset will depend on hanger v not</span>
+<span class="sd">        </span>
+<span class="sd">        ref_level = level in the data that should be used as a marker for</span>
+<span class="sd">                the edge of the color scale.</span>
+<span class="sd">                This looks totally redundant with ref aoffset, but I envison</span>
+<span class="sd">                that the auto behavior is ref_level = np.max(data),</span>
+<span class="sd">                the the offset is say how far you want to rail the color scale</span>
+<span class="sd">                on that side.</span>
+<span class="sd">                </span>
+<span class="sd">        xlims = x axis limtis (assumed these are frequencies)</span>
+<span class="sd">        </span>
+<span class="sd">        ylims = y axis limtis (assumed these are fvoltages)</span>
+<span class="sd">        </span>
+<span class="sd">        plot_phase = boolean to say whether should plot mag or phase.</span>
+<span class="sd">                     if nan, will sue the object default</span>
+<span class="sd">                     </span>
+<span class="sd">        title_with_filename = boolean to determine if file name should go in the title</span>
+<span class="sd">                            for easy identification</span>
+<span class="sd">                    </span>
+<span class="sd">        If any parameter is np.nan by default, that means that it will use</span>
+<span class="sd">        the values already stored with the data file, rather than fine tuning.</span>
+<span class="sd">        </span>
+<span class="sd">        11-8-23 AK made dynamic_range default to vmax-vmin, and ref offset default to zero</span>
+<span class="sd">        This should mean that if you don&#39;t pass any arguments to this function except the</span>
+<span class="sd">        axis, then you should get the same colorbar limits as the default entire figure</span>
+<span class="sd">        -- also adding the option to leave off the colorbar. This makes it easier</span>
+<span class="sd">        to fine tune it later</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">sca</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">dynamic_range</span><span class="p">):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">dynamic_range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span>
+            
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ref_offset</span><span class="p">):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">ref_offset</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ref_level</span><span class="p">):</span>
+            <span class="c1">#use the default</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hanger</span><span class="p">:</span>
+                <span class="n">ref_level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ref_level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span>
+                
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">xlims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">xlims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span>
+        
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ylims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">ylims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ylims</span>
+        
+        <span class="c1"># #configure the offset and the dynamic range to match the hanger v not</span>
+        <span class="c1"># dynamic_range = signum*dynamic_range</span>
+        <span class="c1"># ref_offset = signum*ref_offset</span>
+        
+                
+        <span class="c1">#pull up the right data</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">plot_phase</span><span class="p">):</span>
+            <span class="c1">#use the default</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_phase</span><span class="p">:</span>
+                <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phases</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mags</span>
+        <span class="k">elif</span> <span class="n">plot_phase</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phases</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mags</span>
+            
+        <span class="c1">#configure the plot limits</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hanger</span><span class="p">:</span>
+            <span class="c1">#set everything from the min value</span>
+            <span class="n">vmin</span> <span class="o">=</span> <span class="n">ref_level</span> <span class="o">+</span> <span class="n">ref_offset</span>
+            <span class="n">vmax</span> <span class="o">=</span> <span class="n">vmin</span> <span class="o">+</span> <span class="n">dynamic_range</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#set everything from the max value</span>
+            <span class="n">vmax</span> <span class="o">=</span> <span class="n">ref_level</span> <span class="o">-</span> <span class="n">ref_offset</span>
+            <span class="n">vmin</span> <span class="o">=</span> <span class="n">vmax</span> <span class="o">-</span> <span class="n">dynamic_range</span>
+            
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">,</span> <span class="n">plot_data</span> <span class="p">,</span> 
+                       <span class="n">cmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cmap</span><span class="p">,</span>
+                       <span class="n">vmin</span> <span class="o">=</span> <span class="n">vmin</span><span class="p">,</span>
+                       <span class="n">vmax</span> <span class="o">=</span> <span class="n">vmax</span><span class="p">,</span>
+                       <span class="n">shading</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;specdata&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Spec v Applied Flux&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Transmission v Applied Flux&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">title_with_filename</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">colorbar</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlims</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylims</span><span class="p">)</span>
+
+        <span class="k">return</span>
+    
+    <span class="k">def</span> <span class="nf">make_diff_subplot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span>
+                          <span class="n">dynamic_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> 
+                          <span class="n">diff_cutoff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                          <span class="n">xlims</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+                          <span class="n">ylims</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+                          <span class="n">title_with_filename</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                          <span class="n">colorbar</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">        </span>
+<span class="sd">        Replot that allows to you command that the plot be created in a specific subplot</span>
+<span class="sd">        axis, rather than creating a new figure for it. This version will plot the </span>
+<span class="sd">        differential transmission</span>
+<span class="sd">        </span>
+<span class="sd">        ax = axis object in which to plot</span>
+<span class="sd">        </span>
+<span class="sd">        dynamic_range = dynamic range for the color bar (+- val for this)</span>
+<span class="sd">        </span>
+<span class="sd">        diff_cutoff = absolute power below which we zero the data for differential</span>
+<span class="sd">                </span>
+<span class="sd">        xlims = x axis limtis (assumed these are frequencies)</span>
+<span class="sd">        </span>
+<span class="sd">        ylims = y axis limtis (assumed these are fvoltages)</span>
+<span class="sd">        </span>
+<span class="sd">        title_with_filename = boolean to determine if file name should go in the title for easy identification</span>
+<span class="sd">                    </span>
+<span class="sd">        If any parameter is np.nan by default, that means that it will use</span>
+<span class="sd">        the values already stored with the data file, rather than fine tuning.</span>
+<span class="sd">        </span>
+<span class="sd">        WARNING - To change the minimu value, this will have to recompute the cutoff and </span>
+<span class="sd">        store the new version.</span>
+<span class="sd">        </span>
+<span class="sd">        11-8-23 Adding the option to leave off the colorbar. It makes it easier to </span>
+<span class="sd">        fine tune it later</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">sca</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">xlims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">xlims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xlims</span>
+        
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ylims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">ylims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ylims</span>
+            
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">dynamic_range</span><span class="p">):</span>
+            <span class="c1">#use the default</span>
+            <span class="n">dynamic_range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_colorBound</span>
+            
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">diff_cutoff</span><span class="p">):</span>
+            <span class="c1">#use the default. Everything is already computed</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#need to reconfigure the minimum cutoff and recompute differential</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">diff_cutoff</span> <span class="o">=</span> <span class="n">diff_cutoff</span>
+            
+            <span class="c1">#recompute the differential transmission</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_trimmed_data</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_diff_transmission</span><span class="p">()</span>
+        
+        <span class="c1">#make sure that the differential matrices are up to date </span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stale_diff_cutoff</span><span class="p">:</span>
+            <span class="c1">#diff cutoff has been set, but the matrices </span>
+            <span class="c1">#have not been recomputed</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recompute_differential</span><span class="p">()</span>
+            
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltaMat</span><span class="p">,</span> 
+                       <span class="n">cmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">div_cmap</span><span class="p">,</span> 
+                       <span class="n">vmax</span> <span class="o">=</span> <span class="n">dynamic_range</span><span class="p">,</span> 
+                       <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="n">dynamic_range</span><span class="p">,</span>
+                       <span class="n">shading</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;specdata&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Differential Spec v Applied Flux&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Differential Transmission v Applied Flux&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">title_with_filename</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">colorbar</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlims</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylims</span><span class="p">)</span>
+
+        <span class="k">return</span></div>
+
+
+
+
+
+
+
+
+
+
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

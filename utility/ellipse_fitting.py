@@ -17,6 +17,14 @@ def _fitEllipse(x,y):
     return a    
     
 def ellipse_center(a):
+    '''
+    ellipse_center _summary_
+
+    :param a: _description_
+    :type a: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     b,c,d,f,g,a = a[1]/2, a[2], a[3]/2, a[4]/2, a[5], a[0]
     num = b*b-a*c
     x0=(c*d-b*f)/num
@@ -24,6 +32,14 @@ def ellipse_center(a):
     return np.array([x0,y0])
 
 def ellipse_axis_length( a ):
+    '''
+    ellipse_axis_length _summary_
+
+    :param a: _description_
+    :type a: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     b,c,d,f,g,a = a[1]/2, a[2], a[3]/2, a[4]/2, a[5], a[0]
     up = 2*(a*f*f+c*d*d+g*b*b-2*b*d*f-a*c*g)
     down1=(b*b-a*c)*( (c-a)*np.sqrt(1+4*b*b/((a-c)*(a-c)))-(c+a))
@@ -50,6 +66,20 @@ def ellipse_angle_of_rotation( a ):
     return out
 
 def make_elipse(axes, center, phi,  numPoints):
+    '''
+    make_elipse _summary_
+
+    :param axes: _description_
+    :type axes: _type_
+    :param center: _description_
+    :type center: _type_
+    :param phi: _description_
+    :type phi: _type_
+    :param numPoints: _description_
+    :type numPoints: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     a, b = axes
     thetas = np.linspace(0,2*np.pi, numPoints)
     

@@ -15,7 +15,25 @@ import matplotlib.pyplot as plt
 from utility.FitT import fit_T1, fit_T2
 
 def T1_meas(calib_params, time_max, num_points, instruments, exp_globals, averages=5e3):
-    
+    '''
+    T1_meas _summary_
+
+    :param calib_params: _description_
+    :type calib_params: _type_
+    :param time_max: _description_
+    :type time_max: _type_
+    :param num_points: _description_
+    :type num_points: _type_
+    :param instruments: _description_
+    :type instruments: _type_
+    :param exp_globals: _description_
+    :type exp_globals: _type_
+    :param averages: _description_, defaults to 5e3
+    :type averages: _type_, optional
+    :return: _description_
+    :rtype: _type_
+    '''    
+
     exp_settings = T1_Defaults()
     
     exp_settings['scanname'] = 'T1'
@@ -57,6 +75,25 @@ def T1_meas(calib_params, time_max, num_points, instruments, exp_globals, averag
     return datafit['tau']
     
 def T2_meas(freq, calib_params, time_max, num_points, instruments, exp_globals, averages=5e3):
+    '''
+    T2_meas _summary_
+
+    :param freq: _description_
+    :type freq: _type_
+    :param calib_params: _description_
+    :type calib_params: _type_
+    :param time_max: _description_
+    :type time_max: _type_
+    :param num_points: _description_
+    :type num_points: _type_
+    :param instruments: _description_
+    :type instruments: _type_
+    :param exp_globals: _description_
+    :type exp_globals: _type_
+    :param averages: _description_, defaults to 5e3
+    :type averages: _type_, optional
+    '''    
+    
     exp_settings = T2_Defaults()
     
     exp_settings['scanname'] = 'T2'
@@ -106,6 +143,12 @@ def T2_meas(freq, calib_params, time_max, num_points, instruments, exp_globals, 
 def find_Q_freq(qubit_guess, calib_params, instruments, exp_globals, 
                 t_window=1e-6, num_points=21, freq_shift=2e6, averages=5e3):
      
+    '''
+     _summary_
+
+    :return: _description_
+    :rtype: _type_
+    '''     
     delta1, T2_fit1 = T2_meas(qubit_guess, calib_params, t_window, num_points, instruments, exp_globals, averages)
     probef2 = qubit_guess + freq_shift
     delta2, T2_fit2 = T2_meas(probef2, calib_params, t_window, num_points, instruments, exp_globals, averages)
@@ -126,7 +169,23 @@ def find_Q_freq(qubit_guess, calib_params, instruments, exp_globals,
     return int(qffinal/1e3)*1e3 
 
 def find_T1(T1_guess, calib_params, instruments, exp_globals, averages=5e3):
-    
+    '''
+    find_T1 _summary_
+
+    :param T1_guess: _description_
+    :type T1_guess: _type_
+    :param calib_params: _description_
+    :type calib_params: _type_
+    :param instruments: _description_
+    :type instruments: _type_
+    :param exp_globals: _description_
+    :type exp_globals: _type_
+    :param averages: _description_, defaults to 5e3
+    :type averages: _type_, optional
+    :return: _description_
+    :rtype: _type_
+    '''    
+
     T1_fit = T1_guess
     acceptable_T1 = T1_fit
     T1_range = int(T1_fit*1e6) * 5e-6
@@ -163,7 +222,23 @@ def find_T1(T1_guess, calib_params, instruments, exp_globals, averages=5e3):
     return T1_timefit
 
 def find_T2(T2_guess, calib_params, instruments, exp_globals, averages=5e3):
-    
+    '''
+    find_T2 _summary_
+
+    :param T2_guess: _description_
+    :type T2_guess: _type_
+    :param calib_params: _description_
+    :type calib_params: _type_
+    :param instruments: _description_
+    :type instruments: _type_
+    :param exp_globals: _description_
+    :type exp_globals: _type_
+    :param averages: _description_, defaults to 5e3
+    :type averages: _type_, optional
+    :return: _description_
+    :rtype: _type_
+    '''    
+
     T2_fit = T2_guess
     acceptable_T2 = T2_fit
     T2_range = int(T2_fit*1e6) * 5e-6
@@ -212,6 +287,22 @@ def find_T2(T2_guess, calib_params, instruments, exp_globals, averages=5e3):
     return T2_timefit
 
 def find_T2_old(T2_guess, calib_params, instruments, exp_globals, averages=5e3):
+    '''
+    find_T2_old _summary_
+
+    :param T2_guess: _description_
+    :type T2_guess: _type_
+    :param calib_params: _description_
+    :type calib_params: _type_
+    :param instruments: _description_
+    :type instruments: _type_
+    :param exp_globals: _description_
+    :type exp_globals: _type_
+    :param averages: _description_, defaults to 5e3
+    :type averages: _type_, optional
+    :return: _description_
+    :rtype: _type_
+    '''    
     tstart = 5e-6
     tactual_T2 = tstart
     T2_fit = T2_guess#np.min(np.abs([T2_fit1, T2_fit2]))

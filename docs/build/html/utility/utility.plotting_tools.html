@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>plotting_tools &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'utility/utility.plotting_tools';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="scheduler" href="utility.scheduler.html" />
+    <link rel="prev" title="measurement_helpers" href="utility.measurement_helpers.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MRitter95/Kollar-Lab" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MRitter95/Kollar-Lab" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="utility.html">utility</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="utility.DDC_funcs.html">DDC_funcs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.DataManagementUtility.html">DataManagementUtility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.FitT.html">FitT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.LatticeReplotter2.html">LatticeReplotter2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.Qcalcs.html">Qcalcs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.auto_fit.html">auto_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.ellipse_fitting.html">ellipse_fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.lattice_funcs.html">lattice_funcs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.measurement_helpers.html">measurement_helpers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plotting_tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.autoscan_plot"><code class="docutils literal notranslate"><span class="pre">autoscan_plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.base_power_plot_imshow"><code class="docutils literal notranslate"><span class="pre">base_power_plot_imshow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.general_VNAplot"><code class="docutils literal notranslate"><span class="pre">general_VNAplot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.general_colormap_subplot"><code class="docutils literal notranslate"><span class="pre">general_colormap_subplot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.get_peaks"><code class="docutils literal notranslate"><span class="pre">get_peaks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.pulsed_debug"><code class="docutils literal notranslate"><span class="pre">pulsed_debug()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.simplescan_plot"><code class="docutils literal notranslate"><span class="pre">simplescan_plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility.plotting_tools.simplescan_plot_update"><code class="docutils literal notranslate"><span class="pre">simplescan_plot_update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utility.scheduler.html">scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.userfits.html">userfits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.userfits_v2.html">userfits_v2</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/utility/utility.plotting_tools.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="utility.html" class="nav-link">utility</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">plotting_tools</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-utility.plotting_tools">
+<span id="plotting-tools"></span><h1>plotting_tools<a class="headerlink" href="#module-utility.plotting_tools" title="Link to this heading">#</a></h1>
+<p>Created on Tue Nov 10 10:46:45 2020</p>
+<p>&#64;author: Kollarlab</p>
+<p class="rubric">Functions</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utility.plotting_tools.autoscan_plot" title="utility.plotting_tools.autoscan_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">autoscan_plot</span></code></a>(transdata, specdata, ...[, ...])</p></td>
+<td><p>autoscan_plot _summary_</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utility.plotting_tools.base_power_plot_imshow" title="utility.plotting_tools.base_power_plot_imshow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_power_plot_imshow</span></code></a>(fig, ax, xdata, ...)</p></td>
+<td><p>base_power_plot_imshow _summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utility.plotting_tools.general_VNAplot" title="utility.plotting_tools.general_VNAplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">general_VNAplot</span></code></a>(xaxis, mags, phases, yaxis, ...)</p></td>
+<td><p>general_VNAplot _summary_</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utility.plotting_tools.general_colormap_subplot" title="utility.plotting_tools.general_colormap_subplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">general_colormap_subplot</span></code></a>(ax, xaxis, yaxis, ...)</p></td>
+<td><p>given a subplot object, it should make a decent imshow plot of the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utility.plotting_tools.get_peaks" title="utility.plotting_tools.get_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_peaks</span></code></a>(freqs, mags, window, polyorder, ...)</p></td>
+<td><p>get_peaks _summary_</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utility.plotting_tools.pulsed_debug" title="utility.plotting_tools.pulsed_debug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pulsed_debug</span></code></a>(fig, freqs, powers, mags, ...)</p></td>
+<td><p>pulsed_debug _summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utility.plotting_tools.simplescan_plot" title="utility.plotting_tools.simplescan_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simplescan_plot</span></code></a>(full_data, singledata, ...)</p></td>
+<td><p>simplescan_plot _summary_</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utility.plotting_tools.simplescan_plot_update" title="utility.plotting_tools.simplescan_plot_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simplescan_plot_update</span></code></a>(full_data, ...[, ...])</p></td>
+<td><p>simplescan_plot_update _summary_</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.autoscan_plot">
+<span class="sig-name descname"><span class="pre">autoscan_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singledata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scanname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#autoscan_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.autoscan_plot" title="Link to this definition">#</a></dt>
+<dd><p>autoscan_plot _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transdata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>specdata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>singledata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>yaxis</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>scanname</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>trans_labels</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>spec_labels</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>identifier</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>fig_num</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.base_power_plot_imshow">
+<span class="sig-name descname"><span class="pre">base_power_plot_imshow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#base_power_plot_imshow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.base_power_plot_imshow" title="Link to this definition">#</a></dt>
+<dd><p>base_power_plot_imshow _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>ax</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>xdata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>ydata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>zdata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>labels</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>attenuation</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_, defaults to 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.general_VNAplot">
+<span class="sig-name descname"><span class="pre">general_VNAplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scanname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">HWattenuation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['Freq</span> <span class="pre">(GHz)',</span> <span class="pre">'Power</span> <span class="pre">(dBm)']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#general_VNAplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.general_VNAplot" title="Link to this definition">#</a></dt>
+<dd><p>general_VNAplot _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xaxis</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>mags</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>phases</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>yaxis</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>scanname</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>HWattenuation</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_, defaults to 0</p></li>
+<li><p><strong>labels</strong> (<em>list</em><em>, </em><em>optional</em>) – _description_, defaults to [‘Freq (GHz)’, ‘Power (dBm)’]</p></li>
+<li><p><strong>identifier</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+<li><p><strong>fig_num</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.general_colormap_subplot">
+<span class="sig-name descname"><span class="pre">general_colormap_subplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#general_colormap_subplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.general_colormap_subplot" title="Link to this definition">#</a></dt>
+<dd><p>given a subplot object, it should make a decent imshow plot of the data.</p>
+<p>You have to handle subtracting out any attenuation and do the labeling after.</p>
+<p>Trying to make this the most generic function possible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.get_peaks">
+<span class="sig-name descname"><span class="pre">get_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polyorder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#get_peaks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.get_peaks" title="Link to this definition">#</a></dt>
+<dd><p>get_peaks _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freqs</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>mags</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>window</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>polyorder</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>height</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>width</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>show_plot</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>_description_</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.pulsed_debug">
+<span class="sig-name descname"><span class="pre">pulsed_debug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">powers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scanname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#pulsed_debug"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.pulsed_debug" title="Link to this definition">#</a></dt>
+<dd><p>pulsed_debug _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>freqs</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>powers</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>mags</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>phases</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>amp</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>phase</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>scanname</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>power</strong> (<em>_type_</em>) – _description_</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.simplescan_plot">
+<span class="sig-name descname"><span class="pre">simplescan_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singledata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scanname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IQdata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#simplescan_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.simplescan_plot" title="Link to this definition">#</a></dt>
+<dd><p>simplescan_plot _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_data</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>singledata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>yaxis</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>scanname</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>labels</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>identifier</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+<li><p><strong>fig_num</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘hot’</p></li>
+<li><p><strong>vmin</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to np.nan</p></li>
+<li><p><strong>vmax</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to np.nan</p></li>
+<li><p><strong>IQdata</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_, defaults to False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utility.plotting_tools.simplescan_plot_update">
+<span class="sig-name descname"><span class="pre">simplescan_plot_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singledata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scanname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datanames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utility/plotting_tools.html#simplescan_plot_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utility.plotting_tools.simplescan_plot_update" title="Link to this definition">#</a></dt>
+<dd><p>simplescan_plot_update _summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_data</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>singledata</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>yaxis</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>scanname</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>labels</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>datanames</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>titles</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>identifier</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+<li><p><strong>fig_num</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘’</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_, defaults to ‘hot’</p></li>
+<li><p><strong>vmin</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to np.nan</p></li>
+<li><p><strong>vmax</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to np.nan</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="utility.measurement_helpers.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">measurement_helpers</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="utility.scheduler.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">scheduler</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.autoscan_plot"><code class="docutils literal notranslate"><span class="pre">autoscan_plot()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.base_power_plot_imshow"><code class="docutils literal notranslate"><span class="pre">base_power_plot_imshow()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.general_VNAplot"><code class="docutils literal notranslate"><span class="pre">general_VNAplot()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.general_colormap_subplot"><code class="docutils literal notranslate"><span class="pre">general_colormap_subplot()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.get_peaks"><code class="docutils literal notranslate"><span class="pre">get_peaks()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.pulsed_debug"><code class="docutils literal notranslate"><span class="pre">pulsed_debug()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.simplescan_plot"><code class="docutils literal notranslate"><span class="pre">simplescan_plot()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility.plotting_tools.simplescan_plot_update"><code class="docutils literal notranslate"><span class="pre">simplescan_plot_update()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/utility/utility.plotting_tools.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

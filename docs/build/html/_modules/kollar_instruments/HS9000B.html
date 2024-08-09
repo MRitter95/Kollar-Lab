@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kollar_instruments.HS9000B &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/kollar_instruments/HS9000B';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">kollar_instr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for kollar_instruments.HS9000B</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu Dec  3 18:04:20 2020</span>
+
+<span class="sd">@author: Kollarlab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">pyvisa</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="HS9000B">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HS9000B.HS9000B.html#kollar_instruments.HS9000B.HS9000B">[docs]</a>
+<span class="k">class</span> <span class="nc">HS9000B</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Holzworth class, currently hard coded to 2 channels.</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">    </span>
+<span class="sd">    settings: property that returns the settings of the submodules (channels and reference)</span>
+<span class="sd">    ch1, ch2: channel objects with frequency, phase, power, output control</span>
+<span class="sd">    ref: reference objet that controls the reference clock source (INT/EXT) and frequency (10/100MHz)</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="HS9000B.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HS9000B.HS9000B.html#kollar_instruments.HS9000B.HS9000B.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor for Holzworth</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            address (string): pyvisa resource string (e.g. &#39;ASRL3::INSTR&#39;)</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">=</span> <span class="s1">&#39;holzworth&#39;</span>
+        
+        <span class="n">rm</span> <span class="o">=</span> <span class="n">pyvisa</span><span class="o">.</span><span class="n">ResourceManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span> <span class="o">=</span> <span class="n">rm</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="c1">#We have to explictly set the baud rate and termination because </span>
+        <span class="c1">#they don&#39;t match the pyvisa defaults</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">baud_rate</span> <span class="o">=</span> <span class="mi">115200</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write_termination</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">read_termination</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ch1</span> <span class="o">=</span> <span class="n">channel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ch2</span> <span class="o">=</span> <span class="n">channel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref</span> <span class="o">=</span> <span class="n">reference</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="p">)</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;ch1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">settings</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;ch2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ch2</span><span class="o">.</span><span class="n">settings</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;ref&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">settings</span>
+    
+        <span class="k">return</span> <span class="n">fullsettings</span>
+
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ch2</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="reference">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HS9000B.reference.html#kollar_instruments.HS9000B.reference">[docs]</a>
+<span class="k">class</span> <span class="nc">reference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="reference.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HS9000B.reference.html#kollar_instruments.HS9000B.reference.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inst</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span> <span class="o">=</span> <span class="n">inst</span>
+        
+        <span class="c1">#strings to have around because source and frequency cannot be set separately at the bottom later</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_source_str</span> <span class="o">=</span> <span class="s1">&#39;INT&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_frequency_str</span> <span class="o">=</span> <span class="s1">&#39;100MHz&#39;</span>
+    
+        <span class="c1">#make sure that the actual setting match the stored strings, to start with</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;INT&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="mf">100e6</span></div>
+
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="c1">#        print(&#39;reading ref&#39;)</span>
+        <span class="p">[</span><span class="n">mode</span><span class="p">,</span> <span class="n">freq</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;:REF:STATUS?&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">mode</span>
+    <span class="nd">@source</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
+<span class="c1">#        print(&#39;setting mode&#39;)</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;INT&#39;</span><span class="p">,</span> <span class="s1">&#39;Int&#39;</span><span class="p">,</span> <span class="s1">&#39;Internal&#39;</span><span class="p">]:</span>
+            <span class="n">mode_str</span> <span class="o">=</span> <span class="s1">&#39;INT&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="mf">100e6</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;EXT&#39;</span><span class="p">,</span> <span class="s1">&#39;Ext&#39;</span><span class="p">,</span> <span class="s1">&#39;External&#39;</span><span class="p">]:</span>
+            <span class="n">mode_str</span> <span class="o">=</span> <span class="s1">&#39;EXT&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown refernce source mode. Try Ext, Int&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;:REF:</span><span class="si">{}</span><span class="s1">:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mode_str</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frequency_str</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_source_str</span> <span class="o">=</span> <span class="n">mode_str</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">frequency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="c1">#        print(&#39;reading ref(freq)&#39;)</span>
+        <span class="p">[</span><span class="n">mode</span><span class="p">,</span> <span class="n">freq_str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;:REF:STATUS?&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">freq_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="mf">1e6</span>
+        <span class="k">return</span> <span class="n">freq</span>
+    <span class="nd">@frequency</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">frequency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="c1">#        print(&#39;trying to set {}&#39;.format(value))</span>
+        <span class="n">value_MHz</span> <span class="o">=</span> <span class="n">value</span><span class="o">/</span><span class="mf">1e6</span>
+        <span class="n">value_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">value_MHz</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_str</span> <span class="o">==</span> <span class="s1">&#39;INT&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">value_int</span><span class="o">==</span> <span class="mi">100</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Internal reference frequency must be 100 MHz&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source_str</span> <span class="o">==</span> <span class="s1">&#39;EXT&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">value_int</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;External ref freq must be 10 or 100 MHz&#39;</span><span class="p">)</span>
+        <span class="n">value_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value_int</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;MHz&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;:REF:</span><span class="si">{}</span><span class="s1">:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_source_str</span><span class="p">,</span> <span class="n">value_str</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_frequency_str</span>  <span class="o">=</span> <span class="n">value_str</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;frequency&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span>
+        <span class="k">return</span> <span class="n">fullsettings</span></div>
+
+
+<div class="viewcode-block" id="channel">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HS9000B.channel.html#kollar_instruments.HS9000B.channel">[docs]</a>
+<span class="k">class</span> <span class="nc">channel</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Channel object for Holzworth. Very similar to SCPIinst object but with tweaked syntax</span>
+<span class="sd">    because Holzworth doesn&#39;t follow the SCPI standard...</span>
+<span class="sd">    Behavior is pretty much the same: a dictionary of commands is defined and the keys define </span>
+<span class="sd">    properties of the object that are accessed (e.g,: channel.freq queries the instrument and</span>
+<span class="sd">    channel.freq = &#39;5GHz&#39; sets the instrument frequency to 5 GHz)</span>
+<span class="sd">    All interactions with the instrument happen as queries because that&#39;s just how it is</span>
+<span class="sd">    not sure why.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        </span>
+<span class="sd">    ID: channel number</span>
+<span class="sd">    inst: pyvisa handle</span>
+<span class="sd">    props: dictionary of commands that can be set/ read from the instrument</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">    9-6-21 Going in to force the holzworth channel to have the same syntax (as much as possible)</span>
+<span class="sd">    as the SGS for compatibility. Auto behavior is too persnickety.</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="channel.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HS9000B.channel.html#kollar_instruments.HS9000B.channel.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inst</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">=</span> <span class="s1">&#39;holzworth_channel&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span> <span class="o">=</span> <span class="n">inst</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel</span> <span class="o">=</span> <span class="s1">&#39;:CH</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;:FREQ&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;:PHASE&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;:PWR:RF&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;:PWR&#39;</span>
+<span class="c1">#        self.props[&#39;ext_mod_enable&#39;] = &#39;:MOD&#39;</span>
+<span class="c1">#        self.props[&#39;ext_mod&#39;] = &#39;:MOD:MODE&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;mod&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;:MOD:MODE&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">setting</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">:</span>
+<span class="c1">#            fullsettings[setting] = self.__getattr__(setting)</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="n">setting</span><span class="p">]</span> <span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">setting</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;:CH</span><span class="si">{}</span><span class="s1">*RST&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;returns frequency in Hz&#39;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:FREQ?&#39;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="c1"># example &#39;1980.00000 MHz&#39;</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="mf">1e6</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@freq</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;value should be a number in Hz &#39;&#39;&#39;</span>
+        <span class="n">val_MHz</span> <span class="o">=</span> <span class="n">val</span><span class="o">/</span><span class="mf">1e6</span>
+        <span class="n">val_MHz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">val_MHz</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="c1">#        print(val_MHz)</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:FREQ:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val_MHz</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;MHz&#39;</span>
+<span class="c1">#        print(writeStr)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Freq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq</span>
+    <span class="nd">@Freq</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">val</span>
+        
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;returns power in dB (probably)&#39;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PWR?&#39;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@power</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PWR:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Power</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">power</span>
+    <span class="nd">@Power</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">val</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">phase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;  phase in degrees (probably) &#39;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PHASE?&#39;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@phase</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">phase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Only positive phase angles allowed&#39;</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PHASE:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Phase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phase</span>
+    <span class="nd">@Phase</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Phase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phase</span> <span class="o">=</span> <span class="n">val</span>
+        
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PWR:RF?&#39;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="s1">&#39;ON&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;On&#39;</span>
+        <span class="k">elif</span> <span class="n">output</span> <span class="o">==</span> <span class="s1">&#39;OFF&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Off&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown output state&#39;</span><span class="p">)</span>
+    <span class="nd">@output</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">baseStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PWR:RF&#39;</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ON&#39;</span><span class="p">,</span> <span class="s1">&#39;On&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="c1">#set the power to the desired level</span>
+            <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PWR:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">power</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+<span class="c1">#            print(&#39;Setting power before turning on&#39;)</span>
+            
+            <span class="c1">#turn the output on</span>
+            <span class="n">writeStr</span> <span class="o">=</span> <span class="n">baseStr</span> <span class="o">+</span> <span class="s1">&#39;:ON&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+<span class="c1">#            print(&#39;turning the output on&#39;)</span>
+            
+            <span class="c1">#set the power to the desired level again after the output is on</span>
+            <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:PWR:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">power</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+<span class="c1">#            print(&#39;Setting power after turning on&#39;)</span>
+            
+            
+        <span class="k">elif</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;OFF&#39;</span><span class="p">,</span> <span class="s1">&#39;Off&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
+            <span class="n">writeStr</span> <span class="o">=</span> <span class="n">baseStr</span> <span class="o">+</span> <span class="s1">&#39;:OFF&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;invalid output setting. Should be ON, On, 1, or OFF, Off, 0&#39;</span><span class="p">)</span>
+     
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span>
+    <span class="nd">@Output</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">val</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">writeStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:MOD:MODE?&#39;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="s1">&#39;OFF&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Off&#39;</span>
+        <span class="k">elif</span> <span class="n">output</span> <span class="o">==</span> <span class="s1">&#39;PULSE:EXT&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;On&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">output</span>
+    <span class="nd">@mod</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">baseStr</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">+</span> <span class="s1">&#39;:MOD:MODE&#39;</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ON&#39;</span><span class="p">,</span> <span class="s1">&#39;On&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="n">writeStr</span> <span class="o">=</span> <span class="n">baseStr</span> <span class="o">+</span> <span class="s1">&#39;:PULSE:SRC:EXT&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;OFF&#39;</span><span class="p">,</span> <span class="s1">&#39;Off&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">]:</span>
+            <span class="n">writeStr</span> <span class="o">=</span> <span class="n">baseStr</span> <span class="o">+</span> <span class="s1">&#39;:OFF&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">writeStr</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;invalid output setting. Should be ON, On, 1, or OFF, Off, 0&#39;</span><span class="p">)</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Mod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mod</span>
+    <span class="nd">@Mod</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Mod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mod</span> <span class="o">=</span> <span class="n">val</span>
+    
+    <span class="k">def</span> <span class="nf">enable_pulse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mod</span> <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">disable_pulse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mod</span> <span class="o">=</span> <span class="s1">&#39;Off&#39;</span></div>
+
+    
+    
+<span class="c1">#    @property</span>
+<span class="c1">#    def triggerSlope(self):</span>
+<span class="c1">#        activeTrigger = self.driver.Trigger.Sources[self.triggerSource]</span>
+<span class="c1">#        temp = activeTrigger.Edge.Slope</span>
+<span class="c1">##        self._triggerSlope = temp</span>
+<span class="c1">#        if temp == 0:</span>
+<span class="c1">#            val = &#39;Falling&#39;</span>
+<span class="c1">#        elif temp == 1:</span>
+<span class="c1">#            val = &#39;Rising&#39;</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            raise ValueError(&quot;Unkown trigger slope returned&quot;)</span>
+<span class="c1">#        self._triggerSlope = val</span>
+<span class="c1">#        return val</span>
+<span class="c1">#    @triggerSlope.setter</span>
+<span class="c1">#    def triggerSlope(self,val):</span>
+<span class="c1">#        if val == &#39;Falling&#39;:</span>
+<span class="c1">#            triggerSlopeC = 0</span>
+<span class="c1">#        elif val == &#39;Rising&#39;:</span>
+<span class="c1">#            triggerSlopeC = 1</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            raise ValueError(&quot;Edge trigger slope must be either &#39;Rising&#39; or &#39;Falling&#39;&quot;)</span>
+<span class="c1">##        self._triggerSlope = triggerSlopeC</span>
+<span class="c1">#        self._triggerSlope = val</span>
+<span class="c1">#        activeTrigger = self.driver.Trigger.Sources[self.triggerSource]</span>
+<span class="c1">#        activeTrigger.Edge.Slope = triggerSlopeC</span>
+
+
+
+
+
+<span class="c1">#    def __getattr__(self, name):</span>
+<span class="c1">#        &#39;&#39;&#39;</span>
+<span class="c1">#        Overwriting the get attr method so that we can have the instrument</span>
+<span class="c1">#        behave like a normal python object without having to write properties</span>
+<span class="c1">#        or getters/setters for every single setting</span>
+<span class="c1">#        Avoids infinite loops by invoking the standard getattr for the init </span>
+<span class="c1">#        phase</span>
+<span class="c1">#        &#39;&#39;&#39;</span>
+<span class="c1">#        initializing = self.__dict__[&#39;init&#39;]</span>
+<span class="c1">#        full_dict = self.__dict__</span>
+<span class="c1">#        if initializing or name in full_dict.keys():</span>
+<span class="c1">#            super().__getattribute__(self, name)</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            prop_dict = self.__dict__[&#39;props&#39;]</span>
+<span class="c1">#            channel = self.__dict__[&#39;channel&#39;]</span>
+<span class="c1">#            if name in prop_dict.keys():</span>
+<span class="c1">#                val =  self.inst.query(channel+prop_dict[name]+&#39;?&#39;)</span>
+<span class="c1">#                try:</span>
+<span class="c1">#                    return eval(val)</span>
+<span class="c1">#                except:</span>
+<span class="c1">#                    return val</span>
+<span class="c1">#            else:</span>
+<span class="c1">#                print(&#39;invalid command&#39;)</span>
+    
+<span class="c1">#    def __setattr__(self, name, value):</span>
+<span class="c1">#        &#39;&#39;&#39;</span>
+<span class="c1">#        Overwriting the set attribute method</span>
+<span class="c1">#        It will behave &#39;normally&#39; for the defined properties (ID etc) but</span>
+<span class="c1">#        execute a command on the instrument for the standard operations (freq, phase</span>
+<span class="c1">#        etc.)</span>
+<span class="c1">#        The code at the beginning avoids infinite recursion for the very first setting (init)</span>
+<span class="c1">#        &#39;&#39;&#39;</span>
+<span class="c1">#        try:</span>
+<span class="c1">#            initializing = self.__dict__[&#39;init&#39;]</span>
+<span class="c1">#        except:</span>
+<span class="c1">#            initializing = True</span>
+<span class="c1">#        full_dict = self.__dict__</span>
+<span class="c1">#        if initializing or name in full_dict.keys():</span>
+<span class="c1">#            super().__setattr__(name, value)</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            prop_dict = self.__dict__[&#39;props&#39;]</span>
+<span class="c1">#            channel = self.__dict__[&#39;channel&#39;]</span>
+<span class="c1">#            if name in prop_dict.keys():</span>
+<span class="c1">#                self.inst.query(channel+prop_dict[name]+&#39;:{}&#39;.format(value))</span>
+<span class="c1">#            else:</span>
+<span class="c1">#                print(&#39;setting an invalid command&#39;)</span>
+                
+                
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">holzworth</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="n">hardwareAddress</span> <span class="o">=</span> <span class="s1">&#39;ASRL7::INSTR&#39;</span>
+    <span class="n">holzworth</span> <span class="o">=</span> <span class="n">HS9000B</span><span class="p">(</span><span class="n">hardwareAddress</span><span class="p">)</span>
+    
+    
+<span class="c1">#    #frequency, lower case</span>
+<span class="c1">#    f1 = holzworth.ch1.freq</span>
+<span class="c1">#    print(str(f1/1e9))</span>
+<span class="c1">#</span>
+<span class="c1">##    holzworth.ch1.freq = 1e9</span>
+<span class="c1">#    holzworth.ch1.freq = (3.2e9 + np.random.rand()*100e6)</span>
+<span class="c1">#    f2 = holzworth.ch1.freq</span>
+<span class="c1">#    print(str(f2/1e9))</span>
+    
+<span class="c1">#    #frequency, upper case</span>
+<span class="c1">#    f1 = holzworth.ch1.Freq</span>
+<span class="c1">#    print(str(f1/1e9))</span>
+<span class="c1">#</span>
+<span class="c1">##    holzworth.ch1.freq = 1e9</span>
+<span class="c1">#    holzworth.ch1.Freq = (3.2e9 + np.random.rand()*100e6)</span>
+<span class="c1">#    f2 = holzworth.ch1.Freq</span>
+<span class="c1">#    print(str(f2/1e9))</span>
+    
+<span class="c1">#    #power, lower case</span>
+<span class="c1">#    p1 = holzworth.ch1.power</span>
+<span class="c1">#    print(str(p1))</span>
+<span class="c1">#</span>
+<span class="c1">#    holzworth.ch1.power = (-3.2+ np.random.rand()*1)</span>
+<span class="c1">#    p2 = holzworth.ch1.power</span>
+<span class="c1">#    print(str(p2))</span>
+    
+<span class="c1">#    #phase, lower case</span>
+<span class="c1">#    p1 = holzworth.ch1.phase</span>
+<span class="c1">#    print(str(p1))</span>
+<span class="c1">#</span>
+<span class="c1">##    holzworth.ch1.phase = (6)</span>
+<span class="c1">#    holzworth.ch1.phase = (23.2+ np.random.rand()*1)</span>
+<span class="c1">#    p2 = holzworth.ch1.phase</span>
+<span class="c1">#    print(str(p2))</span>
+    
+<span class="c1">#    #phase, upper case</span>
+<span class="c1">#    p1 = holzworth.ch1.Phase</span>
+<span class="c1">#    print(str(p1))</span>
+<span class="c1">#</span>
+<span class="c1">##    holzworth.ch1.Phase = (6)</span>
+<span class="c1">#    holzworth.ch1.Phase = (23.2+ np.random.rand()*1)</span>
+<span class="c1">#    p2 = holzworth.ch1.Phase</span>
+<span class="c1">#    print(str(p2))</span>
+    
+<span class="c1">#    #output, lower case</span>
+<span class="c1">#    out = holzworth.ch1.output</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.output = &#39;OFF&#39;</span>
+<span class="c1">#    out = holzworth.ch1.output</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.output = &#39;On&#39;</span>
+<span class="c1">#    out = holzworth.ch1.output</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.output = 0</span>
+<span class="c1">#    out = holzworth.ch1.output</span>
+<span class="c1">#    print(out)</span>
+    
+<span class="c1">#    #output, upper case</span>
+<span class="c1">#    out = holzworth.ch1.Output</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.Output = &#39;OFF&#39;</span>
+<span class="c1">#    out = holzworth.ch1.Output</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.Output = &#39;On&#39;</span>
+<span class="c1">#    out = holzworth.ch1.Output</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.Output = 0</span>
+<span class="c1">#    out = holzworth.ch1.Output</span>
+<span class="c1">#    print(out)</span>
+    
+<span class="c1">#    #mod, lower case</span>
+<span class="c1">#    out = holzworth.ch1.mod</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.mod = &#39;OFF&#39;</span>
+<span class="c1">#    out = holzworth.ch1.mod</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.mod = &#39;On&#39;</span>
+<span class="c1">#    out = holzworth.ch1.mod</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+<span class="c1">#    holzworth.ch1.mod = 0</span>
+<span class="c1">#    out = holzworth.ch1.mod</span>
+<span class="c1">#    print(out)</span>
+<span class="c1">#    </span>
+    
+    <span class="c1">#mod, upper case</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    
+    <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    
+    <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span> <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    
+    <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">holzworth</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">Mod</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    
+    
+    
+    
+    
+    
+
+
+
+
+                
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

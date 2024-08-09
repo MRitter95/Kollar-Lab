@@ -11,12 +11,42 @@ import scipy.signal
 import scipy.constants
 
 def fit_func(omega,omega_0,delta_omega,Q_i,Q_c,dB_offset):
+    '''
+    fit_func _summary_
+
+    :param omega: _description_
+    :type omega: _type_
+    :param omega_0: _description_
+    :type omega_0: _type_
+    :param delta_omega: _description_
+    :type delta_omega: _type_
+    :param Q_i: _description_
+    :type Q_i: _type_
+    :param Q_c: _description_
+    :type Q_c: _type_
+    :param dB_offset: _description_
+    :type dB_offset: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     Q_0 = 1/(1/Q_i + 1/Q_c)
     num = Q_0/Q_c - 2*1j*Q_0*delta_omega/omega_0
     den = 1 + 2*1j*Q_0*(omega-omega_0)/omega_0
     return 20*np.log10(np.abs(1 - num/den)) + dB_offset
 
 def fit_Q(freqs, mag, center):
+    '''
+    fit_Q _summary_
+
+    :param freqs: _description_
+    :type freqs: _type_
+    :param mag: _description_
+    :type mag: _type_
+    :param center: _description_
+    :type center: _type_
+    :return: _description_
+    :rtype: _type_
+    '''    
     xdata = 2*np.pi*freqs
     ydata  = mag
     

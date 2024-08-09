@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utility.plotting_tools &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/utility/plotting_tools';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">utility.plot...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for utility.plotting_tools</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Tue Nov 10 10:46:45 2020</span>
+
+<span class="sd">@author: Kollarlab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1.inset_locator</span> <span class="kn">import</span> <span class="n">inset_axes</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">find_peaks</span><span class="p">,</span> <span class="n">savgol_filter</span>
+
+<div class="viewcode-block" id="general_VNAplot">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.general_VNAplot">[docs]</a>
+<span class="k">def</span> <span class="nf">general_VNAplot</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">mags</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">scanname</span><span class="p">,</span> <span class="n">HWattenuation</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+                 <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Freq (GHz)&#39;</span><span class="p">,</span> <span class="s1">&#39;Power (dBm)&#39;</span><span class="p">],</span> <span class="n">identifier</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> 
+                 <span class="n">fig_num</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    general_VNAplot _summary_</span>
+
+<span class="sd">    :param xaxis: _description_</span>
+<span class="sd">    :type xaxis: _type_</span>
+<span class="sd">    :param mags: _description_</span>
+<span class="sd">    :type mags: _type_</span>
+<span class="sd">    :param phases: _description_</span>
+<span class="sd">    :type phases: _type_</span>
+<span class="sd">    :param yaxis: _description_</span>
+<span class="sd">    :type yaxis: _type_</span>
+<span class="sd">    :param scanname: _description_</span>
+<span class="sd">    :type scanname: _type_</span>
+<span class="sd">    :param HWattenuation: _description_, defaults to 0</span>
+<span class="sd">    :type HWattenuation: int, optional</span>
+<span class="sd">    :param labels: _description_, defaults to [&#39;Freq (GHz)&#39;, &#39;Power (dBm)&#39;]</span>
+<span class="sd">    :type labels: list, optional</span>
+<span class="sd">    :param identifier: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type identifier: str, optional</span>
+<span class="sd">    :param fig_num: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type fig_num: str, optional</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    
+    <span class="k">if</span> <span class="n">fig_num</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fig_num</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">yaxis</span><span class="o">-</span><span class="n">HWattenuation</span><span class="p">,</span> <span class="n">mags</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="s1">&#39;S21 mag&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">yaxis</span><span class="o">-</span><span class="n">HWattenuation</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="s1">&#39;S21 phase&#39;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Filename: </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scanname</span><span class="p">,</span> <span class="n">identifier</span><span class="p">))</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="simplescan_plot">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.simplescan_plot">[docs]</a>
+<span class="k">def</span> <span class="nf">simplescan_plot</span><span class="p">(</span><span class="n">full_data</span><span class="p">,</span> <span class="n">singledata</span><span class="p">,</span> 
+                    <span class="n">yaxis</span><span class="p">,</span> 
+                    <span class="n">scanname</span><span class="p">,</span> 
+                    <span class="n">labels</span><span class="p">,</span> 
+                    <span class="n">identifier</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> 
+                    <span class="n">fig_num</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> 
+                    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">,</span> 
+                    <span class="n">vmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="n">IQdata</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    simplescan_plot _summary_</span>
+
+<span class="sd">    :param full_data: _description_</span>
+<span class="sd">    :type full_data: _type_</span>
+<span class="sd">    :param singledata: _description_</span>
+<span class="sd">    :type singledata: _type_</span>
+<span class="sd">    :param yaxis: _description_</span>
+<span class="sd">    :type yaxis: _type_</span>
+<span class="sd">    :param scanname: _description_</span>
+<span class="sd">    :type scanname: _type_</span>
+<span class="sd">    :param labels: _description_</span>
+<span class="sd">    :type labels: _type_</span>
+<span class="sd">    :param identifier: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type identifier: str, optional</span>
+<span class="sd">    :param fig_num: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type fig_num: str, optional</span>
+<span class="sd">    :param cmap: _description_, defaults to &#39;hot&#39;</span>
+<span class="sd">    :type cmap: str, optional</span>
+<span class="sd">    :param vmin: _description_, defaults to np.nan</span>
+<span class="sd">    :type vmin: _type_, optional</span>
+<span class="sd">    :param vmax: _description_, defaults to np.nan</span>
+<span class="sd">    :type vmax: _type_, optional</span>
+<span class="sd">    :param IQdata: _description_, defaults to False</span>
+<span class="sd">    :type IQdata: bool, optional</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    
+    <span class="k">if</span> <span class="n">fig_num</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fig_num</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    
+    <span class="c1">#modifying this function so that it can plot mag/phase data or I/Q data</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">IQdata</span><span class="p">:</span>
+        <span class="n">key1</span> <span class="o">=</span> <span class="s1">&#39;mags&#39;</span>
+        <span class="n">title1</span> <span class="o">=</span> <span class="s1">&#39;Mag&#39;</span>
+        
+        <span class="n">key2</span> <span class="o">=</span> <span class="s1">&#39;phases&#39;</span>
+        <span class="n">title2</span> <span class="o">=</span> <span class="s1">&#39;Phase&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">key1</span> <span class="o">=</span> <span class="s1">&#39;Is&#39;</span>
+        <span class="n">title1</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span>
+        
+        <span class="n">key2</span> <span class="o">=</span> <span class="s1">&#39;Qs&#39;</span>
+        <span class="n">title2</span> <span class="o">=</span> <span class="s1">&#39;Q&#39;</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#    general_colormap_subplot(ax,full_data[&#39;xaxis&#39;], yaxis, full_data[&#39;mags&#39;], labels, &#39;Mag&#39;, cmap, vmin, vmax)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">full_data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">full_data</span><span class="p">[</span><span class="n">key1</span><span class="p">],</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title1</span><span class="p">,</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#    general_colormap_subplot(ax,full_data[&#39;xaxis&#39;], yaxis, full_data[&#39;phases&#39;], labels, &#39;Phase&#39;, cmap)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">full_data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">full_data</span><span class="p">[</span><span class="n">key2</span><span class="p">],</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title2</span><span class="p">,</span> <span class="n">cmap</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">key1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#    plt.plot(singledata[&#39;xaxis&#39;], singledata[&#39;mag&#39;])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">singledata</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1">#    plt.title(&#39;Single shot mag&#39;)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single shot &#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">key2</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#    plt.plot(singledata[&#39;xaxis&#39;], singledata[&#39;phase&#39;])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">singledata</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1">#    plt.title(&#39;Single shot phase&#39;)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single shot &#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Filename: </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scanname</span><span class="p">,</span> <span class="n">identifier</span><span class="p">))</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="simplescan_plot_update">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.simplescan_plot_update">[docs]</a>
+<span class="k">def</span> <span class="nf">simplescan_plot_update</span><span class="p">(</span><span class="n">full_data</span><span class="p">,</span> 
+                           <span class="n">singledata</span><span class="p">,</span> 
+                           <span class="n">yaxis</span><span class="p">,</span> 
+                           <span class="n">scanname</span><span class="p">,</span> 
+                           <span class="n">labels</span><span class="p">,</span> 
+                           <span class="n">datanames</span><span class="p">,</span>
+                           <span class="n">titles</span><span class="p">,</span>
+                           <span class="n">identifier</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                           <span class="n">fig_num</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> 
+                           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">,</span> 
+                           <span class="n">vmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> 
+                           <span class="n">vmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    simplescan_plot_update _summary_</span>
+
+<span class="sd">    :param full_data: _description_</span>
+<span class="sd">    :type full_data: _type_</span>
+<span class="sd">    :param singledata: _description_</span>
+<span class="sd">    :type singledata: _type_</span>
+<span class="sd">    :param yaxis: _description_</span>
+<span class="sd">    :type yaxis: _type_</span>
+<span class="sd">    :param scanname: _description_</span>
+<span class="sd">    :type scanname: _type_</span>
+<span class="sd">    :param labels: _description_</span>
+<span class="sd">    :type labels: _type_</span>
+<span class="sd">    :param datanames: _description_</span>
+<span class="sd">    :type datanames: _type_</span>
+<span class="sd">    :param titles: _description_</span>
+<span class="sd">    :type titles: _type_</span>
+<span class="sd">    :param identifier: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type identifier: str, optional</span>
+<span class="sd">    :param fig_num: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type fig_num: str, optional</span>
+<span class="sd">    :param cmap: _description_, defaults to &#39;hot&#39;</span>
+<span class="sd">    :type cmap: str, optional</span>
+<span class="sd">    :param vmin: _description_, defaults to np.nan</span>
+<span class="sd">    :type vmin: _type_, optional</span>
+<span class="sd">    :param vmax: _description_, defaults to np.nan</span>
+<span class="sd">    :type vmax: _type_, optional</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    
+    <span class="k">if</span> <span class="n">fig_num</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fig_num</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    
+    <span class="n">key1</span> <span class="o">=</span> <span class="n">datanames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">key2</span> <span class="o">=</span> <span class="n">datanames</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">title1</span> <span class="o">=</span> <span class="n">titles</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">title2</span> <span class="o">=</span> <span class="n">titles</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">full_data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">full_data</span><span class="p">[</span><span class="n">key1</span><span class="p">],</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title1</span><span class="p">,</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">full_data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">full_data</span><span class="p">[</span><span class="n">key2</span><span class="p">],</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title2</span><span class="p">,</span> <span class="n">cmap</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">key1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">singledata</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single shot &#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">key2</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">singledata</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single shot &#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Filename: </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scanname</span><span class="p">,</span> <span class="n">identifier</span><span class="p">))</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="autoscan_plot">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.autoscan_plot">[docs]</a>
+<span class="k">def</span> <span class="nf">autoscan_plot</span><span class="p">(</span><span class="n">transdata</span><span class="p">,</span> <span class="n">specdata</span><span class="p">,</span> <span class="n">singledata</span><span class="p">,</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">scanname</span><span class="p">,</span> <span class="n">trans_labels</span><span class="p">,</span> <span class="n">spec_labels</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">fig_num</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    autoscan_plot _summary_</span>
+
+<span class="sd">    :param transdata: _description_</span>
+<span class="sd">    :type transdata: _type_</span>
+<span class="sd">    :param specdata: _description_</span>
+<span class="sd">    :type specdata: _type_</span>
+<span class="sd">    :param singledata: _description_</span>
+<span class="sd">    :type singledata: _type_</span>
+<span class="sd">    :param yaxis: _description_</span>
+<span class="sd">    :type yaxis: _type_</span>
+<span class="sd">    :param scanname: _description_</span>
+<span class="sd">    :type scanname: _type_</span>
+<span class="sd">    :param trans_labels: _description_</span>
+<span class="sd">    :type trans_labels: _type_</span>
+<span class="sd">    :param spec_labels: _description_</span>
+<span class="sd">    :type spec_labels: _type_</span>
+<span class="sd">    :param identifier: _description_</span>
+<span class="sd">    :type identifier: _type_</span>
+<span class="sd">    :param fig_num: _description_, defaults to &#39;&#39;</span>
+<span class="sd">    :type fig_num: str, optional</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    
+    <span class="k">if</span> <span class="n">fig_num</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fig_num</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">],</span> <span class="n">trans_labels</span><span class="p">,</span> <span class="s1">&#39;Trans mag&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">transdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">],</span> <span class="n">trans_labels</span><span class="p">,</span> <span class="s1">&#39;Trans phase&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;mags&#39;</span><span class="p">],</span> <span class="n">spec_labels</span><span class="p">,</span> <span class="s1">&#39;Spec mag&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">specdata</span><span class="p">[</span><span class="s1">&#39;phases&#39;</span><span class="p">],</span> <span class="n">spec_labels</span><span class="p">,</span> <span class="s1">&#39;Spec phase&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">spec_labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single shot spec mag&#39;</span><span class="p">)</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span> <span class="n">singledata</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">spec_labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single shot spec phase&#39;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Filename: </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scanname</span><span class="p">,</span> <span class="n">identifier</span><span class="p">))</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="general_colormap_subplot">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.general_colormap_subplot">[docs]</a>
+<span class="k">def</span> <span class="nf">general_colormap_subplot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">yaxis</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> 
+                             <span class="n">title</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;hot&#39;</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;given a subplot object, it should make a decent imshow plot of the data.</span>
+<span class="sd">    </span>
+<span class="sd">    You have to handle subtracting out any attenuation and do the labeling after.</span>
+<span class="sd">    </span>
+<span class="sd">    Trying to make this the most generic function possible.&#39;&#39;&#39;</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">sca</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+    
+    <span class="c1">#this version will handle the color plot if there is only one row.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">xaxis</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">xaxis</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xaxis</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span> 
+            <span class="n">xlimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">xlimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xaxis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xlimits</span> <span class="o">=</span>  <span class="p">[</span><span class="n">xaxis</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">xaxis</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        
+    <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">yaxis</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">yaxis</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yaxis</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ylimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ylimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">yaxis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>  
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ylimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">yaxis</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">yaxis</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        
+    <span class="n">limits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">xlimits</span><span class="p">,</span> <span class="n">ylimits</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">vmax</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">vmin</span><span class="p">)):</span>
+<span class="c1">#        print(&#39;version with color scale limits&#39;)</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="n">limits</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="n">vmax</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="n">limits</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cbar</span><span class="p">:</span>
+        <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">cbar</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cbar</span><span class="o">.</span><span class="n">update_normal</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+        <span class="k">return</span></div>
+
+    
+<div class="viewcode-block" id="base_power_plot_imshow">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.base_power_plot_imshow">[docs]</a>
+<span class="k">def</span> <span class="nf">base_power_plot_imshow</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">zdata</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">attenuation</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    base_power_plot_imshow _summary_</span>
+
+<span class="sd">    :param fig: _description_</span>
+<span class="sd">    :type fig: _type_</span>
+<span class="sd">    :param ax: _description_</span>
+<span class="sd">    :type ax: _type_</span>
+<span class="sd">    :param xdata: _description_</span>
+<span class="sd">    :type xdata: _type_</span>
+<span class="sd">    :param ydata: _description_</span>
+<span class="sd">    :type ydata: _type_</span>
+<span class="sd">    :param zdata: _description_</span>
+<span class="sd">    :type zdata: _type_</span>
+<span class="sd">    :param labels: _description_</span>
+<span class="sd">    :type labels: _type_</span>
+<span class="sd">    :param attenuation: _description_, defaults to 0</span>
+<span class="sd">    :type attenuation: int, optional</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    
+    <span class="c1">#limits = [xdata[0], xdata[-1], ydata[0] + attenuation, ydata[-1] + attenuation]</span>
+    
+    <span class="c1">#this version will handle the color plot if there is only one row.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">xdata</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">xdata</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xdata</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span> 
+            <span class="n">xlimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">xdata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">xdata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">xlimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">xdata</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xdata</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xlimits</span> <span class="o">=</span>  <span class="p">[</span><span class="n">xdata</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">xdata</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        
+    <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ydata</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ydata</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ydata</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ylimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">ydata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span> <span class="n">attenuation</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">ydata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span> <span class="n">attenuation</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ylimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">ydata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span><span class="n">attenuation</span><span class="p">,</span> <span class="n">ydata</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span> <span class="n">attenuation</span><span class="p">]</span>  
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ylimits</span> <span class="o">=</span> <span class="p">[</span><span class="n">ydata</span><span class="o">+</span><span class="n">attenuation</span><span class="o">-</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">ydata</span><span class="o">+</span><span class="n">attenuation</span><span class="o">+</span><span class="mf">1e-3</span><span class="p">]</span>
+        
+        
+    <span class="n">limits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">xlimits</span><span class="p">,</span> <span class="n">ylimits</span><span class="p">))</span>
+    
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">zdata</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="n">limits</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="pulsed_debug">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.pulsed_debug">[docs]</a>
+<span class="k">def</span> <span class="nf">pulsed_debug</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">powers</span><span class="p">,</span> <span class="n">mags</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">scanname</span><span class="p">,</span> <span class="n">power</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    pulsed_debug _summary_</span>
+
+<span class="sd">    :param fig: _description_</span>
+<span class="sd">    :type fig: _type_</span>
+<span class="sd">    :param freqs: _description_</span>
+<span class="sd">    :type freqs: _type_</span>
+<span class="sd">    :param powers: _description_</span>
+<span class="sd">    :type powers: _type_</span>
+<span class="sd">    :param mags: _description_</span>
+<span class="sd">    :type mags: _type_</span>
+<span class="sd">    :param phases: _description_</span>
+<span class="sd">    :type phases: _type_</span>
+<span class="sd">    :param amp: _description_</span>
+<span class="sd">    :type amp: _type_</span>
+<span class="sd">    :param phase: _description_</span>
+<span class="sd">    :type phase: _type_</span>
+<span class="sd">    :param scanname: _description_</span>
+<span class="sd">    :type scanname: _type_</span>
+<span class="sd">    :param power: _description_</span>
+<span class="sd">    :type power: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Frequency (GHz)&#39;</span><span class="p">,</span> <span class="s1">&#39;Power (dBm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Voltage (mag)&#39;</span><span class="p">]</span>
+    <span class="n">base_power_plot_imshow</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">freqs</span><span class="o">/</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">powers</span><span class="p">,</span> <span class="n">mags</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Frequency (GHz)&#39;</span><span class="p">,</span> <span class="s1">&#39;Power (dBm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Voltage (phase)&#39;</span><span class="p">]</span>
+    <span class="n">base_power_plot_imshow</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">freqs</span><span class="o">/</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">powers</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="o">/</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">amp</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Freq (GHz)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amp (V)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="o">/</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Freq (GHz)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Phase (deg)&#39;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Filename: </span><span class="si">{}</span><span class="s1">, Power: </span><span class="si">{}</span><span class="s1">dB&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scanname</span><span class="p">,</span> <span class="n">power</span><span class="p">))</span></div>
+
+    
+<div class="viewcode-block" id="get_peaks">
+<a class="viewcode-back" href="../../utility/utility.plotting_tools.html#utility.plotting_tools.get_peaks">[docs]</a>
+<span class="k">def</span> <span class="nf">get_peaks</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">mags</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="n">polyorder</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">show_plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    get_peaks _summary_</span>
+
+<span class="sd">    :param freqs: _description_</span>
+<span class="sd">    :type freqs: _type_</span>
+<span class="sd">    :param mags: _description_</span>
+<span class="sd">    :type mags: _type_</span>
+<span class="sd">    :param window: _description_</span>
+<span class="sd">    :type window: _type_</span>
+<span class="sd">    :param polyorder: _description_</span>
+<span class="sd">    :type polyorder: _type_</span>
+<span class="sd">    :param height: _description_</span>
+<span class="sd">    :type height: _type_</span>
+<span class="sd">    :param width: _description_</span>
+<span class="sd">    :type width: _type_</span>
+<span class="sd">    :param show_plot: _description_, defaults to False</span>
+<span class="sd">    :type show_plot: bool, optional</span>
+<span class="sd">    :return: _description_</span>
+<span class="sd">    :rtype: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+
+    <span class="n">filtmag</span> <span class="o">=</span> <span class="n">savgol_filter</span><span class="p">(</span><span class="n">mags</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="n">polyorder</span><span class="p">)</span>
+    
+    <span class="n">peaks</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">find_peaks</span><span class="p">(</span><span class="o">-</span><span class="n">filtmag</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">show_plot</span><span class="p">:</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">mags</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">filtmag</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="p">[</span><span class="n">peaks</span><span class="p">],</span> <span class="n">filtmag</span><span class="p">[</span><span class="n">peaks</span><span class="p">],</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Peaks in signal&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">[</span><span class="n">freqs</span><span class="p">[</span><span class="n">peaks</span><span class="p">],</span> <span class="n">mags</span><span class="p">[</span><span class="n">peaks</span><span class="p">]]</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

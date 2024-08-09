@@ -1,0 +1,864 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kollar_instruments.settingTools &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/kollar_instruments/settingTools';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">kollar_instr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for kollar_instruments.settingTools</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">_get_level</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">genSection</span><span class="p">,</span> <span class="n">gensetting</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Get section depth inside dictionary (i.e. settings[&#39;HDAWG&#39;] has depth one, </span>
+<span class="sd">    section[&#39;Channels&#39;][&#39;Channel1&#39;] has depth 2 etc.). Settings will return a </span>
+<span class="sd">    depth of zero and anything that cannot be matched to the reg ex will return </span>
+<span class="sd">    a negative number</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        line: string to be analyzed (expected section format: [sectionname] where # of [] gives level)</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        level (int): depth inside dictionary of specific section, settings return 0</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1">#Check if input live is a setting</span>
+    <span class="n">setting</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">gensetting</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">setting</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">setting</span><span class="p">]</span>
+
+    <span class="c1">#Calculate how far down the section is by counting the number of square brackets</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">tagLevel</span> <span class="o">=</span> <span class="n">genSection</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">ismatch</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">tagLevel</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ismatch</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">ismatch</span><span class="p">]</span>
+    
+    <span class="c1">#No match, return negative number</span>
+    <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">setting</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_store_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">localset</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Store the collection of settings at a specific location in the dictionary.</span>
+<span class="sd">    This will automatically create entries if needed to achieve the correct depth</span>
+<span class="sd">    Uses the names list as a series of keys in the dictionary:</span>
+<span class="sd">    names=[Top section, subsection, subsubsection]</span>
+<span class="sd">    locaset={setting1:a,setting2:b}</span>
+<span class="sd">    settings[Topsection][subsection][subsubsection]=localset</span>
+<span class="sd">    Arguments:</span>
+<span class="sd">        settings (dict): dictionary to hold settings</span>
+<span class="sd">        names (list): list of nodes to traverse to get to desired location</span>
+<span class="sd">        localset (dict): dictionary of settings for particular node</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Nothing but updates the settings dictionary</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1">#Check if names is empty</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">names</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#Get section name</span>
+        <span class="n">section</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1">#Create dict if needed</span>
+        <span class="k">if</span> <span class="n">section</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">settings</span><span class="p">[</span><span class="n">section</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1">#Check if we are at the root</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">settings</span><span class="p">[</span><span class="n">section</span><span class="p">]</span> <span class="o">=</span> <span class="n">localset</span>
+            <span class="k">return</span>
+        <span class="c1">#Go one layer deeper</span>
+        <span class="n">_store_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">section</span><span class="p">],</span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">localset</span><span class="p">)</span>
+
+<div class="viewcode-block" id="load_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.settingTools.html#kollar_instruments.settingTools.load_settings">[docs]</a>
+<span class="k">def</span> <span class="nf">load_settings</span><span class="p">(</span><span class="n">inputfile</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function that reads in a file and turns it into a dictionary</span>
+<span class="sd">    The file MUST have the following formatting standards:</span>
+<span class="sd">    -[sections] that describe the main blocks/ modules of the instrument where more [] indicates subsections</span>
+<span class="sd">    -settings = value that match attributes of the section/subsection they are in</span>
+<span class="sd">    Can format this, modify reg-exes in function to do so</span>
+
+<span class="sd">    Argurments:</span>
+<span class="sd">    ############</span>
+<span class="sd">        inputfile (str): </span>
+<span class="sd">            file where the settings are stored</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    ##########</span>
+<span class="sd">        dictionary organized as follows:</span>
+<span class="sd">        settings = {sectionA:{settings},sectionB:{subsectionB:{settings},etc.},etc.}</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#Reg-exes to match sections and settings</span>
+    <span class="n">gensetting</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(\S*)\s*=\s*(.*)&#39;</span> <span class="c1">#Matches anything of &#39;Setting = value&#39; format</span>
+    <span class="n">genSection</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\[{1,</span><span class="si">%s</span><span class="s1">}(\w*)\]{1,</span><span class="si">%s</span><span class="s1">}&#39;</span> <span class="c1">#Looks for arbitrary number of [] surrounding a section name</span>
+
+    <span class="c1">#Initialize everything and open the file</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">inputfile</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#Used to track where we are in the setting tree</span>
+    <span class="n">oldlevel</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#Used to see how we have to move to get to the next section</span>
+    <span class="n">settings</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#Dictionary containing final settings</span>
+    <span class="n">localset</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#Temp dict to store local settings of section of interest</span>
+
+    <span class="c1">#Go through the entire file</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="c1">#Figure out what the line is (section/ setting) and its breakdown in reg ex</span>
+        <span class="p">[</span><span class="n">level</span><span class="p">,</span> <span class="n">regexp</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_level</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">genSection</span><span class="p">,</span> <span class="n">gensetting</span><span class="p">)</span>
+
+        <span class="c1">#Section or some sort</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#Store settings in path determined by names</span>
+            <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
+                <span class="n">_store_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span><span class="n">names</span><span class="p">,</span><span class="n">localset</span><span class="p">)</span>
+            <span class="c1">#Check if we need to move up a section in the tree</span>
+            <span class="k">if</span> <span class="n">oldlevel</span> <span class="o">&gt;=</span> <span class="n">level</span><span class="p">:</span>
+                <span class="c1">#print(&#39;Need to go up a section&#39;)</span>
+                <span class="n">leveldif</span> <span class="o">=</span> <span class="n">oldlevel</span><span class="o">-</span><span class="n">level</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">leveldif</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                    <span class="c1">#Remove sections from names until we reached the desired level</span>
+                    <span class="n">names</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="c1">#Add current section to names list</span>
+            <span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">regexp</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="c1">#Update section level</span>
+            <span class="n">oldlevel</span> <span class="o">=</span> <span class="n">level</span>
+            <span class="c1">#Reset local dictionary</span>
+            <span class="n">localset</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1">#Setting</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#Store setting in local dict </span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">regexp</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+            <span class="n">localset</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="c1">#Store final set of local settings</span>
+    <span class="n">_store_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span><span class="n">names</span><span class="p">,</span><span class="n">localset</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">settings</span></div>
+
+
+<div class="viewcode-block" id="print_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.settingTools.html#kollar_instruments.settingTools.print_settings">[docs]</a>
+<span class="k">def</span> <span class="nf">print_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sectionstyle</span> <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">{}</span><span class="s1">]&#39;</span><span class="p">,</span> <span class="n">sectionheading</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function to display the settings stored in a dictionary</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    ###########</span>
+<span class="sd">        settings (str) : </span>
+<span class="sd">            dictionary structured with nested dictionaries composed of sections, subsections and settings</span>
+<span class="sd">        Optional:</span>
+<span class="sd">            file (filehandle): handle to file. If provided, will save to file instead of printing (default=None)</span>
+<span class="sd">            sectionheading (str): format to display sections as (default=[{}])</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">sectionheading</span> <span class="o">=</span> <span class="n">sectionheading</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sectionstyle</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">settings</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="nb">dict</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sectionheading</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">sectionheading</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+            <span class="n">print_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="n">file</span><span class="p">,</span> <span class="n">sectionstyle</span><span class="o">=</span><span class="n">sectionstyle</span><span class="p">,</span> <span class="n">sectionheading</span> <span class="o">=</span> <span class="n">sectionheading</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> = </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span></div>
+
+
+<div class="viewcode-block" id="save_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.settingTools.html#kollar_instruments.settingTools.save_settings">[docs]</a>
+<span class="k">def</span> <span class="nf">save_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">savefile</span><span class="p">,</span> <span class="n">sectionstyle</span> <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">{}</span><span class="s1">]&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function to save settings to file, expects a dictionary with nested</span>
+<span class="sd">    dictionaries coresponding to the various sections, subsections of the instrument settings</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        settings (dict): </span>
+<span class="sd">            dictionary containing all the relevant settings</span>
+<span class="sd">        savefile (str): </span>
+<span class="sd">            path to file where settings should be saved</span>
+<span class="sd">        Optional:</span>
+<span class="sd">            sectionheading (str): format string for section style (default=[{}]\\n)</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">settings</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">fID</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">savefile</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">print_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="n">fID</span><span class="p">,</span> <span class="n">sectionstyle</span> <span class="o">=</span> <span class="n">sectionstyle</span><span class="p">)</span></div>
+
+
+
+<span class="c1">############################################################</span>
+<span class="c1">############################################################</span>
+<span class="c1">#Old settings codes</span>
+<span class="c1">############################################################</span>
+<span class="c1">############################################################</span>
+
+<div class="viewcode-block" id="load_settings_old">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.settingTools.html#kollar_instruments.settingTools.load_settings_old">[docs]</a>
+<span class="k">def</span> <span class="nf">load_settings_old</span><span class="p">(</span><span class="n">inputfile</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function that reads in a file and turns it into a dictionary</span>
+<span class="sd">    The file MUST have the following formatting standards:</span>
+<span class="sd">    -[sections] that describe the main blocks/ modules of the instrument</span>
+<span class="sd">    -[subsections] that describe subblocks such as channels</span>
+<span class="sd">    -settings = value that match attributes of the section/subsection they are in</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    ###########</span>
+<span class="sd">        inputfile (str) : </span>
+<span class="sd">            file where the settings are stored</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    #########</span>
+<span class="sd">        dictionary organized as follows:</span>
+<span class="sd">        settings = {sectionA:{settings},sectionB:{subsectionB:{settings},etc.},etc.}</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1">#Regular expression that denote the style of the different setting labels</span>
+    <span class="n">sectionTag</span>    <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\[(\w*)\]&#39;</span>
+    <span class="n">subsectionTag</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\[\[(\w*)\]\]&#39;</span>
+    <span class="n">settingTag</span>    <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(\S*)\s*=\s*(\S*)&#39;</span>
+
+    <span class="n">confFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">inputfile</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">line</span><span class="o">=</span><span class="n">confFile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+    <span class="n">settings</span><span class="o">=</span><span class="p">{}</span>
+    <span class="n">subset</span><span class="o">=</span><span class="p">{}</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1">#Determine the label associated with the line</span>
+        <span class="n">section</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">sectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">subsection</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">subsectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">setting</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">settingTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">section</span><span class="p">:</span>
+            <span class="c1">#Get the name of the section</span>
+            <span class="n">sectionName</span> <span class="o">=</span> <span class="n">section</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="c1">#Read next line and check label</span>
+            <span class="n">line</span>       <span class="o">=</span> <span class="n">confFile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+            <span class="n">section</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">sectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">subsection</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">subsectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">setting</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">settingTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+            <span class="c1">#Create dictionary for section entry</span>
+            <span class="n">settings</span><span class="p">[</span><span class="n">sectionName</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="c1">#Keep reading lines until we reach the next section</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="n">section</span><span class="p">:</span>
+                <span class="c1">#If we have a subsection, we need to go a layer deeper</span>
+                <span class="k">if</span> <span class="n">subsection</span><span class="p">:</span>
+                    <span class="n">subset</span><span class="o">=</span><span class="p">{}</span>
+                    <span class="c1">#Get subsection name</span>
+                    <span class="n">subsectionName</span> <span class="o">=</span> <span class="n">subsection</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="c1">#Read next line</span>
+                    <span class="n">line</span>    <span class="o">=</span> <span class="n">confFile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                    <span class="n">setting</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">settingTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                    <span class="c1">#Continue until we reach a non setting entry (section, subsection)</span>
+                    <span class="k">while</span> <span class="n">setting</span><span class="p">:</span>
+                        <span class="n">subset</span><span class="p">[</span><span class="n">setting</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">setting</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                        <span class="c1">#Read next line and check label</span>
+                        <span class="n">line</span>       <span class="o">=</span> <span class="n">confFile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                        <span class="n">setting</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">settingTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                        <span class="n">section</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">sectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                        <span class="n">subsection</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">subsectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                    <span class="c1">#Store settings in the appropriate dict entry</span>
+                    <span class="n">settings</span><span class="p">[</span><span class="n">sectionName</span><span class="p">][</span><span class="n">subsectionName</span><span class="p">]</span><span class="o">=</span><span class="n">subset</span>
+                <span class="c1">#If we just have settings, loop until we arrive to the next section</span>
+                <span class="k">elif</span> <span class="n">setting</span><span class="p">:</span>
+                    <span class="k">while</span> <span class="n">setting</span><span class="p">:</span>
+                        <span class="n">subset</span><span class="p">[</span><span class="n">setting</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">setting</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                        <span class="c1">#Read next line and check label</span>
+                        <span class="n">line</span>       <span class="o">=</span> <span class="n">confFile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                        <span class="n">setting</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">settingTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                        <span class="n">section</span>    <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">sectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                        <span class="n">subsection</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">subsectionTag</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                    <span class="c1">#Store settings in the section entry</span>
+                    <span class="n">settings</span><span class="p">[</span><span class="n">sectionName</span><span class="p">]</span><span class="o">=</span><span class="n">subset</span>
+                <span class="c1">#If we reach the end of the file or something like that this should avoid infinite loops</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">setting</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">subsection</span><span class="p">:</span>
+                    <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">settings</span></div>
+
+
+
+<div class="viewcode-block" id="print_settings_old">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.settingTools.html#kollar_instruments.settingTools.print_settings_old">[docs]</a>
+<span class="k">def</span> <span class="nf">print_settings_old</span><span class="p">(</span><span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function to display the settings stored in a dictionary</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">        settings (str) : </span>
+<span class="sd">            dictionary structured with nested dictionaries composed of sections, subsections and settings</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1">#Formatting the output</span>
+    <span class="n">sectionStyle</span>    <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">{}</span><span class="s1">]&#39;</span>
+    <span class="n">subsectionStyle</span> <span class="o">=</span> <span class="s1">&#39;[[</span><span class="si">{}</span><span class="s1">]]&#39;</span>
+    <span class="n">settingStyle</span>    <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">=</span><span class="si">{}</span><span class="s1">&#39;</span>
+
+    <span class="c1">#Loop through all the entries in settins</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="c1">#Print the section header</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sectionStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="c1">#Making sure that the section is actually populated</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="nb">dict</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">subkey</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="c1">#Checks to see if we have a subsection</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">],</span><span class="nb">dict</span><span class="p">):</span>
+                    <span class="c1">#Print subsection header</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">subsectionStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">subkey</span><span class="p">))</span>
+                    <span class="c1">#Loop over all the settings in the subsection</span>
+                    <span class="k">for</span> <span class="n">setting</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">settingStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">setting</span><span class="p">,</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">][</span><span class="n">setting</span><span class="p">]))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1">#Print the settings</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">settingStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">subkey</span><span class="p">,</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">]))</span></div>
+
+
+<div class="viewcode-block" id="save_settings_old">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.settingTools.html#kollar_instruments.settingTools.save_settings_old">[docs]</a>
+<span class="k">def</span> <span class="nf">save_settings_old</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">savefile</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function to save settings to file, expects a dictionary with nested</span>
+<span class="sd">    dictionaries coresponding to the various sections, subsections of the instrument settings</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    ###########</span>
+
+<span class="sd">        settings (dict) : </span>
+<span class="sd">            dictionary containing all the relevant settings</span>
+<span class="sd">        savefile (str) : </span>
+<span class="sd">            path to file where settings should be saved</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1">#Formatting strings</span>
+    <span class="n">sectionStyle</span>    <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">{}</span><span class="s1">]</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="n">subsectionStyle</span> <span class="o">=</span> <span class="s1">&#39;[[</span><span class="si">{}</span><span class="s1">]]</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="n">settingStyle</span>    <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">=</span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+    <span class="n">saveTo</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">savefile</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="c1">#Loop through all the sections</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">saveTo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sectionStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="c1">#Check if section is populated</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="nb">dict</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">subkey</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="c1">#Check if we have subsections</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">],</span><span class="nb">dict</span><span class="p">):</span>
+                    <span class="n">saveTo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">subsectionStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">subkey</span><span class="p">))</span>
+                    <span class="c1">#Loop through all settings in subsection</span>
+                    <span class="k">for</span> <span class="n">setting</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="c1">#Write settings to file</span>
+                        <span class="n">saveTo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">settingStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">setting</span><span class="p">,</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">][</span><span class="n">setting</span><span class="p">]))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1">#Write settings to file</span>
+                    <span class="n">saveTo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">settingStyle</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">subkey</span><span class="p">,</span><span class="n">settings</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">]))</span>
+
+    <span class="n">saveTo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+            
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

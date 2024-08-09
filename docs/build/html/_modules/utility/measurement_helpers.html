@@ -1,0 +1,1196 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utility.measurement_helpers &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/utility/measurement_helpers';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">utility.meas...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for utility.measurement_helpers</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Wed Mar  3 09:20:52 2021</span>
+
+
+<span class="sd">8-25-21 AK trying to unwarpp the phase of pulse homodyne data. Messing </span>
+<span class="sd">with the extract data function.</span>
+
+<span class="sd">@author: Kollarlab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">datetime</span>
+
+<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">signal</span>
+
+<div class="viewcode-block" id="check_inputs">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.check_inputs">[docs]</a>
+<span class="k">def</span> <span class="nf">check_inputs</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">defaults</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Checks that the given input dictionary has the correct settings. It&#39;s easy</span>
+<span class="sd">    to accidentally mistype something or us an old naming convention so this </span>
+<span class="sd">    function will throw an error if the keys in the dictionaries don&#39;t match</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    __________</span>
+<span class="sd">            inputs: </span>
+<span class="sd">                input dictionary that is modified by user</span>
+<span class="sd">            defaults: </span>
+<span class="sd">                default dictionary specified by script</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">diff1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">defaults</span><span class="p">)</span>
+    <span class="n">diff2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">defaults</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff1</span><span class="p">)</span> <span class="o">!=</span><span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff2</span><span class="p">)</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Differing keys:&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff1</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">diff1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">diff2</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Incorrect number of inputs, please check the default settings for variable names&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="remove_IQ_ellipse">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.remove_IQ_ellipse">[docs]</a>
+<span class="k">def</span> <span class="nf">remove_IQ_ellipse</span><span class="p">(</span><span class="n">Is</span><span class="p">,</span> <span class="n">Qs</span><span class="p">,</span> <span class="n">mixer_config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Removes IQ imbalances from the mixer. This is critical for signals with </span>
+<span class="sd">    small SNR since the differences between high and low can be wiped out by</span>
+<span class="sd">    the ellipse eccentricity. Expects axes center phi in the convention defined</span>
+<span class="sd">    by the &#39;fitEllipse&#39; function in the ellipse_fitting file</span>
+<span class="sd">    </span>
+<span class="sd">        Parameters:</span>
+<span class="sd">            Is, Qs: raw I, Q signals </span>
+
+<span class="sd">            mixer config: dictionary with axes, center and phase rotation params</span>
+<span class="sd">            of the ellipse as found in the fitEllipse function. This is initialized</span>
+<span class="sd">            in the exp_globals function</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">center</span> <span class="o">=</span> <span class="n">mixer_config</span><span class="p">[</span><span class="s1">&#39;center&#39;</span><span class="p">]</span>
+    <span class="n">axes</span>   <span class="o">=</span> <span class="n">mixer_config</span><span class="p">[</span><span class="s1">&#39;axes&#39;</span><span class="p">]</span>
+    <span class="n">phi</span>    <span class="o">=</span> <span class="n">mixer_config</span><span class="p">[</span><span class="s1">&#39;phi&#39;</span><span class="p">]</span>
+
+    <span class="n">Isprime</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Is</span><span class="o">-</span><span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Qs</span><span class="o">-</span><span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">Qsprime</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Is</span><span class="o">-</span><span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Qs</span><span class="o">-</span><span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> 
+    <span class="n">Qsprime</span> <span class="o">=</span> <span class="n">Qsprime</span><span class="o">*</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Isprime</span><span class="p">,</span> <span class="n">Qsprime</span></div>
+
+
+<div class="viewcode-block" id="remove_slow_drift">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.remove_slow_drift">[docs]</a>
+<span class="k">def</span> <span class="nf">remove_slow_drift</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    remove_slow_drift _summary_</span>
+
+<span class="sd">    :param I: _description_</span>
+<span class="sd">    :type I: _type_</span>
+<span class="sd">    :param Q: _description_</span>
+<span class="sd">    :type Q: _type_</span>
+<span class="sd">    :param t: _description_</span>
+<span class="sd">    :type t: _type_</span>
+<span class="sd">    :return: _description_</span>
+<span class="sd">    :rtype: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">angle</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.00035</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span>
+    <span class="n">rot_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)],</span> 
+                         <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)]])</span>
+    <span class="k">return</span> <span class="n">rot_mat</span><span class="nd">@np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">I</span><span class="p">,</span><span class="n">Q</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="generate_filter">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.generate_filter">[docs]</a>
+<span class="k">def</span> <span class="nf">generate_filter</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    generate_filter _summary_</span>
+
+<span class="sd">    :param card: _description_</span>
+<span class="sd">    :type card: _type_</span>
+<span class="sd">    :param settings: _description_</span>
+<span class="sd">    :type settings: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">exp_globals</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">]</span>
+    <span class="c1">#create Chebychev type II digital filter</span>
+    <span class="n">filter_N</span> <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;ddc_config&#39;</span><span class="p">][</span><span class="s1">&#39;order&#39;</span><span class="p">]</span>
+    <span class="n">filter_rs</span> <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;ddc_config&#39;</span><span class="p">][</span><span class="s1">&#39;stop_atten&#39;</span><span class="p">]</span>
+    <span class="n">filter_cutoff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;ddc_config&#39;</span><span class="p">][</span><span class="s1">&#39;cutoff&#39;</span><span class="p">])</span>
+    <span class="n">LPF</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">cheby2</span><span class="p">(</span><span class="n">filter_N</span><span class="p">,</span> <span class="n">filter_rs</span><span class="p">,</span> <span class="n">filter_cutoff</span><span class="p">,</span> <span class="n">btype</span><span class="o">=</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="n">analog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;sos&#39;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span><span class="p">)</span>
+    
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>
+    <span class="n">digLO_sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">xaxis</span><span class="p">)</span>
+    <span class="n">digLO_cos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">xaxis</span><span class="p">)</span>
+    
+    <span class="c1">#store in settings so that the processing functions can get to them</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;digLO_sin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">digLO_sin</span> 
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;digLO_cos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">digLO_cos</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;LPF&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">LPF</span></div>
+
+
+<div class="viewcode-block" id="extract_data">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.extract_data">[docs]</a>
+<span class="k">def</span> <span class="nf">extract_data</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Extracts the data from a trace. Finds the indices of start/ stop for both</span>
+<span class="sd">    data and background (assumes that they are the same length, which should</span>
+<span class="sd">    be enforced by the card samples in the actual exp script) and splices the </span>
+<span class="sd">    correct ranges from the raw data. Returns a time axis for the data window </span>
+<span class="sd">    and subtracts mean of background if specified.</span>
+
+<span class="sd">    ALL VALUES SHOULD BE IN TIME UNITS (base seconds)</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ________________</span>
+<span class="sd">        </span>
+
+<span class="sd">        init_buffer: </span>
+<span class="sd">            buffer specified to card before the measurement tone</span>
+<span class="sd">        emp_delay: </span>
+<span class="sd">            combination of line delay and other delays that correctly shifts the digitizer to match the HDAWG time axis</span>
+<span class="sd">        meas_window: </span>
+<span class="sd">            width of the measurement pulse</span>
+<span class="sd">        post_buffer: </span>
+<span class="sd">            time to wait after the pulse before measuring background</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">measurement_pulse</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;measurement_pulse&#39;</span><span class="p">]</span>
+    <span class="n">init_buffer</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">]</span>
+    <span class="n">emp_delay</span>   <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;emp_delay&#39;</span><span class="p">]</span>
+    <span class="n">meas_window</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span>
+    <span class="n">post_buffer</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;post_buffer&#39;</span><span class="p">]</span>
+    
+    <span class="n">timestep</span>   <span class="o">=</span> <span class="n">xaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">data_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">init_buffer</span> <span class="o">+</span> <span class="n">emp_delay</span><span class="p">)</span><span class="o">/</span><span class="n">timestep</span><span class="p">)</span>
+    <span class="n">back_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">init_buffer</span> <span class="o">+</span> <span class="n">emp_delay</span> <span class="o">+</span> <span class="n">meas_window</span> <span class="o">+</span> <span class="n">post_buffer</span><span class="p">)</span><span class="o">/</span><span class="n">timestep</span><span class="p">)</span>
+    <span class="n">window_width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">meas_window</span><span class="o">/</span><span class="n">timestep</span><span class="p">)</span>
+    
+    <span class="n">data_x</span> <span class="o">=</span> <span class="n">xaxis</span><span class="p">[</span><span class="n">data_start</span><span class="p">:</span><span class="n">data_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    
+    <span class="n">data</span>    <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="n">data_start</span><span class="p">:</span><span class="n">data_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    <span class="n">background</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="n">back_start</span><span class="p">:</span><span class="n">back_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    <span class="n">back_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">background</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_settings&#39;</span><span class="p">][</span><span class="s1">&#39;subtract_background&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">data</span> <span class="o">-</span> <span class="n">back_val</span><span class="p">,</span> <span class="n">data_x</span><span class="p">,</span> <span class="n">raw_data</span> <span class="o">-</span> <span class="n">back_val</span><span class="p">,</span> <span class="n">xaxis</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">data_x</span><span class="p">,</span> <span class="n">raw_data</span><span class="p">,</span> <span class="n">xaxis</span></div>
+
+        
+        
+<div class="viewcode-block" id="extract_data_heterodyne">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.extract_data_heterodyne">[docs]</a>
+<span class="k">def</span> <span class="nf">extract_data_heterodyne</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Extracts the data from a trace. Finds the indices of start/ stop for both</span>
+<span class="sd">    data and background (assumes that they are the same length, which should</span>
+<span class="sd">    be enforced by the card samples in the actual exp script) and splices the </span>
+<span class="sd">    correct ranges from the raw data. Returns a time axis for the data window </span>
+<span class="sd">    and subtracts mean of background if specified.</span>
+
+<span class="sd">    ALL VALUES SHOULD BE IN TIME UNITS (base seconds)</span>
+
+<span class="sd">    This has been modified from extract_data so that it will work with heterodyne and digital down conversion</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    _________________</span>
+
+<span class="sd">        init_buffer: </span>
+<span class="sd">            buffer specified to card before the measurement tone</span>
+<span class="sd">        emp_delay: </span>
+<span class="sd">            combination of line delay and other delays that correctly shifts the digitizer to match the HDAWG time axis</span>
+<span class="sd">        meas_window: </span>
+<span class="sd">            width of the measurement pulse</span>
+<span class="sd">        post_buffer: </span>
+<span class="sd">            time to wait after the pulse before measuring background</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">measurement_pulse</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;measurement_pulse&#39;</span><span class="p">]</span>
+    <span class="n">init_buffer</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">]</span>
+    <span class="n">emp_delay</span>   <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;emp_delay&#39;</span><span class="p">]</span>
+    <span class="n">meas_window</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span>
+    <span class="n">post_buffer</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;post_buffer&#39;</span><span class="p">]</span>
+    
+    <span class="n">timestep</span>   <span class="o">=</span> <span class="n">xaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">data_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">init_buffer</span> <span class="o">+</span> <span class="n">emp_delay</span><span class="p">)</span><span class="o">/</span><span class="n">timestep</span><span class="p">)</span>
+    <span class="n">back_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">init_buffer</span> <span class="o">+</span> <span class="n">emp_delay</span> <span class="o">+</span> <span class="n">meas_window</span> <span class="o">+</span> <span class="n">post_buffer</span><span class="p">)</span><span class="o">/</span><span class="n">timestep</span><span class="p">)</span>
+    <span class="n">window_width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">meas_window</span><span class="o">/</span><span class="n">timestep</span><span class="p">)</span>
+    
+    <span class="n">data_x</span> <span class="o">=</span> <span class="n">xaxis</span><span class="p">[</span><span class="n">data_start</span><span class="p">:</span><span class="n">data_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    <span class="n">background</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="n">back_start</span><span class="p">:</span><span class="n">back_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    <span class="n">back_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">background</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_settings&#39;</span><span class="p">][</span><span class="s1">&#39;subtract_background&#39;</span><span class="p">]:</span>
+        <span class="n">raw_data</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">-</span><span class="n">back_val</span>
+
+    <span class="c1">#now I am ready to filter the data.</span>
+    <span class="n">LPF</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;LPF&#39;</span><span class="p">]</span>
+    <span class="n">digLO_sin</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;digLO_sin&#39;</span><span class="p">]</span>
+    <span class="n">digLO_cos</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;digLO_cos&#39;</span><span class="p">]</span>
+    
+    <span class="n">filtered_sin_full</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">sosfilt</span><span class="p">(</span><span class="n">LPF</span><span class="p">,</span> <span class="n">raw_data</span><span class="o">*</span><span class="n">digLO_sin</span><span class="p">)</span>
+    <span class="n">filtered_cos_full</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">sosfilt</span><span class="p">(</span><span class="n">LPF</span><span class="p">,</span> <span class="n">raw_data</span><span class="o">*</span><span class="n">digLO_cos</span><span class="p">)</span>
+    
+    <span class="n">filtered_sin</span> <span class="o">=</span> <span class="n">filtered_sin_full</span><span class="p">[</span><span class="n">data_start</span><span class="p">:</span><span class="n">data_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    <span class="n">filtered_cos</span> <span class="o">=</span> <span class="n">filtered_cos_full</span><span class="p">[</span><span class="n">data_start</span><span class="p">:</span><span class="n">data_start</span><span class="o">+</span><span class="n">window_width</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">filtered_cos</span><span class="p">,</span> <span class="n">filtered_sin</span><span class="p">,</span> <span class="n">data_x</span><span class="p">,</span> <span class="n">filtered_cos_full</span><span class="p">,</span> <span class="n">filtered_sin_full</span><span class="p">,</span> <span class="n">xaxis</span></div>
+
+        
+<div class="viewcode-block" id="estimate_time">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.estimate_time">[docs]</a>
+<span class="k">def</span> <span class="nf">estimate_time</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    estimate_time _summary_</span>
+
+<span class="sd">    :param t1: _description_</span>
+<span class="sd">    :type t1: _type_</span>
+<span class="sd">    :param t2: _description_</span>
+<span class="sd">    :type t2: _type_</span>
+<span class="sd">    :param steps: _description_</span>
+<span class="sd">    :type steps: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">one_step</span> <span class="o">=</span> <span class="n">t2</span><span class="o">-</span><span class="n">t1</span>
+    <span class="n">total_time</span> <span class="o">=</span> <span class="n">one_step</span><span class="o">*</span><span class="n">steps</span>
+    
+    <span class="n">final_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="p">(</span><span class="n">total_time</span><span class="o">-</span><span class="n">one_step</span><span class="p">))</span>
+    <span class="n">mins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">total_time</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">total_time</span><span class="o">/</span><span class="mi">3600</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;estimated time for this scan : </span><span class="si">{}</span><span class="s1"> mins or </span><span class="si">{}</span><span class="s1"> hours&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mins</span><span class="p">,</span> <span class="n">hours</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;expected finish time: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final_time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="heterodyne_martin">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.heterodyne_martin">[docs]</a>
+<span class="k">def</span> <span class="nf">heterodyne_martin</span><span class="p">(</span><span class="n">Ipp</span><span class="p">,</span> <span class="n">Qpp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    heterodyne_martin _summary_</span>
+
+<span class="sd">    :param Ipp: _description_</span>
+<span class="sd">    :type Ipp: _type_</span>
+<span class="sd">    :param Qpp: _description_</span>
+<span class="sd">    :type Qpp: _type_</span>
+<span class="sd">    :param xaxis: _description_</span>
+<span class="sd">    :type xaxis: _type_</span>
+<span class="sd">    :param settings: _description_</span>
+<span class="sd">    :type settings: _type_</span>
+<span class="sd">    :return: _description_</span>
+<span class="sd">    :rtype: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">I_cos</span><span class="p">,</span> <span class="n">I_sin</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">I_cos_full</span><span class="p">,</span> <span class="n">I_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">Ipp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    <span class="n">Q_cos</span><span class="p">,</span> <span class="n">Q_sin</span><span class="p">,</span> <span class="n">Qtime</span><span class="p">,</span> <span class="n">Q_cos_full</span><span class="p">,</span> <span class="n">Q_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">Qpp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    <span class="n">Qprime_sin</span> <span class="o">=</span> <span class="n">Q_cos</span>
+    <span class="n">Qprime_cos</span> <span class="o">=</span> <span class="o">-</span><span class="n">Q_sin</span>
+    
+    <span class="n">Qprime_sin_full</span> <span class="o">=</span> <span class="n">Q_cos_full</span>
+    <span class="n">Qprime_cos_full</span> <span class="o">=</span> <span class="o">-</span><span class="n">Q_sin_full</span>
+    
+    
+    <span class="n">Q_window</span>  <span class="o">=</span> <span class="p">(</span><span class="n">I_sin</span> <span class="o">+</span>  <span class="n">Qprime_sin</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">I_window</span> <span class="o">=</span> <span class="p">(</span><span class="n">I_cos</span> <span class="o">+</span> <span class="n">Qprime_cos</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    
+    <span class="n">Q_full</span>  <span class="o">=</span> <span class="p">(</span><span class="n">I_sin_full</span> <span class="o">+</span>  <span class="n">Qprime_sin_full</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">I_full</span> <span class="o">=</span> <span class="p">(</span><span class="n">I_cos_full</span> <span class="o">+</span> <span class="n">Qprime_cos_full</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    
+    <span class="k">return</span> <span class="n">I_window</span><span class="p">,</span> <span class="n">Q_window</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">,</span> <span class="n">time_full</span></div>
+
+
+<div class="viewcode-block" id="read_and_process_two_pulses">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.read_and_process_two_pulses">[docs]</a>
+<span class="k">def</span> <span class="nf">read_and_process_two_pulses</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">plot</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    read_and_process_two_pulses _summary_</span>
+
+<span class="sd">    :param card: _description_</span>
+<span class="sd">    :type card: _type_</span>
+<span class="sd">    :param settings: _description_</span>
+<span class="sd">    :type settings: _type_</span>
+<span class="sd">    :param plot: _description_</span>
+<span class="sd">    :type plot: _type_</span>
+<span class="sd">    :return: _description_</span>
+<span class="sd">    :rtype: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">card</span><span class="o">.</span><span class="n">ArmAndWait</span><span class="p">()</span>
+    <span class="n">I</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">ReadAllData</span><span class="p">()</span>
+    <span class="n">Ipeven</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">Qpeven</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">Ipodd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">Qpodd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+    
+    <span class="n">mixer_config</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;mixer_config&#39;</span><span class="p">]</span>
+    <span class="n">Ippeven</span><span class="p">,</span> <span class="n">Qppeven</span> <span class="o">=</span> <span class="n">remove_IQ_ellipse</span><span class="p">(</span><span class="n">Ipeven</span><span class="p">,</span> <span class="n">Qpeven</span><span class="p">,</span> <span class="n">mixer_config</span><span class="p">)</span>
+    <span class="n">Ippodd</span><span class="p">,</span> <span class="n">Qppodd</span> <span class="o">=</span> <span class="n">remove_IQ_ellipse</span><span class="p">(</span><span class="n">Ipodd</span><span class="p">,</span> <span class="n">Qpodd</span><span class="p">,</span> <span class="n">mixer_config</span><span class="p">)</span>
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">/</span><span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>
+    
+    <span class="n">I1_window</span><span class="p">,</span> <span class="n">Q1_window</span><span class="p">,</span> <span class="n">time_window</span><span class="p">,</span> <span class="n">I1_full</span><span class="p">,</span> <span class="n">Q1_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">heterodyne_martin</span><span class="p">(</span><span class="n">Ippeven</span><span class="p">,</span> <span class="n">Qppeven</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    <span class="n">I2_window</span><span class="p">,</span> <span class="n">Q2_window</span><span class="p">,</span> <span class="n">time_window</span><span class="p">,</span> <span class="n">I2_full</span><span class="p">,</span> <span class="n">Q2_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">heterodyne_martin</span><span class="p">(</span><span class="n">Ippeven</span><span class="p">,</span> <span class="n">Qppeven</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    <span class="n">Inet</span> <span class="o">=</span> <span class="n">I1_window</span><span class="o">-</span><span class="n">I2_window</span>
+    <span class="n">Qnet</span> <span class="o">=</span> <span class="n">Q1_window</span><span class="o">-</span><span class="n">Q2_window</span>
+    <span class="n">Inet_full</span> <span class="o">=</span> <span class="n">I1_full</span><span class="o">-</span><span class="n">I2_full</span>
+    <span class="n">Qnet_full</span> <span class="o">=</span> <span class="n">Q1_full</span><span class="o">-</span><span class="n">Q2_full</span>
+    <span class="k">return</span> <span class="n">Inet</span><span class="p">,</span> <span class="n">Qnet</span><span class="p">,</span> <span class="n">Inet_full</span><span class="p">,</span> <span class="n">Qnet_full</span><span class="p">,</span> <span class="n">xaxis</span></div>
+
+
+<div class="viewcode-block" id="read_and_process_dual_readout">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.read_and_process_dual_readout">[docs]</a>
+<span class="k">def</span> <span class="nf">read_and_process_dual_readout</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">plot</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    </span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    card : TYPE</span>
+<span class="sd">        DESCRIPTION.</span>
+<span class="sd">    settings : TYPE</span>
+<span class="sd">        DESCRIPTION.</span>
+<span class="sd">    plot : TYPE</span>
+<span class="sd">        DESCRIPTION.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">ArmAndWait</span><span class="p">()</span>
+    <span class="n">I</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">ReadAllData</span><span class="p">()</span>
+    <span class="n">boost</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">readout</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">/</span><span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>
+            
+    <span class="n">boost_I</span><span class="p">,</span> <span class="n">boost_Q</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">I_cos_full</span><span class="p">,</span> <span class="n">I_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">boost</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    <span class="n">readout_I</span><span class="p">,</span> <span class="n">readout_Q</span><span class="p">,</span> <span class="n">Qtime</span><span class="p">,</span> <span class="n">Q_cos_full</span><span class="p">,</span> <span class="n">Q_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">readout</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    
+    
+    <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+        <span class="n">fig0</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">boost</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;raw boost&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">readout</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;raw readout&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Card Voltages&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+      
+        <span class="n">fig0</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fig0</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">boost_I</span><span class="p">,</span> <span class="n">boost_Q</span><span class="p">,</span> <span class="n">readout_I</span><span class="p">,</span> <span class="n">readout_Q</span><span class="p">,</span> <span class="n">xaxis</span>        </div>
+
+
+
+<div class="viewcode-block" id="read_and_process_single_channel">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.read_and_process_single_channel">[docs]</a>
+<span class="k">def</span> <span class="nf">read_and_process_single_channel</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">plot</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The original version of this function wanted to convert to </span>
+<span class="sd">    amplitude(t) and phase(t). This has been found to be problematic.</span>
+<span class="sd">    To get the old version of operation, set</span>
+<span class="sd">    IQstorage = False</span>
+<span class="sd">    </span>
+<span class="sd">    IQstorage = True will instead return I(t) and Q(t) for </span>
+<span class="sd">    later processing.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">ArmAndWait</span><span class="p">()</span>
+    <span class="n">I</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">ReadAllData</span><span class="p">()</span>
+    <span class="n">Ip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">/</span><span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>
+            
+    <span class="n">I_cos</span><span class="p">,</span> <span class="n">I_sin</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">I_cos_full</span><span class="p">,</span> <span class="n">I_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">Ip</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+    
+    <span class="n">I_full</span> <span class="o">=</span> <span class="n">I_cos_full</span>
+    <span class="n">Q_full</span> <span class="o">=</span> <span class="n">I_sin_full</span>
+    <span class="n">I_window</span> <span class="o">=</span> <span class="n">I_cos</span>
+    <span class="n">Q_window</span> <span class="o">=</span> <span class="n">I_sin</span>
+    
+    <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+        <span class="n">fig0</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">Ip</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;raw V1&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Card Voltages&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+      
+        <span class="n">fig0</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fig0</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+        
+        <span class="n">amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Q_window</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">I_window</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#this is just the I signal</span>
+        <span class="n">amp_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I_full</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Q_full</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">plot_data_extraction</span><span class="p">(</span><span class="n">amp</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="n">time_full</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">I_window</span><span class="p">,</span> <span class="n">Q_window</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">,</span> <span class="n">xaxis</span></div>
+
+
+
+<div class="viewcode-block" id="read_and_process">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.read_and_process">[docs]</a>
+<span class="k">def</span> <span class="nf">read_and_process</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">plot</span><span class="p">,</span> <span class="n">IQstorage</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;The original version of this function wanted to convert to </span>
+<span class="sd">    amplitude(t) and phase(t). This has been found to be problematic.</span>
+<span class="sd">    To get the old version of operation, set</span>
+<span class="sd">    IQstorage = False</span>
+<span class="sd">    </span>
+<span class="sd">    IQstorage = True will instead return I(t) and Q(t) for </span>
+<span class="sd">    later processing.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">ArmAndWait</span><span class="p">()</span>
+    <span class="n">I</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">ReadAllData</span><span class="p">()</span>
+    <span class="n">Ip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">Qp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">mixer_config</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;mixer_config&#39;</span><span class="p">]</span>
+    <span class="n">Ipp</span><span class="p">,</span> <span class="n">Qpp</span> <span class="o">=</span> <span class="n">remove_IQ_ellipse</span><span class="p">(</span><span class="n">Ip</span><span class="p">,</span> <span class="n">Qp</span><span class="p">,</span> <span class="n">mixer_config</span><span class="p">)</span>
+<span class="c1">#    Ipp, Qpp = remove_slow_drift(Ipp, Qpp, time_el)</span>
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">/</span><span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>
+
+<span class="c1">#    Idata, Itime, Ifull, time_full = extract_data(Ipp, xaxis, settings)</span>
+<span class="c1">#    Qdata, Qtime, Qfull, time_full = extract_data(Qpp, xaxis, settings)</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">IQstorage</span><span class="p">:</span>
+        <span class="n">Idata</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">Ifull</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">(</span><span class="n">Ipp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+        <span class="n">Qdata</span><span class="p">,</span> <span class="n">Qtime</span><span class="p">,</span> <span class="n">Qfull</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">(</span><span class="n">Qpp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+        
+        <span class="n">amp_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Ifull</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Qfull</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">phase_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">Qfull</span><span class="p">,</span> <span class="n">Ifull</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raw_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">Qfull</span><span class="p">,</span> <span class="n">Ifull</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">phase_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">raw_angle</span> <span class="o">+</span> <span class="mi">360</span><span class="o">*</span><span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">xaxis</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+            
+    <span class="c1">#        plt.figure(101)</span>
+    <span class="c1">#        plt.clf()</span>
+    <span class="c1">#        ax = plt.subplot(1,2,1)</span>
+    <span class="c1">#        plt.plot(xaxis, raw_angle)</span>
+    <span class="c1">#        plt.title(&#39;raw phase angle&#39;)</span>
+    <span class="c1">#        ax = plt.subplot(1,2,2)</span>
+    <span class="c1">#        plt.plot(xaxis, phase_full)</span>
+    <span class="c1">#        plt.show()</span>
+    <span class="c1">#        plt.title(&#39;(hopefully) corrected phase angle&#39;)</span>
+    
+        <span class="n">amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Idata</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Qdata</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">Qdata</span><span class="p">,</span> <span class="n">Idata</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">raw_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">Qdata</span><span class="p">,</span> <span class="n">Idata</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">raw_angle</span> <span class="o">+</span> <span class="mi">360</span><span class="o">*</span><span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">Itime</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+    
+        <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+            <span class="n">plot_data_extraction</span><span class="p">(</span><span class="n">amp</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="n">time_full</span><span class="p">,</span> <span class="n">Ifull</span><span class="p">,</span> <span class="n">Qfull</span><span class="p">)</span>
+    
+        <span class="k">return</span> <span class="n">amp</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="n">phase_full</span><span class="p">,</span> <span class="n">xaxis</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#do not convert to amp(t) and phase(t)</span>
+<span class="c1">#        if plot:</span>
+<span class="c1">#            amp = np.sqrt(Idata**2+Qdata**2) #this is just a guide to theeye for locating the pulse</span>
+<span class="c1">#            amp_full = np.sqrt(Ifull**2+Qfull**2)</span>
+<span class="c1">#            plot_data_extraction(amp, Itime, amp_full, time_full, Ifull, Qfull)</span>
+        
+        <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">][</span><span class="s1">&#39;IF&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="c1">#            Idata, Itime, Ifull, time_full = extract_data(Ipp, xaxis, settings)</span>
+<span class="c1">#            Qdata, Qtime, Qfull, time_full = extract_data(Qpp, xaxis, settings)</span>
+<span class="c1">#            if plot:</span>
+<span class="c1">#                amp = np.sqrt(Idata**2+Qdata**2) #this is just a guide to theeye for locating the pulse</span>
+<span class="c1">#                amp_full = np.sqrt(Ifull**2+Qfull**2)</span>
+<span class="c1">#                plot_data_extraction(amp, Itime, amp_full, time_full, Ifull, Qfull)</span>
+            
+            <span class="c1">#matching newer names</span>
+            <span class="n">I_window</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">(</span><span class="n">Ipp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+            <span class="n">Q_window</span><span class="p">,</span> <span class="n">Qtime</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">(</span><span class="n">Qpp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+                <span class="n">amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I_window</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Q_window</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#this is just a guide to theeye for locating the pulse</span>
+                <span class="n">amp_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I_full</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Q_full</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">plot_data_extraction</span><span class="p">(</span><span class="n">amp</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="n">time_full</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#Quick fix to the problem of full cancellation in the DDC data. Turns out the channels got swapped </span>
+            <span class="c1">#during a reshuffle and combining the channels incorrectly leads to near perfect cancellation (offset by</span>
+            <span class="c1">#the mixer impairements). For now I just swapped the definition of I and Q to match the combination phase</span>
+            <span class="n">I_cos</span><span class="p">,</span> <span class="n">I_sin</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">I_cos_full</span><span class="p">,</span> <span class="n">I_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">Ipp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+            <span class="n">Q_cos</span><span class="p">,</span> <span class="n">Q_sin</span><span class="p">,</span> <span class="n">Qtime</span><span class="p">,</span> <span class="n">Q_cos_full</span><span class="p">,</span> <span class="n">Q_sin_full</span><span class="p">,</span> <span class="n">time_full</span> <span class="o">=</span> <span class="n">extract_data_heterodyne</span><span class="p">(</span><span class="n">Qpp</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">settings</span><span class="p">)</span>
+            
+            
+                
+            <span class="c1">#rotate the mixer Q signal back into I so they can be averaged properly</span>
+            <span class="n">theta</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+            <span class="n">Qprime_sin</span> <span class="o">=</span> <span class="n">Q_sin</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="o">-</span><span class="n">Q_cos</span> <span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> 
+            <span class="n">Qprime_cos</span> <span class="o">=</span> <span class="n">Q_sin</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">Q_cos</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+            
+            <span class="n">Qprime_sin_full</span> <span class="o">=</span> <span class="n">Q_sin_full</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="o">-</span><span class="n">Q_cos_full</span> <span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> 
+            <span class="n">Qprime_cos_full</span> <span class="o">=</span> <span class="n">Q_sin_full</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">Q_cos_full</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+            
+            
+            <span class="n">Q_window</span>  <span class="o">=</span> <span class="p">(</span><span class="n">I_sin</span> <span class="o">+</span>  <span class="n">Qprime_sin</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+            <span class="n">I_window</span> <span class="o">=</span> <span class="p">(</span><span class="n">I_cos</span> <span class="o">+</span> <span class="n">Qprime_cos</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+            
+            <span class="n">Q_full</span>  <span class="o">=</span> <span class="p">(</span><span class="n">I_sin_full</span> <span class="o">+</span>  <span class="n">Qprime_sin_full</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+            <span class="n">I_full</span> <span class="o">=</span> <span class="p">(</span><span class="n">I_cos_full</span> <span class="o">+</span> <span class="n">Qprime_cos_full</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+            
+            <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+                <span class="n">fig0</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+                <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">Ip</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;raw V1&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">Qp</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;raw V2&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Card Voltages&#39;</span><span class="p">)</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+                
+                <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Ip</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Qp</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;crude amplitude&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Ipp</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Qpp</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;mixer corrected&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rough Pulse Amplitude&#39;</span><span class="p">)</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+                <span class="n">fig0</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+                <span class="n">fig0</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+                
+                <span class="n">amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Q_window</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">I_window</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#this is just the I signal</span>
+                <span class="n">amp_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I_full</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Q_full</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">plot_data_extraction</span><span class="p">(</span><span class="n">amp</span><span class="p">,</span> <span class="n">Itime</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="n">time_full</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">I_window</span><span class="p">,</span> <span class="n">Q_window</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">,</span> <span class="n">xaxis</span></div>
+
+            
+        
+
+<div class="viewcode-block" id="plot_data_extraction">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.plot_data_extraction">[docs]</a>
+<span class="k">def</span> <span class="nf">plot_data_extraction</span><span class="p">(</span><span class="n">amp_extract</span><span class="p">,</span> <span class="n">time_extract</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="n">time_full</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">Q</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    plot_data_extraction _summary_</span>
+
+<span class="sd">    :param amp_extract: _description_</span>
+<span class="sd">    :type amp_extract: _type_</span>
+<span class="sd">    :param time_extract: _description_</span>
+<span class="sd">    :type time_extract: _type_</span>
+<span class="sd">    :param amp_full: _description_</span>
+<span class="sd">    :type amp_full: _type_</span>
+<span class="sd">    :param time_full: _description_</span>
+<span class="sd">    :type time_full: _type_</span>
+<span class="sd">    :param I: _description_</span>
+<span class="sd">    :type I: _type_</span>
+<span class="sd">    :param Q: _description_</span>
+<span class="sd">    :type Q: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_full</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">amp_full</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_extract</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">amp_extract</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Data window check&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+
+    <span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">98</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_full</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">)</span>    
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_full</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>    
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_full</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_full</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (us)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;I and Q&#39;</span><span class="p">)</span>    
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Single read I and Q&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">fig2</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">fig2</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="configure_hdawg">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.configure_hdawg">[docs]</a>
+<span class="k">def</span> <span class="nf">configure_hdawg</span><span class="p">(</span><span class="n">hdawg</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    configure_hdawg _summary_</span>
+
+<span class="sd">    :param hdawg: _description_</span>
+<span class="sd">    :type hdawg: _type_</span>
+<span class="sd">    :param settings: _description_</span>
+<span class="sd">    :type settings: _type_</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">hdawg_config</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;hdawg_config&#39;</span><span class="p">]</span>
+    <span class="n">amp</span> <span class="o">=</span> <span class="n">hdawg_config</span><span class="p">[</span><span class="s1">&#39;amplitude&#39;</span><span class="p">]</span>
+    <span class="n">trigger_slope</span> <span class="o">=</span> <span class="n">hdawg_config</span><span class="p">[</span><span class="s1">&#39;trigger_slope&#39;</span><span class="p">]</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">AWGs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">samplerate</span> <span class="o">=</span> <span class="n">hdawg_config</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">channelgrouping</span> <span class="o">=</span> <span class="n">hdawg_config</span><span class="p">[</span><span class="s1">&#39;channelgrouping&#39;</span><span class="p">]</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">configureChannel</span><span class="p">(</span><span class="n">amp</span><span class="o">=</span><span class="n">amp</span><span class="p">,</span><span class="n">marker_out</span><span class="o">=</span><span class="s1">&#39;Marker&#39;</span><span class="p">,</span> <span class="n">hold</span><span class="o">=</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">configureChannel</span><span class="p">(</span><span class="n">amp</span><span class="o">=</span><span class="n">amp</span><span class="p">,</span><span class="n">marker_out</span><span class="o">=</span><span class="s1">&#39;Marker&#39;</span><span class="p">,</span> <span class="n">hold</span><span class="o">=</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">configureChannel</span><span class="p">(</span><span class="n">amp</span><span class="o">=</span><span class="n">amp</span><span class="p">,</span><span class="n">marker_out</span><span class="o">=</span><span class="s1">&#39;Marker&#39;</span><span class="p">,</span> <span class="n">hold</span><span class="o">=</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">configureChannel</span><span class="p">(</span><span class="n">amp</span><span class="o">=</span><span class="n">amp</span><span class="p">,</span><span class="n">marker_out</span><span class="o">=</span><span class="s1">&#39;Marker&#39;</span><span class="p">,</span> <span class="n">hold</span><span class="o">=</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+    <span class="n">hdawg</span><span class="o">.</span><span class="n">AWGs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Triggers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">configureTrigger</span><span class="p">(</span><span class="n">slope</span><span class="o">=</span><span class="n">trigger_slope</span><span class="p">,</span><span class="n">channel</span><span class="o">=</span><span class="s1">&#39;Trigger in 1&#39;</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="configure_card">
+<a class="viewcode-back" href="../../utility/utility.measurement_helpers.html#utility.measurement_helpers.configure_card">[docs]</a>
+<span class="k">def</span> <span class="nf">configure_card</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function to configure the card from a set of settings. This will</span>
+<span class="sd">    force a standard definition of what the digitizer timing should be. Computes</span>
+<span class="sd">    the total acquisition time and converts it to samples (also configures the </span>
+<span class="sd">    rest of the digitizer but this is the main part that requires logic)</span>
+
+<span class="sd">    Inputs</span>
+<span class="sd">    _______</span>
+
+<span class="sd">        settings dictionary with the following keys (should be initialized from</span>
+<span class="sd">        the get_default_settings method)</span>
+
+<span class="sd">        meas_window: </span>
+<span class="sd">            width of measurment tone</span>
+<span class="sd">        meas_pos: </span>
+<span class="sd">            position of measurement tone relative to the rise edge of the trigger</span>
+<span class="sd">        emp_delay: </span>
+<span class="sd">            line delay and other delays accumulated between the AWG and the digitizer</span>
+<span class="sd">        init_buffer: </span>
+<span class="sd">            buffer to collect data before the pulse</span>
+<span class="sd">        post_buffer: </span>
+<span class="sd">            buffer after measurment tone to wait out the ringing before background subtraction</span>
+<span class="sd">        averages: </span>
+<span class="sd">            number of averages for the card to perform in HW</span>
+<span class="sd">        segments: </span>
+<span class="sd">            number of segments (will be averaged together), useful when number of averages gets very high ~&gt;50e3</span>
+<span class="sd">        sampleRate: </span>
+<span class="sd">            sampling rate of digitizer (make this lower for longer acquisitions)</span>
+<span class="sd">        activeChannels: </span>
+<span class="sd">            active channels on digitizer (both by default)</span>
+<span class="sd">        timeout: </span>
+<span class="sd">            timeout (in s) for VISA communication (make this longer for longer acquisitions)</span>
+<span class="sd">        channelRange: </span>
+<span class="sd">            full scale (peak to peak) of each channel, 0.5 or 2.5 V</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">exp_globals</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">]</span>
+    <span class="n">exp_settings</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_settings&#39;</span><span class="p">]</span>
+
+    <span class="n">measurement_pulse</span> <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;measurement_pulse&#39;</span><span class="p">]</span>
+    <span class="n">card_config</span> <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;card_config&#39;</span><span class="p">]</span>
+
+    <span class="c1">#Compute total acquisition time</span>
+    <span class="n">meas_pos</span>    <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">]</span>
+    <span class="n">meas_window</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span>
+    <span class="n">emp_delay</span>   <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;emp_delay&#39;</span><span class="p">]</span>
+    <span class="n">init_buffer</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">]</span>
+    <span class="n">post_buffer</span> <span class="o">=</span> <span class="n">measurement_pulse</span><span class="p">[</span><span class="s1">&#39;post_buffer&#39;</span><span class="p">]</span>
+
+    <span class="n">card_time</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">meas_window</span> <span class="o">+</span> <span class="n">emp_delay</span> <span class="o">+</span> <span class="n">init_buffer</span> <span class="o">+</span> <span class="n">post_buffer</span>
+    <span class="n">meas_samples</span> <span class="o">=</span> <span class="n">card_config</span><span class="p">[</span><span class="s1">&#39;sampleRate&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">card_time</span>
+
+    <span class="c1">#Compute trigger delay, has to be multiple of 32ns for Acquiris</span>
+    <span class="n">trigger_delay</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">meas_pos</span> <span class="o">-</span> <span class="n">init_buffer</span><span class="p">)</span><span class="o">/</span><span class="mf">32e-9</span><span class="p">)</span><span class="o">*</span><span class="mf">32e-9</span>
+    
+    <span class="n">card</span><span class="o">.</span><span class="n">channelRange</span>   <span class="o">=</span> <span class="n">card_config</span><span class="p">[</span><span class="s1">&#39;channelRange&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">timeout</span>        <span class="o">=</span> <span class="n">card_config</span><span class="p">[</span><span class="s1">&#39;timeout&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>     <span class="o">=</span> <span class="n">card_config</span><span class="p">[</span><span class="s1">&#39;sampleRate&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">activeChannels</span> <span class="o">=</span> <span class="n">card_config</span><span class="p">[</span><span class="s1">&#39;activeChannels&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">triggerSlope</span>   <span class="o">=</span> <span class="n">card_config</span><span class="p">[</span><span class="s1">&#39;triggerSlope&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">averages</span>       <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;averages&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">segments</span>       <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;segments&#39;</span><span class="p">]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">triggerDelay</span>   <span class="o">=</span> <span class="n">trigger_delay</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">samples</span>        <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">meas_samples</span><span class="p">)</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">SetParams</span><span class="p">()</span>    </div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

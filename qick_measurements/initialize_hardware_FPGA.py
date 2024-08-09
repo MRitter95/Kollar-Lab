@@ -7,7 +7,7 @@ from kollar_instruments.SGS import SGS100A
 #rm = pyvisa.ResourceManager()
 #rm.close()
 
-logen = SGS100A('TCPIP0::rssgs100a110739::inst0::INSTR')
+logen = SGS100A('TCPIP0::rssgs100a110738::inst0::INSTR')
 
 logen.Ref.Source = 'INT'
 logen.Ref.Frequency = 10e6

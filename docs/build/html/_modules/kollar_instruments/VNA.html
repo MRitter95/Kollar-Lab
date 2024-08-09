@@ -1,0 +1,1206 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kollar_instruments.VNA &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/kollar_instruments/VNA';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">kollar_instr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for kollar_instruments.VNA</h1><div class="highlight"><pre>
+<span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Author: Martin Ritter</span>
+<span class="sd">Date: 10/19/2020</span>
+<span class="sd">VNA class</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span><span class="p">,</span> <span class="n">time</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="kn">from</span> <span class="nn">.SCPIinst</span> <span class="kn">import</span> <span class="n">SCPIinst</span>
+
+<div class="viewcode-block" id="VNA">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.VNA.html#kollar_instruments.VNA.VNA">[docs]</a>
+<span class="k">class</span> <span class="nc">VNA</span><span class="p">(</span><span class="n">SCPIinst</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Class representing RS VNA instrument</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        output (str or int): output state of instrument (ON/1 or OFF/0)</span>
+<span class="sd">        power (str or float): output power of instrument (&#39;10 dBm&#39; or 10 work)</span>
+<span class="sd">        error: read only value, returns error code and string</span>
+<span class="sd">        </span>
+<span class="sd">    Methods:</span>
+<span class="sd">        __init__(address) - initialize connection and resets the instrument</span>
+<span class="sd">        </span>
+<span class="sd">        spec_default_settings(): return default settings for a spec measurement</span>
+<span class="sd">        </span>
+<span class="sd">        meas_spec(settings): perform spec measurement using settings dict</span>
+<span class="sd">        </span>
+<span class="sd">        trans_default_settings(): return default settings for transmission meas</span>
+<span class="sd">        </span>
+<span class="sd">        meas_trans(settings): perform transmission measurement using settings</span>
+<span class="sd">        </span>
+<span class="sd">        wait_complete(channel, averages): block execution until acquisition is done</span>
+<span class="sd">        </span>
+<span class="sd">        autoscale(window, ref_trace): autoscale window using ref_trace as reference</span>
+<span class="sd">        </span>
+<span class="sd">        configure_averages(channel, averages): setup VNA to meas and average x times</span>
+<span class="sd">        </span>
+<span class="sd">        configure_frequency(channel, start, stop, sweep_points): configure freq axis</span>
+<span class="sd">        </span>
+<span class="sd">        configure_trace(channel, name, meastype, measformat): set up trace on a</span>
+<span class="sd">            channel to measure &#39;meastype&#39; (e.g.&#39;S21&#39;) in &#39;measformat&#39; (e.g.&#39;MLOG&#39;)</span>
+<span class="sd">        </span>
+<span class="sd">        get_channel_traces(channel): get a list of traces on the channel</span>
+<span class="sd">        </span>
+<span class="sd">        get_channel_axis(channel): return numpy array of the x-axis of channel</span>
+<span class="sd">        </span>
+<span class="sd">        get_trace(channel, name): return numpy array of trace data on channel</span>
+<span class="sd">        </span>
+<span class="sd">        clear_all_traces(): remove all traces defined on all channels</span>
+<span class="sd">        </span>
+<span class="sd">        clear_channel_traces(channel): remove traces defined in channel</span>
+<span class="sd">        </span>
+<span class="sd">        display_trace(trace, tracenum, window): display trace in window with number tracenum</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">errcmds</span>           <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">errcmds</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">&#39;SYSTem:ERRor?&#39;</span>
+    
+    <span class="n">commandlist</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">commandlist</span><span class="p">[</span><span class="s1">&#39;core&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">commandlist</span><span class="p">[</span><span class="s1">&#39;Ref&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="n">core</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">core</span><span class="p">[</span><span class="s1">&#39;Output&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;OUTPut:STATe&#39;</span>
+    <span class="n">core</span><span class="p">[</span><span class="s1">&#39;Power&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="s1">&#39;SOURce:POWer&#39;</span>
+    <span class="n">core</span><span class="p">[</span><span class="s1">&#39;SweepType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SENSe:SWEep:TYPE&#39;</span>
+    <span class="n">core</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;SOURce:FREQuency:CW&#39;</span>
+    <span class="n">core</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;SENSe:BANDwidth&#39;</span>
+    
+    <span class="n">Ref</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">Ref</span><span class="p">[</span><span class="s1">&#39;Source&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;ROSCillator&#39;</span>
+    <span class="n">Ref</span><span class="p">[</span><span class="s1">&#39;Frequency&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ROSCillator:EXTernal:FREQuency&#39;</span>
+    
+    <span class="n">commandlist</span><span class="p">[</span><span class="s1">&#39;core&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">core</span>
+    <span class="n">commandlist</span><span class="p">[</span><span class="s1">&#39;Ref&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="n">Ref</span>
+
+
+<div class="viewcode-block" id="VNA.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.VNA.html#kollar_instruments.VNA.VNA.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">reset</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Initialize connection with instrument, reset it and clear all errors</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">=</span> <span class="s1">&#39;vna&#39;</span>
+        
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commandlist</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">errcmds</span><span class="p">,</span> <span class="n">reset</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">Ref</span><span class="o">.</span><span class="n">Source</span> <span class="o">=</span> <span class="s1">&#39;EXT&#39;</span>
+        <span class="c1">#self.Output = &#39;Off&#39;</span>
+        <span class="k">if</span> <span class="n">reset</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="VNA.reset">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;*RST; *CLS&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;OUTP OFF&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Ref</span><span class="o">.</span><span class="n">Source</span> <span class="o">=</span> <span class="s1">&#39;EXT&#39;</span></div>
+
+    
+    <span class="c1">### User functions (spec, trans, powersweep etc.)     </span>
+<div class="viewcode-block" id="VNA.spec_default_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.spec_default_settings">[docs]</a>
+    <span class="k">def</span> <span class="nf">spec_default_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Return default settings for spec measurement&#39;&#39;&#39;</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">&#39;S21&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s1">&#39;3 GHz&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;6 GHz&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">501</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFport&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="mi">3</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Mport&#39;</span><span class="p">]</span>        <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVport&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVfreq&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;7 GHz&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>         <span class="o">=</span> <span class="mf">1e3</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span>         <span class="o">=</span> <span class="s1">&#39;MOV&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        
+        <span class="k">return</span> <span class="n">settings</span></div>
+
+
+<div class="viewcode-block" id="VNA.spec_meas">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.spec_meas">[docs]</a>
+    <span class="k">def</span> <span class="nf">spec_meas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Perform spec measurement using settings dict.</span>
+<span class="sd">        Measurement consists of:</span>
+<span class="sd">            -setting up an cavity port (fixed frequency/power), CAVport</span>
+<span class="sd">            -setting up a probe port (swept freq), RFport</span>
+<span class="sd">            -configuring the measurement port (Mport) to measure</span>
+<span class="sd">                S(Mport-CAVport) as function of RFfreq</span>
+<span class="sd">        Currently just plots data on VNA</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">channel</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">time</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>
+        <span class="n">measurement</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span>
+        <span class="n">start</span>        <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span>
+        <span class="n">stop</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span>
+        <span class="n">sweep_points</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span>
+        <span class="n">rf_power</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>
+        <span class="n">rf_port</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFport&#39;</span><span class="p">]</span>
+        <span class="n">m_port</span>       <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Mport&#39;</span><span class="p">]</span>
+        <span class="n">cav_port</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVport&#39;</span><span class="p">]</span>
+        <span class="n">cav_power</span>    <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span>
+        <span class="n">cav_freq</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVfreq&#39;</span><span class="p">]</span>
+        <span class="n">ifBW</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+        <span class="n">mode</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span>
+        <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span>
+        
+        <span class="c1">#Turn off output and switch to single sweep mode instead of continuous sweeps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT:CONT OFF&#39;</span><span class="p">)</span>
+
+        <span class="c1">#Configure averaging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+
+        <span class="c1">#Clear old traces on channels and define a new trace to measure &#39;S21&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_measurement</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">unwrap_phase</span><span class="p">)</span>
+  
+        <span class="c1">#Configure frequency sweep and RF power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_frequency</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">sweep_points</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">rf_power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ifBW</span> <span class="o">=</span> <span class="n">ifBW</span>
+
+        <span class="c1">#Configure ports</span>
+        <span class="c1">#RF</span>
+        <span class="c1">##########################################</span>
+        <span class="c1">#It seems like the data comes out more cleanly when only the rf port is </span>
+        <span class="c1">#configured in generator mode. Not sure why this is the case but this</span>
+        <span class="c1">#cleared out a lot of noise spikes in the spec data</span>
+        <span class="c1">##########################################</span>
+        <span class="c1">#configures rf_port to always be on during measurements</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:POW</span><span class="si">{}</span><span class="s1">:PERM ON&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">rf_port</span><span class="p">))</span>
+        <span class="c1">#Measure</span>
+        <span class="c1">#configure to only receive</span>
+<span class="c1">#        self.inst.write(&#39;SOUR{}:POW{}:STATE OFF&#39;.format(channel, m_port))</span>
+        <span class="c1">#only look at what is happening at cav_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:FREQ</span><span class="si">{}</span><span class="s1">:CONV:ARB:IFR 1, 1, </span><span class="si">{}</span><span class="s1">, FIX&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">m_port</span><span class="p">,</span> <span class="n">cav_freq</span><span class="p">))</span>
+        <span class="c1">#LO</span>
+        <span class="c1">#always keep cav_port on during measurements</span>
+<span class="c1">#        self.inst.write(&#39;SOUR{}:POW{}:PERM ON&#39;.format(channel, cav_port))</span>
+        <span class="c1">#only output at 60MHz</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:FREQ</span><span class="si">{}</span><span class="s1">:CONV:ARB:IFR 1, 1, </span><span class="si">{}</span><span class="s1">, FIX&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">cav_port</span><span class="p">,</span> <span class="n">cav_freq</span><span class="p">))</span>
+        <span class="c1">#fixed power of cav_power (ignores the power level of Ch1)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:POW</span><span class="si">{}</span><span class="s1">:OFFS </span><span class="si">{}</span><span class="s1">, ONLY&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">cav_port</span><span class="p">,</span> <span class="n">cav_power</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_data</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    
+    
+<div class="viewcode-block" id="VNA.reverse_spec_meas">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.reverse_spec_meas">[docs]</a>
+    <span class="k">def</span> <span class="nf">reverse_spec_meas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Perform reverse spec measurement using settings dict.</span>
+<span class="sd">        Measurement consists of:</span>
+<span class="sd">            -setting up a cavity port (fixed power, fixed freq), CAVport</span>
+<span class="sd">            -setting up a probe port (swept power, fixed freq), RFport</span>
+<span class="sd">        Currently just plots data on VNA</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">channel</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">time</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>
+        <span class="n">measurement</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span>
+        <span class="n">start</span>        <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span>
+        <span class="n">stop</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span>
+        <span class="n">sweep_points</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span>
+        <span class="n">rf_power</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>
+        <span class="n">rf_port</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFport&#39;</span><span class="p">]</span>
+        <span class="n">rf_freq</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFfreq&#39;</span><span class="p">]</span>
+        <span class="n">m_port</span>       <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;Mport&#39;</span><span class="p">]</span>
+        <span class="n">cav_port</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVport&#39;</span><span class="p">]</span>
+        <span class="n">cav_power</span>    <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;CAVpower&#39;</span><span class="p">]</span>
+        <span class="n">ifBW</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+        <span class="n">mode</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span>
+        <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span>
+        
+        <span class="c1">#Turn off output and switch to single sweep mode instead of continuous sweeps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT:CONT OFF&#39;</span><span class="p">)</span>
+
+        <span class="c1">#Configure averaging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+
+        <span class="c1">#Clear old traces on channels and define a new trace to measure &#39;S21&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_measurement</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">unwrap_phase</span><span class="p">)</span>
+  
+        <span class="c1">#Configure frequency sweep and RF power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_frequency</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">sweep_points</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">rf_power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ifBW</span> <span class="o">=</span> <span class="n">ifBW</span>
+
+        <span class="c1">#Configure ports</span>
+        <span class="c1">#RF</span>
+        <span class="c1">##########################################</span>
+        <span class="c1">#It seems like the data comes out more cleanly when only the rf port is </span>
+        <span class="c1">#configured in generator mode. Not sure why this is the case but this</span>
+        <span class="c1">#cleared out a lot of noise spikes in the spec data</span>
+        <span class="c1">##########################################</span>
+        <span class="c1">#configures rf_port to always be on during measurements</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:POW</span><span class="si">{}</span><span class="s1">:PERM ON&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">rf_port</span><span class="p">))</span>
+        <span class="c1">#Measure</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:FREQ</span><span class="si">{}</span><span class="s1">:CONV:ARB:IFR 1, 1, </span><span class="si">{}</span><span class="s1">, FIX&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">rf_port</span><span class="p">,</span> <span class="n">rf_freq</span><span class="p">))</span>
+        <span class="c1">#fixed power of cav_power (ignores the power level of Ch1)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SOUR</span><span class="si">{}</span><span class="s1">:POW</span><span class="si">{}</span><span class="s1">:OFFS </span><span class="si">{}</span><span class="s1">, ONLY&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">cav_port</span><span class="p">,</span> <span class="n">cav_power</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_data</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="VNA.trans_default_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.trans_default_settings">[docs]</a>
+    <span class="k">def</span> <span class="nf">trans_default_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Return default settings for trans measurement&#39;&#39;&#39;</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">&#39;S21&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s1">&#39;3 GHz&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;9 GHz&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">501</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="o">-</span><span class="mi">20</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>         <span class="o">=</span> <span class="mf">1e3</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span>         <span class="o">=</span> <span class="s1">&#39;MOV&#39;</span>
+        <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="k">return</span> <span class="n">settings</span></div>
+
+
+<div class="viewcode-block" id="VNA.trans_meas">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.trans_meas">[docs]</a>
+    <span class="k">def</span> <span class="nf">trans_meas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Perform transmission measurement between user specified ports</span>
+<span class="sd">        Uses settings dictionary to configure instrument</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            mag: array containing magnitude info for measurement</span>
+<span class="sd">            phase: array containing phase info</span>
+<span class="sd">            freqs: x axis for channel (frequency here)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">channel</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">time</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>
+        <span class="n">measurement</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span>
+        <span class="n">start</span>        <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span>
+        <span class="n">stop</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span>
+        <span class="n">sweep_points</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span>
+        <span class="n">rf_power</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>
+        <span class="n">ifBW</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+        <span class="n">mode</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span>
+        <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span>
+        <span class="c1">#Turn off output and switch to single sweep mode instead of continuous sweeps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT:CONT OFF&#39;</span><span class="p">)</span>
+        
+        <span class="c1">#Configure averaging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="c1">#high number so that VNA keeps averaging regardless of user averaging time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_measurement</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">unwrap_phase</span><span class="p">)</span>
+
+        <span class="c1">#Configure frequency sweep and RF power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_frequency</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">sweep_points</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">rf_power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ifBW</span> <span class="o">=</span> <span class="n">ifBW</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_data</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    
+<div class="viewcode-block" id="VNA.trans_meas_S21_real_imag">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.trans_meas_S21_real_imag">[docs]</a>
+    <span class="k">def</span> <span class="nf">trans_meas_S21_real_imag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Perform transmission measurement between user specified ports</span>
+<span class="sd">        Uses settings dictionary to configure instrument</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            S21_real: array containing real part of S21</span>
+<span class="sd">            S21_imag: array containing imaginary part of S21</span>
+<span class="sd">            freqs: x axis for channel (frequency here)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">channel</span>      <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">time</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>
+        <span class="n">measurement</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement&#39;</span><span class="p">]</span>
+        <span class="n">start</span>        <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;start_freq&#39;</span><span class="p">]</span>
+        <span class="n">stop</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;stop_freq&#39;</span><span class="p">]</span>
+        <span class="n">sweep_points</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;freq_points&#39;</span><span class="p">]</span>
+        <span class="n">rf_power</span>     <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>
+        <span class="n">ifBW</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+        <span class="n">mode</span>         <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span>
+
+        <span class="c1">#Turn off output and switch to single sweep mode instead of continuous sweeps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT:CONT OFF&#39;</span><span class="p">)</span>
+        
+        <span class="c1">#Configure averaging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="c1">#high number so that VNA keeps averaging regardless of user averaging time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_measurement</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1">#Configure frequency sweep and RF power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_frequency</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">sweep_points</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">rf_power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ifBW</span> <span class="o">=</span> <span class="n">ifBW</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_data</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    
+    <span class="c1">### Helpers and utility functions</span>
+<div class="viewcode-block" id="VNA.autoscale">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.autoscale">[docs]</a>
+    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ref_trace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Autoscale window to match ref_trace range&#39;&#39;&#39;</span>
+        <span class="n">tracestr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">ref_trace</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">tracestr</span> <span class="o">=</span> <span class="s2">&quot;,&#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ref_trace</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;DISP:WIND</span><span class="si">{}</span><span class="s2">:TRAC:Y:AUTO ONCE</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">tracestr</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">ref_trace</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">traces</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_traces</span><span class="p">(</span><span class="mi">1</span><span class="p">)[::</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">:</span>
+                <span class="n">tracestr</span> <span class="o">=</span> <span class="s2">&quot;,&#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;DISP:WIND</span><span class="si">{}</span><span class="s2">:TRAC:Y:AUTO ONCE</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">tracestr</span><span class="p">))</span></div>
+
+                
+<div class="viewcode-block" id="VNA.avg_time">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.avg_time">[docs]</a>
+    <span class="k">def</span> <span class="nf">avg_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set the instrument to measure for &#39;time&#39; seconds. The instrument will</span>
+<span class="sd">        autoscale after 20% of the time has elapsed so that the traces can be</span>
+<span class="sd">        examined on the VNA</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            channel (int): channel being used for the measurement</span>
+<span class="sd">            time (int): time in seconds that the instrument will measure</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT</span><span class="si">{}</span><span class="s1">:IMM&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="n">time</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autoscale</span><span class="p">()</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">time</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="VNA.clear_all_traces">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.clear_all_traces">[docs]</a>
+    <span class="k">def</span> <span class="nf">clear_all_traces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Clear all traces defined on instrument&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;CALC:PAR:DEL:ALL&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="VNA.clear_averages">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.clear_averages">[docs]</a>
+    <span class="k">def</span> <span class="nf">clear_averages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Clear averages on channel&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:AVER:CLE&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="VNA.clear_channel_traces">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.clear_channel_traces">[docs]</a>
+    <span class="k">def</span> <span class="nf">clear_channel_traces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Clear all traces defined in channel&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;CALC</span><span class="si">{}</span><span class="s1">:PAR:DEL:CALL&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="VNA.configure_averages">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_averages">[docs]</a>
+    <span class="k">def</span> <span class="nf">configure_averages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">averages</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;MOV&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Set up channel to measure averages traces&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:AVER ON&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:AVER:MODE </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">mode</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:AVER:COUN </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">averages</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:SWE:COUN </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">averages</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="VNA.configure_frequency">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_frequency">[docs]</a>
+    <span class="k">def</span> <span class="nf">configure_frequency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sweep_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">span</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set up frequency axis</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            channel(int): channel number, channel must have been created beforehand</span>
+<span class="sd">            if specified:</span>
+<span class="sd">                start(float/str): frequency of sweep start (&#39;10 MHz&#39; or 10e6)</span>
+<span class="sd">                stop(float/str): frequency of sweep end (&#39;100 MHz&#39; or 100e6)</span>
+<span class="sd">            if specified:</span>
+<span class="sd">                center(float/str): center of frequency sweep</span>
+<span class="sd">                span(float/str): span of frequency sweep</span>
+<span class="sd">            sweep_points(int): number of points in sweep</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">sweep_points</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sweep_points</span> <span class="o">=</span> <span class="mi">501</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">stop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:FREQ:STAR </span><span class="si">{}</span><span class="s1">; STOP </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:SWE:POIN </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">sweep_points</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">center</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">span</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:FREQ:CENT </span><span class="si">{}</span><span class="s1">; SPAN </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">span</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:SWE:POIN </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">sweep_points</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="VNA.configure_measurement">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_measurement">[docs]</a>
+    <span class="k">def</span> <span class="nf">configure_measurement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set up a basic &#39;Sij&#39; measurement configuring traces for magnitude and </span>
+<span class="sd">        phase. If the traces already exist, the code will ignore the clearing</span>
+<span class="sd">        commands and return without doing anything</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            channel (int): channel number for measurement</span>
+<span class="sd">            measurement (string): measurement to be performed (e.g &#39;S21&#39;)</span>
+<span class="sd">            window (int): window to display the traces in (default 1)</span>
+<span class="sd">            </span>
+<span class="sd">        10-6 Adding option to have unwrapped versus normal phase and new optional argument to go with.</span>
+<span class="sd">        When switching from UPH to PHAS, it&#39;s not obvious how to querry which mode the current</span>
+<span class="sd">        trace is in. So, we have set it to always reconfigure the traces. A more elegant solution</span>
+<span class="sd">        is a tomorrow problem.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+<span class="c1">#        traces = self.get_channel_traces(channel)</span>
+<span class="c1">#        reinit = True</span>
+<span class="c1">#        if &#39;mag&#39; in traces and &#39;phase&#39; in traces:</span>
+<span class="c1">#            reinit = False</span>
+<span class="c1">#        if reinit:</span>
+<span class="c1">#            self.clear_channel_traces(channel)</span>
+<span class="c1">#            self.configure_trace(channel, &#39;mag&#39;, measurement, &#39;MLOG&#39;)</span>
+<span class="c1">#            self.configure_trace(channel, &#39;phase&#39;, measurement, &#39;PHAS&#39;) #10-5-21 AK trying unwrapped phase, was &#39;PHAS&#39;</span>
+<span class="c1">#            self.display_trace(&#39;mag&#39;,tracenum=1, window=window)</span>
+<span class="c1">#            self.display_trace(&#39;phase&#39;,tracenum=2, window=window)</span>
+        <span class="k">if</span> <span class="n">polar</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">unwrap_phase</span><span class="p">:</span>
+                <span class="n">phase_str</span> <span class="o">=</span> <span class="s1">&#39;UPH&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">phase_str</span> <span class="o">=</span> <span class="s1">&#39;PHAS&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clear_channel_traces</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;mag&#39;</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="s1">&#39;MLOG&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;phase&#39;</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="n">phase_str</span><span class="p">)</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">display_trace</span><span class="p">(</span><span class="s1">&#39;mag&#39;</span><span class="p">,</span><span class="n">tracenum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">display_trace</span><span class="p">(</span><span class="s1">&#39;phase&#39;</span><span class="p">,</span><span class="n">tracenum</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clear_channel_traces</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;S21_real&#39;</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="s1">&#39;Real&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;S21_imag&#39;</span><span class="p">,</span> <span class="n">measurement</span><span class="p">,</span> <span class="s1">&#39;Imag&#39;</span><span class="p">)</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">display_trace</span><span class="p">(</span><span class="s1">&#39;S21_real&#39;</span><span class="p">,</span><span class="n">tracenum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">display_trace</span><span class="p">(</span><span class="s1">&#39;S21_imag&#39;</span><span class="p">,</span><span class="n">tracenum</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="VNA.configure_trace">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.configure_trace">[docs]</a>
+    <span class="k">def</span> <span class="nf">configure_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">meastype</span><span class="p">,</span> <span class="n">measformat</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Configure trace to measure a specific parameter in a given format</span>
+<span class="sd">        Argument:</span>
+<span class="sd">            channel(int): channel number</span>
+<span class="sd">            name(str): name to assign to trace</span>
+<span class="sd">            meastype(str): parameter being measured (e.g. &#39;S21&#39;)</span>
+<span class="sd">            measformat(str): format to measure parameter (e.g. &#39;MLOG&#39; for dB scale)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;CALC</span><span class="si">{}</span><span class="s2">:PAR:SDEF &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">meastype</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;CALC</span><span class="si">{}</span><span class="s2">:FORM </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">measformat</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="VNA.display_trace">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.display_trace">[docs]</a>
+    <span class="k">def</span> <span class="nf">display_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace</span><span class="p">,</span> <span class="n">tracenum</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Display trace in window assigning it the tracenum number</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            trace (str): name of trace to be displayed</span>
+<span class="sd">            tracenum (int): number to assign to trace in window</span>
+<span class="sd">            window (int): window to display trace in (will create a new one if needed)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;DISP:WIND</span><span class="si">{}</span><span class="s1">:STAT ON&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">window</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;DISP:WIND</span><span class="si">{}</span><span class="s1">:TRAC</span><span class="si">{}</span><span class="s1">:FEED &quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">tracenum</span><span class="p">,</span> <span class="n">trace</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*OPC?&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="VNA.get_channel_axis">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_channel_axis">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_channel_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Return numpy array of channel x-axis&#39;&#39;&#39;</span>
+        <span class="n">xaxis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query_ascii_values</span><span class="p">(</span><span class="s2">&quot;CALC</span><span class="si">{}</span><span class="s2">:DATA:STIM?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">xaxis</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="VNA.get_channel_data">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_channel_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_channel_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Return dictionary with all the data from a channel&#39;&#39;&#39;</span>
+        <span class="n">traces</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_traces</span><span class="p">(</span><span class="n">channel</span><span class="p">)[::</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">trace</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">trace</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_axis</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    
+<div class="viewcode-block" id="VNA.get_channel_traces">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_channel_traces">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_channel_traces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Return list of traces defined in channel&#39;&#39;&#39;</span>
+        <span class="n">instresp</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;CALC</span><span class="si">{}</span><span class="s1">:PAR:CAT?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span>
+        <span class="n">tracelist</span> <span class="o">=</span> <span class="n">instresp</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tracelist</span></div>
+
+
+<div class="viewcode-block" id="VNA.get_trace">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.get_trace">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Return measurement data for trace with name &#39;name&#39;</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            channel(int): channel number</span>
+<span class="sd">            name(str): trace name, same as name given at trace creation</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">tracelist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_traces</span><span class="p">(</span><span class="n">channel</span><span class="p">)[::</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tracelist</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Trace not found, possible options are: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tracelist</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query_ascii_values</span><span class="p">(</span><span class="s2">&quot;CALC</span><span class="si">{}</span><span class="s2">:DATA:TRAC? &#39;</span><span class="si">{}</span><span class="s2">&#39;,FDAT&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+    
+    <span class="c1">####Legacy functions/ unused functions</span>
+<div class="viewcode-block" id="VNA.wait_complete">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.VNA.html#kollar_instruments.VNA.VNA.wait_complete">[docs]</a>
+    <span class="k">def</span> <span class="nf">wait_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">averages</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Block execution until instrument has completed measurement</span>
+<span class="sd">        Will estimate the sweep time and update the user periodically on progress</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            channel (int): channel number</span>
+<span class="sd">            averages (int): number of traces the instrument is set to average</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sweep_time</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;SENS</span><span class="si">{}</span><span class="s1">:SWE:TIME?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">)))</span>
+        <span class="n">total_time</span> <span class="o">=</span> <span class="n">averages</span><span class="o">*</span><span class="n">sweep_time</span>
+
+        <span class="c1">#Turn on output and wait until sweep is complete to autoscale the trace</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;ON&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT</span><span class="si">{}</span><span class="s1">:IMM; *OPC&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel</span><span class="p">))</span>
+
+        <span class="n">opc</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">auto_scale</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">opc</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+            <span class="c1">#print(&#39;waiting for command to complete, elapsed time:{}, total time est. {}&#39;.format(t2-t1, total_time))</span>
+            <span class="n">opc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;*ESR?&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&#39;&quot;</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">opc</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">sweep_time</span><span class="o">*</span><span class="mf">0.2</span><span class="o">*</span><span class="n">averages</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">total_time</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">auto_scale</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">autoscale</span><span class="p">()</span>
+                <span class="n">auto_scale</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+                
+    <span class="k">def</span> <span class="nf">power_sweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">powers</span><span class="p">):</span>
+
+        <span class="n">channel</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">ifBW</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+        <span class="n">sweep_points</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;sweep_points&#39;</span><span class="p">]</span>
+        <span class="n">averages</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;averages&#39;</span><span class="p">]</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;frequency&#39;</span><span class="p">]</span>
+        <span class="n">span</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;span&#39;</span><span class="p">]</span>
+        <span class="n">unwrap_phase</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;unwrap_phase&#39;</span><span class="p">]</span><span class="c1">########## MA</span>
+        
+         
+            
+        <span class="bp">self</span><span class="o">.</span><span class="n">ifBW</span> <span class="o">=</span> <span class="n">ifBW</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;Trc1&#39;</span><span class="p">,</span> <span class="s1">&#39;S21&#39;</span><span class="p">,</span> <span class="s1">&#39;MLOG&#39;</span><span class="p">)</span>
+<span class="c1">#        self.configure_trace(channel, &#39;Trc2&#39;, &#39;S21&#39;, &#39;UPH&#39;)</span>
+        <span class="k">if</span> <span class="n">unwrap_phase</span><span class="p">:</span>
+            <span class="n">phase_str</span> <span class="o">=</span> <span class="s1">&#39;UPH&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">phase_str</span> <span class="o">=</span> <span class="s1">&#39;PHAS&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;phase&#39;</span><span class="p">,</span> <span class="s1">&#39;S21&#39;</span><span class="p">,</span> <span class="n">phase_str</span><span class="p">)</span><span class="c1">#########MA</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">display_trace</span><span class="p">(</span><span class="s1">&#39;Trc1&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">display_trace</span><span class="p">(</span><span class="s1">&#39;Trc2&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_frequency</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span> <span class="n">span</span><span class="o">=</span><span class="n">span</span><span class="p">,</span> <span class="n">sweep_points</span><span class="o">=</span><span class="n">sweep_points</span><span class="p">)</span>
+        
+        <span class="n">mags</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">phases</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="k">for</span> <span class="n">power</span> <span class="ow">in</span> <span class="n">powers</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT:CONT OFF&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">power</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">averages</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wait_complete</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">averages</span><span class="p">)</span>
+            <span class="n">mag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;Trc1&#39;</span><span class="p">)</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;Trc2&#39;</span><span class="p">)</span>
+            <span class="n">freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_axis</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+            <span class="n">mags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mag</span><span class="p">)</span>
+            <span class="n">phases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phase</span><span class="p">)</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">mags</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">axes</span>
+    
+    <span class="k">def</span> <span class="nf">meas_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">spans</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+        
+        <span class="n">power</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;RFpower&#39;</span><span class="p">]</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">ifBW</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;ifBW&#39;</span><span class="p">]</span>
+        <span class="n">sweep_points</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;sweep_points&#39;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;avg_time&#39;</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="n">power</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ifBW</span> <span class="o">=</span> <span class="n">ifBW</span>
+        
+<span class="c1">#        self.configure_trace(channel, &#39;Trc1&#39;, &#39;S21&#39;, &#39;MLOG&#39;)</span>
+<span class="c1">#        self.configure_trace(channel, &#39;Trc2&#39;, &#39;S21&#39;, &#39;UPH&#39;)</span>
+<span class="c1">#        self.display_trace(&#39;Trc2&#39;,2,1)</span>
+<span class="c1">#        self.display_trace(&#39;Trc1&#39;,1,1)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_measurement</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">&#39;S21&#39;</span><span class="p">)</span>
+        
+        
+        <span class="n">mags</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">phases</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">freq</span><span class="p">,</span> <span class="n">span</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">spans</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">,</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">span</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;OFF&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;INIT:CONT OFF&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_frequency</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span> <span class="n">span</span><span class="o">=</span><span class="n">span</span><span class="p">,</span> <span class="n">sweep_points</span><span class="o">=</span><span class="n">sweep_points</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configure_averages</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="mf">10e3</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channel_data</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+            <span class="n">mag</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>
+            <span class="n">freq</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;xaxis&#39;</span><span class="p">]</span>
+            <span class="n">mags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mag</span><span class="p">)</span>
+            <span class="n">phases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phase</span><span class="p">)</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">mags</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">axes</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

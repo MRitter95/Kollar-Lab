@@ -19,7 +19,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from utility.measurement_helpers import configure_card, read_and_process
-from SI_conversion import get_prefix, convert_to_prefix
+from pulsed_measurements.schedules.SI_conversion import get_prefix, convert_to_prefix
 from userfuncs import timestamp, saveDir, SaveFull
 import scipy.signal as signal
 

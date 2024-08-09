@@ -11,7 +11,6 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import userfuncs
-from utility.plotting_tools import simplescan_plot
 import cmath
 import random
 
@@ -53,7 +52,8 @@ class IQProgram_RB(AveragerProgram):
 
 
 
-        freq_q  = self.freq2reg( cfg["qub_freq"], gen_ch = qub_ch, ro_ch = ro_chs[0])
+        freq_q  = self.freq2reg( cfg["qub_freq"], gen_ch = qub_ch) #, ro_ch = ro_chs[0])
+
         phase_q = self.deg2reg( cfg["qub_phase"], gen_ch = gen_ch) #should this be gen_ch? 
         gain_q  = cfg["qub_gain"]
         
@@ -78,7 +78,6 @@ class IQProgram_RB(AveragerProgram):
         cfg     = self.cfg
         gen_ch  = cfg["cav_channel"]
         qub_ch  = cfg["qub_channel"]
-        ro_chs  = cfg["ro_channels"]
         print(cfg["pulse_schedule"])
         
         sigma = self.us2cycles(self.cfg["qub_sigma"])
@@ -90,23 +89,28 @@ class IQProgram_RB(AveragerProgram):
 
         self.trigger(adcs = self.ro_chs, 
                      pins = [0], 
-                    adc_trig_offset = offset )
+                     adc_trig_offset = offset )
       
         flip_pulses = np.flip(np.array(cfg["pulse_schedule"]))
-        
-        playtime = meas_time - self.us2cycles( cfg["qub_delay"], gen_ch = qub_ch) - int(num_sigma*sigma)
+
+        pulse_len = int(len(cfg['pulse_data'][0][1])/16)
         buffer = self.us2cycles( cfg["buffer"], gen_ch = qub_ch) 
+        playtime = meas_time - ( self.us2cycles( cfg["qub_delay"], gen_ch = qub_ch) 
+                                + pulse_len*( len( cfg['pulse_schedule'] ) + 1 ) 
+                                + buffer*len( cfg['pulse_schedule'] ) )
         
         plot_pulse_I = []
         plot_pulse_Q = []
         
+        '''
         for item in flip_pulses:
             
             self.set_pulse_registers( qub_ch, style = 'arb', waveform = item )
             self.pulse( ch = qub_ch, t = playtime )
-            print( "we have played the pulse {} at t = {}".format( item, playtime ) )
+            #print( "we have played the pulse {} at t = {}".format( item, playtime ) )
             
-            print(self.cycles2us( (38320-32128)/16, gen_ch = qub_ch))
+            #print(self.cycles2us( (38320-32128)/16, gen_ch = qub_ch))
+
             
             for i in range( len ( cfg["pulse_data"] ) ):
                 if item == cfg["pulse_data"][i][0]:
@@ -122,7 +126,29 @@ class IQProgram_RB(AveragerProgram):
                     plot_pulse_I.extend(buff_zero)
                     plot_pulse_Q.extend(gate[2].tolist())
                     plot_pulse_Q.extend(buff_zero)
-        
+        '''
+
+        for item in cfg['pulse_schedule']:
+            self.set_pulse_registers( qub_ch, style = 'arb', waveform = item )
+            self.pulse( ch = qub_ch, t = playtime )
+            
+            for i in range( len ( cfg["pulse_data"] ) ):
+                if item == cfg["pulse_data"][i][0]:
+                    gate = cfg["pulse_data"][i]
+                
+                    addtime = buffer + int( len( gate[1] )/16 )
+                    playtime = playtime + addtime  
+                    
+                    buff_zero = [0]*(buffer*16)
+                    
+                    # Now let's add the pulse data to the arrays to plot
+                    #print('adding gate{} to plot'.format(gate[0]))
+                    plot_pulse_I.extend(gate[1].tolist())
+                    plot_pulse_I.extend(buff_zero)
+                    plot_pulse_Q.extend(gate[2].tolist())
+                    plot_pulse_Q.extend(buff_zero)
+
+
         cfg['pulse_plot'] = [plot_pulse_I, plot_pulse_Q]
         
         
@@ -226,8 +252,8 @@ class gaussian_square():
         self.rotate = rot_matrix   
         
 
-def random_sched_gen(config_dict):
-    
+def random_seq_gen(config_dict):
+   
     '''
     This function generates the RB schedule, both the total schedule and the truncated schedule for a given run.
     It also calculates and then adds the required pulse to return an ideal qubit back to the ground state at the end of the schedule.
@@ -235,40 +261,45 @@ def random_sched_gen(config_dict):
     **Parameters:**
         ``config_dict``: the config dictionary for the run, composed of exp_settings, exp_globals, and the locally defined factors
 
-        ``gen_new``: when ``gen_new`` is set to ``True``, a new schedule will be created. If ``gen_new`` is set to ``False``, the function
-                     will continue to use the current schedule and simply update the number of gates that are being used.
+        ``gen_num``: The number of new schedules to be created.
 
-        ``num_gates``: the total number of gates in the RB sequence. This only comes into play when generating a totally new schedule.
+        ``num_gates``: the total number of gates in the RB sequence.
 
-        ``used_gates``: this parameter sets where to truncate the full schedule.
-        
+    **Returns:**
+        ``full_seq_dict``: (dictionary) contains all the sequences for the run, with numbered keys.        
     '''
 
     cfg = config_dict
+    gen_new = cfg["gen_new"]
     
-    gen_new = cfg["gen_new"] 
-    u = cfg["used_gates"]
-
     if gen_new == True:
-        
-        cfg["pulse_schedule"] = []
-        rand_list = []
-        full_set = []
+        gen_num = cfg["gen_num"] 
 
         n = cfg["num_gates"]
+        full_seq_dict = {}
 
-        for i in range(n):
-            rand_list.append(random.randint(0,5)) #TODO: make this faster by having everything generated at once, not using append
-    
-        for value in rand_list:
-            cfg["pulse_schedule"].append(cfg["pulse_data"][value][0])
+        for seq in range(gen_num):
+            
+            rand_list = np.zeros(n)
+            full_seq = list(map(str, np.zeros(n)))
+
+            for i in range(n):
+                rand_list[i] = random.randint(0,3)
+                placeholder = int(rand_list[i])
+                full_seq[i] = (cfg["pulse_data"][placeholder][0])
         
-        full_set = cfg["pulse_schedule"]
-        cfg["pulse_schedule"] = full_set[:u]
+            full_seq_dict[seq] = full_seq
 
     else:
+        full_seq_dict = config_dict['full_seq_dict']
 
-        cfg["pulse_schedule"] = full_set[:u]
+    return full_seq_dict
+
+def meas_pulse(config_dict):
+        
+    cfg = config_dict
+
+     
     
     '''
     This section takes the density matrix of the initial state and operates on it with the rotation matrices of each 
@@ -300,13 +331,11 @@ def random_sched_gen(config_dict):
     very thoroughly messes everything else up.
     '''
     
-    stater = state.real
-    statei = state.imag
-
-    stater[np.abs(stater) < np.finfo(np.float64).eps] = 0 
-    statei[np.abs(statei) < np.finfo(np.float64).eps] = 0
-
-    state = stater + (statei*1j)
+    for count, element in enumerate(state):
+        if np.isclose(element.real, [0]):
+            state[count].real = element.real*0
+        if np.isclose(element.imag, [0]):
+            state[count].imag = element.imag*0    
 
     '''
     The following section puts the state we're left with in the conventional format that quantum states are written out in.
@@ -396,8 +425,8 @@ def random_sched_gen(config_dict):
             cfg["pulse_schedule"].append(cfg["pulse_data"][i][0])
             print('added {}'.format(cfg["pulse_data"][i][0]))
     
-    
-    
+    return config_dict
+
 
 
 
@@ -416,8 +445,11 @@ def get_RB_settings():
     settings['pulse_schedule'] = []
     settings['pulse_data']     = [] 
     settings['pulse_plot']     = []
+    settings['full_seq_dict']  = {}
     settings['buffer']         = .1 #[us]
     settings['gen_new']        = True
+    settings['gen_num']        = 2
+
     settings['num_gates']      = 10
     settings['used_gates']     = 1
    
@@ -467,11 +499,17 @@ def random_bench(soc,soccfg,instruments,settings):
         'qub_delay'       : q_pulse['delay'],
         'num_sigma'       : q_pulse['num_sigma'],
         'hold_time'       : q_pulse['Hold_time'],
+        
+        # RB specialized settings
         'pulse_data'      : exp_settings['pulse_data'],
         'pulse_schedule'  : exp_settings['pulse_schedule'],
+        'full_seq_dict'   : exp_settings['full_seq_dict'],
         'buffer'          : exp_settings['buffer'],
         'pulse_plot'      : exp_settings['pulse_plot'],
         'gen_new'         : exp_settings['gen_new'],
+        'gen_num'         : exp_settings['gen_num'],
+        'num_gates'       : exp_settings['num_gates'],
+        'used_gates'      : exp_settings['used_gates'],
         
         'readout_length'  : m_pulse['init_buffer'] + m_pulse['meas_window'] + m_pulse['post_buffer'],
         'adc_trig_offset' : m_pulse['emp_delay'] + m_pulse['meas_pos'] - m_pulse['init_buffer'],
@@ -482,6 +520,9 @@ def random_bench(soc,soccfg,instruments,settings):
         'soft_avgs'       : exp_settings['soft_avgs']
         }
     
+
+    # The following section sets up the I and Q data for each of the standard pulses
+  
     x_pulse = pauli_gates['x_pulse']
     y_pulse = pauli_gates['y_pulse']
     x2_pulse = pauli_gates['x2_pulse']
@@ -510,74 +551,106 @@ def random_bench(soc,soccfg,instruments,settings):
         pulse_data = [pulse[0], pulse_comp.I, pulse_comp.Q, pulse_comp.rotate]
 
         pulse_list_RB.append(pulse_data)
-
-    
+ 
     config['pulse_data'] = pulse_list_RB
 
-    #config = random_sched_gen(config)
-    
-     
-    prog_RB = IQProgram_RB(soccfg, config)
-    meas_start = prog_RB.us2cycles(m_pulse["init_buffer"],ro_ch=0)
-    meas_end = meas_start+prog_RB.us2cycles(m_pulse["meas_window"],ro_ch=0)
 
-    iq_list_RB = prog_RB.acquire_decimated(soc, load_pulses=True, progress=False, debug=False)
+    # This next section sets the sequences of pulses and iterates through them
 
-    I_full = iq_list_RB[0][0]
-    Q_full = iq_list_RB[0][1]
+    full_seq_dict = random_seq_gen(config)
+    config['full_seq_dict'] = full_seq_dict
 
-    I_window = I_full[meas_start:meas_end]
-    Q_window = Q_full[meas_start:meas_end]
-    
-    I_final = np.mean(I_window)
-    Q_final = np.mean(Q_window)
+    power_data = np.zeros((len(full_seq_dict), len(config['used_gates'])))
+    phase_data = np.zeros((len(full_seq_dict), len(config['used_gates'])))
 
-    power = np.sqrt(I_final**2 + Q_final**2)
-    phase = np.arctan2(Q_final, I_final)*180/np.pi
-    
-    '''
-    Woo the plotting section!
-    
-    Plot 1 displays the output traces (cavity pulse data)
-    Plot 2 displays the input pulses
-    '''
-    
-    # Now we get into plotting
-    plt.figure(1)
-    plt.clf()
-    
-    # Define an x axis the length of our IQ data and convert it to us instead of clock ticks
-    xaxis = np.linspace( 0, len( iq_list_RB[0][0] ) -1, len( iq_list_RB[0][0] ) )
-    for x in range(0,len(xaxis)):
-        xaxis[x] = prog_RB.cycles2us(xaxis[x],ro_ch=1)
+    for seq in full_seq_dict:
+        run_seq = full_seq_dict[seq]
+        print('Running Sequence {}'.format(seq))
 
-    plt.plot(xaxis, I_full)
-    plt.plot(xaxis, Q_full)
-    plt.title('Randomized Benchmarking Output Traces')
-    plt.xlabel('us')
-    plt.ylabel('a.u.')   
+        for i in range(len(config['used_gates'])):
+            trunc_point = config['used_gates'][i]
+            config['pulse_schedule'] = run_seq[: trunc_point]
 
-    plt.savefig(os.path.join(saveDir, filename+'_RawTimeTraces.png'), dpi = 150)
-    
-    
-    plt.figure(2)
-    plt.clf()
-    x_axis_pulses = np.linspace(0, len(config['pulse_plot'][0])-1, len(config['pulse_plot'][0]))
-    for x in range(0,len(x_axis_pulses)):
-        x_axis_pulses[x] = prog_RB.cycles2us(x_axis_pulses[x],gen_ch=6)
-    x_axis_pulses = x_axis_pulses/16
-    
-    plt.plot(x_axis_pulses, config['pulse_plot'][0], label = 'I Data')
-    plt.plot(x_axis_pulses, config['pulse_plot'][1], label = 'Q Data') 
-    plt.title('Input RB Pulses')
-    plt.xlabel('us')
-    plt.ylabel('amplitude')
-    plt.legend()
-    
-    plt.savefig(os.path.join(saveDir, filename+'_InputTraces.png'), dpi = 150)
+            # Append the measurement pulse
+            #config = meas_pulse(config)
 
-    userfuncs.SaveFull(saveDir, filename, ['power', 'phase', 'I_full', 'Q_full','xaxis'],
+            prog_RB = IQProgram_RB(soccfg, config)
+
+            meas_start = prog_RB.us2cycles(m_pulse["init_buffer"],ro_ch=0)
+            meas_end = meas_start+prog_RB.us2cycles(m_pulse["meas_window"],ro_ch=0)
+
+            iq_list_RB = prog_RB.acquire_decimated(soc, load_pulses=True, progress=False, debug=False)
+
+
+            # I and Q full are the entire data for the output traces of the cavity
+            I_full = iq_list_RB[0][0]
+            Q_full = iq_list_RB[0][1]
+
+            # I and Q window select for only the time when the cavity pulse was happening
+            I_window = I_full[meas_start:meas_end]
+            Q_window = Q_full[meas_start:meas_end]
+            
+            I_final = np.mean(I_window)
+            Q_final = np.mean(Q_window)
+
+            power_data[seq, i] = np.sqrt(I_final**2 + Q_final**2)
+            phase_data[seq, i] = np.arctan2(Q_final, I_final)*180/np.pi
+        
+        # Define an x axis the length of our IQ data and convert it to us instead of clock ticks    
+        if seq == 0: 
+            xaxis = np.linspace( 0, len( iq_list_RB[0][0] ) -1, len( iq_list_RB[0][0] ) )
+            for x in range(0,len(xaxis)):
+                xaxis[x] = prog_RB.cycles2us(xaxis[x],ro_ch=1)
+            
+            x_axis_pulses = np.linspace(0, len(config['pulse_plot'][0])-1, len(config['pulse_plot'][0]))
+            for x in range(0,len(x_axis_pulses)):
+                x_axis_pulses[x] = prog_RB.cycles2us(x_axis_pulses[x],gen_ch=6)
+            x_axis_pulses = x_axis_pulses/16
+
+        '''
+        Woo the plotting section!
+        
+        Plot 1 displays the output traces (cavity pulse data)
+        Plot 2 displays the input pulses
+        '''
+
+        # TODO: Find some way to determine fidelity and switch to using that instead of power
+
+        # Figure 1 plots single shot I and Q output cavity traces and Input traces
+        fig1 = plt.figure(1, figsize=(13, 8))
+        plt.clf()
+        plt.subplot(121)
+        plt.plot(xaxis, I_full, label = 'I Data')
+        plt.plot(xaxis, Q_full, label = 'Q Data')
+        plt.xlabel('us')
+        plt.ylabel('a.u.')
+        plt.legend()
+        plt.subplot(122)
+        plt.plot(x_axis_pulses, config['pulse_plot'][0], label = 'I Data')
+        plt.plot(x_axis_pulses, config['pulse_plot'][1], label = 'Q Data')
+        plt.xlabel('us')
+        plt.ylabel('amplitude')
+        plt.legend()
+        plt.title('Single Shot Cavity Output/Input Traces')
+        fig1.canvas.draw()
+        fig1.canvas.flush_events()
+        plt.savefig(os.path.join(saveDir, filename+'_Input_Output_Traces.png'), dpi = 150)
+
+        # Figure 2 plots the average power v number of gates for each sequence
+        fig2 = plt.figure(2, figsize=(13, 8))
+        plt.clf()
+        for i in range(0, seq +1):
+            plt.scatter(config['used_gates'], power_data[i], label = 'Sequence {}'.format(i))
+        plt.title('Power v Num Used Gates\n' + filename)
+        plt.xlabel('Num Gates')
+        plt.ylabel('Power (DAC a.u.)')
+        #plt.legend()
+        fig2.canvas.draw()
+        fig2.canvas.flush_events()
+        plt.savefig(os.path.join(saveDir, filename + '_fidelity_plot.png'))
+    
+    userfuncs.SaveFull(saveDir, filename, ['power_data', 'phase_data', 'I_full', 'Q_full','xaxis'],
                              locals(), expsettings=settings, instruments={})
      
-    data = {'saveDir': saveDir, 'filename': filename, 'I_full': I_full, 'Q_full': Q_full,'xaxis':xaxis}
-    return data, power, phase, prog_RB
+    data = {'saveDir': saveDir, 'filename': filename, 'I_full': I_full, 'Q_full': Q_full,'xaxis':xaxis, 'power_data':power_data}
+    return data, power_data, phase_data, prog_RB

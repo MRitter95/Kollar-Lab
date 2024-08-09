@@ -19,7 +19,16 @@ from utility.measurement_helpers import estimate_time
 
       
 class T1_speedup(NDAveragerProgram):
+    '''
+    T1_speedup _summary_
+
+    :param NDAveragerProgram: _description_
+    :type NDAveragerProgram: _type_
+    '''    
     def initialize(self):
+        '''
+        initialize _summary_
+        '''        
         cfg=self.cfg   
         gen_ch = cfg["cav_channel"]
         qub_ch = cfg["qub_channel"]
@@ -71,6 +80,9 @@ class T1_speedup(NDAveragerProgram):
         self.synci(200)   
     
     def body(self):
+        '''
+        body _summary_
+        '''        
         #The body sets the pulse sequence, it runs through it a number of times specified by "reps" and takes averages
         #specified by "soft_averages." Both are required if you wish to acquire_decimated, only "reps" is otherwise.
         
@@ -89,7 +101,16 @@ class T1_speedup(NDAveragerProgram):
         self.sync_all(self.us2cycles(self.cfg["relax_delay"])) #Syncs to an offset time after the final pulse is sent
 
 class CavitySweep(AveragerProgram):
+    '''
+    CavitySweep _summary_
+
+    :param AveragerProgram: _description_
+    :type AveragerProgram: _type_
+    '''    
     def initialize(self):
+        '''
+        initialize _summary_
+        '''        
         cfg=self.cfg   
         gen_ch = cfg["cav_channel"]
 
@@ -119,6 +140,9 @@ class CavitySweep(AveragerProgram):
         self.synci(200)   
     
     def body(self):
+        '''
+        body _summary_
+        '''        
         #The body sets the pulse sequence, it runs through it a number of times specified by "reps" and takes averages
         #specified by "soft_averages." Both are required if you wish to acquire_decimated, only "reps" is otherwise.
         offset = self.us2cycles(self.cfg["adc_trig_offset"],gen_ch=self.cfg["cav_channel"])
@@ -135,6 +159,12 @@ class CavitySweep(AveragerProgram):
 
 
 def get_T1_settings():
+    '''
+    get_T1_settings _summary_
+
+    :return: _description_
+    :rtype: _type_
+    '''    
     settings = {}
     
     settings['scanname'] = 'initial_power_scan_q4'
@@ -159,6 +189,18 @@ def get_T1_settings():
     return settings
 
 def meas_T1(soc,soccfg,instruments,settings):
+    '''
+    meas_T1 _summary_
+
+    :param soc: _description_
+    :type soc: _type_
+    :param soccfg: _description_
+    :type soccfg: _type_
+    :param instruments: _description_
+    :type instruments: _type_
+    :param settings: _description_
+    :type settings: _type_
+    '''    
     exp_globals  = settings['exp_globals']
     exp_settings = settings['exp_settings'] 
     m_pulse      = exp_globals['measurement_pulse']

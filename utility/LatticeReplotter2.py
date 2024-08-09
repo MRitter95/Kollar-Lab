@@ -85,11 +85,11 @@ class replotter2(object):
     def __init__(self, folder = '',filename = '',
                  name = '',
                  savedir = '',
-                 vmin = np.NaN,
-                 vmax = np.NaN,
-                 xlims = [np.NaN,np.NaN],
-                 ylims = [np.NaN,np.NaN],
-                 diff_cutoff = np.NaN,
+                 vmin = np.nan,
+                 vmax = np.nan,
+                 xlims = [np.nan,np.nan],
+                 ylims = [np.nan,np.nan],
+                 diff_cutoff = np.nan,
                  cmap = 'YlGnBu_r',
                  div_cmap = whiteBlueBlue_double,
                  fig_xSize = 8,
@@ -103,8 +103,8 @@ class replotter2(object):
         
         Init will now automatically fill values from the data file or a prepickled replotter object
         
-        settings with default of NaN will automatically load from the file
-        If they are set to not NaN, then the manually entered value will be used instead
+        settings with default of nan will automatically load from the file
+        If they are set to not nan, then the manually entered value will be used instead
         
         for compatibility with first replotter, folder argument comes firts, but will try to make it optional
         
@@ -747,8 +747,8 @@ class replotter2(object):
     
     def show_plots(self, dynamic_range = 35, 
                     max_offset = 3,
-                    diff_dynamic_range = np.NaN,
-                    diff_colorBound = np.NaN,
+                    diff_dynamic_range = np.nan,
+                    diff_colorBound = np.nan,
                     savefig = False,
                     fignums = [401,402],
                     show_diff_baseline_plot = False):
@@ -796,15 +796,18 @@ class replotter2(object):
     
     
     def make_data_subplot(self, ax,
-                          dynamic_range = np.NaN, 
-                          ref_offset = np.NaN,
-                          ref_level = np.NaN,
-                          xlims = [np.NaN, np.NaN],
-                          ylims = [np.NaN, np.NaN],
-                          plot_phase = np.NaN,
+                          dynamic_range = np.nan, 
+                          ref_offset = np.nan,
+                          ref_level = np.nan,
+                          xlims = [np.nan, np.nan],
+                          ylims = [np.nan, np.nan],
+                          plot_phase = np.nan,
                           title_with_filename = False,
                           colorbar = True):
-        ''' Replot that allows to you command that the plot be created in a specific subplot
+        
+        ''' 
+        
+        Replot that allows to you command that the plot be created in a specific subplot
         axis, rather than creating a new figure for it.
         
         ax = axis object in which to plot
@@ -832,14 +835,14 @@ class replotter2(object):
         title_with_filename = boolean to determine if file name should go in the title
                             for easy identification
                     
-        If any parameter is np.NaN by default, that means that it will use
+        If any parameter is np.nan by default, that means that it will use
         the values already stored with the data file, rather than fine tuning.
         
         11-8-23 AK made dynamic_range default to vmax-vmin, and ref offset default to zero
         This should mean that if you don't pass any arguments to this function except the
         axis, then you should get the same colorbar limits as the default entire figure
-            -- also adding the option to leave off the colorbar. This makes it easier
-            to fine tune it later
+        -- also adding the option to leave off the colorbar. This makes it easier
+        to fine tune it later
         
         '''
         plt.sca(ax)
@@ -917,13 +920,15 @@ class replotter2(object):
         return
     
     def make_diff_subplot(self, ax,
-                          dynamic_range = np.NaN, 
-                          diff_cutoff = np.NaN,
-                          xlims = [np.NaN, np.NaN],
-                          ylims = [np.NaN, np.NaN],
+                          dynamic_range = np.nan, 
+                          diff_cutoff = np.nan,
+                          xlims = [np.nan, np.nan],
+                          ylims = [np.nan, np.nan],
                           title_with_filename = False,
                           colorbar = True):
-        ''' Replot that allows to you command that the plot be created in a specific subplot
+        ''' 
+        
+        Replot that allows to you command that the plot be created in a specific subplot
         axis, rather than creating a new figure for it. This version will plot the 
         differential transmission
         
@@ -937,10 +942,9 @@ class replotter2(object):
         
         ylims = y axis limtis (assumed these are fvoltages)
         
-        title_with_filename = boolean to determine if file name should go in the title
-                            for easy identification
+        title_with_filename = boolean to determine if file name should go in the title for easy identification
                     
-        If any parameter is np.NaN by default, that means that it will use
+        If any parameter is np.nan by default, that means that it will use
         the values already stored with the data file, rather than fine tuning.
         
         WARNING - To change the minimu value, this will have to recompute the cutoff and 

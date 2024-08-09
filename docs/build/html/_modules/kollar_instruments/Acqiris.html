@@ -1,0 +1,1903 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kollar_instruments.Acqiris &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/kollar_instruments/Acqiris';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">kollar_instr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for kollar_instruments.Acqiris</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&#39;&#39;&#39;4/3/20</span>
+<span class="sd">Modifying old version of the Acqiris object that ran off of the C driver to use </span>
+<span class="sd">the new python beta version of the driver from acqiris.</span>
+
+<span class="sd">card = Acqiris(hardwareAddress)  &#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">ctypes</span>
+
+
+<span class="c1"># import comtypes</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="c1">#import subprocess</span>
+
+<span class="c1">#import re</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#import tarfile</span>
+<span class="c1">#import struct</span>
+<span class="c1">#import glob</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1">#import pickle</span>
+<span class="c1">#import datetime</span>
+<span class="c1">#import itertools</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+
+<span class="c1">#import AqMD3 as driver #this is the Acqiris python driver</span>
+<span class="kn">import</span> <span class="nn">AqMD3</span>
+
+<span class="n">InstrumentFolderPath</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Kollarlab\Desktop\Kollar-Lab\Control&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">InstrumentFolderPath</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">InstrumentFolderPath</span><span class="p">)</span>
+
+
+<span class="kn">from</span> <span class="nn">userfuncs</span> <span class="kn">import</span> <span class="n">freeze</span>
+
+<div class="viewcode-block" id="Acqiris">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.Acqiris.Acqiris.html#kollar_instruments.Acqiris.Acqiris">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">Acqiris</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    
+<div class="viewcode-block" id="Acqiris.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.Acqiris.Acqiris.html#kollar_instruments.Acqiris.Acqiris.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ResourceName</span><span class="p">,</span> <span class="n">simulate</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">=</span> <span class="s1">&#39;Acqiris&#39;</span>
+        
+        <span class="c1">#look to the right place.</span>
+        <span class="n">IVIbinPath</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Program Files</span><span class="se">\\</span><span class="s2">IVI Foundation</span><span class="se">\\</span><span class="s2">IVI</span><span class="se">\\</span><span class="s2">Bin</span><span class="se">\\</span><span class="s2">&quot;</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">IVIbinPath</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IVIbinPath</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+            
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fillHardwareKeys</span><span class="p">()</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">simulate</span> <span class="o">=</span> <span class="n">simulate</span> <span class="c1">#python for whether we want to simulate or not</span>
+        <span class="c1">#perperty simulateMode will come from the driver.</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareAddress</span> <span class="o">=</span> <span class="n">ResourceName</span>
+<span class="c1">#        self.ReInitialize()</span>
+        
+        <span class="c1">#in the python version, there seems to be an issue with reinitializing an already</span>
+        <span class="c1">#existing instnace of the driver. It causes an error that the sample clocks are unstable</span>
+        <span class="c1">#or something about mising TDC curves. Running close before reinitializing it seems to allow</span>
+        <span class="c1">#things to work. So, putting this try in here in case the object card already exists.</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">InitializeDriver</span><span class="p">()</span>
+        
+        <span class="c1">#set default values. Eventually this should probably load from some default config file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loadDefaultConfig</span><span class="p">()</span>
+        
+        <span class="c1">#push the currently stored settings to the card and calibrate. Hopefully ths will actually save hassle.</span>
+        <span class="c1">#if this is running at _init_ then it will push the defaults</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SetParams</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">SelfCalibrate</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="c1">#most likely cause of failure at this point is either that funny</span>
+            <span class="c1">#pll synching issue, or the absence of an external clock.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clockSource</span> <span class="o">==</span> <span class="s1">&#39;External&#39;</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;External Clock Failure. Booting in Internal Mode.&#39;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span> <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">clockSource</span> <span class="o">=</span> <span class="s1">&#39;Internal&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">SelfCalibrate</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Self Calibrate Failed: Cause Unkown.&#39;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span> <span class="p">)</span>
+        
+        
+        <span class="c1">#some flags for controlling the read</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">armed</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span> <span class="o">=</span> <span class="kc">False</span>
+        
+<span class="c1">#        self._fill_slots()</span>
+        <span class="c1">#declare some attributes that will be needed later</span>
+        <span class="c1">#because class is prozen they need to exist from the get go.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offsetWithinRecord</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">totalSamples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_simulateMode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulate</span> 
+        <span class="n">temp</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetParams</span><span class="p">()</span>
+        <span class="n">temp</span><span class="p">[</span><span class="s1">&#39;timeout&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span>
+        <span class="n">temp</span><span class="p">[</span><span class="s1">&#39;verbose&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">temp</span></div>
+
+        
+<span class="c1">#    ##############################</span>
+    <span class="c1">#hardware properties</span>
+    
+    
+    <span class="c1">#master hardware settings parameter, to be used for</span>
+    <span class="c1">#saving, and printing</span>
+    <span class="c1">#includes what yout would need to reset to a particular configuration</span>
+    <span class="c1">#but not changeable things like run time flags or hardware address.</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; getts all the settings needed to save or initialize a python card</span>
+<span class="sd">        object. So, it calls GetParams to get the hardware level settings. </span>
+<span class="sd">        It adds a couple more like timeout and verbose that don&#39;t exist at the lowest level.</span>
+<span class="sd">        </span>
+<span class="sd">        For looking at amtching function names, this makes something more like a configuration</span>
+<span class="sd">        getten from LoadConfig or _laodDefaultConfig</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">paramsDict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetParams</span><span class="p">()</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s1">&#39;timeout&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span> <span class="c1">#timeout is an argument </span>
+        <span class="c1">#of a driver level function, not a driver level parameter, so </span>
+        <span class="c1">#it is not gotten in get params</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s1">&#39;verbose&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="c1">#added this so that this</span>
+        <span class="c1">#has exactly the same fields as the default config.</span>
+        <span class="c1">#Python object can therfore boot from this drictionary.</span>
+        <span class="k">return</span> <span class="n">paramsDict</span> 
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">LoadConfig</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="c1">#load config checks for invalid fields</span>
+    
+    <span class="c1">#icky properties that have to be batch set</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sampleRate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1">#this one might not need to be here, but I did it already</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">SampleRate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sampleRate</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@sampleRate</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sampleRate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sampleRate</span> <span class="o">=</span> <span class="n">val</span> 
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">samples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">RecordSize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@samples</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">samples</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span> <span class="o">=</span> <span class="n">val</span> 
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">segments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">NumberOfRecordsToAcquire</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_segments</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@segments</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">segments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_segments</span> <span class="o">=</span> <span class="n">val</span> 
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">averageMode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">Mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_averageMode</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@averageMode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">averageMode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_averageMode</span> <span class="o">=</span> <span class="n">val</span> 
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">averages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">NumberOfAverages</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_averages</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@averages</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">averages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_averages</span> <span class="o">=</span> <span class="n">val</span> 
+        <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">0</span>
+            
+            
+    <span class="c1">#I hope that this one can be a regular property, but I&#39;m not sure</span>
+    <span class="c1">#might run into trouble with limits in avergaing mode</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">activeChannels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#have to check what it enabled and convert</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Enabled</span>
+        <span class="n">val2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Enabled</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">val</span><span class="p">,</span><span class="n">val2</span><span class="p">])</span>
+        <span class="n">inds</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">flags</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">full</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">actives</span> <span class="o">=</span> <span class="n">full</span><span class="p">[</span><span class="n">inds</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_activeChannels</span> <span class="o">=</span> <span class="n">actives</span>
+        <span class="k">return</span> <span class="n">actives</span>
+    <span class="nd">@activeChannels</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">activeChannels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Active channels needs to be either 1, [1], or [1,2].&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span>  <span class="ow">not</span> <span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Active channels needs to be either 1, [1], or [1,2].&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Only two channels&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_activeChannels</span> <span class="o">=</span> <span class="n">val</span>
+
+
+    
+    
+    <span class="c1">#normal properties that I think can be set reasonably.</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">triggerSource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">ActiveSource</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerSource</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@triggerSource</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">triggerSource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerSource</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">ActiveSource</span> <span class="o">=</span> <span class="n">val</span> 
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">triggerLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerLevel</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@triggerLevel</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">triggerLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerLevel</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Level</span> <span class="o">=</span> <span class="n">val</span> 
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">triggerSlope</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Edge</span><span class="o">.</span><span class="n">Slope</span>
+<span class="c1">#        self._triggerSlope = temp</span>
+        <span class="k">if</span> <span class="n">temp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="s1">&#39;Falling&#39;</span>
+        <span class="k">elif</span> <span class="n">temp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="s1">&#39;Rising&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unkown trigger slope returned&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerSlope</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@triggerSlope</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">triggerSlope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;Falling&#39;</span><span class="p">:</span>
+            <span class="n">triggerSlopeC</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;Rising&#39;</span><span class="p">:</span>
+            <span class="n">triggerSlopeC</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Edge trigger slope must be either &#39;Rising&#39; or &#39;Falling&#39;&quot;</span><span class="p">)</span>
+<span class="c1">#        self._triggerSlope = triggerSlopeC</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerSlope</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+        <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Edge</span><span class="o">.</span><span class="n">Slope</span> <span class="o">=</span> <span class="n">triggerSlopeC</span> 
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">triggerDelay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Delay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerDelay</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@triggerDelay</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">triggerDelay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerDelay</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Delay</span> <span class="o">=</span> <span class="n">val</span> 
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">triggerCoupling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Coupling</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggerCoupling</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@triggerCoupling</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">triggerCoupling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+         <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">_triggerCoupling</span> <span class="o">=</span> <span class="n">val</span>
+         <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Coupling</span> <span class="o">=</span> <span class="n">val</span>
+         
+         
+    
+<span class="c1">#    @property</span>
+<span class="c1">#    def channelRange(self):</span>
+<span class="c1">#        #have to check what it enabled and convert</span>
+<span class="c1">#        val = self.driver.Channels[0].Range</span>
+<span class="c1">#        val2 = self.driver.Channels[1].Range</span>
+<span class="c1">#        if not val == val2:</span>
+<span class="c1">#            print(&#39;Warning: Range set differently on the two channels&#39;)</span>
+<span class="c1">#        return val</span>
+<span class="c1">#    @channelRange.setter</span>
+<span class="c1">#    def channelRange(self,val):</span>
+<span class="c1">#        if val in [0.5, 2.5]:</span>
+<span class="c1">#            self.driver.Channels[0].Range = val</span>
+<span class="c1">#            self.driver.Channels[1].Range = val</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            raise ValueError(&#39;Range must be 0.5 or 2.5&#39;)</span>
+    
+<span class="c1">#    @property</span>
+<span class="c1">#    def channelOffset(self):</span>
+<span class="c1">#        #have to check what it enabled and convert</span>
+<span class="c1">#        val = self.driver.Channels[0].Offset</span>
+<span class="c1">#        val2 = self.driver.Channels[1].Offset</span>
+<span class="c1">#        if not val == val2:</span>
+<span class="c1">#            print(&#39;Warning: Offset set differently on the two channels&#39;)</span>
+<span class="c1">#        return val</span>
+<span class="c1">#    @channelOffset.setter</span>
+<span class="c1">#    def channelOffset(self,val):</span>
+<span class="c1">#        self.driver.Channels[0].Offset = val</span>
+<span class="c1">#        self.driver.Channels[1].Offset = val</span>
+         
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">channelRange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#have to check what it enabled and convert</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Range</span>
+        <span class="n">val2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_channelRange</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">val</span><span class="p">,</span> <span class="n">val2</span><span class="p">])</span> <span class="c1">#store the basic range</span>
+        <span class="c1">#for both channels under the hood</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="n">val2</span><span class="p">:</span>
+            <span class="c1">#two channels set the same, use one only</span>
+            <span class="k">return</span> <span class="n">val</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">val</span><span class="p">,</span> <span class="n">val2</span><span class="p">])</span>
+    <span class="nd">@channelRange</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">channelRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+            <span class="c1">#only single value specified</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_channelRange</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">val</span><span class="p">,</span> <span class="n">val</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Range</span> <span class="o">=</span> <span class="n">val</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Range</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Range must be 0.5 or 2.5&#39;</span><span class="p">)</span>   
+        <span class="k">elif</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="p">:</span>
+            <span class="c1">#given an array or list of values</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span> <span class="ow">and</span> <span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Range</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Range</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Range must be 0.5 or 2.5&#39;</span><span class="p">)</span>  
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Array too long. Only two channels.&#39;</span><span class="p">)</span> 
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">channelOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#have to check what it enabled and convert</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Offset</span>
+        <span class="n">val2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_channelOffset</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">val</span><span class="p">,</span><span class="n">val2</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">val</span> <span class="o">==</span> <span class="n">val2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Warning: Offset set differently on the two channels&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@channelOffset</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">channelOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Offset</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Offset</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_channelOffset</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">val</span><span class="p">,</span><span class="n">val</span><span class="p">])</span>
+        
+        
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">simulateMode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">DriverOperation</span><span class="o">.</span><span class="n">Simulate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_simulateMode</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@simulateMode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">simulateMode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>  <span class="c1">#be very wary just trrying to set this blindly.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">DriverOperation</span><span class="o">.</span><span class="n">Simulate</span> <span class="o">=</span> <span class="n">val</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">_simulateMode</span> <span class="o">=</span> <span class="n">val</span>
+        
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">clockSource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">ReferenceOscillator</span><span class="o">.</span><span class="n">Source</span>
+        <span class="k">if</span> <span class="n">temp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="s1">&#39;Internal&#39;</span>
+        <span class="k">elif</span> <span class="n">temp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="s1">&#39;External&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unkown clock source returned&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_clockSource</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@clockSource</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">clockSource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;Internal&#39;</span><span class="p">:</span>
+            <span class="n">sourceC</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;External&#39;</span><span class="p">:</span>
+            <span class="n">sourceC</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Edge clock source. Must be either &#39;Internal&#39; or &#39;External&#39;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_clockSource</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">ReferenceOscillator</span><span class="o">.</span><span class="n">Source</span> <span class="o">=</span> <span class="n">sourceC</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">clockFrequency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">ReferenceOscillator</span><span class="o">.</span><span class="n">ExternalFrequency</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">clockSource</span> <span class="o">==</span> <span class="s1">&#39;Internal&#39;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Internal Clock. Frequency Setting Ignored (I think).&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">val</span> <span class="o">==</span> <span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Warning: Clock frequency is not set to 10 MHz.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_clockFrequency</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@clockFrequency</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">clockFrequency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>  <span class="c1">#be very wary just trrying to set this blindly.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">clockSource</span> <span class="o">==</span> <span class="s1">&#39;Internal&#39;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Internal Clock. Frequency Setting Ignored (I think).&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">val</span> <span class="o">==</span> <span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Clock frequency must be 10 MHz?&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_clockFrequency</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">ReferenceOscillator</span><span class="o">.</span><span class="n">ExternalFrequency</span> <span class="o">=</span> <span class="n">val</span> 
+
+
+    
+<span class="c1">#    </span>
+<span class="c1">#    #############################</span>
+<span class="c1">#        </span>
+            
+    <span class="k">def</span> <span class="nf">SetParams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{}):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Autoinititalize function that will set up the card with all the driver</span>
+<span class="sd">        parameters stored in this object. It will push all the settings and do cross checks.</span>
+<span class="sd">        </span>
+<span class="sd">        This function loads all the settings to the card, so it sets up the trigger and the</span>
+<span class="sd">        data acquisition channels. Then it calls Configure Acquisition to set up things</span>
+<span class="sd">        like averaging and sample/sample rate</span>
+<span class="sd">        </span>
+<span class="sd">        params is an optional settings dictionary that can be used set everything at the python level&#39;&#39;&#39;</span>
+        
+        <span class="n">fields</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">LoadConfig</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+        
+        <span class="c1">#configure the trigger</span>
+<span class="c1">#        self.ConfigureTrigger(Source = self.triggerSource, Level = self.triggerLevel, Slope = self.triggerSlope, Mode = self.triggerMode)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConfigureTrigger</span><span class="p">(</span><span class="n">Source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_triggerSource</span><span class="p">,</span> <span class="n">Level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_triggerLevel</span><span class="p">,</span> <span class="n">Slope</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_triggerSlope</span><span class="p">,</span> <span class="n">Mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">triggerMode</span><span class="p">)</span>
+        
+        <span class="c1">#configure the channels:</span>
+        <span class="k">for</span> <span class="n">chind</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">chind</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_activeChannels</span><span class="p">:</span> <span class="c1">#need the underscore here so it takes the python value and then sets up hardware to match</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">enabled</span><span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ConfigureChannel</span><span class="p">(</span><span class="n">channelNum</span> <span class="o">=</span> <span class="n">chind</span><span class="p">,</span> <span class="n">Range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channelRange</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">channelOffset</span><span class="p">,</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">enabled</span><span class="p">)</span>
+            
+        <span class="c1">#configure the acquisition</span>
+<span class="c1">#        self.ConfigureAcquisition(self.samples, self.sampleRate, self.segments)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConfigureAcquisition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sampleRate</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_segments</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span> <span class="o">=</span> <span class="kc">True</span>
+        
+    <span class="k">def</span> <span class="nf">GetParams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Autoget function for params. Will querry the hardware and package all the settings, as well as </span>
+<span class="sd">        update the fields of the python software object.</span>
+<span class="sd">        </span>
+<span class="sd">        In order to fully initialize or save a python Acqiris object, you will need the @settings</span>
+<span class="sd">        property. This incorporates the hardware-level settings and a couple more. (but still no</span>
+<span class="sd">        run time flags or things like that.)&#39;&#39;&#39;</span>
+        
+        <span class="n">hardwareSettings</span><span class="o">=</span> <span class="p">{}</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">)</span>
+        
+<span class="c1">#        hardwareSettings = {}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="p">:</span>
+            
+            <span class="c1">#If these are all properties, then I can do this like this</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">)</span>
+            
+            <span class="c1">#store everything away</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+            <span class="n">hardwareSettings</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+            
+            <span class="c1">#print all the results    </span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39; : &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+   
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">)</span>
+            
+<span class="c1">#        return</span>
+        <span class="k">return</span> <span class="n">hardwareSettings</span>
+            
+            
+    <span class="k">def</span> <span class="nf">Close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">SelfCalibrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Calibrating...&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Calibration</span><span class="o">.</span><span class="n">SelfCalibrate</span><span class="p">()</span>
+
+    <span class="c1">##################################################</span>
+    
+    <span class="k">def</span> <span class="nf">Abort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Abort a hung acquisition &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">Abort</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">Arm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Initialize the acquisition and get ready to take and read data.</span>
+<span class="sd">        Tells the card to get ready and wait for triggers.</span>
+<span class="sd">        </span>
+<span class="sd">        Unlike it big brother ArmAndWait, this function will allow python to </span>
+<span class="sd">        do stuff while the card is waiting for a trigger. E.g. start up the</span>
+<span class="sd">        AWG so that it actually delivers said triggers.</span>
+<span class="sd">        </span>
+<span class="sd">        Note: If this is used instead of ArmAndWait, then WaitForAcquisition will</span>
+<span class="sd">        need to be called at some point so that the card realizes that it is done.</span>
+<span class="sd">        ReadData has been modified so that it should take care of this automatically,</span>
+<span class="sd">        but FYI.</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#check if the settings are up to date</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">settingsCurrent</span><span class="p">:</span> 
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Warning: Python contains stale settings.&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pushing current settings.&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">SetParams</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Calibration</span><span class="o">.</span><span class="n">IsRequired</span><span class="p">:</span>
+             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Calibration needed before acquisition. Doing it.&#39;</span><span class="p">)</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">SelfCalibrate</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">InitiateAcquisition</span><span class="p">()</span>
+        
+<span class="c1">#        time.sleep(0.1) #putting in a pause to see if that stops the clocks from being unhappy. Nope.</span>
+<span class="c1">#        try:</span>
+<span class="c1">#            self.InitiateAcquisition()</span>
+<span class="c1">#        except:</span>
+<span class="c1">#            time.sleep(5)</span>
+<span class="c1">#            print(&#39;Waiting for clocks to stabilize?&#39;) #hopefully this fixes stuff</span>
+<span class="c1">#            self.InitiateAcquisition()</span>
+            
+    <span class="k">def</span> <span class="nf">ArmAndWait</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Initialize the acquisition and get ready to take and read data.</span>
+<span class="sd">        Tells the card to get ready and wait for triggers, and then waits </span>
+<span class="sd">        for it to finish.</span>
+<span class="sd">        </span>
+<span class="sd">        This version works fine if the AWG is already setup and running, but it will</span>
+<span class="sd">        cause python to hang until the acqusition is finished. So, you will not be able</span>
+<span class="sd">        to do anything, and that includes starting up the AWG to have it give the </span>
+<span class="sd">        card triggers. So, this function should only be used if the card is triggered</span>
+<span class="sd">        off an external generator, not the AWG.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Arm</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">WaitForAcquisition</span><span class="p">()</span>
+     
+        
+    <span class="k">def</span> <span class="nf">ConfigureAcquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">sampleRate</span><span class="p">,</span> <span class="n">segments</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;Configure Acquistion function that gets everything ready for data taking.</span>
+<span class="sd">#        Does more than the equivelent C function.</span>
+<span class="sd">        </span>
+<span class="sd">        Test version of configure acquisition. Trying to use the built in function of the C</span>
+<span class="sd">        driver and not manually setting all the variables.&#39;&#39;&#39;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">sampleRate</span> <span class="o">=</span> <span class="n">sampleRate</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="n">segments</span>
+        
+
+<span class="c1">#        #software needs to know at this point so that it can adjust the number of samples</span>
+<span class="c1">#        #I can&#39;t write to the driver here because old number of samples could still be</span>
+<span class="c1">#        #large from a non-averaged run.</span>
+        
+        <span class="c1">#turn off averaging in hardware so that it doesn&#39;t muck with setting the number of samples.</span>
+        <span class="c1">#This is necessary when switching back from averaging mode.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">NumberOfAverages</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="c1">#using this low-level hack isntead of ConfigureAveraging, because at this point, python needs</span>
+        <span class="c1">#to know about averaging, but the hardware needs to always not be in averaging mode, so that </span>
+        <span class="c1">#it can take a large number of samples if the upcoming acqusition is going to be in regular mode.</span>
+        <span class="c1">#whereas the software needs to adjust the limit on the number of samples if the upcoming acquisition</span>
+        <span class="c1"># is going to be in averaging mode.</span>
+        
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Setting acquisition parameters manually.&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Samples will shorten if too long for avg mode.&#39;</span><span class="p">)</span>
+<span class="c1">#            print(&#39;Sample will autoround to a multiple of 1024 and shorten if to long for avg mode.&#39;)</span>
+        <span class="c1">###!!!!!!!!!!!!!</span>
+        <span class="c1">#!!!!!!!!!empircally, record size must be 1024*n, and the largest that it can be is 513*1024</span>
+        <span class="c1">#roughly 500 kS. Which is what the mnual says, but this sucks. Did the old Acqiris do this?</span>
+        <span class="c1">#or is it just that the ME is only for non-averaging mode?</span>
+        <span class="n">multiple</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="o">/</span><span class="mi">1024</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_averages</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1">#check the number of channels</span>
+            <span class="n">numChans</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_activeChannels</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">numChans</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">maxSamples</span> <span class="o">=</span> <span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">maxSamples</span> <span class="o">=</span> <span class="mi">1024</span><span class="o">*</span><span class="mi">512</span>
+                
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span> <span class="o">&gt;</span> <span class="n">maxSamples</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data is too long for averaging mode. Setting to max length: 512*1024&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">maxSamples</span><span class="p">)</span>
+                
+<span class="c1">#            if multiple*1024 &gt; maxSamples:</span>
+<span class="c1">#                print(&#39;Data is too long for averaging mode. Setting to max length: 512*1024&#39;)</span>
+<span class="c1">#                self.samples = int(maxSamples)</span>
+<span class="c1">#            else:</span>
+<span class="c1">#                #auto round to next multiple of 1024 up, regardless</span>
+<span class="c1">#                self.samples = int(multiple*1024) </span>
+<span class="c1">#                #it is very important that this winds up an integer, or it least it was at some point</span>
+                
+        <span class="c1">#it looks like now that we have the order of operations right between configuring</span>
+        <span class="c1">#the acquisition and turning averaging on and off, so that we can use the</span>
+        <span class="c1">#built in C function for configuring, that we might not need this multiple of 1024 check.</span>
+        <span class="c1">#But we do need the auto check that turns down the number of samples if its averaging mode</span>
+        
+<span class="c1">#        self.driver.Acquisition.ConfigureAcquisition(int(self.segments), int(self.samples), self.sampleRate)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">ConfigureAcquisition</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_segments</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sampleRate</span><span class="p">)</span>
+        
+        <span class="c1">#configure the the actual averaging mode and restore number of averages</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConfigureAveraging</span><span class="p">()</span> <span class="c1">#trip the flags to handle the averaging</span>
+        <span class="c1">#(both in python and sending down to the hardware driver.)</span>
+        <span class="c1">#Hopefully doing it after everything else is set will only try to flip to averager </span>
+        <span class="c1">#after the number of samples has been reduced.</span>
+
+
+    <span class="k">def</span> <span class="nf">ConfigureAveraging</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_averages</span> <span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#make sure this variable is conistent. I probably want to do away with it eventually</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#        self.driver.Acquisition.Mode = self.averageMode </span>
+<span class="c1">#        self.driver.Acquisition.NumberOfAverages = self.averages</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">Mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_averageMode</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">NumberOfAverages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_averages</span>
+
+    <span class="k">def</span> <span class="nf">ConfigureChannel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channelNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Range</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Configure channel function.</span>
+<span class="sd">        </span>
+<span class="sd">        Meant to becalled by configure acquisiton, but can be called manually.</span>
+<span class="sd">        If it is called mnaually, it will write it&#39;s inputs to the driver settings.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="n">channelNum</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid channel. Should be 1 or 2&#39;</span><span class="p">)</span>
+        
+<span class="c1">#        if Range in [0.5, 2.5]: #changed to a property, so this is checked elsewhere</span>
+<span class="c1">#            self.channelRange = Range</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            raise ValueError(&#39;Range must be 0.5 or 2.5&#39;)</span>
+            
+        <span class="bp">self</span><span class="o">.</span><span class="n">channelRange</span> <span class="o">=</span> <span class="n">Range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channelOffset</span> <span class="o">=</span> <span class="n">offset</span>
+
+        <span class="n">couplingC</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 1 = DC coupling. Always. Card can&#39;t do AC.</span>
+
+        <span class="n">chan</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">channelNum</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#python channels are index from 0</span>
+        <span class="n">chan</span><span class="o">.</span><span class="n">Configure</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_channelRange</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">channelNum</span><span class="o">-</span><span class="mi">1</span><span class="p">)],</span> <span class="bp">self</span><span class="o">.</span><span class="n">channelOffset</span><span class="p">,</span> <span class="n">couplingC</span><span class="p">,</span> <span class="n">enabled</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">ConfigureTrigger</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Source</span> <span class="o">=</span> <span class="s1">&#39;External1&#39;</span><span class="p">,</span> <span class="n">Level</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Slope</span> <span class="o">=</span> <span class="s1">&#39;Falling&#39;</span><span class="p">,</span> <span class="n">Mode</span> <span class="o">=</span> <span class="s1">&#39;Edge&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Mode</span> <span class="o">!=</span> <span class="s1">&#39;Edge&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;This trigger mode not yet supported. Edge trigger only.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">triggerMode</span> <span class="o">=</span> <span class="n">Mode</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span> <span class="o">=</span> <span class="n">Source</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">triggerLevel</span> <span class="o">=</span> <span class="n">Level</span>
+            
+            <span class="k">if</span> <span class="n">Slope</span> <span class="o">==</span> <span class="s1">&#39;Falling&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">triggerSlope</span> <span class="o">=</span> <span class="n">Slope</span>
+                <span class="n">triggerSlopeC</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">elif</span> <span class="n">Slope</span> <span class="o">==</span> <span class="s1">&#39;Rising&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">triggerSlope</span> <span class="o">=</span> <span class="n">Slope</span>
+                <span class="n">triggerSlopeC</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Edge trigger slope must be either &#39;Rising&#39; or &#39;Falling&#39;&quot;</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Delay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">triggerDelay</span>
+
+
+            <span class="c1">#manually set trigger source because the configure function doesn&#39;t actually do it.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">ActiveSource</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span>
+            
+
+            <span class="c1">#self.driver.Trigger.Sources[self.triggerSource].Coupling, but I think this always has to be 1</span>
+<span class="c1">#            self.driver.Trigger.Sources[self.triggerSource].Coupling = self.triggerCoupling</span>
+            
+            <span class="c1">#couldn&#39;t find a configure trigger function in the python. Just set all the fields instead</span>
+            <span class="n">activeTrigger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Trigger</span><span class="o">.</span><span class="n">Sources</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span><span class="p">]</span>
+            <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">triggerLevel</span>
+            <span class="n">activeTrigger</span><span class="o">.</span><span class="n">Edge</span><span class="o">.</span><span class="n">Slope</span> <span class="o">=</span> <span class="n">triggerSlopeC</span> 
+            
+            
+            
+    <span class="k">def</span> <span class="nf">_fillHardwareKeys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Storing the names of the harware level vairables. &#39;&#39;&#39;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;driverDescription&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;driverRevision&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;firmwareRevision&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;instrumentModel&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driverKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;serialNumber&#39;</span><span class="p">)</span>
+        
+        
+        
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;channelOffset&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;channelRange&#39;</span><span class="p">)</span>
+<span class="c1">#        self.hardwareKeys.append(&#39;channelEnabled&#39;) #removed for better syntax</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;activeChannels&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;triggerSource&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;triggerLevel&#39;</span><span class="p">)</span>
+<span class="c1">#        self.hardwareKeys.append(&#39;triggerMode&#39;) #I don&#39;t think we can change this one</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;triggerSlope&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;triggerDelay&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;triggerCoupling&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;averageMode&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;averages&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;samples&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;segments&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sampleRate&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;simulateMode&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;clockFrequency&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;clockSource&#39;</span><span class="p">)</span>
+        
+<span class="c1">#        self.hardwareKeys.append(&#39;timeout&#39;) #i don&#39;t know how to get this from the hardware, so it&#39;s a software setting</span>
+    
+    <span class="k">def</span> <span class="nf">_fill_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">firstRound</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1">#this gets all of the normal attributes, but it doesn&#39;t handle the properties</span>
+        <span class="n">propertyKeys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__slots__</span> <span class="o">=</span> <span class="n">firstRound</span> <span class="o">+</span> <span class="n">propertyKeys</span>
+    
+    <span class="k">def</span> <span class="nf">_generateConfig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Make a dictionary of the hardware settings and a couple of useful flags.</span>
+<span class="sd">        </span>
+<span class="sd">        As it currently stands it will try to get the settings from the hardware</span>
+<span class="sd">        and ignore the python shadow copies.</span>
+<span class="sd">        </span>
+<span class="sd">        This will hopefully be the basis for saving and loading.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hardwareKeys</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">)</span>
+            <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+        
+        <span class="c1">#a couple of the python software settings need to go too.</span>
+        <span class="n">params</span><span class="p">[</span><span class="s1">&#39;verbose&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span>
+        <span class="n">params</span><span class="p">[</span><span class="s1">&#39;timeout&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span>
+        <span class="n">params</span><span class="p">[</span><span class="s1">&#39;simulate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulate</span>
+        <span class="k">return</span> <span class="n">params</span>
+        
+    
+    <span class="k">def</span> <span class="nf">InitializeDriver</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Basic init function. Creates the driver.&#39;&#39;&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initializing...&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulate</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">strInitOptions</span> <span class="o">=</span>  <span class="s1">&#39;Simulate=True,  DriverSetup= model = SA220P&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">strInitOptions</span> <span class="o">=</span> <span class="s1">&#39;Simulate=False,  DriverSetup= model = SA220P&#39;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span>  <span class="n">AqMD3</span><span class="o">.</span><span class="n">AqMD3</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">hardwareAddress</span> <span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">strInitOptions</span><span class="p">)</span>
+        
+
+    <span class="k">def</span> <span class="nf">InitiateAcquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Tells the hardware to start looking for data.</span>
+<span class="sd">        This is a relatively low-level hardware function.</span>
+<span class="sd">        User-friendly version with more checks and balances</span>
+<span class="sd">        is the wrappers Arm and ArmAndWait.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">Initiate</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">armed</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#throw flag so that python knows acquisition has been itiated</span>
+        <span class="c1">#and system is waiting for trigger.</span>
+        
+    <span class="k">def</span> <span class="nf">LoadConfig</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Takes in a dictionary of settings and loads them into this python</span>
+<span class="sd">        class. Those that are normal properties will get set to hardware.</span>
+<span class="sd">        The icky properties will not get set until a call to SetParams is made,</span>
+<span class="sd">        either by the user, or when the flag is tripped in Arm</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">bool1</span> <span class="o">=</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+            <span class="n">bool2</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">bool1</span> <span class="ow">or</span> <span class="n">bool2</span><span class="p">):</span>
+<span class="c1">#                raise ValueError(&#39;invalid setting key : &#39; + str(key))</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Warning:  Invalid setting key : &#39;</span> <span class="o">+</span> <span class="n">key</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+<span class="c1">#                print(&#39;Warning:  setting key : &#39; + key)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        
+    <span class="k">def</span> <span class="nf">_loadDefaultConfig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#diagnostic prints</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span>   <span class="c1">#this needs to be first because it effects how properties below it act</span>
+        
+        <span class="c1">#sampling</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="mi">1024</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sampleRate</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
+        
+        <span class="c1">#averaging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">averages</span> <span class="o">=</span> <span class="mi">1</span>
+        
+        <span class="c1">#multisegment acquisition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="mi">1</span>
+        
+        <span class="c1">#channel settings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">activeChannels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channelRange</span> <span class="o">=</span> <span class="mf">2.5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channelOffset</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="c1">#trigger settings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">triggerSource</span> <span class="o">=</span> <span class="s1">&#39;External1&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">triggerMode</span> <span class="o">=</span> <span class="s1">&#39;Edge&#39;</span> <span class="c1">#this thing should maybe go away.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">triggerLevel</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">triggerSlope</span> <span class="o">=</span> <span class="s1">&#39;Rising&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">triggerDelay</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">triggerCoupling</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#1 for DC, 0 for AC. I think it must always be DC, at least on external</span>
+        
+        <span class="c1">#clock settings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clockSource</span> <span class="o">=</span> <span class="s1">&#39;External&#39;</span>
+<span class="c1">#        self.clockSource = &#39;Internal&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clockFrequency</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">7</span>
+        
+        <span class="c1">#timeout of failed acquisitions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1">#seconds</span>
+        
+    <span class="k">def</span> <span class="nf">Print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Print the most important settings. </span>
+<span class="sd">        Will not show the run time flags and stuff like this.&#39;&#39;&#39;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generateConfig</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39; : &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">ReadAllData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">returnTwoArrays</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Highest level read function. Will automatically read all active</span>
+<span class="sd">        channels.</span>
+<span class="sd">        </span>
+<span class="sd">        Will trip flags when it is done that the data acquisition and read are complete</span>
+<span class="sd">        </span>
+<span class="sd">        if returnTwoArrays is true, then it will alwyas return two data arrays, even if channel </span>
+<span class="sd">        two is turned off. But it will return an empty array for the inactive channel</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#check if the card is done. </span>
+        <span class="c1">#NOTE: Card needs to be asked if its done, or it will get mad, even if it is actually done</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">armed</span><span class="p">:</span>
+            <span class="c1">#there was an active acquisition</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span><span class="p">:</span>
+                <span class="c1">#need to confirm with the card that it is done.</span>
+                <span class="c1">#(this will already have happened if you used ArmAndWait, but not if you use Arm)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">WaitForAcquisition</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot read data. Card acquisition hasn&#39;t happened.&quot;</span><span class="p">)</span>
+        
+        
+<span class="c1">#        data1 = []</span>
+<span class="c1">#        data2 = []</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_activeChannels</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">data1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ReadData</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="n">returnRaw</span><span class="p">)</span>
+            <span class="n">data2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ReadData</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="n">returnRaw</span><span class="p">)</span>
+            <span class="c1">#notify the python that this acquisition is done</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">armed</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">ReadData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_activeChannels</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="n">returnRaw</span><span class="p">)</span>
+            <span class="n">data_blank</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+            <span class="c1">#notify the python that this acquisition and read are done</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">armed</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">returnTwoArrays</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">data_blank</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">ReadData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Single channel data read function.</span>
+<span class="sd">        Will automatically call lowerlevel read functions of the driver,</span>
+<span class="sd">        depending on how the card is set up.</span>
+
+<span class="sd">        Somewhat intended as a hidden internal function of ReadAllData, so</span>
+<span class="sd">        it may not do the safety checks as well as it&#39;s parent because they are </span>
+<span class="sd">        harder to manage when each channel is called separately.</span>
+<span class="sd">        </span>
+<span class="sd">        This single channel read function is not protected against reading the same dat twice,</span>
+<span class="sd">        as least not at the Kollar-lab python level.</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#check if the card is done. (Ideally this happens in ReadAllData, but it channels are</span>
+        <span class="c1">#being called individually, then it may need to happen here.)</span>
+        <span class="c1">#NOTE: Card needs to be asked if its done, or it will get mad, even if it is actually done</span>
+        <span class="c1">#WaitForAcquisition MUST happen before the hardware-level reads.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">armed</span><span class="p">:</span>
+            <span class="c1">#there was an active acquisition</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span><span class="p">:</span>
+                <span class="c1">#need to confirm with the card that it is done.</span>
+                <span class="c1">#(this will already have happened if you used ArmAndWait, but not if you use Arm)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">WaitForAcquisition</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot read data. Card acquisition hasn&#39;t happened.&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">chanNum</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid channel. Should be 1 or 2&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">offsetWithinRecord</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">numSamples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">QueryMinWaveformMemory</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">offsetWithinRecord</span><span class="p">),</span> \
+                                                       <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Memeory Allocation Determined&#39;</span><span class="p">)</span>
+            
+        <span class="bp">self</span><span class="o">.</span><span class="n">totalSamples</span> <span class="o">=</span> <span class="n">numSamples</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Trying to Read&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">averageMode</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ReadAveragerData</span><span class="p">(</span><span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="n">returnRaw</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ReadMultiSegData</span><span class="p">(</span><span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="n">returnRaw</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ReadSingleSegData</span><span class="p">(</span><span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="n">returnRaw</span><span class="p">)</span>
+                
+
+        <span class="k">return</span> <span class="n">out</span>
+    
+    <span class="k">def</span> <span class="nf">_ReadAveragerData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;reading averaged data&#39;</span><span class="p">)</span>
+            
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">chanNum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        
+        
+        <span class="n">waveformObj</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">Measurement</span><span class="o">.</span><span class="n">FetchAccumulatedWaveform</span><span class="p">(</span><span class="n">firstRecord</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>\
+                                                                      <span class="n">numberOfRecords</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">),</span>\
+                                                                      <span class="n">offsetWithinRecord</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">offsetWithinRecord</span><span class="p">),</span> \
+                                                                      <span class="n">numberOfPointsPerRecord</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>   
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fetch Complete. Processing Data.&#39;</span><span class="p">)</span>
+            
+<span class="c1">#        if self.segments == 1:</span>
+<span class="c1">#            rawData = numpy.zeros( self.samples)</span>
+<span class="c1">#            waveform  = waveformObj[0]</span>
+<span class="c1">#            rawData[:] = waveform.Samples* waveform.ScaleFactor + waveform.ScaleOffset</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            rawData = numpy.zeros((self.segments, self.samples))</span>
+<span class="c1">#            for segind in range(0, self.segments):</span>
+<span class="c1">#                waveform  = waveformObj[segind]</span>
+<span class="c1">#                rawData[segind,:] = waveform.Samples* waveform.ScaleFactor + waveform.ScaleOffset</span>
+            
+        <span class="c1">#always get matrix shaped data</span>
+        <span class="n">rawData</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">segind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">):</span>
+            <span class="n">waveform</span>  <span class="o">=</span> <span class="n">waveformObj</span><span class="p">[</span><span class="n">segind</span><span class="p">]</span>
+            <span class="n">rawData</span><span class="p">[</span><span class="n">segind</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">waveform</span><span class="o">.</span><span class="n">Samples</span><span class="o">*</span> <span class="n">waveform</span><span class="o">.</span><span class="n">ScaleFactor</span> <span class="o">+</span> <span class="n">waveform</span><span class="o">.</span><span class="n">ScaleOffset</span>
+        
+        
+        <span class="k">if</span> <span class="n">waveformObj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ActualSamples</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning. Data size doesn&#39;t match the number of samples. Something wierd happened.&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">returnRaw</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">rawData</span><span class="p">,</span> <span class="n">waveformObj</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">out</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">rawData</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data Processed.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">data</span>
+        
+    <span class="k">def</span> <span class="nf">_ReadMultiSegData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Python function for reading non-averaged multisegment data. &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;reading non-averaged, multisegment data&#39;</span><span class="p">)</span>
+            
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">chanNum</span> <span class="ow">in</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Channel number must be 1 or 2.&#39;</span><span class="p">)</span>
+            
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">chanNum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        
+        
+        <span class="n">waveformObj</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">MultiRecordMeasurement</span><span class="o">.</span><span class="n">FetchMultiRecordWaveform</span><span class="p">(</span><span class="n">firstRecord</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>\
+                                                                      <span class="n">numberOfRecords</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">),</span>\
+                                                                      <span class="n">offsetWithinRecord</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">offsetWithinRecord</span><span class="p">),</span> \
+                                                                      <span class="n">numberOfPointsPerRecord</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fetch Complete. Processing Data.&#39;</span><span class="p">)</span>
+            
+        <span class="n">rawData</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">segind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">):</span>
+            <span class="n">waveform</span>  <span class="o">=</span> <span class="n">waveformObj</span><span class="p">[</span><span class="n">segind</span><span class="p">]</span>
+            <span class="n">rawData</span><span class="p">[</span><span class="n">segind</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">waveform</span><span class="o">.</span><span class="n">Samples</span><span class="o">*</span> <span class="n">waveform</span><span class="o">.</span><span class="n">ScaleFactor</span> <span class="o">+</span> <span class="n">waveform</span><span class="o">.</span><span class="n">ScaleOffset</span>
+        
+        <span class="k">if</span> <span class="n">waveformObj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ActualSamples</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning. Data size doesn&#39;t match the number of samples. Something wierd happened.&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">returnRaw</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">rawData</span><span class="p">,</span> <span class="n">waveformObj</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">out</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">rawData</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data Processed.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">_ReadSingleSegData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">chanNum</span><span class="p">,</span> <span class="n">returnRaw</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Python read function for single segment data that is not averaged &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;reading non-averaged, single-segment data&#39;</span><span class="p">)</span>
+             
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">chanNum</span> <span class="ow">in</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Channel number must be 1 or 2.&#39;</span><span class="p">)</span>
+            
+        <span class="n">channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">chanNum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        
+        <span class="n">waveformObj</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">Measurement</span><span class="o">.</span><span class="n">FetchWaveform</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fetch Complete. Processing Data.&#39;</span><span class="p">)</span>
+            
+            
+        <span class="n">rawData</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">waveformObj</span><span class="o">.</span><span class="n">Samples</span><span class="o">*</span><span class="n">waveformObj</span><span class="o">.</span><span class="n">ScaleFactor</span><span class="o">+</span> <span class="n">waveformObj</span><span class="o">.</span><span class="n">ScaleOffset</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">waveformObj</span><span class="o">.</span><span class="n">ActualSamples</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning. Data size doesn&#39;t match the number of samples. Something wierd happened.&quot;</span><span class="p">)</span>
+            
+        <span class="k">if</span> <span class="n">returnRaw</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">rawData</span><span class="p">,</span> <span class="n">waveformObj</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">out</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#always make matrix shaped data to be compatible with the other read functions</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rawData</span><span class="p">)))</span>
+            <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">rawData</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data Processed.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">data</span>
+  
+    <span class="k">def</span> <span class="nf">ReInitialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Basic init function. Can also be used to wipe he settings if the card is very confused. </span>
+<span class="sd">        Will push the currently stored settings to the card and calibrate&#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1">#try to pull the current values of all the settings</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generateConfig</span><span class="p">()</span>
+            <span class="n">gotSettings</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">gotSettings</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">pass</span>
+
+
+        <span class="c1">#in the python version, there seems to be an issue with reinitializing an already</span>
+        <span class="c1">#existing instnace of the driver. It causes an error that the sample clocks are unstable</span>
+        <span class="c1">#or something about mising TDC curves. Running close before reinitializing it seems to allow</span>
+        <span class="c1">#things to work. So, putting this try in here to try to catch things</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">InitializeDriver</span><span class="p">()</span> <span class="c1">#this puts the driver back in a default</span>
+        <span class="c1">#and then some of the properties act funny, because they are only stored in hardware</span>
+        <span class="c1">#so they revert to the driver default.</span>
+        <span class="c1">#trying to patch this by pulling the current settings, but if it&#39;s vry confuzzled,</span>
+        <span class="c1">#this may not work. So, if that fails, I will just load the default.</span>
+        <span class="k">if</span> <span class="n">gotSettings</span><span class="p">:</span>
+            <span class="c1">#load rescued settings</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">LoadConfig</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#load the default if you can&#39;t get the current ones.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_loadDefaultConfig</span><span class="p">()</span>
+
+       
+        <span class="c1">#push the currently stored settings to the card and calibrate. Hopefully ths will actually save hassle.</span>
+        <span class="c1">#if this is running at _init_ then it will push the defaults</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SetParams</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SelfCalibrate</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">WaitForAcquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Timeout in seconds &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Waiting until the acquisition is done (or checking that it is) and getting confirmation&#39;</span><span class="p">)</span>
+        <span class="n">timeoutC</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="o">*</span><span class="mi">1000</span> <span class="c1">#convert to ms</span>
+<span class="c1">#        self.driver.Acquisition.WaitForAcquisitionComplete(timeoutC)</span>
+<span class="c1">#        self.acquisitionFinished = True #throw the internal flag to show that the card is done.</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">Acquisition</span><span class="o">.</span><span class="n">WaitForAcquisitionComplete</span><span class="p">(</span><span class="n">timeoutC</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#throw the internal flag to show that the card is done.</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">RuntimeError</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acquisition probably timed out.&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Aborting to clear hung acquisition.&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Abort</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">acquisitionFinished</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#throw the internal flag to indicate failure</span></div>
+
+        
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="n">hardwareAddress</span> <span class="o">=</span> <span class="s2">&quot;PXI23::0::0::INSTR&quot;</span>
+
+    <span class="n">IVIbinPath</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Program Files</span><span class="se">\\</span><span class="s2">IVI Foundation</span><span class="se">\\</span><span class="s2">IVI</span><span class="se">\\</span><span class="s2">Bin</span><span class="se">\\</span><span class="s2">&quot;</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IVIbinPath</span><span class="p">)</span>
+    
+<span class="c1">#    alwaysInit = False</span>
+    <span class="n">alwaysInit</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">alwaysInit</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initialize instrument @&quot;</span><span class="p">,</span> <span class="n">hardwareAddress</span><span class="p">)</span>
+        <span class="n">card</span> <span class="o">=</span> <span class="n">Acqiris</span><span class="p">(</span><span class="n">hardwareAddress</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1">#random driver call to see if things are set up</span>
+<span class="c1">#            card.GetAttribute(None, AQMD3_ATTR_SIMULATE, &#39;ViBoolean&#39;)</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">GetDriverAttribute</span><span class="p">(</span><span class="s1">&#39;simulateMode&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Card already initialized&#39;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initialize instrument @&quot;</span><span class="p">,</span> <span class="n">hardwareAddress</span><span class="p">)</span>
+            <span class="n">card</span> <span class="o">=</span> <span class="n">Acqiris</span><span class="p">(</span><span class="n">hardwareAddress</span><span class="p">)</span>
+    
+    
+    <span class="c1">######</span>
+    <span class="c1">#testing raw functions</span>
+<span class="c1">#    card.ConfigureTrigger()</span>
+<span class="c1">#    card.ConfigureAveraging()</span>
+<span class="c1">#    card.ConfigureChannel(channelNum = 1, Range = 2.5, offset = 0, enabled = True)</span>
+<span class="c1">#    card.SetParams()</span>
+    
+    
+
+    <span class="c1">#####################</span>
+    <span class="c1">#chose acquisition type</span>
+    <span class="c1">#####################</span>
+
+    <span class="n">averageMode</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1">#    averageMode = False</span>
+
+    <span class="n">multisegMode</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1">#    multisegMode = False</span>
+    
+    
+    
+    <span class="c1">##########</span>
+    <span class="c1">#set settings to the card object</span>
+    <span class="c1">### samples = 1*10**7</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="mi">513</span><span class="o">*</span><span class="mi">1024</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
+    
+    
+    <span class="c1">#swtich between test cases</span>
+    <span class="k">if</span> <span class="n">averageMode</span><span class="p">:</span>
+        <span class="n">card</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">multisegMode</span><span class="p">:</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">averages</span> <span class="o">=</span> <span class="mi">100</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">averages</span> <span class="o">=</span> <span class="mi">100</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">card</span><span class="o">.</span><span class="n">averageMode</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">multisegMode</span><span class="p">:</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">averages</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">averages</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">card</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="mi">1</span>
+            
+    <span class="n">card</span><span class="o">.</span><span class="n">triggerSource</span> <span class="o">=</span> <span class="s1">&#39;External1&#39;</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">triggerLevel</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">triggerSlope</span> <span class="o">=</span> <span class="s1">&#39;Falling&#39;</span>
+    
+    <span class="n">card</span><span class="o">.</span><span class="n">activeChannels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="c1">#    card.activeChannels = [1] #it looks like single channel has to be channel 1</span>
+    
+    <span class="n">card</span><span class="o">.</span><span class="n">timeOut</span> <span class="o">=</span> <span class="mi">2</span>
+    
+    <span class="n">card</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#get lots of diagnostic print statements</span>
+    
+<span class="c1">#    card.channelRange = 0.5</span>
+<span class="c1">#    card.channelRange = [0.5, 2.5]</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">channelRange</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span>
+    
+    <span class="n">card</span><span class="o">.</span><span class="n">channelOffset</span> <span class="o">=</span> <span class="mf">0.1</span>
+    
+    <span class="c1">##########</span>
+    <span class="c1">#push settings to hardware</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">SetParams</span><span class="p">()</span>
+<span class="c1">#    card.ConfigureChannel(channelNum = 1, Range = 2.5, offset = 0, enabled = True)</span>
+<span class="c1">#    card.ConfigureChannel(channelNum = 2, Range = 2.5, offset = 0, enabled = True)</span>
+<span class="c1">#    card.ConfigureTrigger(&#39;External1&#39;, 0, &#39;Falling&#39;)</span>
+<span class="c1">#    card.ConfigureAcquisition(samples, sampleRate, segments)</span>
+
+    <span class="c1">#card.GetParams()</span>
+    
+    <span class="c1">##########</span>
+    <span class="c1">#initiate acquisition and wait for it to finish</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">ArmAndWait</span><span class="p">()</span>
+<span class="c1">#    card.Arm()</span>
+<span class="c1">#    card.WaitForAcquisition()</span>
+<span class="c1">#    card.WaitForAcquisition(timeOut)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data Acquired (In Theory)&#39;</span><span class="p">)</span>
+
+
+    
+    
+<span class="c1">#    data = card.ReadData(1, returnRaw = False) #read channel 1</span>
+<span class="c1">#    data = card.ReadData(2, returnRaw = False) #read channel 1</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">ReadAllData</span><span class="p">()</span>
+    
+
+    <span class="c1">####</span>
+    <span class="c1">#plot data</span>
+
+    <span class="n">numSamples</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">samples</span>
+    <span class="n">sampleRate</span> <span class="o">=</span> <span class="n">card</span><span class="o">.</span><span class="n">sampleRate</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">sampleRate</span>
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">numSamples</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span>
+
+    <span class="k">if</span> <span class="n">multisegMode</span><span class="p">:</span>
+        <span class="n">dataSegments</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Plotting.&#39;</span><span class="p">)</span>
+
+    <span class="n">fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">multisegMode</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Multiseg: Active Channel&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">segind</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">dataSegments</span> <span class="p">):</span>
+            <span class="n">labelstr</span> <span class="o">=</span> <span class="s1">&#39;seg: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">segind</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">segind</span><span class="p">,:]</span> <span class="o">+</span> <span class="n">segind</span><span class="o">*</span><span class="mf">0.125</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labelstr</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">averageMode</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Averager: Active Channel&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Singleseg: Active Channel&#39;</span><span class="p">)</span>
+        <span class="n">labelstr</span> <span class="o">=</span> <span class="s1">&#39;seg: 0&#39;</span> 
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">data</span><span class="p">[:],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labelstr</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage (waterfall)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (ms)&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#</span>
+<span class="c1">#    print(&#39;Done plotting.&#39;)</span>
+<span class="c1">#    </span>
+<span class="c1">#    # Close the instrument</span>
+<span class="c1">#    print(&quot;\nClose the instrument&quot;)    </span>
+<span class="c1">#    card.close()</span>
+<span class="c1">#    </span>
+    
+
+    
+    
+  <span class="c1">#    card.offsetWithinRecord = 0</span>
+<span class="c1">#    channel = card.driver.Channels[0]</span>
+<span class="c1">#    if averageMode:</span>
+<span class="c1">#        waveformObj = channel.Measurement.FetchAccumulatedWaveform(firstRecord = 0,\</span>
+<span class="c1">#                                                       numberOfRecords = int(card.segments),\</span>
+<span class="c1">#                                                       offsetWithinRecord = int(card.offsetWithinRecord),\</span>
+<span class="c1">#                                                       numberOfPointsPerRecord = int(card.samples),\</span>
+<span class="c1">#                                                       dtype=numpy.int32)</span>
+<span class="c1">#    else:</span>
+<span class="c1">#        if multisegMode:</span>
+<span class="c1">#            waveformObj = channel.MultiRecordMeasurement.FetchMultiRecordWaveform(firstRecord = 0,\</span>
+<span class="c1">#                                                                          numberOfRecords = int(card.segments),\</span>
+<span class="c1">#                                                                          offsetWithinRecord = int(card.offsetWithinRecord), \</span>
+<span class="c1">#                                                                          numberOfPointsPerRecord = int(card.samples))</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            waveformObj = channel.Measurement.FetchWaveform()  </span>
+    
+    
+    
+    
+    
+    
+    <span class="c1">###################</span>
+    <span class="c1">#older, cruder codes</span>
+    <span class="c1">################</span>
+    <span class="c1">#    #    averageMode = True</span>
+<span class="c1">#    averageMode = False</span>
+<span class="c1">#</span>
+<span class="c1">#    # multisegMode = True</span>
+<span class="c1">#    multisegMode = False</span>
+<span class="c1">#    </span>
+<span class="c1">#    # samples = 1*10**7</span>
+<span class="c1">#    samples = 513*1024</span>
+<span class="c1">#    sampleRate = 1*10**9</span>
+    
+
+<span class="c1">#    if averageMode:</span>
+<span class="c1">#        numAverages = 100</span>
+<span class="c1">#        segments = 1</span>
+<span class="c1">#        card.SetAverageMode(numAverages)</span>
+<span class="c1">#    else:</span>
+<span class="c1">#        if multisegMode:</span>
+<span class="c1">#            numAverages = 1</span>
+<span class="c1">#            segments = 2</span>
+<span class="c1">#            card.SetMultiMode()</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            numAverages = 1</span>
+<span class="c1">#            segments = 1</span>
+<span class="c1">#            card.SetSingleMode()</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#    #configure channels</span>
+<span class="c1">#    card.activeChannels = [1,2]</span>
+<span class="c1">#    card.ConfigureChannel(channelNum = 1, Range = 2.5, offset = 0, enabled = True)</span>
+<span class="c1">#    card.ConfigureChannel(channelNum = 2, Range = 2.5, offset = 0, enabled = True)</span>
+<span class="c1">#</span>
+<span class="c1">#    # Set active trigger source to External1</span>
+<span class="c1">#    print(&#39;\nSet active trigger source to External1&#39;)</span>
+<span class="c1">#    card.ConfigureTrigger(&#39;External1&#39;, 0, &#39;Falling&#39;)</span>
+<span class="c1">#</span>
+<span class="c1">#    # aconfigout = driverdll.AqMD3_ConfigureAcquisition(init_status.ViSession, numRecordsC, numPointsPerRecordC, sampleRateC)</span>
+<span class="c1">#    card.ConfigureAcquisition(samples, sampleRate, segments)</span>
+    
+<span class="c1">#    # acqout = driverdll.AqMD3_InitiateAcquisition(init_status.ViSession)</span>
+<span class="c1">#    # waitout = driverdll.AqMD3_WaitForAcquisitionComplete(init_status.ViSession,c_int32(timeouttime) )</span>
+<span class="c1">#    try:</span>
+<span class="c1">#        card.InitiateAcquisition()</span>
+<span class="c1">#    except:</span>
+<span class="c1">#        print(&#39;Initiate Failed. Trying a Calibration and Reinnitiate&#39;)</span>
+<span class="c1">#        card.SelfCalibrate()</span>
+<span class="c1">#        card.InitiateAcquisition()</span>
+<span class="c1">#</span>
+<span class="c1">#    timeOut = 10</span>
+<span class="c1">#    card.WaitForAcquisition(timeOut)</span>
+<span class="c1">#</span>
+<span class="c1">#    print(&#39;Data Acquired (In Theory)&#39;)</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#    # out = card.ReadData(1, returnRaw = True)</span>
+<span class="c1">#    data = card.ReadData(1, returnRaw = False)</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#    ####</span>
+<span class="c1">#    #plot data</span>
+<span class="c1">#</span>
+<span class="c1">#    numSamples = card.samples</span>
+<span class="c1">#    #sampleRate = card.GetAttribute(&#39;Channel1&#39;, AQMD3_ATTR_SAMPLE_RATE, &#39;ViReal64&#39;)</span>
+<span class="c1">#    sampleRate = card.GetDriverAttribute(&#39;sampleRate&#39;)</span>
+<span class="c1">#    dt = 1/sampleRate</span>
+<span class="c1">#    xaxis = scipy.arange(0, numSamples,1)*dt</span>
+<span class="c1">#</span>
+<span class="c1">#    if multisegMode:</span>
+<span class="c1">#        dataSegments = data.shape[0]</span>
+<span class="c1">#</span>
+<span class="c1">#    print(&#39;Plotting.&#39;)</span>
+<span class="c1">#</span>
+<span class="c1">#    fig1 = plt.figure(1)</span>
+<span class="c1">#    plt.clf()</span>
+<span class="c1">#    ax = plt.subplot(1,1,1)</span>
+<span class="c1">#    if multisegMode:</span>
+<span class="c1">#        plt.title(&#39;Multiseg: Active Channel&#39;)</span>
+<span class="c1">#        for segind in  range(0,dataSegments ):</span>
+<span class="c1">#            labelstr = &#39;seg: &#39; + str(segind)</span>
+<span class="c1">#            plt.plot(xaxis*1000, data[segind,:] + segind*0.125, label = labelstr)</span>
+<span class="c1">#    else:</span>
+<span class="c1">#        if averageMode:</span>
+<span class="c1">#            plt.title(&#39;Averager: Active Channel&#39;)</span>
+<span class="c1">#        else:</span>
+<span class="c1">#            plt.title(&#39;Singleseg: Active Channel&#39;)</span>
+<span class="c1">#        labelstr = &#39;seg: 0&#39; </span>
+<span class="c1">#        plt.plot(xaxis*1000, data[:], label = labelstr)</span>
+<span class="c1">#    ax.legend(loc = &#39;upper right&#39;)</span>
+<span class="c1">#    plt.ylabel(&#39;Voltage (waterfall)&#39;)</span>
+<span class="c1">#    plt.xlabel(&#39;Time (ms)&#39;)</span>
+<span class="c1">#</span>
+<span class="c1">#    plt.show()</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#    print(&#39;Done plotting.&#39;)</span>
+<span class="c1">#    </span>
+<span class="c1">##    # Close the instrument</span>
+<span class="c1">##    print(&quot;\nClose the instrument&quot;)    </span>
+<span class="c1">##    card.close()    </span>
+    
+    
+    
+    
+    
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

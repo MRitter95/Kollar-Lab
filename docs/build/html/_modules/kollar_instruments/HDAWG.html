@@ -1,0 +1,1768 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kollar_instruments.HDAWG &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/kollar_instruments/HDAWG';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">kollar_instr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for kollar_instruments.HDAWG</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">zhinst.ziPython</span> <span class="k">as</span> <span class="nn">ziPython</span>
+<span class="kn">import</span> <span class="nn">zhinst.utils</span> <span class="k">as</span> <span class="nn">ziUtils</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">settingTools</span> <span class="k">as</span> <span class="n">sT</span>
+<span class="kn">from</span> <span class="nn">bidict</span> <span class="kn">import</span> <span class="n">bidict</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
+<span class="kn">from</span> <span class="nn">userfuncs</span> <span class="kn">import</span> <span class="n">freeze</span>
+
+<div class="viewcode-block" id="HDAWG">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWG.html#kollar_instruments.HDAWG.HDAWG">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">HDAWG</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Class representing an HDAWG instrument</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        channelgrouping (str) : string representation of channelgrouping (2x2 or 1x4)</span>
+<span class="sd">        referenceclock (str) : string representation of clock used to lock HDAWG (internal or external)</span>
+<span class="sd">        Channels (HDAWGchannel) : list of channels on the instrument</span>
+<span class="sd">        AWGs (HDAWGawg) : list of awgs accessible in the instrument</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">apilevel</span> <span class="o">=</span> <span class="mi">6</span> <span class="c1"># Sets the &#39;modernity&#39; of the api used (higher is more modern, 6 is current max version)</span>
+    <span class="n">defaults_path</span>  <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+    <span class="n">defaults_filename</span><span class="o">=</span><span class="s1">&#39;defaults.xml&#39;</span>
+
+<div class="viewcode-block" id="HDAWG.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWG.html#kollar_instruments.HDAWG.HDAWG.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor for HDAWG class</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            device (str): device identifier (example &#39;dev8163&#39;)</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Initialized HDAWG object with 4 channels and 2 AWGs with all settings set to defaults stored in default file</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">props</span><span class="p">)</span> <span class="o">=</span> <span class="n">ziUtils</span><span class="o">.</span><span class="n">create_api_session</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">apilevel</span><span class="p">)</span> <span class="c1">#connect to device specified by string</span>
+        <span class="c1">#ziUtils.disable_everything(self.daq,self.device) #disable all outputs of device</span>
+        <span class="c1">#self.load_default()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_paths</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Channels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AWGs</span>     <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">OSCs</span>     <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Channels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HDAWGchannel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">AWGs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HDAWGawg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">OSCs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HDAWGosc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channelgrouping</span> <span class="o">=</span> <span class="s1">&#39;1x4&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">referenceClock</span>  <span class="o">=</span> <span class="s1">&#39;External&#39;</span></div>
+
+
+<div class="viewcode-block" id="HDAWG.fill_paths">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.fill_paths">[docs]</a>
+    <span class="k">def</span> <span class="nf">fill_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to fill in dictionary of nodes on HDAWG that we need to access to set settings</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            None</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary of nodes on HDAWG identified by their setting name</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">nodes</span><span class="o">=</span><span class="p">{}</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;channelgrouping&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/system/awg/channelgrouping&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;referenceClock&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/system/clocks/referenceclock/source&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+    
+    <span class="c1">###################################</span>
+    <span class="c1"># Methods</span>
+    <span class="c1">###################################</span>
+
+<div class="viewcode-block" id="HDAWG.done">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.done">[docs]</a>
+    <span class="k">def</span> <span class="nf">done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Closes connection to API</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">disconnectDevice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWG.save_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.save_settings">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Calls settingTools function to turn settings dictionary into file and save it</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            filename (str): filename of settings file</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sT</span><span class="o">.</span><span class="n">save_settings</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="HDAWG.show_keysettings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.show_keysettings">[docs]</a>
+    <span class="k">def</span> <span class="nf">show_keysettings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Calls settingTools function to display all key settings</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sT</span><span class="o">.</span><span class="n">print_settings</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWG.load_settings">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.load_settings">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Load settings from file and apply to HDAWG</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            filename (str): full name of file to be loaded (provide full path if not in directory)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="n">sT</span><span class="o">.</span><span class="n">load_settings</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">fullsettings</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">fullsettings</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Settings Methods</span>
+    <span class="c1">###################################</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function that returns key settings for HDAWG and subclasses (Channels, AWGs)</span>
+<span class="sd">        Calls getSettings functions for AWGs and Channels respectively</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            None</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Nested dictionary with all settings. Top level contains main keywords: &#39;System&#39;,&#39;AWGs&#39;,&#39;Channels&#39; </span>
+<span class="sd">            that contain all the relevant info for their respective categories. Channels will only be stored if </span>
+<span class="sd">            the user has configured them or they have been set from a settings file/ dictionary </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;System&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;System&#39;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;AWGs&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">channelgrouping</span> <span class="o">==</span> <span class="s1">&#39;1x4&#39;</span><span class="p">:</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;AWGs&#39;</span><span class="p">][</span><span class="s1">&#39;AWG0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">AWGs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+                <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;AWGS&#39;</span><span class="p">][</span><span class="s1">&#39;AWG</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">AWGs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Channels&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">configured</span><span class="p">:</span>
+                <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Channels&#39;</span><span class="p">][</span><span class="s1">&#39;Channel</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;OSCs&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;OSCs&#39;</span><span class="p">][</span><span class="s1">&#39;OSC</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">OSCs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to set settings from a settings dictionary</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            fullsettings (dict): dictionary structured as follows:</span>
+<span class="sd">            &#39;System&#39;:{All main HDAWG settings}</span>
+<span class="sd">            &#39;Channels&#39;:{Channel0:{Main channel settings}, Channel1:{Main channel settings},...}</span>
+<span class="sd">            &#39;AWGs&#39;:{AWGs0:{Main AWGs settings}, AWGs1:{Main AWGs settings}}</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Nothing</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;System&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">setting</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;System&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;System&#39;</span><span class="p">][</span><span class="n">setting</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;AWGs&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+                    <span class="n">AWGname</span> <span class="o">=</span> <span class="s1">&#39;AWG</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">AWGname</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;AWGs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">AWGs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;AWGs&#39;</span><span class="p">][</span><span class="n">AWGname</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;Channels&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                    <span class="n">Channelname</span> <span class="o">=</span> <span class="s1">&#39;Channel</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">Channelname</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Channels&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">Channels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Channels&#39;</span><span class="p">][</span><span class="n">Channelname</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;OSCs&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+                    <span class="n">OSCname</span> <span class="o">=</span> <span class="s1">&#39;OSC</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">OSCname</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;OSCs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">OSCs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;OSCs&#39;</span><span class="p">][</span><span class="n">OSCname</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unknown key: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                <span class="c1">#setattr(self,key,settings[&#39;System&#39;][key])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+
+    
+    <span class="c1">###################################</span>
+    <span class="c1"># XML load and save methods</span>
+    <span class="c1">###################################</span>
+
+<div class="viewcode-block" id="HDAWG.load_default">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.load_default">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_default</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Loads default settings from xml file to device, path is hardcoded in class definition</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults_path</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults_filename</span>
+        <span class="n">ziUtils</span><span class="o">.</span><span class="n">load_settings</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWG.load_settings_xml">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.load_settings_xml">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_settings_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">path</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Load settings from an xml file</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            path (str) : path to file</span>
+<span class="sd">            filename (str) : name of file</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="n">filename</span>
+        <span class="n">ziUtils</span><span class="o">.</span><span class="n">load_settings</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWG.save_settings_xml">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWG.save_settings_xml">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_settings_xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Save all HDAWG settings to xml file</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            path (str): path to file</span>
+<span class="sd">            filename (str): name of file</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="n">filename</span>
+        <span class="n">ziUtils</span><span class="o">.</span><span class="n">save_settings</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></div>
+
+
+    <span class="c1">##########################</span>
+    <span class="c1"># Properties</span>
+    <span class="c1">##########################</span>
+    
+    <span class="c1">#Structure used to convert between int and string rep of channelgrouping property</span>
+    <span class="n">_groupInt</span><span class="o">=</span><span class="n">bidict</span><span class="p">({</span>
+        <span class="s1">&#39;2x2&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;1x4&#39;</span><span class="p">:</span><span class="mi">1</span>
+    <span class="p">})</span>
+
+    <span class="c1">#Structure used to convert between int and string rep of reference clock property</span>
+    <span class="n">_refInt</span><span class="o">=</span><span class="n">bidict</span><span class="p">({</span>
+        <span class="s1">&#39;Internal&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;External&#39;</span><span class="p">:</span><span class="mi">1</span>
+    <span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">channelgrouping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;channelgrouping&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_groupInt</span><span class="o">.</span><span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+    <span class="nd">@channelgrouping</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">channelgrouping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;channelgrouping&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_groupInt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid channel grouping, must be </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_groupInt</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_groupInt</span><span class="p">[</span><span class="n">val</span><span class="p">])</span>
+            <span class="c1">#if val == &#39;1x4&#39;:</span>
+                <span class="c1">#print(&#39;AWG settings and programs will be loaded from AWG0 (settings for AWG1 have not been overwriting but will not apply)&#39;)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">referenceClock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;referenceClock&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_refInt</span><span class="o">.</span><span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+    <span class="nd">@referenceClock</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">referenceClock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;referenceClock&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_refInt</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid reference clock parameter, must be </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_refInt</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_refInt</span><span class="p">[</span><span class="n">val</span><span class="p">])</span></div>
+
+
+
+<span class="c1">#################################################################################################</span>
+<span class="c1"># HDAWGawg subclass</span>
+<span class="c1">#################################################################################################</span>
+
+<div class="viewcode-block" id="HDAWGawg">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGawg.html#kollar_instruments.HDAWG.HDAWGawg">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">HDAWGawg</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper class used to access the awg cores on HDAWG. Contains two trigger objects that can be</span>
+<span class="sd">    used to configure the triggering of the awg core</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        index (int) : AWGcore identifier (0 or 1)</span>
+<span class="sd">        channelgrouping (str) : string rep of AWGcore configuration (2x2 with 2 independent cores or 1x4)</span>
+<span class="sd">        Triggers ([HDAWGtrigger]) : list of HDAWGtrigger objects</span>
+<span class="sd">        samplerate (str) : string rep of samplerate used by awg core, must be 2.4GHz/2^n </span>
+<span class="sd">        (examples &#39;2.4GHz&#39;, &#39;1.2MHz&#39;, etc.)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="HDAWGawg.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGawg.html#kollar_instruments.HDAWG.HDAWGawg.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">daq</span><span class="p">,</span> <span class="n">AWGcore</span><span class="p">,</span> <span class="n">samplerate</span><span class="o">=</span><span class="s1">&#39;2.4GHz&#39;</span><span class="p">,</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;dev8163&#39;</span><span class="p">,</span> <span class="n">channelgrouping</span><span class="o">=</span><span class="s1">&#39;1x4&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor for HDAWGawg class, initializes attributes and populates Triggers list</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            daq (daq) : handle to daq object from HDAWG, used to do interfacing with instrument</span>
+<span class="sd">            AWGcore (int) : identified of AWGcore being programmed (0 or 1)</span>
+<span class="sd">            Optional:</span>
+<span class="sd">                samplerate (str) : string rep of samplerate (default &#39;2.4GHz&#39;)</span>
+<span class="sd">                device (str) : device serial number (default &#39;dev8163&#39;)</span>
+<span class="sd">                channelgrouping (str) : string rep of channelgrouping (default &#39;1x4&#39;)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span>          <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span>             <span class="o">=</span> <span class="n">daq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span>           <span class="o">=</span> <span class="n">AWGcore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span>       <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_paths</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channelgrouping</span> <span class="o">=</span> <span class="n">channelgrouping</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Triggers</span>        <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Triggers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HDAWGtrigger</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">AWGcore</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samplerate</span>      <span class="o">=</span> <span class="n">samplerate</span></div>
+
+
+<div class="viewcode-block" id="HDAWGawg.fill_paths">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.fill_paths">[docs]</a>
+    <span class="k">def</span> <span class="nf">fill_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to fill in dictionary of nodes on AWG that we need to access to set settings</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            None</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary of nodes on HDAWG identified by their setting name</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;waves&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/waveform/waves/index&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;single&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/single&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;enable&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/enable&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/time&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+    
+    <span class="c1">###################################</span>
+    <span class="c1"># Methods</span>
+    <span class="c1">################################### </span>
+
+<div class="viewcode-block" id="HDAWGawg.load_waveform">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.load_waveform">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_waveform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">wave1</span><span class="p">,</span> <span class="n">wave2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Load arbitrary waveform to AWGcore and replace waveform{index}. </span>
+<span class="sd">        Requires waveform to be part of a playWave command</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            index (int) : index of waveform on AWG</span>
+<span class="sd">            wave1 (array) : array of values to be played on channel 1</span>
+<span class="sd">            wave2 (array) : array of values to be played on channel 2 (Optional)</span>
+<span class="sd">            markers (array) : array of int values for marker configuration (0 both off, 1 marker 1 on, 2 marker 2 on, 3 both on)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">wave_awg</span> <span class="o">=</span> <span class="n">ziUtils</span><span class="o">.</span><span class="n">convert_awg_waveform</span><span class="p">(</span><span class="n">wave1</span><span class="p">,</span> <span class="n">wave2</span><span class="p">,</span> <span class="n">markers</span><span class="p">)</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;waves&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+        <span class="c1">#path=&#39;/{:s}/awgs/0/waveform/waves/{:d}&#39;.format(self.device, index)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setVector</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">wave_awg</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWGawg.read_waveform">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.read_waveform">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_waveform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">index</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">markers_present</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Read waveform generated by HDAWG and convert back into regular arrays</span>
+<span class="sd">        Requires waveform to be part of playWave command </span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            index (int) : index of waveform on AWG</span>
+<span class="sd">            Optional:</span>
+<span class="sd">                channels (int) : number of channels wave is being played on (default 1)</span>
+<span class="sd">                markers_present (bool) : boolean indicating whether markers were used (default False)</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            [ch1,ch2,markers]: list of 3 arrays containing data from channel 1, 2 and markers.</span>
+<span class="sd">            Arrays will be empty if nothing was played or set on them</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;waves&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+        <span class="c1">#prepare data to be read out, unclear what this does exactly but in combination with the poll command this will read arbitrarily long data</span>
+        <span class="n">checktime</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#time to record data for (s)</span>
+        <span class="n">timeout</span>   <span class="o">=</span> <span class="mi">2000</span> <span class="c1">#timeout for poll command (ms)</span>
+        <span class="n">pollReturn</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span><span class="p">(</span><span class="ow">not</span> <span class="n">pollReturn</span> <span class="ow">and</span> <span class="n">counter</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
+            <span class="c1">#sleep(0.1)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getAsEvent</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="n">pollReturn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">poll</span><span class="p">(</span><span class="n">checktime</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">pollReturn</span><span class="p">)</span>
+            <span class="n">counter</span><span class="o">+=</span><span class="mi">1</span>
+            
+        <span class="k">if</span><span class="p">(</span><span class="n">counter</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Something went wrong, polled the AWG 10 times and got an empty dict&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[[],[],[]]</span>
+        
+        <span class="n">wave_awg</span>   <span class="o">=</span> <span class="n">pollReturn</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;vector&#39;</span><span class="p">]</span>
+        
+        <span class="c1">#Use built in parse_awg_waveform to recover the channel data</span>
+        <span class="p">[</span><span class="n">ch1</span><span class="p">,</span><span class="n">ch2</span><span class="p">,</span><span class="n">markers</span><span class="p">]</span> <span class="o">=</span> <span class="n">ziUtils</span><span class="o">.</span><span class="n">parse_awg_waveform</span><span class="p">(</span><span class="n">wave_awg</span><span class="p">,</span><span class="n">channels</span><span class="p">,</span><span class="n">markers_present</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">ch1</span><span class="p">,</span><span class="n">ch2</span><span class="p">,</span><span class="n">markers</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="HDAWGawg.load_program">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.load_program">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_program</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">awg_program</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Load program to awg, copied from example code</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            awg_program (raw string): raw string containing program (use triple quotes to make sure formatting stays the same)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">awgModule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">awgModule</span><span class="p">()</span>
+        <span class="n">awgModule</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;device&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">awgModule</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">awgModule</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+
+        <span class="n">awgModule</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;compiler/sourcestring&#39;</span><span class="p">,</span><span class="n">awg_program</span><span class="p">)</span>
+        <span class="c1"># Note: when using an AWG program from a source file (and only then), the compiler needs to</span>
+        <span class="c1"># be started explicitly with awgModule.set(&#39;compiler/start&#39;, 1)</span>
+        <span class="k">while</span> <span class="n">awgModule</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="s1">&#39;compiler/status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">awgModule</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="s1">&#39;compiler/status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># compilation failed, raise an exception</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">awgModule</span><span class="o">.</span><span class="n">getString</span><span class="p">(</span><span class="s1">&#39;compiler/statusstring&#39;</span><span class="p">))</span>
+            
+        <span class="c1">#if awgModule.getInt(&#39;compiler/status&#39;) == 0:</span>
+            <span class="c1">#print(&quot;Compilation successful with no warnings, will upload the program to the instrument.&quot;)</span>
+<span class="c1">#        if awgModule.getInt(&#39;compiler/status&#39;) == 2:</span>
+<span class="c1">#            print(&quot;Compilation successful with warnings, will upload the program to the instrument.&quot;)</span>
+<span class="c1">#            print(&quot;Compiler warning: &quot;, awgModule.getString(&#39;compiler/statusstring&#39;))</span>
+
+        <span class="c1"># Wait for the waveform upload to finish</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">awgModule</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">awgModule</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="s1">&#39;elf/status&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="c1">#print(&quot;{} progress: {:.2f}&quot;.format(i, awgModule.getDouble(&#39;progress&#39;)))</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1">#print(&quot;{} progress: {:.2f}&quot;.format(i, awgModule.getDouble(&#39;progress&#39;)))</span>
+
+        <span class="c1">#if awgModule.getInt(&#39;elf/status&#39;) == 0:</span>
+            <span class="c1">#print(&quot;Upload to the instrument successful.&quot;)</span>
+        <span class="k">if</span> <span class="n">awgModule</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="s1">&#39;elf/status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Upload to the instrument failed.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWGawg.run">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.run">[docs]</a>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Turn on AWG and run code once</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;single&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HDAWGawg.run_loop">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.run_loop">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Run AWG continuously</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;enable&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="HDAWGawg.stop">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGawg.stop">[docs]</a>
+    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Stop AWG program</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;single&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;enable&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Settings methods</span>
+    <span class="c1">###################################</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to build dictionary from all key settings of AWG object</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Nested dictionary:</span>
+<span class="sd">                key AWG settings</span>
+<span class="sd">                &#39;Triggers&#39;:{Trigger0:{Key trigger0 settings}, etc.}</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samplerate</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Triggers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">trigger</span> <span class="o">=</span> <span class="s1">&#39;Trigger</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">Triggers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">configured</span><span class="p">:</span>
+                <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Triggers&#39;</span><span class="p">][</span><span class="n">trigger</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Triggers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">setSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to set settings on AWG from settings dictionary</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            settings (dict): structured as follows: key AWG settings,&#39;Triggers&#39;:{Trigger0:{Key trigger0 settings}, etc.}</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samplerate</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;Triggers&#39;</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+                <span class="n">trigger</span> <span class="o">=</span> <span class="s1">&#39;Trigger</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">trigger</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Triggers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">Triggers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Triggers&#39;</span><span class="p">][</span><span class="n">trigger</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">continue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        
+    <span class="c1">###################################</span>
+    <span class="c1"># Properties</span>
+    <span class="c1">###################################</span>
+
+    <span class="c1">#Structure to convert between int and string rep of sample rate</span>
+    <span class="n">_sampleInt</span><span class="o">=</span><span class="n">bidict</span><span class="p">({</span>
+        <span class="s1">&#39;2.4GHz&#39;</span>   <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;1.2GHz&#39;</span>   <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;600MHz&#39;</span>   <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;300MHz&#39;</span>   <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s1">&#39;150MHz&#39;</span>   <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;75MHz&#39;</span>    <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s1">&#39;37.5MHz&#39;</span>  <span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s1">&#39;18.75MHz&#39;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s1">&#39;9.38MHz&#39;</span>  <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s1">&#39;4.69MHz&#39;</span>  <span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s1">&#39;2.34MHz&#39;</span>  <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;1.17MHz&#39;</span>  <span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+        <span class="s1">&#39;585.94kHz&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s1">&#39;292.97kHz&#39;</span><span class="p">:</span> <span class="mi">13</span>
+    <span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">samplerate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sampleInt</span><span class="o">.</span><span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+    <span class="nd">@samplerate</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">samplerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sampleInt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid samplerate, acceptable values are: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sampleInt</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_sampleInt</span><span class="p">[</span><span class="n">val</span><span class="p">])</span></div>
+
+
+<span class="c1">#################################################################################################</span>
+<span class="c1"># HDAWGtrigger subclass</span>
+<span class="c1">#################################################################################################</span>
+<div class="viewcode-block" id="HDAWGtrigger">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGtrigger.html#kollar_instruments.HDAWG.HDAWGtrigger">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">HDAWGtrigger</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper class to access trigger settings for AWG cores</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        ID (int) : trigger identifier (0 or 1)</span>
+<span class="sd">        AWGcore (int) : AWGcore that trigger is applying to</span>
+<span class="sd">        slope (str) : string rep of trigger slope (&#39;rising&#39;,etc.)</span>
+<span class="sd">        channel (str) : string rep for channel trigger is configured to listen to (&#39;Trigger in 1&#39;,etc.)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="HDAWGtrigger.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGtrigger.html#kollar_instruments.HDAWG.HDAWGtrigger.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">daq</span><span class="p">,</span> <span class="n">triggerID</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">AWGcore</span><span class="p">,</span> <span class="n">slope</span><span class="o">=</span><span class="s1">&#39;rising&#39;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s1">&#39;Trigger in 1&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor for Trigger object</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            daq (daq) : handle to daq object used to interface with instrument</span>
+<span class="sd">            triggerID (int) : trigger identifier (0 or 1)</span>
+<span class="sd">            device (str) : device serial number</span>
+<span class="sd">            AWGcore (int) : AWGcore this trigger is applying to</span>
+<span class="sd">            Optional:</span>
+<span class="sd">                slope (str) : trigger slope (default: &#39;rising&#39;)</span>
+<span class="sd">                channel (str) : trigger source (default: &#39;Trigger in 1&#39;)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span>     <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span>        <span class="o">=</span> <span class="n">daq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span>         <span class="o">=</span> <span class="n">triggerID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AWGcore</span>    <span class="o">=</span> <span class="n">AWGcore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_paths</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">AWGcore</span><span class="p">,</span> <span class="n">triggerID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slope</span>      <span class="o">=</span> <span class="n">slope</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel</span>    <span class="o">=</span> <span class="n">channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+    
+    <span class="k">def</span> <span class="nf">fill_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">AWGcore</span><span class="p">,</span> <span class="n">triggerID</span><span class="p">):</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;slope&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/auxtriggers/</span><span class="si">{}</span><span class="s1">/slope&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">AWGcore</span><span class="p">,</span> <span class="n">triggerID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/auxtriggers/</span><span class="si">{}</span><span class="s1">/channel&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">AWGcore</span><span class="p">,</span> <span class="n">triggerID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span>
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Methods</span>
+    <span class="c1">###################################</span>
+
+<div class="viewcode-block" id="HDAWGtrigger.configureTrigger">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGtrigger.configureTrigger">[docs]</a>
+    <span class="k">def</span> <span class="nf">configureTrigger</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">slope</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Configure trigger to provided slope and channel</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            slope (str) : string rep of trigger slope</span>
+<span class="sd">            channel (str) : string rep of trigger source</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slope</span>      <span class="o">=</span> <span class="n">slope</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel</span>    <span class="o">=</span> <span class="n">channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Settings Methods</span>
+    <span class="c1">###################################</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Create dictionary of key trigger settings</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            settings (dict) : dictionary of trigger settinsg</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">fullsettings</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">fullsettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set key trigger attributes from dictionary</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            settings (str) : dictionary of trigger settings </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">fullsettings</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Properties</span>
+    <span class="c1">###################################</span>
+
+    <span class="c1">#Structure to convert between int and string rep of slope property</span>
+    <span class="n">_slopeInt</span> <span class="o">=</span> <span class="n">bidict</span><span class="p">({</span>
+        <span class="s1">&#39;level&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;rising&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;falling&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;both&#39;</span><span class="p">:</span><span class="mi">3</span>
+    <span class="p">})</span>
+
+    <span class="c1">#Structure to convert between int and string rep of channel property</span>
+    <span class="n">_channelInt</span> <span class="o">=</span> <span class="n">bidict</span><span class="p">({</span>
+        <span class="s1">&#39;Trigger in 1&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger in 2&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger in 3&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger in 4&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger out 1&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger out 2&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger out 3&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span>
+        <span class="s1">&#39;Trigger out 4&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span>
+    <span class="p">})</span>    
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">slope</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;slope&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slopeInt</span><span class="o">.</span><span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+    <span class="nd">@slope</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;slope&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slopeInt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid trigger slope, acceptable values are: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_slopeInt</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_slopeInt</span><span class="p">[</span><span class="n">val</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">channel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channelInt</span><span class="o">.</span><span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+    <span class="nd">@channel</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channelInt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid trigger channel, acceptable values are: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_channelInt</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_channelInt</span><span class="p">[</span><span class="n">val</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+
+<span class="c1">#################################################################################################</span>
+<span class="c1"># HDAWGchannel subclass</span>
+<span class="c1">#################################################################################################</span>
+<div class="viewcode-block" id="HDAWGchannel">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGchannel.html#kollar_instruments.HDAWG.HDAWGchannel">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">HDAWGchannel</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper class used to access all the output settings of the 4 HDAWG channels</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        ID (int) : channel number</span>
+<span class="sd">        AWGcore (int) : AWGcore controlling output</span>
+<span class="sd">        AWGout (int) : channel number representation for AWGcore (i.e. channel 2 is on AWG1/channel0 etc.)</span>
+<span class="sd">        status (str) : string rep of channel state (&#39;On&#39;/&#39;Off&#39;)</span>
+<span class="sd">        fullscale (double) : output voltage range on channel (V)</span>
+<span class="sd">        AWGamp (double) : scaling factor relative to fullscale for output voltage </span>
+<span class="sd">        amp (double) : output voltage amplitude of channel (fullscale*AWGamp). If set, will automatically set fullscale and AWGamp to optimal settings</span>
+<span class="sd">        offset (double) : output voltage offset (V)</span>
+<span class="sd">        delay (double) : delay applied to channel (s)</span>
+<span class="sd">        markers (str) : determines whether this channel has markers associated with it</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="HDAWGchannel.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGchannel.html#kollar_instruments.HDAWG.HDAWGchannel.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">daq</span><span class="p">,</span> <span class="n">channelID</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;dev8163&#39;</span><span class="p">,</span> <span class="n">amp</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">fullscale</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">AWGamp</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">delay</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">marker_out</span> <span class="o">=</span> <span class="s1">&#39;Trigger&#39;</span><span class="p">,</span> <span class="n">hold</span> <span class="o">=</span> <span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="n">aouts</span> <span class="o">=</span> <span class="p">[]):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor for channel class.</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            daq (daq) : handle to daq used to interface with hardware</span>
+<span class="sd">            channelID : channel number</span>
+<span class="sd">            Optional:</span>
+<span class="sd">                device: device serial number (default: &#39;dev8163&#39;)</span>
+<span class="sd">                amp: output amplitude in V (default: 1)</span>
+<span class="sd">                fullscale: channel fullscale setting in V (default: 1)</span>
+<span class="sd">                AWGamp: awg scaling factor applied on fullscale (default: 1)</span>
+<span class="sd">                delay: delay applied on channel to align waves (default: 0)</span>
+<span class="sd">                offset: offset applied to output of channel (default: 0)</span>
+<span class="sd">                markers: determines whether channel has markers associated with it</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span>      <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span>         <span class="o">=</span> <span class="n">daq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span>          <span class="o">=</span> <span class="n">channelID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AWGcore</span>     <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">channelID</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AWGout</span>      <span class="o">=</span> <span class="n">channelID</span><span class="o">%</span><span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_paths</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span>      <span class="o">=</span> <span class="s1">&#39;Off&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_notinit</span>    <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fullscale</span>   <span class="o">=</span> <span class="n">fullscale</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AWGamp</span>      <span class="o">=</span> <span class="n">AWGamp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">amp</span>         <span class="o">=</span> <span class="n">amp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offset</span>      <span class="o">=</span> <span class="n">offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay</span>       <span class="o">=</span> <span class="n">delay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span>      <span class="o">=</span> <span class="n">marker_out</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hold</span>        <span class="o">=</span> <span class="n">hold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analog_outs</span> <span class="o">=</span> <span class="n">aouts</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_notinit</span>    <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span>  <span class="o">=</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="HDAWGchannel.fill_paths">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGchannel.fill_paths">[docs]</a>
+    <span class="k">def</span> <span class="nf">fill_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Helper function to fill paths to nodes in hardware containing settings of interest</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;fullscale&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sigouts/</span><span class="si">{}</span><span class="s1">/range&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;offset&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sigouts/</span><span class="si">{}</span><span class="s1">/offset&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span>       <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sigouts/</span><span class="si">{}</span><span class="s1">/delay&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sigouts/</span><span class="si">{}</span><span class="s1">/on&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;marker&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/triggers/out/</span><span class="si">{}</span><span class="s1">/source&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;AWGamp&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/outputs/</span><span class="si">{}</span><span class="s1">/amplitude&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">AWGcore</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">AWGout</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;hold&#39;</span><span class="p">]</span>        <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/awgs/</span><span class="si">{}</span><span class="s1">/outputs/</span><span class="si">{}</span><span class="s1">/hold&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">AWGcore</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">AWGout</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;analog_outs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sines/</span><span class="si">{}</span><span class="s1">/amplitudes/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">AWGout</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Methods</span>
+    <span class="c1">###################################</span>
+
+<div class="viewcode-block" id="HDAWGchannel.configureChannel">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGchannel.configureChannel">[docs]</a>
+    <span class="k">def</span> <span class="nf">configureChannel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amp</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">fullscale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">AWGamp</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">marker_out</span> <span class="o">=</span> <span class="s1">&#39;Trigger&#39;</span><span class="p">,</span> <span class="n">hold</span> <span class="o">=</span> <span class="s1">&#39;False&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Configure channel output settings. If amp is provided, ignores fullscale and AWGamp parameters</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            Optional:</span>
+<span class="sd">                device: device serial number (default: &#39;dev8163&#39;)</span>
+<span class="sd">                amp: output amplitude in V (default: 1)</span>
+<span class="sd">                fullscale: channel fullscale setting in V (default: 1)</span>
+<span class="sd">                AWGamp: awg scaling factor applied on fullscale (default: 1)</span>
+<span class="sd">                delay: delay applied on channel to align waves (default: 0)</span>
+<span class="sd">                offset: offset applied to output of channel (default: 0)</span>
+<span class="sd">                markers: determines whether channel has markers associated with it</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+            
+        <span class="k">if</span> <span class="n">amp</span> <span class="o">&lt;</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">amp</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">amp</span> <span class="o">=</span> <span class="n">amp</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fullscale</span> <span class="o">=</span> <span class="n">fullscale</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">AWGamp</span>    <span class="o">=</span> <span class="n">AWGamp</span>
+            <span class="c1">#print(&#39;Manual range configuration&#39;)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay</span>      <span class="o">=</span> <span class="n">delay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offset</span>     <span class="o">=</span> <span class="n">offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span>     <span class="o">=</span> <span class="n">marker_out</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hold</span>       <span class="o">=</span> <span class="n">hold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span>     <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Settings Methods</span>
+    <span class="c1">###################################</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Build dictionary from all key channel settings</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            settings (dict) : dictionary where keys are attributes of channel object</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">fullsettings</span><span class="o">=</span><span class="p">{}</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;amp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;amp&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        From settings dictionary, configure channel</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            settings (dict) : dictionary containing key channel settings</span>
+<span class="sd">            If settings are missing, Channel will keep default values</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">fullsettings</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span>     <span class="o">=</span> <span class="s1">&#39;On&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Properties</span>
+    <span class="c1">###################################</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Off&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;On&#39;</span>
+    <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;On&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;Off&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Status must be &quot;On&quot; or &quot;Off&quot;&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">amp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fullscale</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">AWGamp</span>
+    <span class="nd">@amp</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">amp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="c1">#if self._notinit:</span>
+            <span class="c1">#print(&#39;Automatically adjusting fullscale and AWGamp values&#39;)</span>
+        <span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">4.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#Check that the ratio of the full scale to the amplitude is round</span>
+                <span class="c1">#to the mV scale. If not, skips this fullscale and tries the next one</span>
+                <span class="c1">#This gives us the &#39;best&#39;/ closest representation on the AWG</span>
+                <span class="n">delta</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">val</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">-</span><span class="n">val</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mf">1e4</span>
+                <span class="k">if</span> <span class="n">delta</span><span class="o">&gt;</span><span class="mf">0.001</span><span class="p">:</span>
+<span class="c1">#                    print(&#39;delta is too large: {}&#39;.format(delta))</span>
+                    <span class="k">continue</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fullscale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">AWGamp</span>    <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">val</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+                <span class="k">break</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">_markerInt</span> <span class="o">=</span> <span class="n">bidict</span><span class="p">({</span>
+        <span class="s1">&#39;Trigger&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;Marker&#39;</span><span class="p">:</span><span class="mi">4</span>
+    <span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;marker&#39;</span><span class="p">]</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="n">val</span>    <span class="o">=</span> <span class="n">status</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="o">%</span><span class="mi">2</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markerInt</span><span class="o">.</span><span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>   
+        <span class="c1">#print(&#39;Using {} function on marker channel&#39;.format(output))</span>
+        <span class="k">return</span> <span class="n">output</span>
+    <span class="nd">@marker</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span>      <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;marker&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markerInt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error, acceptable inputs are </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_markerInt</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">markindex</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="o">%</span><span class="mi">2</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">_markerInt</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+            <span class="c1">#print(&#39;Setting marker output to {}&#39;.format(val))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">markindex</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">hold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;hold&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;True&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;False&#39;</span>
+    <span class="nd">@hold</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">hold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;hold&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;True&#39;</span><span class="p">,</span><span class="s1">&#39;False&#39;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hold setting is either &quot;True&quot; or &quot;False&quot;, invalid input&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">fullscale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;fullscale&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@fullscale</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">fullscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">4.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">]</span>
+        <span class="n">node</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;fullscale&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Fullscale values must one of </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ranges</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">AWGamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;AWGamp&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@AWGamp</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">AWGamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;AWGamp&#39;</span><span class="p">]</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">val</span><span class="o">&lt;=</span><span class="mf">0.0</span> <span class="ow">or</span> <span class="n">val</span><span class="o">&gt;</span><span class="mf">1.0</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;AWG amp out of range (0.,1]&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;offset&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@offset</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;offset&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">delay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@delay</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">delay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">analog_outs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;analog_outs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">pairedChannel</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pairedChannel</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">node2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;analog_outs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="o">+</span><span class="n">pairedChannel</span><span class="p">)</span>
+        <span class="n">nodes</span> <span class="o">=</span><span class="p">[</span><span class="n">node1</span><span class="p">,</span> <span class="n">node2</span><span class="p">]</span>
+        <span class="n">amps</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">amp</span> <span class="ow">in</span> <span class="n">amps</span><span class="p">:</span>
+            <span class="n">amps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">pairedChannel</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">amps</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="nd">@analog_outs</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">analog_outs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amps</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Configure amplitudes of oscillators for this channel</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            amps: list of amplitude in front of the sine outputs (between 0 and 1)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">node1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;analog_outs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">pairedChannel</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pairedChannel</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">node2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;analog_outs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="o">+</span><span class="n">pairedChannel</span><span class="p">)</span>
+        <span class="n">enables1</span> <span class="o">=</span> <span class="n">node1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;amplitudes&#39;</span><span class="p">,</span><span class="s1">&#39;enables&#39;</span><span class="p">)</span>
+        <span class="n">enables2</span> <span class="o">=</span> <span class="n">node2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;amplitudes&#39;</span><span class="p">,</span><span class="s1">&#39;enables&#39;</span><span class="p">)</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="p">[</span><span class="n">node1</span><span class="p">,</span> <span class="n">node2</span><span class="p">]</span>
+        <span class="n">enables</span> <span class="o">=</span> <span class="p">[</span><span class="n">enables1</span><span class="p">,</span><span class="n">enables2</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">amp</span> <span class="ow">in</span> <span class="n">amps</span><span class="p">:</span>
+            <span class="c1">#print(&#39;Setting amp {}&#39;.format(amp))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">amp</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">amp</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">enables</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">amp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">enables</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">pairedChannel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+
+<span class="c1">#################################################################################################</span>
+<span class="c1"># HDAWGosc subclass</span>
+<span class="c1">#################################################################################################</span>
+<div class="viewcode-block" id="HDAWGosc">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGosc.html#kollar_instruments.HDAWG.HDAWGosc">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">HDAWGosc</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper class used to control the two internal oscillators of the HDAWG</span>
+<span class="sd">    Each oscillator controls two sine outputs that can be set nearly independently</span>
+<span class="sd">    Two the sines need to be related by some harmonic ratio (m/n where both can go</span>
+<span class="sd">    from 1 to 1023)</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        freq (int): frequency of reference oscillator</span>
+<span class="sd">        sines ([HDAWGsines]) : list of HDAWGsines objects to hold the phase and </span>
+<span class="sd">        harmonic for each sine output</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="HDAWGosc.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGosc.html#kollar_instruments.HDAWG.HDAWGosc.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">daq</span><span class="p">,</span> <span class="n">oscID</span><span class="p">,</span> <span class="n">freq</span> <span class="o">=</span> <span class="mf">10e6</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="s1">&#39;dev8163&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor class for HDAWGosc object</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            daq (daq) : handle to daq used to interface with hardware</span>
+<span class="sd">            oscID (int) : oscillator identifier (0 or 1)</span>
+<span class="sd">            freq (int) :  frequency of oscillator (default 10MHz)</span>
+<span class="sd">            device (str) : device identifier (default dev8163)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span>       <span class="o">=</span> <span class="n">daq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span>    <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span>        <span class="o">=</span> <span class="n">oscID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_paths</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq</span>      <span class="o">=</span> <span class="n">freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sines</span>     <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HDAWGsines</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="HDAWGosc.fill_paths">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGosc.fill_paths">[docs]</a>
+    <span class="k">def</span> <span class="nf">fill_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Helper function to fill the paths to the nodes of interest</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/oscs/</span><span class="si">{}</span><span class="s1">/freq&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Methods</span>
+    <span class="c1">###################################</span>
+
+<div class="viewcode-block" id="HDAWGosc.configure_sine">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGosc.configure_sine">[docs]</a>
+    <span class="k">def</span> <span class="nf">configure_sine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sineID</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Method to set the frequency on the sine outputs.</span>
+<span class="sd">        By default, it will just adjust the frequency of the ref oscillator</span>
+<span class="sd">        but if one of the channels was already configured, it will adjust the</span>
+<span class="sd">        harmonics to maintain the frequency on the other channel. We find the </span>
+<span class="sd">        gcd of the two frequencies and adjust the ref osc and harmonics to get</span>
+<span class="sd">        the smallest harmonics possible</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            sineID (int) : identifier of sine output (0 or 1)</span>
+<span class="sd">            freq (double) : frequency desired on sine output</span>
+<span class="sd">            phase (double) : phase delay on output</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">osc_freq</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq</span>
+        <span class="n">configured</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">sineID</span><span class="p">]</span><span class="o">.</span><span class="n">configured</span>
+        <span class="n">harm2</span>      <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">sineID</span><span class="p">]</span><span class="o">.</span><span class="n">harmonic</span>
+        <span class="n">freq2</span>      <span class="o">=</span> <span class="n">harm2</span><span class="o">*</span><span class="n">osc_freq</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">configured</span><span class="p">:</span>
+            <span class="n">osc_freq</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+            <span class="n">harm1</span>    <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">harm2</span>    <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">freq2</span>    <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">osc_freq</span><span class="p">)</span>
+        <span class="c1">#elif freq &gt;= osc_freq and freq%osc_freq==0:</span>
+        <span class="c1">#    harm1 = round(freq)/osc_freq</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Adjusting the oscillator frequency&#39;</span><span class="p">)</span>
+            <span class="n">osc_freq</span> <span class="o">=</span> <span class="n">gcd</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">freq</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">freq2</span><span class="p">))</span>
+            <span class="n">harm1</span>    <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">freq</span><span class="o">/</span><span class="n">osc_freq</span><span class="p">)</span>
+            <span class="n">harm2</span>    <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">freq2</span><span class="o">/</span><span class="n">osc_freq</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;H1: </span><span class="si">{}</span><span class="s1">, H2: </span><span class="si">{}</span><span class="s1">, ref: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">harm1</span><span class="p">,</span> <span class="n">harm2</span><span class="p">,</span> <span class="n">osc_freq</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="n">sineID</span><span class="p">]</span><span class="o">.</span><span class="n">harmonic</span>   <span class="o">=</span> <span class="n">harm1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="n">sineID</span><span class="p">]</span><span class="o">.</span><span class="n">phase</span>      <span class="o">=</span> <span class="n">phase</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="n">sineID</span><span class="p">]</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">sineID</span><span class="p">]</span><span class="o">.</span><span class="n">harmonic</span> <span class="o">=</span> <span class="n">harm2</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">osc_freq</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Settings methods</span>
+    <span class="c1">###################################</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to build dictionary from all key settings of osc object</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            dict with key oscillator settings</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq</span>
+        <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Sines&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">sineID</span> <span class="o">=</span> <span class="s1">&#39;Sines</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">configured</span><span class="p">:</span>
+                <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;Sines&#39;</span><span class="p">][</span><span class="n">sineID</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to set settings on AWG from settings dictionary</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            settings (dict): contains settings for osc class</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">sineID</span> <span class="o">=</span> <span class="s1">&#39;Sines</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">sineID</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">fullsettings</span><span class="p">[</span><span class="n">sineID</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        
+    <span class="c1">###################################</span>
+    <span class="c1"># Properties</span>
+    <span class="c1">###################################</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="nd">@freq</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="mf">1.2e9</span> <span class="ow">or</span> <span class="n">val</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid frequency, accepted range: 10 - 1.2e9&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">val</span><span class="p">)</span></div>
+
+
+<span class="c1">#################################################################################################</span>
+<span class="c1"># HDAWGosc subclass</span>
+<span class="c1">#################################################################################################</span>
+<div class="viewcode-block" id="HDAWGsines">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGsines.html#kollar_instruments.HDAWG.HDAWGsines">[docs]</a>
+<span class="nd">@freeze</span>
+<span class="k">class</span> <span class="nc">HDAWGsines</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper class used to control the sine outputs of the HDAWG</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        oscID(int): reference oscillator number (0 or 1)</span>
+<span class="sd">        channelID(int): self identifier (0 to 3)</span>
+<span class="sd">        phase (double) :phase delay on output</span>
+<span class="sd">        harmonic (int) : harmonic of reference oscillator used (1-1023)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="HDAWGsines.__init__">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.HDAWGsines.html#kollar_instruments.HDAWG.HDAWGsines.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">daq</span><span class="p">,</span> <span class="n">oscID</span><span class="p">,</span> <span class="n">channelID</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="s1">&#39;dev8163&#39;</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">harmonic</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Constructor class for HDAWGsines</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            daq (daq): Handle to daq used to control instrument</span>
+<span class="sd">            oscID (int): Reference oscillator number</span>
+<span class="sd">            channelID (int): self identifier (0 to 3)</span>
+<span class="sd">            device (str) : device serial number (default dev8163)</span>
+<span class="sd">            phase (double) :phase delay on output (default 0)</span>
+<span class="sd">            harmonic (int) : harmonic of reference oscillator used (default 1)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span>        <span class="o">=</span> <span class="n">daq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span>         <span class="o">=</span> <span class="n">channelID</span><span class="o">+</span><span class="n">oscID</span><span class="o">*</span><span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span>     <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_paths</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phase</span>      <span class="o">=</span> <span class="n">phase</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonic</span>   <span class="o">=</span> <span class="n">harmonic</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configured</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="HDAWGsines.fill_paths">
+<a class="viewcode-back" href="../../kollar_instruments/kollar_instruments.HDAWG.html#kollar_instruments.HDAWG.HDAWGsines.fill_paths">[docs]</a>
+    <span class="k">def</span> <span class="nf">fill_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Helper function used to fill in the paths to the nodes of interest</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sines/</span><span class="si">{}</span><span class="s1">/phaseshift&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;harmonic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">/sines/</span><span class="si">{}</span><span class="s1">/harmonic&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+
+    <span class="c1">###################################</span>
+    <span class="c1"># Settings methods</span>
+    <span class="c1">###################################</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to build dictionary from all key settings of osc object</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            dict with key oscillator settings</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        <span class="n">fullsettings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">fullsettings</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fullsettings</span>
+    <span class="nd">@settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Function to set settings on AWG from settings dictionary</span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            settings (dict): contains settings for osc class</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fullsettings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">fullsettings</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+        
+    <span class="c1">###################################</span>
+    <span class="c1"># Properties</span>
+    <span class="c1">###################################</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">phase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@phase</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">phase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;phase&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setDouble</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">val</span><span class="o">%</span><span class="mi">360</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">harmonic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;harmonic&#39;</span><span class="p">]</span>
+        <span class="n">val</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+    <span class="nd">@harmonic</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">harmonic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodepaths</span><span class="p">[</span><span class="s1">&#39;harmonic&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">round</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid harmonic, must be integer &gt;=1&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daq</span><span class="o">.</span><span class="n">setInt</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

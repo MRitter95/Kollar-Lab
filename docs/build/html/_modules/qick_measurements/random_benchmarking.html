@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qick_measurements.random_benchmarking &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/qick_measurements/random_benchmarking';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">qick_measure...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for qick_measurements.random_benchmarking</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu Jun 20 11:52:24 2024</span>
+
+<span class="sd">@author: Ruthie Vogel</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">qick.averager_program</span> <span class="kn">import</span> <span class="n">AveragerProgram</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">userfuncs</span>
+<span class="kn">import</span> <span class="nn">cmath</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+
+<span class="c1">#TODO: implement section that works backwards from the measurement time so that it&#39;s always constant regardless of length</span>
+
+<div class="viewcode-block" id="IQProgram_RB">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.random_benchmarking.IQProgram_RB.html#qick_measurements.random_benchmarking.IQProgram_RB">[docs]</a>
+<span class="k">class</span> <span class="nc">IQProgram_RB</span><span class="p">(</span><span class="n">AveragerProgram</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class is optimized for Ruthie&#39;s randomized benchmarking and state tomography thesis project. </span>
+<span class="sd">    Once pulses are defined by the user (and given names) it can automatically play any string of pulses separated</span>
+<span class="sd">    by an empirical buffer defined in the config file. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+<div class="viewcode-block" id="IQProgram_RB.initialize">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.random_benchmarking.html#qick_measurements.random_benchmarking.IQProgram_RB.initialize">[docs]</a>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cfg</span>     <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span>   
+        <span class="n">gen_ch</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">]</span>
+        <span class="n">qub_ch</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">]</span>
+        <span class="n">ro_chs</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">]</span>
+        
+        
+        <span class="c1"># set the nyquist zone</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_gen</span><span class="p">(</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">],</span> <span class="n">nqz</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;nqz_c&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_gen</span><span class="p">(</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">],</span> <span class="n">nqz</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;nqz_q&quot;</span><span class="p">])</span>
+        
+        
+        <span class="c1"># configure the readout lengths and downconversion frequencies (ensuring it is an available DAC frequency)</span>
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;ro_channels&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">declare_readout</span><span class="p">(</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">ch</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;readout_length&quot;</span><span class="p">],</span> <span class="n">ro_ch</span> <span class="o">=</span> <span class="n">ro_chs</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                                 <span class="n">freq</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_freq&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">gen_ch</span><span class="p">)</span>
+
+        <span class="c1"># convert frequency to DAC frequency (ensuring it is an available ADC frequency)</span>
+        <span class="n">freq_c</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq2reg</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_freq&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">gen_ch</span><span class="p">,</span> <span class="n">ro_ch</span> <span class="o">=</span> <span class="n">ro_chs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">phase_c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deg2reg</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_phase&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">gen_ch</span><span class="p">)</span>
+        <span class="n">gain_c</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_gain&quot;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_pulse_registers</span><span class="p">(</span><span class="n">ch</span> <span class="o">=</span> <span class="n">gen_ch</span><span class="p">,</span> <span class="n">freq</span> <span class="o">=</span> <span class="n">freq_c</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="n">phase_c</span><span class="p">,</span> <span class="n">gain</span> <span class="o">=</span> <span class="n">gain_c</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;oneshot&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_pulse_registers</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;const&quot;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_window&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">))</span>
+
+
+
+        <span class="n">freq_q</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq2reg</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_freq&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">qub_ch</span><span class="p">)</span> <span class="c1">#, ro_ch = ro_chs[0])</span>
+        <span class="n">phase_q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deg2reg</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_phase&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">gen_ch</span><span class="p">)</span> <span class="c1">#should this be gen_ch? </span>
+        <span class="n">gain_q</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_gain&quot;</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_pulse_registers</span><span class="p">(</span><span class="n">ch</span> <span class="o">=</span> <span class="n">qub_ch</span><span class="p">,</span> <span class="n">freq</span> <span class="o">=</span> <span class="n">freq_q</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="n">phase_q</span><span class="p">,</span> <span class="n">gain</span> <span class="o">=</span> <span class="n">gain_q</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;oneshot&quot;</span><span class="p">)</span>
+
+        <span class="c1"># loads each unique pulse from &#39;pulse_data&#39; into memory</span>
+        <span class="k">for</span> <span class="n">pulse</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;pulse_data&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_pulse</span><span class="p">(</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">qub_ch</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">idata</span> <span class="o">=</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">soccfg</span><span class="p">[</span><span class="s1">&#39;gens&#39;</span><span class="p">][</span><span class="n">qub_ch</span><span class="p">][</span><span class="s1">&#39;maxv&#39;</span><span class="p">]),</span> 
+                           <span class="n">qdata</span> <span class="o">=</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">soccfg</span><span class="p">[</span><span class="s1">&#39;gens&#39;</span><span class="p">][</span><span class="n">qub_ch</span><span class="p">][</span><span class="s1">&#39;maxv&#39;</span><span class="p">])</span> <span class="p">)</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">synci</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>  <span class="c1"># give processor some time to configure pulses</span></div>
+
+    
+    
+  
+<div class="viewcode-block" id="IQProgram_RB.body">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.random_benchmarking.html#qick_measurements.random_benchmarking.IQProgram_RB.body">[docs]</a>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">       </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        The body function sets pulse registers for each pulse and plays the pulses automatically, then increments the time</span>
+<span class="sd">        to play the next pulse by the length of this pulse plus an empirical buffer defined in the config dicionary</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">cfg</span>     <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span>
+        <span class="n">gen_ch</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;cav_channel&quot;</span><span class="p">]</span>
+        <span class="n">qub_ch</span>  <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_channel&quot;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_schedule&quot;</span><span class="p">])</span>
+        
+        <span class="n">sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_sigma&quot;</span><span class="p">])</span>
+        <span class="n">num_sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;num_sigma&quot;</span><span class="p">]</span>
+        
+        <span class="n">offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;adc_trig_offset&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">gen_ch</span> <span class="p">)</span>
+        <span class="n">meas_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;meas_time&quot;</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">adcs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ro_chs</span><span class="p">,</span> 
+                     <span class="n">pins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
+                     <span class="n">adc_trig_offset</span> <span class="o">=</span> <span class="n">offset</span> <span class="p">)</span>
+      
+        <span class="n">flip_pulses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_schedule&quot;</span><span class="p">]))</span>
+
+        <span class="n">pulse_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;pulse_data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span>
+        <span class="n">buffer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;buffer&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">qub_ch</span><span class="p">)</span> 
+        <span class="n">playtime</span> <span class="o">=</span> <span class="n">meas_time</span> <span class="o">-</span> <span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;qub_delay&quot;</span><span class="p">],</span> <span class="n">gen_ch</span> <span class="o">=</span> <span class="n">qub_ch</span><span class="p">)</span> 
+                                <span class="o">+</span> <span class="n">pulse_len</span><span class="o">*</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;pulse_schedule&#39;</span><span class="p">]</span> <span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> 
+                                <span class="o">+</span> <span class="n">buffer</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;pulse_schedule&#39;</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+        
+        
+        <span class="n">plot_pulse_I</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">plot_pulse_Q</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        for item in flip_pulses:</span>
+<span class="sd">            </span>
+<span class="sd">            self.set_pulse_registers( qub_ch, style = &#39;arb&#39;, waveform = item )</span>
+<span class="sd">            self.pulse( ch = qub_ch, t = playtime )</span>
+<span class="sd">            #print( &quot;we have played the pulse {} at t = {}&quot;.format( item, playtime ) )</span>
+<span class="sd">            </span>
+<span class="sd">            #print(self.cycles2us( (38320-32128)/16, gen_ch = qub_ch))</span>
+<span class="sd">            </span>
+<span class="sd">            for i in range( len ( cfg[&quot;pulse_data&quot;] ) ):</span>
+<span class="sd">                if item == cfg[&quot;pulse_data&quot;][i][0]:</span>
+<span class="sd">                    gate = cfg[&quot;pulse_data&quot;][i]</span>
+<span class="sd">                </span>
+<span class="sd">                    addtime = buffer*16 + int( len( gate[1] )/16 )</span>
+<span class="sd">                    playtime = playtime - addtime  </span>
+<span class="sd">                    </span>
+<span class="sd">                    buff_zero = [0]*(buffer*16)</span>
+<span class="sd">                    </span>
+<span class="sd">                    # Now let&#39;s add the pulse data to the arrays to plot</span>
+<span class="sd">                    plot_pulse_I.extend(gate[1].tolist())</span>
+<span class="sd">                    plot_pulse_I.extend(buff_zero)</span>
+<span class="sd">                    plot_pulse_Q.extend(gate[2].tolist())</span>
+<span class="sd">                    plot_pulse_Q.extend(buff_zero)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;pulse_schedule&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_pulse_registers</span><span class="p">(</span> <span class="n">qub_ch</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;arb&#39;</span><span class="p">,</span> <span class="n">waveform</span> <span class="o">=</span> <span class="n">item</span> <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span><span class="p">(</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">qub_ch</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">playtime</span> <span class="p">)</span>
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span> <span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">]</span> <span class="p">)</span> <span class="p">):</span>
+                <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+                    <span class="n">gate</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+                
+                    <span class="n">addtime</span> <span class="o">=</span> <span class="n">buffer</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">gate</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span><span class="o">/</span><span class="mi">16</span> <span class="p">)</span>
+                    <span class="n">playtime</span> <span class="o">=</span> <span class="n">playtime</span> <span class="o">+</span> <span class="n">addtime</span>  
+                    
+                    <span class="n">buff_zero</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">buffer</span><span class="o">*</span><span class="mi">16</span><span class="p">)</span>
+                    
+                    <span class="c1"># Now let&#39;s add the pulse data to the arrays to plot</span>
+                    <span class="c1">#print(&#39;adding gate{} to plot&#39;.format(gate[0]))</span>
+                    <span class="n">plot_pulse_I</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gate</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+                    <span class="n">plot_pulse_I</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">buff_zero</span><span class="p">)</span>
+                    <span class="n">plot_pulse_Q</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">gate</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+                    <span class="n">plot_pulse_Q</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">buff_zero</span><span class="p">)</span>
+
+
+
+        <span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">plot_pulse_I</span><span class="p">,</span> <span class="n">plot_pulse_Q</span><span class="p">]</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span><span class="p">(</span><span class="n">ch</span><span class="o">=</span><span class="n">gen_ch</span><span class="p">,</span><span class="n">t</span><span class="o">=</span><span class="n">meas_time</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait_all</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_all</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;relax_delay&quot;</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span></div>
+</div>
+
+        
+        
+<div class="viewcode-block" id="gaussian_square">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.random_benchmarking.gaussian_square.html#qick_measurements.random_benchmarking.gaussian_square">[docs]</a>
+<span class="k">class</span> <span class="nc">gaussian_square</span><span class="p">():</span>
+    <span class="n">_defaults</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;sigma&#39;</span>      <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s1">&#39;num_sigma&#39;</span>  <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;hold_time&#39;</span>  <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>     
+        <span class="s1">&#39;amp&#39;</span>        <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;sample_rate&#39;</span><span class="p">:</span> <span class="mf">430.080e6</span><span class="p">,</span>
+        <span class="s1">&#39;angle&#39;</span>      <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;rot_amount&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span>
+        <span class="s1">&#39;axis&#39;</span>       <span class="p">:</span> <span class="s1">&#39;x&#39;</span>
+    <span class="p">}</span>
+    
+<div class="viewcode-block" id="gaussian_square.__init__">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.random_benchmarking.gaussian_square.html#qick_measurements.random_benchmarking.gaussian_square.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pulse</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">,</span> <span class="o">**</span><span class="n">settings</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_settings</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compile_pulse</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rmatrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotation</span><span class="p">()</span></div>
+
+
+        
+    <span class="k">def</span> <span class="nf">set_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error or typo, </span><span class="si">{}</span><span class="s1"> is not a valid parameter for this class&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parameter</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="p">[</span><span class="n">parameter</span><span class="p">])</span>
+                
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">full_settings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">full_settings</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">full_settings</span>
+    
+    <span class="k">def</span> <span class="nf">compile_pulse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function is the main part of the pulse creation. It returns the I data and Q data that we need for our pulses. </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        <span class="n">amp</span>         <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amp</span>
+        <span class="n">sigma</span>       <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="o">/</span><span class="mf">1e6</span>
+        <span class="n">length</span>      <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hold_time</span><span class="o">/</span><span class="mf">1e6</span>
+        <span class="n">num_sigma</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sigma</span>
+        <span class="n">sample_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span> <span class="c1"># multiplied by 16 because each clock tick is broken up into 16 pieces.</span>
+        
+        <span class="c1">#create gaussian ramp</span>
+        
+        <span class="n">samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">num_sigma</span><span class="o">*</span><span class="n">sample_rate</span><span class="p">)</span><span class="o">*</span><span class="mi">16</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">*</span><span class="n">num_sigma</span><span class="p">,</span> <span class="n">samples</span><span class="p">)</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">num_sigma</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">pulse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># correct form for a gaussian has 2*(sigma**2) but the qick board is wack</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">init_amp</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">pulse</span><span class="p">)</span>
+        <span class="n">ramp</span> <span class="o">=</span> <span class="n">amp</span><span class="o">*</span><span class="p">(</span><span class="n">pulse</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">init_amp</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span>
+        <span class="c1">#hold max amplitude</span>
+        <span class="n">square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span><span class="o">*</span><span class="n">sample_rate</span><span class="p">))</span><span class="o">*</span><span class="n">amp</span>
+        <span class="n">ramp_up</span><span class="p">,</span> <span class="n">ramp_down</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">ramp</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ramp_up</span><span class="p">,</span> <span class="n">square</span><span class="p">,</span> <span class="n">ramp_down</span><span class="p">))</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">pulse</span> <span class="o">=</span> <span class="n">final</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">final</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span><span class="o">*</span><span class="n">final</span>
+    
+    <span class="k">def</span> <span class="nf">rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function assesses the rotation that each pulse applies to the qubit, which then gets returned as {}.rotate</span>
+<span class="sd">        This can also be used for any pulse regardless of the axis. </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">axis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rot_amount</span>
+        
+        <span class="n">accept_axes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">axis</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
+            <span class="n">rot_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">)]])</span>
+            
+        <span class="k">elif</span> <span class="n">axis</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+            <span class="n">rot_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">)]])</span>
+
+        <span class="k">elif</span> <span class="n">axis</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">accept_axes</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error or typo, </span><span class="si">{}</span><span class="s1"> is not a valid axis for this function&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">axis</span><span class="p">))</span>
+            
+        <span class="k">if</span> <span class="n">theta</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">:</span>
+            <span class="n">rot_matrix</span> <span class="o">=</span> <span class="n">rot_matrix</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span>
+
+        
+        
+        <span class="c1"># This section makes sure that everything gets rounded away nicely</span>
+        <span class="n">rot_matrix</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">rot_matrix</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">rmatrix</span> <span class="o">=</span> <span class="n">rot_matrix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span> <span class="o">=</span> <span class="n">rot_matrix</span>   </div>
+
+        
+
+<div class="viewcode-block" id="random_seq_gen">
+<a class="viewcode-back" href="../../qick_measurements/qick_measurements.random_benchmarking.html#qick_measurements.random_benchmarking.random_seq_gen">[docs]</a>
+<span class="k">def</span> <span class="nf">random_seq_gen</span><span class="p">(</span><span class="n">config_dict</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function generates the RB schedule, both the total schedule and the truncated schedule for a given run.</span>
+<span class="sd">    It also calculates and then adds the required pulse to return an ideal qubit back to the ground state at the end of the schedule.</span>
+
+<span class="sd">    **Parameters:**</span>
+<span class="sd">        ``config_dict``: the config dictionary for the run, composed of exp_settings, exp_globals, and the locally defined factors</span>
+
+<span class="sd">        ``gen_num``: The number of new schedules to be created.</span>
+
+<span class="sd">        ``num_gates``: the total number of gates in the RB sequence.</span>
+
+<span class="sd">    **Returns:**</span>
+<span class="sd">        ``full_seq_dict``: (dictionary) contains all the sequences for the run, with numbered keys.        </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">cfg</span> <span class="o">=</span> <span class="n">config_dict</span>
+    <span class="n">gen_new</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;gen_new&quot;</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">gen_new</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">gen_num</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;gen_num&quot;</span><span class="p">]</span> 
+
+        <span class="n">n</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;num_gates&quot;</span><span class="p">]</span>
+        <span class="n">full_seq_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">gen_num</span><span class="p">):</span>
+            
+            <span class="n">rand_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="n">full_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">rand_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+                <span class="n">placeholder</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">rand_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">full_seq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">placeholder</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        
+            <span class="n">full_seq_dict</span><span class="p">[</span><span class="n">seq</span><span class="p">]</span> <span class="o">=</span> <span class="n">full_seq</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">full_seq_dict</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;full_seq_dict&#39;</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">full_seq_dict</span></div>
+
+
+<span class="k">def</span> <span class="nf">meas_pulse</span><span class="p">(</span><span class="n">config_dict</span><span class="p">):</span>
+        
+    <span class="n">cfg</span> <span class="o">=</span> <span class="n">config_dict</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This section takes the density matrix of the initial state and operates on it with the rotation matrices of each </span>
+<span class="sd">    pulse applied in the benchmarking sequence defined in &#39;pulse_schedule&#39;. It then calculates what rotation is necessary</span>
+<span class="sd">    to return the qubit to the ground state.</span>
+
+<span class="sd">    This is all done assuming that each gate and the initial state are theoretical and perfect.</span>
+
+<span class="sd">    Once that calculation is done, it&#39;ll generate the new pulse and append it to the pulse schedule.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+
+    <span class="c1"># specify the state we expect our qubit to start in: for us, it&#39;s the ground state. all rotations are then applied</span>
+    <span class="n">init_state</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">init_state</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the current schedule is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_schedule&quot;</span><span class="p">]))</span>
+    
+    
+    <span class="k">for</span> <span class="n">pulse</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_schedule&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span> <span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">]</span> <span class="p">)</span> <span class="p">):</span>
+            <span class="k">if</span> <span class="n">pulse</span> <span class="o">==</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="n">new_state</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">@</span> <span class="n">state</span>
+                <span class="n">state</span> <span class="o">=</span> <span class="n">new_state</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Throughout this function, there are a number of times where we have to decompose the state or rotation matrix and</span>
+<span class="sd">    zero out all the rounding errors that come from python doing trig or working with complex numbers because otherwise it</span>
+<span class="sd">    very thoroughly messes everything else up.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">state</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">real</span><span class="o">*</span><span class="mi">0</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">state</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">imag</span><span class="o">*</span><span class="mi">0</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The following section puts the state we&#39;re left with in the conventional format that quantum states are written out in.</span>
+<span class="sd">    This ensures that the operations we&#39;re doing on it are doing the right thing!</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">conj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">conjugate</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+            <span class="n">state</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="o">*</span><span class="n">conj</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            
+    <span class="c1"># Gotta zero out after taking the complex conjugate</span>
+    <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">state</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">real</span><span class="o">*</span><span class="mi">0</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">state</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">imag</span><span class="o">*</span><span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">state</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>        
+<span class="w">    </span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Every point on the bloch sphere is described by theta and phi. The following part uses our state to pull out those values.</span>
+<span class="sd">    Right now phi is slightly hard coded and only works for the specific points that we can get to on the bloch sphere.</span>
+<span class="sd">    TODO: calculate phi empirically!</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">cmath</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">angle</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+            <span class="n">theta</span> <span class="o">=</span> <span class="n">angle</span>
+    
+    <span class="n">theta</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">theta</span> <span class="c1">#because we need to rotate the opposite way</span>
+
+    <span class="n">phi</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">phi</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+    <span class="k">elif</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+
+    <span class="k">elif</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This section calculates the rotation matrix of the pulse needed to get us back to the ground state. It then sorts through</span>
+<span class="sd">    the pulse dictionary and appends the right pulse to the pulse schedule</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">rot_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)]])</span>
+
+    <span class="c1"># Gotta zero out again</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rot_matrix</span><span class="p">)):</span>
+        <span class="n">sublist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rot_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sublist</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="n">real</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">real</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">real</span>
+
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="n">imag</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">imag</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">imag</span>
+            <span class="n">sublist</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">real</span> <span class="o">+</span> <span class="n">imag</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span>
+        <span class="n">rot_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sublist</span>
+
+
+    <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">meas_pulse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+    <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">meas_pulse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">meas_pulse</span> <span class="o">=</span> <span class="n">rot_matrix</span> 
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span> <span class="p">(</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">]</span> <span class="p">)</span> <span class="p">):</span>
+        <span class="n">subtract</span> <span class="o">=</span> <span class="n">meas_pulse</span> <span class="o">-</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">zero_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">subtract</span><span class="p">,</span> <span class="n">zero_array</span><span class="p">):</span>
+            <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_schedule&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;added </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;pulse_data&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+    
+    
+    <span class="k">return</span> <span class="n">config_dict</span>
+
+
+
+
+<span class="c1">#TODO: actually make this for RB</span>
+<span class="k">def</span> <span class="nf">get_RB_settings</span><span class="p">():</span>
+    <span class="n">settings</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;scanname&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">&#39;initial_RB_test&#39;</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;meas_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;RandomizedBenchmarking&#39;</span>
+    
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;cav_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e9</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;cav_gain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+    
+    <span class="c1"># RB parameters</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;pulse_schedule&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;pulse_data&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="p">[]</span> 
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;full_seq_dict&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;buffer&#39;</span><span class="p">]</span>         <span class="o">=</span> <span class="mf">.1</span> <span class="c1">#[us]</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;gen_new&#39;</span><span class="p">]</span>        <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;gen_num&#39;</span><span class="p">]</span>        <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;num_gates&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="mi">1</span>
+   
+    <span class="c1">#Card settings</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;reps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;soft_avgs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">settings</span>
+
+<span class="k">def</span> <span class="nf">random_bench</span><span class="p">(</span><span class="n">soc</span><span class="p">,</span><span class="n">soccfg</span><span class="p">,</span><span class="n">instruments</span><span class="p">,</span><span class="n">settings</span><span class="p">):</span>
+    <span class="n">exp_globals</span>  <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_globals&#39;</span><span class="p">]</span>
+    <span class="n">exp_settings</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;exp_settings&#39;</span><span class="p">]</span> 
+    <span class="n">m_pulse</span>      <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;measurement_pulse&#39;</span><span class="p">]</span>
+    <span class="n">q_pulse</span>      <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;qubit_pulse&#39;</span><span class="p">]</span>
+    <span class="n">pauli_gates</span>  <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;pauli_gates&#39;</span><span class="p">]</span>
+    
+    <span class="n">soc</span><span class="o">.</span><span class="n">reset_gens</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO&#39;</span><span class="p">]:</span>
+        <span class="n">logen</span> <span class="o">=</span> <span class="n">instruments</span><span class="p">[</span><span class="s1">&#39;LO&#39;</span><span class="p">]</span>
+        
+        <span class="n">logen</span><span class="o">.</span><span class="n">freq</span>   <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO_freq&#39;</span><span class="p">]</span>
+        <span class="n">logen</span><span class="o">.</span><span class="n">power</span>  <span class="o">=</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO_power&#39;</span><span class="p">]</span>
+        <span class="n">logen</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">stamp</span>    <span class="o">=</span> <span class="n">userfuncs</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
+    <span class="n">saveDir</span>  <span class="o">=</span> <span class="n">userfuncs</span><span class="o">.</span><span class="n">saveDir</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;scanname&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">stamp</span>
+
+    <span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;cav_channel&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;cav_channel&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_channel&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;qub_channel&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;ro_channels&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;ro_channels&#39;</span><span class="p">],</span>
+
+        <span class="s1">&#39;nqz_c&#39;</span>           <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;cav_phase&#39;</span>       <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;cav_phase&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;meas_window&#39;</span>     <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;meas_time&#39;</span>       <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;meas_gain&#39;</span>       <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;cav_gain&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;cav_freq&#39;</span>        <span class="p">:</span> <span class="p">(</span><span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;cav_freq&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;LO_freq&#39;</span><span class="p">])</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span>
+        
+        <span class="s1">&#39;nqz_q&#39;</span>           <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;qub_phase&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;qub_phase&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_freq&#39;</span>        <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;qub_freq&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span>
+        <span class="s1">&#39;qub_gain&#39;</span>        <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;qub_gain&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_sigma&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;qub_delay&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;num_sigma&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;hold_time&#39;</span>       <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;Hold_time&#39;</span><span class="p">],</span>
+        
+        <span class="c1"># RB specialized settings</span>
+        <span class="s1">&#39;pulse_data&#39;</span>      <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;pulse_data&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;pulse_schedule&#39;</span>  <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;pulse_schedule&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;full_seq_dict&#39;</span>   <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;full_seq_dict&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;buffer&#39;</span>          <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;buffer&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;pulse_plot&#39;</span>      <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;gen_new&#39;</span>         <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;gen_new&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;gen_num&#39;</span>         <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;gen_num&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;num_gates&#39;</span>       <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;num_gates&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;used_gates&#39;</span>      <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">],</span>
+        
+        <span class="s1">&#39;readout_length&#39;</span>  <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;post_buffer&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;adc_trig_offset&#39;</span> <span class="p">:</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;emp_delay&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;init_buffer&#39;</span><span class="p">],</span>
+
+
+        <span class="s1">&#39;relax_delay&#39;</span>     <span class="p">:</span> <span class="n">exp_globals</span><span class="p">[</span><span class="s1">&#39;relax_delay&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;reps&#39;</span>            <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;reps&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;soft_avgs&#39;</span>       <span class="p">:</span> <span class="n">exp_settings</span><span class="p">[</span><span class="s1">&#39;soft_avgs&#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+    
+    <span class="c1"># The following section sets up the I and Q data for each of the standard pulses</span>
+    
+    <span class="n">x_pulse</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;x_pulse&#39;</span><span class="p">]</span>
+    <span class="n">y_pulse</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;y_pulse&#39;</span><span class="p">]</span>
+    <span class="n">x2_pulse</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;x2_pulse&#39;</span><span class="p">]</span>
+    <span class="n">y2_pulse</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;y2_pulse&#39;</span><span class="p">]</span>
+    <span class="n">x2_neg</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;x2_neg&#39;</span><span class="p">]</span>
+    <span class="n">y2_neg</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;y2_neg&#39;</span><span class="p">]</span>
+    <span class="n">ident_pulse</span> <span class="o">=</span> <span class="n">pauli_gates</span><span class="p">[</span><span class="s1">&#39;identity&#39;</span><span class="p">]</span>
+
+    <span class="n">pulse_set</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_pulse</span><span class="p">,</span> <span class="n">y_pulse</span><span class="p">,</span> <span class="n">x2_pulse</span><span class="p">,</span> <span class="n">y2_pulse</span><span class="p">,</span> <span class="n">x2_neg</span><span class="p">,</span> <span class="n">y2_neg</span><span class="p">,</span> <span class="n">ident_pulse</span><span class="p">]</span>
+
+    <span class="n">pulse_list_RB</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">pulse</span> <span class="ow">in</span> <span class="n">pulse_set</span><span class="p">:</span>
+        <span class="n">set_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sigma&#39;</span>      <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span> 
+            <span class="s1">&#39;num_sigma&#39;</span>  <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;hold_time&#39;</span>  <span class="p">:</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;Hold_time&#39;</span><span class="p">],</span>     
+            <span class="s1">&#39;amp&#39;</span>        <span class="p">:</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="s1">&#39;sample_rate&#39;</span><span class="p">:</span> <span class="mf">430.080e6</span><span class="p">,</span>
+            <span class="s1">&#39;angle&#39;</span>      <span class="p">:</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+            <span class="s1">&#39;rot_amount&#39;</span> <span class="p">:</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+            <span class="s1">&#39;axis&#39;</span>       <span class="p">:</span> <span class="n">pulse</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="p">}</span>
+        
+        <span class="n">pulse_comp</span> <span class="o">=</span> <span class="n">gaussian_square</span><span class="p">(</span><span class="n">pulse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">120</span><span class="p">),</span> <span class="n">settings</span> <span class="o">=</span> <span class="n">set_dict</span><span class="p">)</span>
+        <span class="n">pulse_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">pulse</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pulse_comp</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">pulse_comp</span><span class="o">.</span><span class="n">Q</span><span class="p">,</span> <span class="n">pulse_comp</span><span class="o">.</span><span class="n">rotate</span><span class="p">]</span>
+
+        <span class="n">pulse_list_RB</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pulse_data</span><span class="p">)</span>
+ 
+    <span class="n">config</span><span class="p">[</span><span class="s1">&#39;pulse_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pulse_list_RB</span>
+
+
+    <span class="c1"># This next section sets the sequences of pulses and iterates through them</span>
+
+    <span class="n">full_seq_dict</span> <span class="o">=</span> <span class="n">random_seq_gen</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="n">config</span><span class="p">[</span><span class="s1">&#39;full_seq_dict&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">full_seq_dict</span>
+
+    <span class="n">power_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">full_seq_dict</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">])))</span>
+    <span class="n">phase_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">full_seq_dict</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">])))</span>
+
+    <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">full_seq_dict</span><span class="p">:</span>
+        <span class="n">run_seq</span> <span class="o">=</span> <span class="n">full_seq_dict</span><span class="p">[</span><span class="n">seq</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Running Sequence </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">seq</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">])):</span>
+            <span class="n">trunc_point</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">config</span><span class="p">[</span><span class="s1">&#39;pulse_schedule&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">run_seq</span><span class="p">[:</span> <span class="n">trunc_point</span><span class="p">]</span>
+
+            <span class="c1"># Append the measurement pulse</span>
+            <span class="c1">#config = meas_pulse(config)</span>
+
+            <span class="n">prog_RB</span> <span class="o">=</span> <span class="n">IQProgram_RB</span><span class="p">(</span><span class="n">soccfg</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+
+            <span class="n">meas_start</span> <span class="o">=</span> <span class="n">prog_RB</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">m_pulse</span><span class="p">[</span><span class="s2">&quot;init_buffer&quot;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">meas_end</span> <span class="o">=</span> <span class="n">meas_start</span><span class="o">+</span><span class="n">prog_RB</span><span class="o">.</span><span class="n">us2cycles</span><span class="p">(</span><span class="n">m_pulse</span><span class="p">[</span><span class="s2">&quot;meas_window&quot;</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+            <span class="n">iq_list_RB</span> <span class="o">=</span> <span class="n">prog_RB</span><span class="o">.</span><span class="n">acquire_decimated</span><span class="p">(</span><span class="n">soc</span><span class="p">,</span> <span class="n">load_pulses</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+
+            <span class="c1"># I and Q full are the entire data for the output traces of the cavity</span>
+            <span class="n">I_full</span> <span class="o">=</span> <span class="n">iq_list_RB</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">Q_full</span> <span class="o">=</span> <span class="n">iq_list_RB</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="c1"># I and Q window select for only the time when the cavity pulse was happening</span>
+            <span class="n">I_window</span> <span class="o">=</span> <span class="n">I_full</span><span class="p">[</span><span class="n">meas_start</span><span class="p">:</span><span class="n">meas_end</span><span class="p">]</span>
+            <span class="n">Q_window</span> <span class="o">=</span> <span class="n">Q_full</span><span class="p">[</span><span class="n">meas_start</span><span class="p">:</span><span class="n">meas_end</span><span class="p">]</span>
+            
+            <span class="n">I_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">I_window</span><span class="p">)</span>
+            <span class="n">Q_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Q_window</span><span class="p">)</span>
+
+            <span class="n">power_data</span><span class="p">[</span><span class="n">seq</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I_final</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Q_final</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">phase_data</span><span class="p">[</span><span class="n">seq</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">Q_final</span><span class="p">,</span> <span class="n">I_final</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        
+        <span class="c1"># Define an x axis the length of our IQ data and convert it to us instead of clock ticks    </span>
+        <span class="k">if</span> <span class="n">seq</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+            <span class="n">xaxis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span> <span class="n">iq_list_RB</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span> <span class="n">iq_list_RB</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">xaxis</span><span class="p">)):</span>
+                <span class="n">xaxis</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">prog_RB</span><span class="o">.</span><span class="n">cycles2us</span><span class="p">(</span><span class="n">xaxis</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">ro_ch</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            
+            <span class="n">x_axis_pulses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">x_axis_pulses</span><span class="p">)):</span>
+                <span class="n">x_axis_pulses</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">prog_RB</span><span class="o">.</span><span class="n">cycles2us</span><span class="p">(</span><span class="n">x_axis_pulses</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">gen_ch</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+            <span class="n">x_axis_pulses</span> <span class="o">=</span> <span class="n">x_axis_pulses</span><span class="o">/</span><span class="mi">16</span>
+
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Woo the plotting section!</span>
+<span class="sd">        </span>
+<span class="sd">        Plot 1 displays the output traces (cavity pulse data)</span>
+<span class="sd">        Plot 2 displays the input pulses</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="c1"># TODO: Find some way to determine fidelity and switch to using that instead of power</span>
+
+        <span class="c1"># Figure 1 plots single shot I and Q output cavity traces and Input traces</span>
+        <span class="n">fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">I_full</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;I Data&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">Q_full</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Q Data&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;us&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;a.u.&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis_pulses</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;I Data&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis_pulses</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;pulse_plot&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Q Data&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;us&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;amplitude&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Single Shot Cavity Output/Input Traces&#39;</span><span class="p">)</span>
+        <span class="n">fig1</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fig1</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="o">+</span><span class="s1">&#39;_Input_Output_Traces.png&#39;</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">150</span><span class="p">)</span>
+
+        <span class="c1"># Figure 2 plots the average power v number of gates for each sequence</span>
+        <span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">seq</span> <span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;used_gates&#39;</span><span class="p">],</span> <span class="n">power_data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Sequence </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Power v Num Used Gates</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Num Gates&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Power (DAC a.u.)&#39;</span><span class="p">)</span>
+        <span class="c1">#plt.legend()</span>
+        <span class="n">fig2</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fig2</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span> <span class="o">+</span> <span class="s1">&#39;_fidelity_plot.png&#39;</span><span class="p">))</span>
+    
+    <span class="n">userfuncs</span><span class="o">.</span><span class="n">SaveFull</span><span class="p">(</span><span class="n">saveDir</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;power_data&#39;</span><span class="p">,</span> <span class="s1">&#39;phase_data&#39;</span><span class="p">,</span> <span class="s1">&#39;I_full&#39;</span><span class="p">,</span> <span class="s1">&#39;Q_full&#39;</span><span class="p">,</span><span class="s1">&#39;xaxis&#39;</span><span class="p">],</span>
+                             <span class="nb">locals</span><span class="p">(),</span> <span class="n">expsettings</span><span class="o">=</span><span class="n">settings</span><span class="p">,</span> <span class="n">instruments</span><span class="o">=</span><span class="p">{})</span>
+     
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;saveDir&#39;</span><span class="p">:</span> <span class="n">saveDir</span><span class="p">,</span> <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;I_full&#39;</span><span class="p">:</span> <span class="n">I_full</span><span class="p">,</span> <span class="s1">&#39;Q_full&#39;</span><span class="p">:</span> <span class="n">Q_full</span><span class="p">,</span><span class="s1">&#39;xaxis&#39;</span><span class="p">:</span><span class="n">xaxis</span><span class="p">,</span> <span class="s1">&#39;power_data&#39;</span><span class="p">:</span><span class="n">power_data</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">power_data</span><span class="p">,</span> <span class="n">phase_data</span><span class="p">,</span> <span class="n">prog_RB</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

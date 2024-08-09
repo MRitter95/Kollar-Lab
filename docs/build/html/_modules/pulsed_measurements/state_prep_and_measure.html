@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pulsed_measurements.state_prep_and_measure &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pulsed_measurements/state_prep_and_measure';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../pulsed_measurements/pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pulsed_measurements/pulsed_measurements.html">pulsed_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pulsed_measu...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pulsed_measurements.state_prep_and_measure</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">utility.scheduler</span> <span class="kn">import</span> <span class="n">scheduler</span>
+
+<div class="viewcode-block" id="config_awg_schedule">
+<a class="viewcode-back" href="../../pulsed_measurements/pulsed_measurements.state_prep_and_measure.html#pulsed_measurements.state_prep_and_measure.config_awg_schedule">[docs]</a>
+<span class="k">def</span> <span class="nf">config_awg_schedule</span><span class="p">(</span><span class="n">awg</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Helper function to initialize the scheduler object and load the buffer</span>
+<span class="sd">    program to the AWG. Returns the scheduler object to the user</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        awg (HDAWG.AWG): awg core of the HDAWG</span>
+<span class="sd">        settings (dict): list of settings for the measurement pulse (exp_globals[&#39;m_pulse&#39;])</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        scheduler: configured scheduler object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">]</span>
+    <span class="n">window_time</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span>
+    <span class="n">awg_sched</span> <span class="o">=</span> <span class="n">scheduler</span><span class="p">(</span><span class="n">total_time</span><span class="o">=</span><span class="n">start_time</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">window_time</span><span class="p">,</span> <span class="n">sample_rate</span><span class="o">=</span><span class="mf">2.4e9</span><span class="p">)</span>
+    <span class="n">awg_sched</span><span class="o">.</span><span class="n">add_analog_channel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Qubit_I&#39;</span><span class="p">)</span>
+    <span class="n">awg_sched</span><span class="o">.</span><span class="n">add_analog_channel</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Qubit_Q&#39;</span><span class="p">)</span>
+
+    <span class="n">awg_sched</span><span class="o">.</span><span class="n">add_digital_channel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Qubit_enable&#39;</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="n">HW_offset_on</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">HW_offset_off</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">awg_sched</span><span class="o">.</span><span class="n">add_digital_channel</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Cavity_enable&#39;</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="n">HW_offset_on</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">HW_offset_off</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">progFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Kollarlab\Desktop\Kollar-Lab\pulsed_measurements\HDAWG_sequencer_codes\hdawg_placeholder.cpp&quot;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">rawprog</span>  <span class="o">=</span> <span class="n">progFile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">loadprog</span> <span class="o">=</span> <span class="n">rawprog</span>
+    <span class="n">progFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">loadprog</span> <span class="o">=</span> <span class="n">loadprog</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_samples_&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">awg_sched</span><span class="o">.</span><span class="n">samples</span><span class="p">))</span>
+    <span class="n">awg</span><span class="o">.</span><span class="n">load_program</span><span class="p">(</span><span class="n">loadprog</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">awg_sched</span></div>
+
+
+<div class="viewcode-block" id="load_pulse_sequence">
+<a class="viewcode-back" href="../../pulsed_measurements/pulsed_measurements.state_prep_and_measure.html#pulsed_measurements.state_prep_and_measure.load_pulse_sequence">[docs]</a>
+<span class="k">def</span> <span class="nf">load_pulse_sequence</span><span class="p">(</span><span class="n">awg</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Upload programmed sequence to the AWG and start it</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        awg (HDAWG.AWG): awg core of the HDAWG</span>
+<span class="sd">        scheduler (scheduler): pulse schedule object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">awg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="p">[</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">marker</span><span class="p">]</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="n">compile_schedule</span><span class="p">(</span><span class="s1">&#39;HDAWG&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Qubit_I&#39;</span><span class="p">,</span> <span class="s1">&#39;Qubit_Q&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Qubit_enable&#39;</span><span class="p">,</span> <span class="s1">&#39;Cavity_enable&#39;</span><span class="p">])</span>
+    <span class="n">awg</span><span class="o">.</span><span class="n">load_waveform</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">marker</span><span class="p">)</span>
+    <span class="n">awg</span><span class="o">.</span><span class="n">run_loop</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="add_gate_analog">
+<a class="viewcode-back" href="../../pulsed_measurements/pulsed_measurements.state_prep_and_measure.html#pulsed_measurements.state_prep_and_measure.add_gate_analog">[docs]</a>
+<span class="k">def</span> <span class="nf">add_gate_analog</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">q_pulse</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Low level function that computes the IQ traces to generate the</span>
+<span class="sd">    desired gate. It also adds an enable window &quot;bracketing&quot; the pulse.</span>
+<span class="sd">    We added the capability to apply corrections to the IQ signal</span>
+<span class="sd">    depending on the input angles (essentially removing remaining IQ</span>
+<span class="sd">    imbalance in the system from HDAWG or SGS or something else)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        scheduler (scheduler): pulse schedule object</span>
+<span class="sd">        amp (float): scaling parameter for pulse amplitude (1 corresponds to a pi/2 pulse)</span>
+<span class="sd">        angle (float): angle in XY plane of the drive (RADIANS)</span>
+<span class="sd">        position (float): position of the leading edge of the gate</span>
+<span class="sd">        q_pulse (dict): dictionary holding all the qubit pulse calibration params</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">imp_off</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;imp_off&#39;</span><span class="p">]</span>
+    <span class="n">imp_amp</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;imp_amp&#39;</span><span class="p">]</span>
+    <span class="n">imp_phi</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;imp_phi&#39;</span><span class="p">]</span>
+    <span class="n">p_amp</span>   <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;p_amp&#39;</span><span class="p">]</span>
+    <span class="n">p_amp</span> <span class="o">=</span> <span class="n">amp</span><span class="o">*</span><span class="n">p_amp</span><span class="o">*</span><span class="n">imp_off</span><span class="o">/</span><span class="p">(</span><span class="n">imp_off</span><span class="o">+</span><span class="n">imp_amp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">+</span><span class="n">imp_phi</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">p_amp</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;HDAWG amplitude is &gt; 1, check settings&#39;</span><span class="p">)</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="n">p_amp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">p_amp</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">qubit_I</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="s1">&#39;Qubit_I&#39;</span><span class="p">]</span>
+    <span class="n">qubit_Q</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="n">analog_channels</span><span class="p">[</span><span class="s1">&#39;Qubit_Q&#39;</span><span class="p">]</span>
+    <span class="n">qubit_marker</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="s1">&#39;Qubit_enable&#39;</span><span class="p">]</span>
+
+    <span class="n">pulse_length</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;hold_time&#39;</span><span class="p">]</span>
+    <span class="n">buffer</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span>
+    <span class="n">qubit_I</span><span class="o">.</span><span class="n">add_pulse</span><span class="p">(</span><span class="s1">&#39;gaussian_square&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> 
+                          <span class="n">amplitude</span><span class="o">=</span><span class="n">I</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;hold_time&#39;</span><span class="p">],</span> 
+                          <span class="n">ramp_sigma</span><span class="o">=</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span> <span class="n">num_sigma</span><span class="o">=</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">])</span>
+    <span class="n">qubit_Q</span><span class="o">.</span><span class="n">add_pulse</span><span class="p">(</span><span class="s1">&#39;gaussian_square&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> 
+                          <span class="n">amplitude</span><span class="o">=</span><span class="n">Q</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;hold_time&#39;</span><span class="p">],</span> 
+                          <span class="n">ramp_sigma</span><span class="o">=</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span> <span class="n">num_sigma</span><span class="o">=</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">])</span>
+    <span class="n">qubit_marker</span><span class="o">.</span><span class="n">add_window</span><span class="p">(</span><span class="n">position</span><span class="o">-</span><span class="n">buffer</span><span class="p">,</span> <span class="n">position</span><span class="o">+</span><span class="n">pulse_length</span><span class="o">+</span><span class="n">buffer</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add_gate">
+<a class="viewcode-back" href="../../pulsed_measurements/pulsed_measurements.state_prep_and_measure.html#pulsed_measurements.state_prep_and_measure.add_gate">[docs]</a>
+<span class="k">def</span> <span class="nf">add_gate</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">gate</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">q_pulse</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Higher level function, takes in a string description of the gate </span>
+<span class="sd">    to apply and computes the appropriate IQ values to apply the gate</span>
+<span class="sd">    Will need to be expanded as we want to try other gates </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        scheduler (scheduler): pulse schedule object</span>
+<span class="sd">        gate (string): string description of gate to apply</span>
+<span class="sd">        position (float): position of the leading edge of the gate</span>
+<span class="sd">        q_pulse (dict): dictionary holding all the qubit pulse calibration params</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">gate</span><span class="o">==</span><span class="s1">&#39;X&#39;</span><span class="p">:</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">gate</span><span class="o">==</span><span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">gate</span><span class="o">==</span><span class="s1">&#39;-X&#39;</span><span class="p">:</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">if</span> <span class="n">gate</span><span class="o">==</span><span class="s1">&#39;-Y&#39;</span><span class="p">:</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">gate</span><span class="o">==</span><span class="s1">&#39;Z&#39;</span><span class="p">:</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">gate</span><span class="o">==</span><span class="s1">&#39;PI&#39;</span><span class="p">:</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">gate</span><span class="p">)</span>
+            <span class="n">amp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+            <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;Unsupported gate&#39;</span><span class="p">)</span>
+    <span class="n">add_gate_analog</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">q_pulse</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add_meas_window">
+<a class="viewcode-back" href="../../pulsed_measurements/pulsed_measurements.state_prep_and_measure.html#pulsed_measurements.state_prep_and_measure.add_meas_window">[docs]</a>
+<span class="k">def</span> <span class="nf">add_meas_window</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">m_pulse</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Measurement window function, creates the marker window </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        scheduler (scheduler): pulse schedule object</span>
+<span class="sd">        m_pulse (dict): dictionary holding the measurement window settings (length and position)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">window_time</span> <span class="o">=</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_window&#39;</span><span class="p">]</span>
+    <span class="n">window_pos</span>  <span class="o">=</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">]</span>
+    <span class="n">cavity_marker</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="n">digital_channels</span><span class="p">[</span><span class="s1">&#39;Cavity_enable&#39;</span><span class="p">]</span>
+    <span class="n">cavity_marker</span><span class="o">.</span><span class="n">add_window</span><span class="p">(</span><span class="n">window_pos</span><span class="p">,</span> <span class="n">window_pos</span><span class="o">+</span><span class="n">window_time</span><span class="o">+</span><span class="mf">1e-6</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="state_prep_and_measure">
+<a class="viewcode-back" href="../../pulsed_measurements/pulsed_measurements.state_prep_and_measure.html#pulsed_measurements.state_prep_and_measure.state_prep_and_measure">[docs]</a>
+<span class="k">def</span> <span class="nf">state_prep_and_measure</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">pulse_seq</span><span class="p">,</span> <span class="n">meas_basis</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    General purpose function that creates the pulse schedule to </span>
+<span class="sd">    generate the desired state and measure it in the specified basis. </span>
+<span class="sd">    This function will reset all the channels (IQ, enable and cavity)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        scheduler (scheduler): object holding the pulse schedule (lives in the utility folder)</span>
+<span class="sd">        pulse_seq (list of strings): list of gates to apply to the qubit (e.g: &#39;X&#39;, &#39;-Y&#39;, &#39;Z&#39;, etc.)</span>
+<span class="sd">        meas_basis (string): string defining measurement basis (&#39;X&#39;, &#39;Y&#39;, &#39;Z&#39;)</span>
+<span class="sd">        settings (dict): dictionary of settings configuring the underlying pulses (sigma, hold length, meas time etc.)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">scheduler</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="n">q_pulse</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;qubit_pulse&#39;</span><span class="p">]</span>
+    <span class="n">m_pulse</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s1">&#39;measurement_pulse&#39;</span><span class="p">]</span>
+
+    <span class="n">meas_pos</span> <span class="o">=</span> <span class="n">m_pulse</span><span class="p">[</span><span class="s1">&#39;meas_pos&#39;</span><span class="p">]</span>
+    <span class="n">num_pulse</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pulse_seq</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span> <span class="c1">#Accounts for the basis pulse at the end of the sequence</span>
+    <span class="n">pulse_length</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;num_sigma&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;hold_time&#39;</span><span class="p">]</span>
+    <span class="n">buffer</span> <span class="o">=</span> <span class="n">q_pulse</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span>
+
+    <span class="n">position</span> <span class="o">=</span> <span class="n">meas_pos</span><span class="o">-</span><span class="p">(</span><span class="n">buffer</span><span class="o">+</span><span class="n">pulse_length</span><span class="p">)</span><span class="o">*</span><span class="n">num_pulse</span>
+    <span class="k">if</span> <span class="n">position</span><span class="o">&lt;</span><span class="n">buffer</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Pulse sequence too long for this measurement position&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">pulse_seq</span><span class="p">:</span>
+        <span class="n">add_gate</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">gate</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">q_pulse</span><span class="p">)</span>
+        <span class="n">position</span><span class="o">+=</span><span class="n">buffer</span><span class="o">+</span><span class="n">pulse_length</span>
+    <span class="n">add_gate</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">meas_basis</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">q_pulse</span><span class="p">)</span>
+    <span class="n">add_meas_window</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span> <span class="n">m_pulse</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

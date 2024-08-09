@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pi_calib_IQ_rotation &#8212; Kollar-Lab Repository 2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_style.css?v=6a1bca1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=6fefd858"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pulsed_measurements/pulsed_measurements.pi_calib_IQ_rotation';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pi_calib_ortho" href="pulsed_measurements.pi_calib_ortho.html" />
+    <link rel="prev" title="oscillating_B_field" href="pulsed_measurements.oscillating_B_field.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Kollar-Lab Repository 2024 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../utility/utility.html">
+    utility
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MRitter95/Kollar-Lab" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cw_measurements/cw_measurements.html">
+    cw_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../kollar_instruments/kollar_instruments.html">
+    kollar_instruments
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="pulsed_measurements.html">
+    pulsed_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../qick_measurements/qick_measurements.html">
+    qick_measurements
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../utility/utility.html">
+    utility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../miscellaneous/userfuncs.html">
+    userfuncs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MRitter95/Kollar-Lab" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cw_measurements/cw_measurements.html">cw_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kollar_instruments/kollar_instruments.html">kollar_instruments</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pulsed_measurements.html">pulsed_measurements</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.B_osc_v2.html">B_osc_v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.DrainageT1.html">DrainageT1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.PulseTransVProbe.html">PulseTransVProbe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.Rotating_field_modular.html">Rotating_field_modular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1.html">T1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1_3_state.html">T1_3_state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1_drainage.html">T1_drainage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1_drainage_old.html">T1_drainage_old</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1_f_state.html">T1_f_state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1_fast.html">T1_fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T1_nonDDC.html">T1_nonDDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T2.html">T2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T2_echo.html">T2_echo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T2_echo_phase_rotation.html">T2_echo_phase_rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T2_echo_phase_rotation_calib_pi_pulse.html">T2_echo_phase_rotation_calib_pi_pulse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.T2_echo_phase_rotation_fast.html">T2_echo_phase_rotation_fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.amplitude_sweep.html">amplitude_sweep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.cryoscope.html">cryoscope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.dispersive_shift.html">dispersive_shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.flux_pulse_debug.html">flux_pulse_debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.hold_time_sweep.html">hold_time_sweep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.hold_time_sweep_basis.html">hold_time_sweep_basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.hold_time_sweep_fast.html">hold_time_sweep_fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.mixer_cal.html">mixer_cal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.oscillating_B_field.html">oscillating_B_field</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pi_calib_IQ_rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pi_calib_ortho.html">pi_calib_ortho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulse_calibration.html">pulse_calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_measurement_class.html">pulsed_measurement_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_spec.html">pulsed_spec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_spec_back.html">pulsed_spec_back</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_spec_depump.html">pulsed_spec_depump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_spec_ef.html">pulsed_spec_ef</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_spec_extragens.html">pulsed_spec_extragens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_spec_fast.html">pulsed_spec_fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_trans.html">pulsed_trans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_trans_chi_shift.html">pulsed_trans_chi_shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_trans_chi_shift_e_and_f.html">pulsed_trans_chi_shift_e_and_f</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.pulsed_trans_fast.html">pulsed_trans_fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_amp.html">rabi_amp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron.html">rabi_chevron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_HDAWG_hack.html">rabi_chevron_HDAWG_hack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_HDAWG_hack_FM.html">rabi_chevron_HDAWG_hack_FM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_HDAWG_hack_FM_Kellen_suggestion.html">rabi_chevron_HDAWG_hack_FM_Kellen_suggestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_HDAWG_negative_Flux_pulse.html">rabi_chevron_HDAWG_negative_Flux_pulse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_with_contrast.html">rabi_chevron_with_contrast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_with_contrast_AM_FM_modulation.html">rabi_chevron_with_contrast_AM_FM_modulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_with_contrast_AM_modulation.html">rabi_chevron_with_contrast_AM_modulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.rabi_chevron_with_contrast_FM_modulation.html">rabi_chevron_with_contrast_FM_modulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.repeated_pi_half_calib.html">repeated_pi_half_calib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.schedule_runner_test.html">schedule_runner_test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.schedules.html">schedules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.state_prep_and_measure.html">state_prep_and_measure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.sweep_template.html">sweep_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulsed_measurements.topo_pump_delay_calc.html">topo_pump_delay_calc</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../qick_measurements/qick_measurements.html">qick_measurements</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../utility/utility.html">utility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../miscellaneous/userfuncs.html">userfuncs</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/pulsed_measurements/pulsed_measurements.pi_calib_IQ_rotation.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="pulsed_measurements.html" class="nav-link">pulsed_measurements</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pi_calib_IQ_rotation</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-pulsed_measurements.pi_calib_IQ_rotation">
+<span id="pi-calib-iq-rotation"></span><h1>pi_calib_IQ_rotation<a class="headerlink" href="#module-pulsed_measurements.pi_calib_IQ_rotation" title="Link to this heading">#</a></h1>
+<p>Created on Tue Nov 22 17:14:38 2022</p>
+<p>&#64;author: Kollarlab</p>
+<p class="rubric">Functions</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_settings</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pi_rotation</span></code>(instruments, settings)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pulsed_measurements.oscillating_B_field.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">oscillating_B_field</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pulsed_measurements.pi_calib_ortho.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pi_calib_ortho</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/pulsed_measurements/pulsed_measurements.pi_calib_IQ_rotation.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Kollar Lab.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

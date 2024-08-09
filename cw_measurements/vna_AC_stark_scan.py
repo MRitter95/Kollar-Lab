@@ -15,6 +15,9 @@ import userfuncs
 import utility.plotting_tools as plots
 
 def get_default_settings():
+    """
+    get_default_settings _summary_
+    """   
     fullsettings = {}
     settings = {}
     autoscan_settings = {}
@@ -65,7 +68,16 @@ def get_default_settings():
     return fullsettings
 
 def vna_spec_stark_scan(instruments, settings):
-    ##Instruments used
+    """
+    vna_spec_stark_scan _summary_
+
+    :param instruments: _description_
+    :type instruments: _type_
+    :param settings: _description_
+    :type settings: _type_
+    :return: _description_
+    :rtype: _type_
+    """    
     vna = instruments['VNA']
 
     vna.reset()

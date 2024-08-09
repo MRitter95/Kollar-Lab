@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 import userfuncs
 from utility.measurement_helpers import configure_card, estimate_time, read_and_process
-from topo_helpers import rotating_field_schedule
+#from topo_helpers import rotating_field_schedule
 import scipy.signal as signal
 
     
